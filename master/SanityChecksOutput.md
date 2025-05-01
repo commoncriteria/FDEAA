@@ -1,21 +1,28 @@
+* Error: Found a "assignable" element that is buried under stricken text:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/title[1]""/h:s[1]"and speci"/assignable[1]"cryptogra"
+* Error: Found a "assignable" element that is buried under stricken text:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/title[1]""/h:s[1]"and speci"/assignable[2]"list of s"
+* Error: Found a "selectables" element that is buried under stricken text:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]"The TSF s"/h:s[1]""/selectables[1]""
+* Error: f-element FPT_PWR_EXT.1.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[3]""/f-element[1]""
+* Warning: This document still has at least one comment.
 * Error: Detected multiple elements with an id of 'toe'.
+* Error: Detected multiple elements with an id of 'TOEboundary'.
 * Error: Detected multiple elements with an id of 'toe'.
-* Error: Detected dangling ref-id to 'soup'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/ref-id[1]"soup"
-* Error: Detected dangling ref-id to 'ratatouille'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/not[1]""/ref-id[1]"ratatouil"
-* Error: Detected dangling ref-id to 'pizza'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/not[1]""/ref-id[2]"pizza"
-* Error: Detected dangling ref-id to 'table2'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/not[2]""/ref-id[1]"table2"
-* Error: Detected dangling ref-id to 'optional-comp-example'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/ref-id[2]"optional-"
-* Error: Detected dangling ref-id to 't-network-eavesdrop'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/not[3]""/ref-id[1]"t-network"
-* Error: Detected dangling ref-id to 'a-widgets'.
-	  /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/restrict[1]"Number"/ref-id[1]"a-widgets"
-* Warning: Detected an empty _p_ element./PP[1]""/section[1]""/section[4]""/choice[1]"This PP i"/h:p[1]""
- Failed to find a reference to bibCEM.
- Failed to find soup in /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/ref-id[1]"soup" (use case or rule)
- Failed to find optional-comp-example in /PP[1]""/section[1]""/section[3]""/usecases[1]""/usecase[1]""/config[1]""/ref-id[2]"optional-" (use case or rule)
-Can't find assignable with ID of  a-widgets
+* Error: Detected multiple elements with an id of 'TOEboundary'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-4-d'.
+* Error: Detected multiple elements with an id of 'fcs_ckm-4-1-d'.
+* Error: Detected multiple elements with an id of 'fcs-kdf-ext-1'.
+* Error: Detected multiple elements with an id of 'fcs-kdf-ext-1'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-4-d'.
+* Error: Detected multiple elements with an id of 'fcs_ckm-4-1-d'.
+* Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
+* Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
+* Error: Detected multiple elements with an id of 'fmt-smf-1'.
+* Error: Detected multiple elements with an id of 'fmt-smf-1'.
+* Error: Detected multiple elements with an id of 'fpt-kyp-ext-1'.
+* Error: Detected multiple elements with an id of 'fpt-kyp-ext-1'.
+* Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
+* Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[22]""
