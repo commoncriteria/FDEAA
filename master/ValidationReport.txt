@@ -1,6 +1,6 @@
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:555:44: error: value of attribute "ref" is invalid; must be a string matching the regular expression "O(E?)\.[_A-Z]+"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:806:120: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:829:138: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:829:135: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:832:190: error: attribute "linerbeak" not allowed here; expected attribute "choose-one-of", "linebreak" or "onlyone"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:989:137: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:1120:136: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
@@ -31,26 +31,11 @@
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2034:145: error: value of attribute "cc-id" is invalid; must be a string matching the regular expression "f[a-z]{2}_[a-z0-9^]{2,10}(_ext)?\.[0-9]"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2086:112: error: element "selectable" not allowed here; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2086:160: error: element "selectables" incomplete; missing required element "selectable"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2099:253: error: element "h:u" not allowed here; expected element "not-selectable" or "selectable"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2100:33: error: element "selectable" not allowed here; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2101:35: error: element "selectable" not allowed here; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2103:33: error: element "selectables" incomplete; missing required element "selectable"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2148:226: error: text not allowed here; expected the element end-tag or element "not-selectable" or "selectable"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2154:60: error: element "h:u" not allowed here; expected element "not-selectable", "selectable" or "tabularize"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2154:72: error: element "selectable" not allowed here; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2154:106: error: element "selectable" not allowed here; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2154:196: error: element "selectables" incomplete; expected element "not-selectable", "selectable" or "tabularize"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2331:76: error: element "selectabls" not allowed anywhere; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2331:109: error: element "selectabls" not allowed anywhere; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2331:142: error: element "selectabls" not allowed anywhere; expected the element end-tag, text, element "_", "assignable", "choice", "comment", "ctr", "depends", "endnote", "equation", "external-doc", "figure", "if-opt-app", "implements", "no-link", "provides", "refinement", "requires", "rule", "selectables", "snip", "testlist" or "xref" or an element from another namespace
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2439:18: error: element "TSS" not allowed here; expected the element end-tag or element "aactivity" or "rule"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2440:25: error: element "Guidance" not allowed here; expected the element end-tag or element "aactivity" or "rule"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2444:36: error: element "CustomEA" not allowed here; expected the element end-tag or element "aactivity" or "rule"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2445:22: error: element "Tests" not allowed here; expected the element end-tag or element "aactivity" or "rule"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2639:19: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2651:19: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2652:254: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2658:19: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2661:19: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2667:19: error: element "a-component" incomplete; missing required element "a-element"
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2674:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2157:35: error: text not allowed here; expected the element end-tag or element "not-selectable" or "selectable"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2653:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2665:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2666:254: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2672:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2675:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2681:19: error: element "a-component" incomplete; missing required element "a-element"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2688:19: error: element "a-component" incomplete; missing required element "a-element"

@@ -475,7 +475,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
                       <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-CKM-4-D"><h4>FCS_CKM.4(D) Cryptographic Key Destruction (Software TOE, 3rd 27 Party Storage)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.4(D)</div>
+                    Operational Environment for memory clearing and how that is achieved.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-CKM-4-D"><h4>FCS_CKM.4(D) Cryptographic Key Destruction (Software TOE, 3rd Party Storage)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.4(D)</div>
                     
                       
 
@@ -868,7 +868,16 @@ The following sections list Common Criteria and technology terms used in this do
                       the key chain shall be reviewed to ensure the selected method is followed for the storage
                       of wrapped or encrypted keys in non-volatile memory and plaintext keys in non-volatile
                       memory meet one of the criteria for storage.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FPT-PWR-EXT-1"><h4>FPT_PWR_EXT.1 Power Saving States</h4><span class="activity_pane_body"></span></div><div class="comp" id="FPT-PWR-EXT-2-1"><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.2</div>
+                  There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FPT-PWR-EXT-1"><h4>FPT_PWR_EXT.1 Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.1</div>
+            
+              
+              
+               
+              <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall validate the TSS contains a list of Compliant power saving states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall ensure that guidance documentation contains a list of Compliant
+                power saving states. If additional power saving states are supported, then the evaluator
+                shall validate that the guidance documentation states how non-Compliant power states
+                are disabled.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall confirm that for each listed compliant state all key/key materials
+                are removed from volatile memory by using the test defined in FCS_CKM.4(d).</div></div></span></div><div class="comp" id="FPT-PWR-EXT-2-1"><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.2</div>
                 
                   
                   
