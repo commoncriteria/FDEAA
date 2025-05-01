@@ -1,6 +1,4 @@
-* https://commoncriteria.github.io/FDEAA/master/AppliedTDs-Diff.html[AppliedTDs-Diff.html]
-* https://commoncriteria.github.io/FDEAA/master/AppliedTDs.html[AppliedTDs.html]
 * https://commoncriteria.github.io/FDEAA/master/FDEAA-release-linkable.html[FDEAA-release-linkable.html]
 * https://commoncriteria.github.io/FDEAA/master/FDEAA-release.html[FDEAA-release.html]
+* https://commoncriteria.github.io/FDEAA/master/FDEAA-sd.html[FDEAA-sd.html]
 * https://commoncriteria.github.io/FDEAA/master/FDEAA.html[FDEAA.html]
-* https://commoncriteria.github.io/FDEAA/master/diff-v1.0.html[diff-v1.0.html]
