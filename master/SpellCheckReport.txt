@@ -67,7 +67,6 @@ output/FDEAA-release-linkable.html: acount
 output/FDEAA-release-linkable.html: acvp
 output/FDEAA-release-linkable.html: archiecture
 output/FDEAA-release-linkable.html: behaviour
-output/FDEAA-release-linkable.html: bits256
 output/FDEAA-release-linkable.html: cLen
 output/FDEAA-release-linkable.html: cPPs
 output/FDEAA-release-linkable.html: certian
@@ -139,7 +138,6 @@ output/FDEAA-release.html: ablitiy
 output/FDEAA-release.html: acount
 output/FDEAA-release.html: archiecture
 output/FDEAA-release.html: behaviour
-output/FDEAA-release.html: bits256
 output/FDEAA-release.html: cPPs
 output/FDEAA-release.html: certian
 output/FDEAA-release.html: checksums
@@ -289,7 +287,6 @@ output/FDEAA.html: acount
 output/FDEAA.html: acvp
 output/FDEAA.html: archiecture
 output/FDEAA.html: behaviour
-output/FDEAA.html: bits256
 output/FDEAA.html: cLen
 output/FDEAA.html: cPPs
 output/FDEAA.html: certian
