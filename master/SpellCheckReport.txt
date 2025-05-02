@@ -80,6 +80,7 @@ output/FDEAA-release-linkable.html: nLen
 output/FDEAA-release-linkable.html: nist
 output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: sanitization
+output/FDEAA-release-linkable.html: sfr
 output/FDEAA-release-linkable.html: smartcard
 output/FDEAA-release-linkable.html: subkey
 output/FDEAA-release-linkable.html: un
@@ -136,6 +137,7 @@ output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: sanitization
+output/FDEAA-release.html: sfr
 output/FDEAA-release.html: smartcard
 output/FDEAA-release.html: un
 output/FDEAA-release.html: v1
@@ -279,6 +281,7 @@ output/FDEAA.html: nist
 output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: sanitization
+output/FDEAA.html: sfr
 output/FDEAA.html: smartcard
 output/FDEAA.html: subkey
 output/FDEAA.html: un
