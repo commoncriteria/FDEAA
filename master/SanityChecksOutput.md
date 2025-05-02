@@ -5,6 +5,8 @@
 * Error: Found a "selectables" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]"The TSF s"/h:s[1]""/selectables[1]""
 * Warning: This document still has at least one comment.
+* Error: Detected dangling id-reference to fcs-cop-1-keywrap from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/depends[1]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'TOEboundary'.
 * Error: Detected multiple elements with an id of 'toe'.
