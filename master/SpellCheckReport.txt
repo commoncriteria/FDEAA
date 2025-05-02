@@ -65,6 +65,7 @@ output/FDEAA-release-linkable.html: XXXXX
 output/FDEAA-release-linkable.html: ablitiy
 output/FDEAA-release-linkable.html: acount
 output/FDEAA-release-linkable.html: acvp
+output/FDEAA-release-linkable.html: addtional
 output/FDEAA-release-linkable.html: archiecture
 output/FDEAA-release-linkable.html: behaviour
 output/FDEAA-release-linkable.html: cLen
@@ -83,11 +84,13 @@ output/FDEAA-release-linkable.html: iTC
 output/FDEAA-release-linkable.html: lifecycle
 output/FDEAA-release-linkable.html: miniscule
 output/FDEAA-release-linkable.html: mititagates
+output/FDEAA-release-linkable.html: multifactor
 output/FDEAA-release-linkable.html: nLen
 output/FDEAA-release-linkable.html: nist
 output/FDEAA-release-linkable.html: permissisions
 output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: privildges
+output/FDEAA-release-linkable.html: provideing
 output/FDEAA-release-linkable.html: retricting
 output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: smartcard
@@ -136,6 +139,7 @@ output/FDEAA-release.html: XEX
 output/FDEAA-release.html: XXXXX
 output/FDEAA-release.html: ablitiy
 output/FDEAA-release.html: acount
+output/FDEAA-release.html: addtional
 output/FDEAA-release.html: archiecture
 output/FDEAA-release.html: behaviour
 output/FDEAA-release.html: cPPs
@@ -151,10 +155,12 @@ output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: lifecycle
 output/FDEAA-release.html: mititagates
+output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: permissisions
 output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: privildges
+output/FDEAA-release.html: provideing
 output/FDEAA-release.html: retricting
 output/FDEAA-release.html: sanitization
 output/FDEAA-release.html: smartcard
@@ -285,6 +291,7 @@ output/FDEAA.html: X’
 output/FDEAA.html: ablitiy
 output/FDEAA.html: acount
 output/FDEAA.html: acvp
+output/FDEAA.html: addtional
 output/FDEAA.html: archiecture
 output/FDEAA.html: behaviour
 output/FDEAA.html: cLen
@@ -303,12 +310,14 @@ output/FDEAA.html: iTC
 output/FDEAA.html: lifecycle
 output/FDEAA.html: miniscule
 output/FDEAA.html: mititagates
+output/FDEAA.html: multifactor
 output/FDEAA.html: nLen
 output/FDEAA.html: nist
 output/FDEAA.html: permissisions
 output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: privildges
+output/FDEAA.html: provideing
 output/FDEAA.html: retricting
 output/FDEAA.html: sanitization
 output/FDEAA.html: smartcard
