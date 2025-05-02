@@ -90,7 +90,6 @@ output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
 output/FDEAA-release-linkable.html: v2
 output/FDEAA-release-linkable.html: well26
-output/FDEAA-release-linkable.html: yyy
 output/FDEAA-release.html: 38F
 output/FDEAA-release.html: 56B
 output/FDEAA-release.html: 90A
@@ -202,7 +201,6 @@ output/FDEAA-sd.html: nist
 output/FDEAA-sd.html: pass’
 output/FDEAA-sd.html: preauthentication
 output/FDEAA-sd.html: subkey
-output/FDEAA-sd.html: yyy
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
@@ -299,4 +297,3 @@ output/FDEAA.html: un
 output/FDEAA.html: v1
 output/FDEAA.html: v2
 output/FDEAA.html: well26
-output/FDEAA.html: yyy
