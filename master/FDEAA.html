@@ -2368,15 +2368,37 @@ The following sections list Common Criteria and technology terms used in this do
                     
                   </ul></span>
                   </p>
-                  <p><span class="testlist-"><ul><li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FMT_SMF.1:2</a>:
-      xx</li></ul></span></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                 
-                  <p></p>
-                  <p></p>
+                  <p>If item d) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the
+                    functionality to initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates.</p>
+                    <p>If item e) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: If additional management functions are
+                      claimed, the evaluator shall verify that the additional features function as described. </p>
+                  <p><span class="testlist-"><ul>
+                    <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FMT_SMF.1:2</a>:
+      (conditional): If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides default authorization factors, the
+                      evaluator shall change these factors in the course of taking ownership of the device
+                      as described in the operational guidance. The evaluator shall then confirm that the
+                      (old) authorization factors are no longer valid for data access.</li>
+                    <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FMT_SMF.1:3</a>:
+      (conditional): If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides key recovery capability whose effects are
+                      visible at the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> interface, then the evaluator shall devise a test that ensures that
+                      the key recovery capability has been or can be disabled following the guidance
+                      provided by the vendor.</li>
+                    <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FMT_SMF.1:4</a>:
+      (conditional): If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides the ability to configure the power saving
+                      states that are entered by certain events, the evaluator shall devise a test that causes
+                      the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to enter a specific power saving state, configure the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> so that this
+                      activity causes a different state to be entered, repeat the activity, and observe the
+                      new state is entered as configured.</li>
+                    <li class="test-"><a id="_t_26" class="defined" href="#_t_26">Test FMT_SMF.1:5</a>:
+      (conditional): If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides the ability to disable the use of one or
+                      more power saving states, the evaluator shall devise a test that enables all supported
+                      power saving states and demonstrates that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can enter into each of these
+                      states. The evaluator shall then disable the supported power saving states one by
+                      one, repeating the same set of actions that were performed at the start of the test,
+                      and observe each time that when a power saving state is configured to no longer be
+                      used, none of the behavior causes the disabled state to be entered.</li>
+                  </ul></span></p>
+
                 </div></div></div></div></div>
       <div class="comp" id="FMT_SMR.1"><h4>FMT_SMR.1 Security Roles</h4>
         <div class="element"><div class="reqid" id="FMT_SMR.1.1"><a href="#FMT_SMR.1.1" class="abbr">FMT_SMR.1.1</a></div><div class="reqdesc">
@@ -2579,12 +2601,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                      <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
