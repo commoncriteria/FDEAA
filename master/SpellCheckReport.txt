@@ -73,6 +73,7 @@ output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: iTC
+output/FDEAA-release-linkable.html: inorder
 output/FDEAA-release-linkable.html: lifecycle
 output/FDEAA-release-linkable.html: miniscule
 output/FDEAA-release-linkable.html: multifactor
@@ -132,6 +133,7 @@ output/FDEAA-release.html: choses
 output/FDEAA-release.html: crypto
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
+output/FDEAA-release.html: inorder
 output/FDEAA-release.html: lifecycle
 output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: pool’
@@ -273,6 +275,7 @@ output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
+output/FDEAA.html: inorder
 output/FDEAA.html: lifecycle
 output/FDEAA.html: miniscule
 output/FDEAA.html: multifactor
