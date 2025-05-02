@@ -61,7 +61,6 @@ output/FDEAA-release-linkable.html: TODO
 output/FDEAA-release-linkable.html: Tweakable
 output/FDEAA-release-linkable.html: Valu
 output/FDEAA-release-linkable.html: XEX
-output/FDEAA-release-linkable.html: XXXXX
 output/FDEAA-release-linkable.html: ablitiy
 output/FDEAA-release-linkable.html: acount
 output/FDEAA-release-linkable.html: acvp
@@ -76,7 +75,6 @@ output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: iTC
 output/FDEAA-release-linkable.html: lifecycle
 output/FDEAA-release-linkable.html: miniscule
-output/FDEAA-release-linkable.html: mititagates
 output/FDEAA-release-linkable.html: multifactor
 output/FDEAA-release-linkable.html: nLen
 output/FDEAA-release-linkable.html: nist
@@ -84,7 +82,6 @@ output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: smartcard
 output/FDEAA-release-linkable.html: subkey
-output/FDEAA-release-linkable.html: theat
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
 output/FDEAA-release-linkable.html: v2
@@ -125,7 +122,6 @@ output/FDEAA-release.html: TBD
 output/FDEAA-release.html: Tweakable
 output/FDEAA-release.html: Valu
 output/FDEAA-release.html: XEX
-output/FDEAA-release.html: XXXXX
 output/FDEAA-release.html: ablitiy
 output/FDEAA-release.html: acount
 output/FDEAA-release.html: behaviour
@@ -136,13 +132,11 @@ output/FDEAA-release.html: crypto
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: lifecycle
-output/FDEAA-release.html: mititagates
 output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: sanitization
 output/FDEAA-release.html: smartcard
-output/FDEAA-release.html: theat
 output/FDEAA-release.html: un
 output/FDEAA-release.html: v1
 output/FDEAA-release.html: v2
@@ -264,7 +258,6 @@ output/FDEAA.html: TODO
 output/FDEAA.html: Tweakable
 output/FDEAA.html: Valu
 output/FDEAA.html: XEX
-output/FDEAA.html: XXXXX
 output/FDEAA.html: X’
 output/FDEAA.html: ablitiy
 output/FDEAA.html: acount
@@ -280,7 +273,6 @@ output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: lifecycle
 output/FDEAA.html: miniscule
-output/FDEAA.html: mititagates
 output/FDEAA.html: multifactor
 output/FDEAA.html: nLen
 output/FDEAA.html: nist
@@ -289,7 +281,6 @@ output/FDEAA.html: preauthentication
 output/FDEAA.html: sanitization
 output/FDEAA.html: smartcard
 output/FDEAA.html: subkey
-output/FDEAA.html: theat
 output/FDEAA.html: un
 output/FDEAA.html: v1
 output/FDEAA.html: v2
