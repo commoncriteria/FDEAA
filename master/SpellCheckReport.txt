@@ -16,6 +16,7 @@ output/FDEAA-release-linkable.html: C0
 output/FDEAA-release-linkable.html: C1
 output/FDEAA-release-linkable.html: CAVS
 output/FDEAA-release-linkable.html: CC1
+output/FDEAA-release-linkable.html: CCL
 output/FDEAA-release-linkable.html: CMAC
 output/FDEAA-release-linkable.html: CSP
 output/FDEAA-release-linkable.html: CSPs
@@ -97,6 +98,7 @@ output/FDEAA-release.html: ACPI
 output/FDEAA-release.html: Adleman
 output/FDEAA-release.html: BEVs
 output/FDEAA-release.html: CC1
+output/FDEAA-release.html: CCL
 output/FDEAA-release.html: CSP
 output/FDEAA-release.html: CSP’
 output/FDEAA-release.html: DEKs
@@ -219,6 +221,7 @@ output/FDEAA.html: C0
 output/FDEAA.html: C1
 output/FDEAA.html: CAVS
 output/FDEAA.html: CC1
+output/FDEAA.html: CCL
 output/FDEAA.html: CMAC
 output/FDEAA.html: CSP
 output/FDEAA.html: CSPs
