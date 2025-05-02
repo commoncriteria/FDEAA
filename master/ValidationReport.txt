@@ -1,3 +1,4 @@
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:1828:189: error: attribute "linebeak" not allowed here; expected attribute "choose-one-of", "linebreak" or "onlyone"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2630:19: error: element "a-component" incomplete; missing required element "a-element"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2642:19: error: element "a-component" incomplete; missing required element "a-element"
 /home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:2643:254: error: element "a-component" incomplete; missing required element "a-element"
