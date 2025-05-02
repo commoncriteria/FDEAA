@@ -1214,7 +1214,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key wrap function(s)
                       and shall verify the key wrap uses an approved key wrap algorithm according to the
                       appropriate specification.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that all keys are wrapped using the
-                      approved method and a description of when the key wrapping occurs.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-KEYENCAP"><h4>FCS_COP.1 Cryptographic Operation (Key Transport)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1</div>
+                      approved method and a description of when the key wrapping occurs.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-KEYENCAP"><h4>FCS_COP.1/KeyEncap Cryptographic Operation (Key Transport)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEncap</div>
                     
                     
                     
@@ -1239,14 +1239,14 @@ The following sections list Common Criteria and technology terms used in this do
                         following tests, specific to which key transport scheme was employed.</p>
                         <p>
                           If the KTS-OAEP scheme was selected, the evaluator shall perform the following tests:<span class="testlist-"><ul>
-                            <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_COP.1:1</a>:
+                            <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_COP.1/KeyEncap:1</a>:
       The evaluator shall inspect each cipher text, C, produced by the RSA-OAEP
                               encryption operation of the TOE and make sure it is the correct length, either 256
                               or 384 bytes depending on RSA key size. The evaluator shall also feed into the
                               TOE’s RSA-OEAP decryption operation some cipher texts that are the wrong
                               length and verify that the erroneous input is detected and that the decryption
                               operation exits with an error code.</li>
-                            <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_COP.1:2</a>:
+                            <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_COP.1/KeyEncap:2</a>:
       The evaluator shall convert each cipher text, C, produced by the RSA-OAEP
                               encryption operation of the TOE to the correct cipher text integer, c, and use the
                               decryption primitive to compute em = RSADP((n,d),c) and convert em to the
@@ -1255,7 +1255,7 @@ The following sections list Common Criteria and technology terms used in this do
                               operation some cipher texts where the first byte of EM was set to a value other
                               than 0x00, and verify that the erroneous input is detected and that the decryption
                               operation exits with an error code.</li>
-                            <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_COP.1:3</a>:
+                            <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_COP.1/KeyEncap:3</a>:
       The evaluator shall decrypt each cipher text, C, produced by the RSA-OAEP
                               encryption operation of the TOE using RSADP, and perform the OAEP decoding
                               operation (described in NIST SP 800-56B section 7.2.2.4) to recover HA’ || X. For
@@ -1263,7 +1263,7 @@ The following sections list Common Criteria and technology terms used in this do
                               algorithm and verify that HA' = Hash(A). The evaluator shall also force the TOE
                               to perform some RSA-OAEP decryptions where the A value is passed incorrectly,
                               and the evaluator shall verify that an error is detected.</li>
-                            <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FCS_COP.1:4</a>:
+                            <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FCS_COP.1/KeyEncap:4</a>:
       The evaluator shall check the format of the ‘X’ string recovered in OAEP.Test.3
                               to ensure that the format is of the form PS || 01 || K, where PS consists of zero or
                               more consecutive 0x00 bytes and K is the transported keying material. The
@@ -1272,7 +1272,7 @@ The following sections list Common Criteria and technology terms used in this do
                               the leftmost non-zero byte is not 0x01). These incorrectly formatted ‘X’ variables
                               shall be detected by the RSA-OEAP decrypt function.
                               </li>
-                            <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FCS_COP.1:5</a>:
+                            <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FCS_COP.1/KeyEncap:5</a>:
       The evaluator shall trigger all detectable decryption errors and validate that the
                               returned error codes are the same and that no information is given back to the
                               sender on which type of error occurred. The evaluator shall also validate that no
@@ -1282,7 +1282,7 @@ The following sections list Common Criteria and technology terms used in this do
                         </p>
                         <p>If the KTS-KEM-KWS scheme was selected, the evaluator shall perform the following
                           tests:<span class="testlist-"><ul>
-                            <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_COP.1:6</a>:
+                            <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_COP.1/KeyEncap:6</a>:
       The evaluator shall inspect each cipher text, C, produced by RSA-KEM-KWS
                               encryption operation of the TOE and make sure the length (in bytes) of the cipher
                               text, cLen, is greater than nLen (the length, in bytes, of the modulus of the RSA
@@ -1290,7 +1290,7 @@ The following sections list Common Criteria and technology terms used in this do
                               the key wrapping algorithm. The evaluator shall feed into the RSA-KEM-KWS
                               decryption operation a cipher text of unsupported length and verify that an error
                               is detected and that the decryption process stops.</li>
-                            <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_COP.1:7</a>:
+                            <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_COP.1/KeyEncap:7</a>:
       The evaluator shall separate the cipher text, C, produced by the sender-side of the
                               TOE into its C0 and C1 components and use the RSA decryption primitive to
                               recover the secret value, Z, from C0. The evaluator shall check that the unsigned
@@ -1300,7 +1300,7 @@ The following sections list Common Criteria and technology terms used in this do
                               decryption process detects the error. Similarly, the evaluator shall construct
                               examples where the cipher text is created with a secret value Z = n – 1 and make
                               sure the RSA-KEM-KWS decryption process detects the error.</li>
-                            <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_COP.1:8</a>:
+                            <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_COP.1/KeyEncap:8</a>:
       The evaluator shall attempt to successfully recover the secret value Z, derive the
                               key wrapping key, KWK, and unwrap the KWA-cipher text following the RSAKEM-KWS decryption process given in NISP SP 800-56B section 7.2.3.4. If the
                               key-wrapping algorithm is AES-CCM, the evaluator shall verify that the value of
@@ -1312,7 +1312,7 @@ The following sections list Common Criteria and technology terms used in this do
                               Similarly, if the key-wrapping algorithm is AES-CCM, the evaluator shall attempt
                               at least one decryption where the wrong nonce is given to the RSA-KEM-KWS
                               decryption operation and verify that a decryption error is detected.</li>
-                            <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_COP.1:9</a>:
+                            <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_COP.1/KeyEncap:9</a>:
       The evaluator shall trigger all detectable decryption errors and validate that the
                               resulting error codes are the same and that no information is given back to the
                               sender on which type of error occurred. The evaluator shall also validate that no
