@@ -55,6 +55,7 @@ output/FDEAA-release-linkable.html: SATA
 output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
+output/FDEAA-release-linkable.html: Sigver
 output/FDEAA-release-linkable.html: Smartcard
 output/FDEAA-release-linkable.html: TBD
 output/FDEAA-release-linkable.html: TODO
@@ -71,6 +72,7 @@ output/FDEAA-release-linkable.html: checksums
 output/FDEAA-release-linkable.html: choses
 output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
+output/FDEAA-release-linkable.html: fcs
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: iTC
 output/FDEAA-release-linkable.html: inorder
@@ -88,6 +90,7 @@ output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
 output/FDEAA-release-linkable.html: v2
 output/FDEAA-release-linkable.html: well26
+output/FDEAA-release-linkable.html: yyy
 output/FDEAA-release.html: 38F
 output/FDEAA-release.html: 56B
 output/FDEAA-release.html: 90A
@@ -119,6 +122,7 @@ output/FDEAA-release.html: S4
 output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
 output/FDEAA-release.html: Sanitization
+output/FDEAA-release.html: Sigver
 output/FDEAA-release.html: Smartcard
 output/FDEAA-release.html: TBD
 output/FDEAA-release.html: Tweakable
@@ -131,6 +135,7 @@ output/FDEAA-release.html: cPPs
 output/FDEAA-release.html: checksums
 output/FDEAA-release.html: choses
 output/FDEAA-release.html: crypto
+output/FDEAA-release.html: fcs
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: inorder
@@ -197,6 +202,7 @@ output/FDEAA-sd.html: nist
 output/FDEAA-sd.html: pass’
 output/FDEAA-sd.html: preauthentication
 output/FDEAA-sd.html: subkey
+output/FDEAA-sd.html: yyy
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
@@ -256,6 +262,7 @@ output/FDEAA.html: SATA
 output/FDEAA.html: SHAVS
 output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
+output/FDEAA.html: Sigver
 output/FDEAA.html: Smartcard
 output/FDEAA.html: TBD
 output/FDEAA.html: TODO
@@ -273,6 +280,7 @@ output/FDEAA.html: checksums
 output/FDEAA.html: choses
 output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
+output/FDEAA.html: fcs
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: inorder
@@ -291,3 +299,4 @@ output/FDEAA.html: un
 output/FDEAA.html: v1
 output/FDEAA.html: v2
 output/FDEAA.html: well26
+output/FDEAA.html: yyy

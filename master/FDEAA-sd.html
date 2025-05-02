@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html><head><title>Supporting Document - collaborative Protection Profile for Full Drive Encryption – Encryption Engine</title><style type="text/css">
+<html><head><title>Supporting Document - collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition</title><style type="text/css">
     #toc a{
         display: block;
     }
@@ -271,7 +271,7 @@
     }    
    
    </style></head><body><div style="text-align: center; margin-left: auto; margin-right: auto;"><h1 class="title" style="page-break-before:auto;">Supporting Document<br/>
-        Mandatory Technical Document</h1><img src="images/niaplogo.png" alt="NIAP"></img><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>collaborative Protection Profile for Full Drive Encryption – Encryption Engine<br/>
+        Mandatory Technical Document</h1><img src="images/niaplogo.png" alt="NIAP"></img><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition<br/>
       Version: 2.0<br/>2025-04-11<br/><b>National Information Assurance Partnership</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
       and the associated Common Evaluation Methodology for
       Information Technology Security Evaluation.</p><p>SDs may be “Guidance Documents”, that highlight specific approaches 
@@ -291,7 +291,7 @@
       
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
-      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#man-sfrs" style="text-indent:10px">2.1<span>TOE SFR Evaluation Activities</span></a><a href="#fcs" style="text-indent:20px">2.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">2.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">2.1.3<span>Protection of the TSF (FPT)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.2<span>Evaluation Activities for Optional SFRs</span></a><a href="#fpt" style="text-indent:20px">2.2.1<span>Protection of the TSF (FPT)</span></a><a href="#sel-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#fcs" style="text-indent:20px">2.3.1<span>Cryptographic Support (FCS)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.5<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#adv" style="text-indent:10px">3.1<span>ADV: Development</span></a><a href="#agd" style="text-indent:10px">3.2<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:10px">3.3<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:10px">3.4<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:10px">3.5<span>Class AVA: Vulnerability Assessment</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the collaborative Protection Profile for Full Drive Encryption – Encryption Engine is
+      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#man-sfrs" style="text-indent:10px">2.1<span>TOE SFR Evaluation Activities</span></a><a href="#fcs" style="text-indent:20px">2.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">2.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">2.1.3<span>Protection of the TSF (FPT)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.2<span>Evaluation Activities for Optional SFRs</span></a><a href="#fpt" style="text-indent:20px">2.2.1<span>Protection of the TSF (FPT)</span></a><a href="#sel-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#fcs" style="text-indent:20px">2.3.1<span>Cryptographic Support (FCS)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.5<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#adv" style="text-indent:10px">3.1<span>ADV: Development</span></a><a href="#agd" style="text-indent:10px">3.2<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:10px">3.3<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:10px">3.4<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:10px">3.5<span>Class AVA: Vulnerability Assessment</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition is
     to describe the security functionality of 
     
     products in terms of 
@@ -843,7 +843,34 @@ The following sections list Common Criteria and technology terms used in this do
                     (if applicable), and how to enable/disable the use of specific power saving states (if
                     applicable).</p>
                 </div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  <span style="" class="comment " id="Comment-30-">May need to revisit this writeup.</span>
+                  <span style="" class="comment " id="Comment-28-">May need to revisit this writeup.</span>
+                  <p>
+                  If item a) and/or b) is selected in FMT_SMF.1.1: The evaluator shall verify that the
+                  TOE has the functionality to forward a command to the EE to change and
+                  cryptographically erase the DEK. The actual testing of the cryptographic erase will take
+                  place in the EE.
+                  </p>
+                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall initialize the TOE such that
+                    it requires the user to input an authorization factor in order to access encrypted data.</p>
+                  <p>
+                    <span class="testlist-"><ul><li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FMT_SMF.1:1</a>:
+      The evaluator shall first provision user authorization factors, and then verify
+                      all authorization values supported allow the user access to the encrypted data. Then
+                      the evaluator shall exercise the management functions to change a user’s
+                      authorization factor values to a new one. Then he or she will verify that the TOE
+                      denies access to the user’s encrypted data when he or she uses the old or original
+                      authorization factor values to gain access.</li>
+                    xxx
+                  </ul></span>
+                  </p>
+                  <p>yyy</p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                 
+                  <p></p>
+                  <p></p>
                 </div></div></span></div><div class="comp" id="FMT-SMR-1"><h4>FMT_SMR.1 Security Roles</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMR.1</div>
 		TODO: You need to explain the lack of EAs for this component!!!!
 	
@@ -916,12 +943,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                      <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
