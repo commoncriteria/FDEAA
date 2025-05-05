@@ -1849,9 +1849,10 @@ The following sections list Common Criteria and technology terms used in this do
                         running 1000 iterations with the same values using a known good implementation.</p>
                       <p>The evaluator shall test the decrypt functionality using the same test as above,
                         exchanging CT and PT, and replacing <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt with <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Decrypt.</p>
-                      <p><u><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM Test</b></u>
-                      <p>The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
-                        combination of the following input parameter lengths:</p></p>
+                      <p><head><u><b>AES-GCM Test</b></u></head></p>
+                      <body><p>The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
+                        combination of the following input parameter lengths:</p></body>
+                      
                       <p><b>128 bit and 256 bit keys</b></p>
                       <p><b>Two plaintext lengths.</b> One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported. The other plaintext length shall not be an integer multiple of 128 bits, if supported.</p>
                       <p><b>Three AAD lengths.</b> One AAD length shall be 0, if supported. One AAD length
