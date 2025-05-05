@@ -4,6 +4,8 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/f-element[1]""/title[1]""/h:s[1]"and speci"/assignable[2]"list of s"
 * Error: Found a "selectables" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]"The TSF s"/h:s[1]""/selectables[1]""
+* Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[20]""/f-element[2]""
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[20]""/f-element[3]""
 * Warning: This document still has at least one comment.

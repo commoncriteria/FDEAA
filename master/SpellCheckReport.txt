@@ -91,6 +91,7 @@ output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: sfr
 output/FDEAA-release-linkable.html: smartcard
 output/FDEAA-release-linkable.html: subkey
+output/FDEAA-release-linkable.html: theat
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
 output/FDEAA-release-linkable.html: v2
@@ -210,6 +211,7 @@ output/FDEAA-sd.html: nist
 output/FDEAA-sd.html: pass’
 output/FDEAA-sd.html: preauthentication
 output/FDEAA-sd.html: subkey
+output/FDEAA-sd.html: theat
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
@@ -307,6 +309,7 @@ output/FDEAA.html: sanitization
 output/FDEAA.html: sfr
 output/FDEAA.html: smartcard
 output/FDEAA.html: subkey
+output/FDEAA.html: theat
 output/FDEAA.html: un
 output/FDEAA.html: v1
 output/FDEAA.html: v2
