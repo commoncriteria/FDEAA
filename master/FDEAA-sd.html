@@ -465,20 +465,20 @@ The following sections list Common Criteria and technology terms used in this do
                         <li>Release an invalid authorization factor and verify that access to decrypted plaintext data is denied</li>
                         <li>Release a valid authorization factor and verify that access to decrypted plaintext data is granted.</li>
                       </ul>
-                    </div></div></span></div><div class="comp" id="FCS-CKM-6"><h4>FCS_CKM.6 Cryptographic Key and Key Material Destruction (Destruction Timing)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6</div>
-                      
-                      
-                      
-                      
-                  
-                    
-                      
-
-                    
-                    
-                    
-                    
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS provides a high level description of what it means for keys and key material to be no longer needed and when then should be expected to be destroyed.</div><div class="ea">
+                    </div></div></span></div><div class="comp" id="FCS-CKM-6"><h4>FCS_CKM.6 Cryptographic Key and Key Material Destruction (Destruction Timing)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1</div>
+                      <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify the TSS provides a high level description of what it means for keys and key material to be no longer needed and when then should be expected to be destroyed.</div>
+                      <div class="eacategory">Guidance</div><div class="ea">There are no AGD evaluation activities for this SFR.</div>
+                      <div class="eacategory">KMD</div><div class="ea">
+                        <p>The evaluator shall verify the KMD includes a description of the areas where keys and
+                          key material reside and when the keys and key material are no longer needed.</p>
+                        <p>The evaluator shall verify the KMD includes a key lifecycle, that includes a description
+                          where key material reside, how the key material is used, how it is determined that keys
+                          and key material are no longer needed, and how the material is destroyed once it is not
+                          needed and that the documentation in the KMD follows FCS_CKM.4(a) for the
+                          destruction.</p></div>
+                      <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
+                  <div class="element-activity-header">FCS_CKM.6.2</div>
+                    <div class="eacategory">TSS</div><div class="ea">
                       <p>The evaluator examines the TSS to ensure it describes how the keys are managed in
                         volatile memory. This description includes details of how each identified key is
                         introduced into volatile memory (e.g. by derivation from user input, or by unwrapping
@@ -495,7 +495,10 @@ The following sections list Common Criteria and technology terms used in this do
                         that may not strictly conform to the key destruction requirement. If the ST makes use
                         of the open assignment and fills in the type of pattern that is used, the evaluator
                         examines the TSS to ensure it describes how that pattern is obtained and used. The
-                        evaluator shall verify that the pattern does not contain any CSPs.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div><div class="ea">
+                        evaluator shall verify that the pattern does not contain any CSPs.</p></div>
+                      
+
+                    <div class="eacategory">Guidance</div><div class="ea">
                       <p>There are a variety of concerns that may prevent or delay key destruction in some cases.
                         The evaluator shall check that the guidance documentation identifies configurations or
                         circumstances that may not strictly conform to the key destruction requirement, and
@@ -522,16 +525,12 @@ The following sections list Common Criteria and technology terms used in this do
                         recoverable data may remain in damaged areas of the drive.</p>
                       <p>Finally, it is assumed the keys are not stored using a method that would be inaccessible
                         to TRIM, such as being contained in a file less than 982 bytes which would be
-                        completely contained in the master file table.</p></div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
-                        <p>The evaluator shall verify the KMD includes a description of the areas where keys and
-                          key material reside and when the keys and key material are no longer needed.</p>
-                        <p>The evaluator shall verify the KMD includes a key lifecycle, that includes a description
-                          where key material reside, how the key material is used, how it is determined that keys
-                          and key material are no longer needed, and how the material is destroyed once it is not
-                          needed and that the documentation in the KMD follows FCS_CKM.4(a) for the
-                          destruction.</p></div><div class="eacategory">KMD</div><div class="ea"> Refer to the TSS. KMD is combined with the TSS.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div><div class="ea">
+                        completely contained in the master file table.</p></div>
+                    
+                    <div class="eacategory">KMD</div><div class="ea"> Refer to the TSS. KMD is combined with the TSS.</div>
+                    <div class="eacategory">Tests</div><div class="ea">
                       <span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_CKM.6:1</a>:
+                        <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_CKM.6.2:1</a>:
        Applied to each key held as plaintext in volatile memory and subject to
                           destruction by overwrite by the TOE (whether or not the plaintext value is subsequently
                           encrypted for storage in volatile or non-volatile memory). In the case where the only
@@ -562,7 +561,7 @@ The following sections list Common Criteria and technology terms used in this do
                               <p>For the selection of “logically addresses the storage location…”, the following tests are used to determine the TOE is able to request
                                 the platform to overwrite the key with a TOE supplied pattern.</p>
                           </li>
-                          <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6:2</a>:
+                          <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:2</a>:
       
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media (e.g., MBR file system):<ol type="1">
                               <li>Record the value of the key in the TOE subject to clearing.</li>
@@ -578,7 +577,7 @@ The following sections list Common Criteria and technology terms used in this do
 
                             </ol>
                           </li>
-                          <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_CKM.6:3</a>:
+                          <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_CKM.6.2:3</a>:
       
                             Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
                               <li>Record the logical storage location of the key in the TOE subject to clearing</li>
@@ -593,32 +592,33 @@ The following sections list Common Criteria and technology terms used in this do
                             </p>
                           </li>
                       </ul></span>
-                    </div></div></span></div><div class="comp" id="FCS-CKM-6-POWER"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6/Power</div>
-                  
-                  
-                  
-                  
-                
-                    
-                      
-                      
-                      
-                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                    </div>
+                </span></div><div class="comp" id="FCS-CKM-6-POWER"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1/Power</div>
+                  <div class="eacategory">TSS</div><div class="ea">
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
                       <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div><div class="ea">The evaluator shall verify the TSS provides a description of what keys and key material
-                      are destroyed when entering any Compliant power saving state.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div><div class="ea">The evaluator shall validate that guidance documentation contains clear warnings and
+                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div>
+                  <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
+                    Operational Environment for memory clearing and how that is achieved.</div>
+                  <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
+                  <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
+                <div class="element-activity-header">FCS_CKM.6.2/Power</div>
+                    <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify the TSS provides a description of what keys and key material
+                      are destroyed when entering any Compliant power saving state.</div>
+                      <div class="eacategory">Guidance</div><div class="ea">The evaluator shall validate that guidance documentation contains clear warnings and
                         information on conditions in which the TOE may end up in a non-Compliant power
                         saving state indistinguishable from a Compliant power saving state. In that case it must
-                        contain mitigation instructions on what to do in such scenarios.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div><div class="eacategory">KMD</div><div class="ea">
+                        contain mitigation instructions on what to do in such scenarios.</div>
+                      <div class="eacategory">KMD</div><div class="ea">
                         <p>The evaluator shall verify the KMD includes a description of the areas where keys and
                           key material reside.</p>
                           <p>The evaluator shall verify the KMD includes a key lifecycle that includes a description
                             where key material resides, how the key material is used, and how the material is
                             destroyed once it is not needed and that the documentation in the KMD follows
-                            FCS_CKM.6 for the destruction.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-KYC-EXT-1"><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_KYC_EXT.1</div>
+                            FCS_CKM.6 for the destruction.</p></div>
+                      <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
+                  </span></div><div class="comp" id="FCS-KYC-EXT-1"><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_KYC_EXT.1</div>
 		TODO: You need to explain the lack of EAs for this component!!!!
 	
                       
@@ -745,45 +745,44 @@ The following sections list Common Criteria and technology terms used in this do
                     
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                       <p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generating using an RBG described in FCS_RBG_EXT.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</p>
-                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_VAL_EXT.1</div>
-                      
-                      
-                      
-                      
-                  
-		TODO: You need to explain the lack of EAs for this component!!!!
-	<div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
+                      <div class="eacategory">TSS</div><div class="ea">
                         <p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</p>
                         <p>The evaluator shall examine the TSS to review a high-level description if multiple
                           submasks are used within the TOE, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                          validated before combining, once combined validation takes place).</p></div>
+                      <div class="eacategory">Guidance</div><div class="ea">
                         <p>(conditional) If the validation functionality is configurable, the evaluator shall examine
                           the operational guidance to ensure it describes how to configure the TOE to ensure the
                           limits regarding validation attempts can be established.</p>
                         <p>(conditional) If the validation functionality is specified by the ST author, the evaluator
                           shall examine the operational guidance to ensure that it states the values that the TOE
-                          uses for limits regarding validation attempts.</p></div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
+                          uses for limits regarding validation attempts.</p></div>
+                      <div class="eacategory">KMD</div><div class="ea">
                         <p>The evaluator shall examine the KMD to verify that it described the method the TOE
                           employs to limit the number of consecutively failed authorization attempts.</p>
                         <p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
                           is performed. The description of the validation process in the KMD provides detailed
                           information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submask(s).</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                          works, such that it does not expose any material that might compromise the submask(s).</p></div>
+                      <div class="eacategory">Tests</div><div class="ea">
                         The evaluator shall perform the following tests:
                         <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_VAL_EXT.1:1</a>:
+                          <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_VAL_EXT.1.1:1</a>:
       The evaluator shall determine the limit on the average rate of the number of
                             consecutive failed authorization attempts. The evaluator will test the TOE by entering
                             that number of incorrect authorization factors in consecutive attempts to access the
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</li>
-                          <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_VAL_EXT.1:2</a>:
+                          <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_VAL_EXT.1.1:2</a>:
       For each validated authorization factor, ensure that when the user provides an
                             incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
                             the TOE (e.g., to the EE).</li>
-                        </ul></span></div></div></span></div><h2 class="indexable" data-level="2" id="FMT">2.1.2 Security Management (FMT)</h2><div class="comp" id="FMT-MOF-1-1"><h4>FMT_MOF.1 Management of Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF.1</div>
+                        </ul></span></div>
+                  <div class="element-activity-header">FCS_VAL_EXT.1.2</div>
+			TODO: You need to explain the lack of EAs for this element!!!!<br/><br/></span></div><h2 class="indexable" data-level="2" id="FMT">2.1.2 Security Management (FMT)</h2><div class="comp" id="FMT-MOF-1-1"><h4>FMT_MOF.1 Management of Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF.1</div>
                   
                   
                   
@@ -1152,7 +1151,7 @@ The following sections list Common Criteria and technology terms used in this do
                             the evaluator shall generate a set of 10 1024-bit message, public key and signature
                             tuples and modify one of the values (message, public key or signature) in five of the 10
                             tuples. The evaluator shall obtain in response a set of 10 PASS/FAIL values.</p>
-                          <p><i>RSA Signature Algorithm Tests</i></p>
+                          <p><u>RSA Signature Algorithm Tests</u></p>
                           <p><b>Signature Verification Test</b></p>
                           <p>The evaluator shall perform the Signature Verification test to verify the ability of the
                             TOE to recognize another party’s authentic and unauthentic signatures. The evaluator
