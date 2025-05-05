@@ -27,6 +27,7 @@ output/FDEAA-release-linkable.html: G2
 output/FDEAA-release-linkable.html: G3
 output/FDEAA-release-linkable.html: GFSBox
 output/FDEAA-release-linkable.html: IUT
+output/FDEAA-release-linkable.html: IandA
 output/FDEAA-release-linkable.html: K1
 output/FDEAA-release-linkable.html: K2
 output/FDEAA-release-linkable.html: KRKs
@@ -106,6 +107,7 @@ output/FDEAA-release.html: ECD
 output/FDEAA-release.html: Electrotechnical
 output/FDEAA-release.html: G2
 output/FDEAA-release.html: G3
+output/FDEAA-release.html: IandA
 output/FDEAA-release.html: KRKs
 output/FDEAA-release.html: KTS6
 output/FDEAA-release.html: L1
@@ -234,6 +236,7 @@ output/FDEAA.html: G3
 output/FDEAA.html: GFSBox
 output/FDEAA.html: HA’
 output/FDEAA.html: IUT
+output/FDEAA.html: IandA
 output/FDEAA.html: K1
 output/FDEAA.html: K2
 output/FDEAA.html: KRKs
