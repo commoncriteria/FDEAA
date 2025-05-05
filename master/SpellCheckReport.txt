@@ -61,7 +61,6 @@ output/FDEAA-release-linkable.html: Sanitization
 output/FDEAA-release-linkable.html: Sigver
 output/FDEAA-release-linkable.html: Smartcard
 output/FDEAA-release-linkable.html: TBD
-output/FDEAA-release-linkable.html: TODO
 output/FDEAA-release-linkable.html: Tweakable
 output/FDEAA-release-linkable.html: Valu
 output/FDEAA-release-linkable.html: XEX
@@ -91,7 +90,6 @@ output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: sfr
 output/FDEAA-release-linkable.html: smartcard
 output/FDEAA-release-linkable.html: subkey
-output/FDEAA-release-linkable.html: theat
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
 output/FDEAA-release-linkable.html: v2
@@ -195,7 +193,6 @@ output/FDEAA-sd.html: RSAKEM
 output/FDEAA-sd.html: SHAVS
 output/FDEAA-sd.html: SP800
 output/FDEAA-sd.html: Sanitization
-output/FDEAA-sd.html: TODO
 output/FDEAA-sd.html: Valu
 output/FDEAA-sd.html: X’
 output/FDEAA-sd.html: acvp
@@ -211,7 +208,6 @@ output/FDEAA-sd.html: nist
 output/FDEAA-sd.html: pass’
 output/FDEAA-sd.html: preauthentication
 output/FDEAA-sd.html: subkey
-output/FDEAA-sd.html: theat
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
@@ -277,7 +273,6 @@ output/FDEAA.html: Sanitization
 output/FDEAA.html: Sigver
 output/FDEAA.html: Smartcard
 output/FDEAA.html: TBD
-output/FDEAA.html: TODO
 output/FDEAA.html: Tweakable
 output/FDEAA.html: Valu
 output/FDEAA.html: XEX
@@ -309,7 +304,6 @@ output/FDEAA.html: sanitization
 output/FDEAA.html: sfr
 output/FDEAA.html: smartcard
 output/FDEAA.html: subkey
-output/FDEAA.html: theat
 output/FDEAA.html: un
 output/FDEAA.html: v1
 output/FDEAA.html: v2
