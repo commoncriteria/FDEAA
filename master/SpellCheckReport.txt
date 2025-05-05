@@ -142,7 +142,6 @@ output/FDEAA-release.html: fcs
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: inorder
-output/FDEAA-release.html: lifecycle
 output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
