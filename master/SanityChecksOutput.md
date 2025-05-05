@@ -15,8 +15,6 @@
 * Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
 * Error: Detected multiple elements with an id of 'fmt-smf-1'.
 * Error: Detected multiple elements with an id of 'fmt-smf-1'.
-* Error: Detected multiple elements with an id of 'fpt-kyp-ext-1'.
-* Error: Detected multiple elements with an id of 'fpt-kyp-ext-1'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[22]""
