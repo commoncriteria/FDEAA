@@ -1825,24 +1825,24 @@ The following sections list Common Criteria and technology terms used in this do
                         <br/><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[0] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>
                         <br/>PT[0] = PT</p>
                       <p>for i = 1 to 100 {
-                        <br/>Output Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[0]
-                        <br/>for j = 1 to 1000 {
-                          <br/>if j == 1 {
-                            <br/>CT[1] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[1])
-                            <br/>PT[2] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i]
-                            <br/>} else {
-                              <br/>CT[j] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], PT[j])
-                              <br/>PT[j+1] = CT[j-1]
-                              <br/>}
-                              <br/>}
-                              <br/>Output CT[1000]</p>
+                        <br/>   Output Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[0]
+                        <br/>   for j = 1 to 1000 {
+                        <br/>   if j == 1 {
+                          <br/>      CT[1] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[1])
+                          <br/>      PT[2] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i]
+                        <br/>   } else {
+                          <br/>      CT[j] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], PT[j])
+                          <br/>      PT[j+1] = CT[j-1]
+                        <br/>   }
+                        <br/>}
+                        <br/>   Output CT[1000]</p>
                       <p>
-                        <br/>If KeySize == 128 { Key[i+1] = Key[i] xor CT[1000] }
-                        <br/>If KeySize == 256 { Key[i+1] = Key[i] xor ((CT[999] &lt;&lt; 128) | CT[1000]) }
+                        <br/>   If KeySize == 128 { Key[i+1] = Key[i] xor CT[1000] }
+                        <br/>   If KeySize == 256 { Key[i+1] = Key[i] xor ((CT[999] &lt;&lt; 128) | CT[1000]) }
                       </p>
                       <p>
-                        <br/><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i+1] = CT[1000]
-                        <br/>PT[0] = CT[999]
+                        <br/>   <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i+1] = CT[1000]
+                        <br/>   PT[0] = CT[999]
                          }</p>
                       <p>The ciphertext computed in the 1000th iteration (CT[1000]) is the result for each of the
                         100 3-tuples for each selected key size. This result shall be compared to the result of
@@ -1851,14 +1851,14 @@ The following sections list Common Criteria and technology terms used in this do
                         exchanging CT and PT, and replacing <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt with <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Decrypt.</p>
                       <p><u><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM Test</b></u></p>
                      
-                      <p>   The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
+                      <p>The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
                         combination of the following input parameter lengths:</p>
-                      <p><b>128 bit and 256 bit keys</b></p>
-                      <p><b>Two plaintext lengths.</b> One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported. The other plaintext length shall not be an integer multiple of 128 bits, if supported.</p>
-                      <p><b>Three AAD lengths.</b> One AAD length shall be 0, if supported. One AAD length
+                      <p><b>   128 bit and 256 bit keys</b></p>
+                      <p><b>   Two plaintext lengths.</b> One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported. The other plaintext length shall not be an integer multiple of 128 bits, if supported.</p>
+                      <p><b>   Three AAD lengths.</b> One AAD length shall be 0, if supported. One AAD length
                       shall be a non-zero integer multiple of 128 bits, if supported. One AAD length shall
                       not be an integer multiple of 128 bits, if supported.</p>
-                      <p><b>Two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths.</b> If 96 bit <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is supported, 96 bits shall be one of the two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths
+                      <p><b>   Two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths.</b> If 96 bit <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is supported, 96 bits shall be one of the two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths
                       tested.</p>
                       <p>The evaluator shall test the encrypt functionality using a set of 10 key, plaintext, AAD,
                         and <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> tuples for each combination of parameter lengths above and obtain the
@@ -1876,8 +1876,8 @@ The following sections list Common Criteria and technology terms used in this do
                       <p><b><u><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES Test</u></b></p>
                       <p>The evaluator shall test the encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES for each combination of
                         the following input parameter lengths:</p>
-                      <p><b>256 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128) and 512 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256) keys</b></p>
-                      <p><b>Three data unit (i.e., plaintext) lengths. </b>One of the data unit lengths shall be a
+                      <p><b>   256 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128) and 512 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256) keys</b></p>
+                      <p><b>   Three data unit (i.e., plaintext) lengths. </b>One of the data unit lengths shall be a
                       non-zero integer multiple of 128 bits, if supported. One of the data unit lengths
                       shall be an integer multiple of 128 bits, if supported. The third data unit length shall
                       be either the longest supported data unit length or 216 bits, whichever is smaller.</p>

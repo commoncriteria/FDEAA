@@ -1758,24 +1758,24 @@ The following sections list Common Criteria and technology terms used in this do
                         <br><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[0] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>
                         <br>PT[0] = PT</p>
                       <p>for i = 1 to 100 {
-                        <br>Output Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[0]
-                        <br>for j = 1 to 1000 {
-                          <br>if j == 1 {
-                            <br>CT[1] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[1])
-                            <br>PT[2] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i]
-                            <br>} else {
-                              <br>CT[j] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], PT[j])
-                              <br>PT[j+1] = CT[j-1]
-                              <br>}
-                              <br>}
-                              <br>Output CT[1000]</p>
+                        <br>&#8194;&#8194;&#8194;Output Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[0]
+                        <br>&#8194;&#8194;&#8194;for j = 1 to 1000 {
+                        <br>&#8194;&#8194;&#8194;if j == 1 {
+                          <br>&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;CT[1] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i], PT[1])
+                          <br>&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;PT[2] = <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i]
+                        <br>&#8194;&#8194;&#8194;} else {
+                          <br>&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;CT[j] = <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt(Key[i], PT[j])
+                          <br>&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;PT[j+1] = CT[j-1]
+                        <br>&#8194;&#8194;&#8194;}
+                        <br>}
+                        <br>&#8194;&#8194;&#8194;Output CT[1000]</p>
                       <p>
-                        <br>If KeySize == 128 { Key[i+1] = Key[i] xor CT[1000] }
-                        <br>If KeySize == 256 { Key[i+1] = Key[i] xor ((CT[999] &lt;&lt; 128) | CT[1000]) }
+                        <br>&#8194;&#8194;&#8194;If KeySize == 128 { Key[i+1] = Key[i] xor CT[1000] }
+                        <br>&#8194;&#8194;&#8194;If KeySize == 256 { Key[i+1] = Key[i] xor ((CT[999] &lt;&lt; 128) | CT[1000]) }
                       </p>
                       <p>
-                        <br><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i+1] = CT[1000]
-                        <br>PT[0] = CT[999]
+                        <br>&#8194;&#8194;&#8194;<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>[i+1] = CT[1000]
+                        <br>&#8194;&#8194;&#8194;PT[0] = CT[999]
                          }</p>
                       <p>The ciphertext computed in the 1000th iteration (CT[1000]) is the result for each of the
                         100 3-tuples for each selected key size<a id="period_550" href="#period_550">. </a>This result shall be compared to the result of
@@ -1784,14 +1784,14 @@ The following sections list Common Criteria and technology terms used in this do
                         exchanging CT and PT, and replacing <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt with <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Decrypt<a id="period_552" href="#period_552">. </a></p>
                       <p><u><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM Test</b></u></p>
                      
-                      <p>&#8194;&#8194;&#8194;The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
+                      <p>The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
                         combination of the following input parameter lengths:</p>
-                      <p><b>128 bit and 256 bit keys</b></p>
-                      <p><b>Two plaintext lengths<a id="period_553" href="#period_553">. </a></b> One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported<a id="period_554" href="#period_554">. </a>The other plaintext length shall not be an integer multiple of 128 bits, if supported<a id="period_555" href="#period_555">. </a></p>
-                      <p><b>Three AAD lengths<a id="period_556" href="#period_556">. </a></b> One AAD length shall be 0, if supported<a id="period_557" href="#period_557">. </a>One AAD length
+                      <p><b>&#8194;&#8194;&#8194;128 bit and 256 bit keys</b></p>
+                      <p><b>&#8194;&#8194;&#8194;Two plaintext lengths<a id="period_553" href="#period_553">. </a></b> One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported<a id="period_554" href="#period_554">. </a>The other plaintext length shall not be an integer multiple of 128 bits, if supported<a id="period_555" href="#period_555">. </a></p>
+                      <p><b>&#8194;&#8194;&#8194;Three AAD lengths<a id="period_556" href="#period_556">. </a></b> One AAD length shall be 0, if supported<a id="period_557" href="#period_557">. </a>One AAD length
                       shall be a non-zero integer multiple of 128 bits, if supported<a id="period_558" href="#period_558">. </a>One AAD length shall
                       not be an integer multiple of 128 bits, if supported<a id="period_559" href="#period_559">. </a></p>
-                      <p><b>Two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths<a id="period_560" href="#period_560">. </a></b> If 96 bit <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is supported, 96 bits shall be one of the two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths
+                      <p><b>&#8194;&#8194;&#8194;Two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths<a id="period_560" href="#period_560">. </a></b> If 96 bit <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is supported, 96 bits shall be one of the two <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> lengths
                       tested<a id="period_561" href="#period_561">. </a></p>
                       <p>The evaluator shall test the encrypt functionality using a set of 10 key, plaintext, AAD,
                         and <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> tuples for each combination of parameter lengths above and obtain the
@@ -1809,8 +1809,8 @@ The following sections list Common Criteria and technology terms used in this do
                       <p><b><u><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES Test</u></b></p>
                       <p>The evaluator shall test the encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES for each combination of
                         the following input parameter lengths:</p>
-                      <p><b>256 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128) and 512 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256) keys</b></p>
-                      <p><b>Three data unit (i.e., plaintext) lengths<a id="period_569" href="#period_569">. </a></b>One of the data unit lengths shall be a
+                      <p><b>&#8194;&#8194;&#8194;256 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128) and 512 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256) keys</b></p>
+                      <p><b>&#8194;&#8194;&#8194;Three data unit (i.e., plaintext) lengths<a id="period_569" href="#period_569">. </a></b>One of the data unit lengths shall be a
                       non-zero integer multiple of 128 bits, if supported<a id="period_570" href="#period_570">. </a>One of the data unit lengths
                       shall be an integer multiple of 128 bits, if supported<a id="period_571" href="#period_571">. </a>The third data unit length shall
                       be either the longest supported data unit length or 216 bits, whichever is smaller<a id="period_572" href="#period_572">. </a></p>
