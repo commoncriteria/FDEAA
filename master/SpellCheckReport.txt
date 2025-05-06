@@ -28,7 +28,6 @@ output/FDEAA-release-linkable.html: G2
 output/FDEAA-release-linkable.html: G3
 output/FDEAA-release-linkable.html: GFSBox
 output/FDEAA-release-linkable.html: IUT
-output/FDEAA-release-linkable.html: IandA
 output/FDEAA-release-linkable.html: K1
 output/FDEAA-release-linkable.html: K2
 output/FDEAA-release-linkable.html: KRKs
@@ -60,7 +59,6 @@ output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
 output/FDEAA-release-linkable.html: Sigver
-output/FDEAA-release-linkable.html: Smartcard
 output/FDEAA-release-linkable.html: TBD
 output/FDEAA-release-linkable.html: Tweakable
 output/FDEAA-release-linkable.html: Valu
@@ -91,7 +89,6 @@ output/FDEAA-release-linkable.html: nist
 output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: sfr
-output/FDEAA-release-linkable.html: smartcard
 output/FDEAA-release-linkable.html: softwarebased
 output/FDEAA-release-linkable.html: subkey
 output/FDEAA-release-linkable.html: un
@@ -114,7 +111,6 @@ output/FDEAA-release.html: ECD
 output/FDEAA-release.html: Electrotechnical
 output/FDEAA-release.html: G2
 output/FDEAA-release.html: G3
-output/FDEAA-release.html: IandA
 output/FDEAA-release.html: KRKs
 output/FDEAA-release.html: KTS6
 output/FDEAA-release.html: L1
@@ -134,7 +130,6 @@ output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
 output/FDEAA-release.html: Sanitization
 output/FDEAA-release.html: Sigver
-output/FDEAA-release.html: Smartcard
 output/FDEAA-release.html: TBD
 output/FDEAA-release.html: Tweakable
 output/FDEAA-release.html: Valu
@@ -159,7 +154,6 @@ output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: sanitization
 output/FDEAA-release.html: sfr
-output/FDEAA-release.html: smartcard
 output/FDEAA-release.html: softwarebased
 output/FDEAA-release.html: un
 output/FDEAA-release.html: v1
@@ -251,7 +245,6 @@ output/FDEAA.html: G3
 output/FDEAA.html: GFSBox
 output/FDEAA.html: HA’
 output/FDEAA.html: IUT
-output/FDEAA.html: IandA
 output/FDEAA.html: K1
 output/FDEAA.html: K2
 output/FDEAA.html: KRKs
@@ -283,7 +276,6 @@ output/FDEAA.html: SHAVS
 output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
 output/FDEAA.html: Sigver
-output/FDEAA.html: Smartcard
 output/FDEAA.html: TBD
 output/FDEAA.html: Tweakable
 output/FDEAA.html: Valu
@@ -316,7 +308,6 @@ output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: sanitization
 output/FDEAA.html: sfr
-output/FDEAA.html: smartcard
 output/FDEAA.html: softwarebased
 output/FDEAA.html: subkey
 output/FDEAA.html: un
