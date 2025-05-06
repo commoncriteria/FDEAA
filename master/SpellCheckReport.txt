@@ -40,6 +40,7 @@ output/FDEAA-release-linkable.html: L1
 output/FDEAA-release-linkable.html: L2
 output/FDEAA-release-linkable.html: Labelling
 output/FDEAA-release-linkable.html: MBRs
+output/FDEAA-release-linkable.html: MMMM
 output/FDEAA-release-linkable.html: NISP
 output/FDEAA-release-linkable.html: OEAP
 output/FDEAA-release-linkable.html: P9
@@ -75,8 +76,10 @@ output/FDEAA-release-linkable.html: checksums
 output/FDEAA-release-linkable.html: choses
 output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
+output/FDEAA-release-linkable.html: ee
 output/FDEAA-release-linkable.html: elmemnts
 output/FDEAA-release-linkable.html: fcs
+output/FDEAA-release-linkable.html: fde
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: iTC
 output/FDEAA-release-linkable.html: inorder
@@ -89,6 +92,7 @@ output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: sanitization
 output/FDEAA-release-linkable.html: sfr
 output/FDEAA-release-linkable.html: smartcard
+output/FDEAA-release-linkable.html: softwarebased
 output/FDEAA-release-linkable.html: subkey
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: v1
@@ -117,6 +121,7 @@ output/FDEAA-release.html: L1
 output/FDEAA-release.html: L2
 output/FDEAA-release.html: Labelling
 output/FDEAA-release.html: MBRs
+output/FDEAA-release.html: MMMM
 output/FDEAA-release.html: P9
 output/FDEAA-release.html: PBKDF2
 output/FDEAA-release.html: PINs
@@ -142,8 +147,10 @@ output/FDEAA-release.html: cPPs
 output/FDEAA-release.html: checksums
 output/FDEAA-release.html: choses
 output/FDEAA-release.html: crypto
+output/FDEAA-release.html: ee
 output/FDEAA-release.html: elmemnts
 output/FDEAA-release.html: fcs
+output/FDEAA-release.html: fde
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: inorder
@@ -153,6 +160,7 @@ output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: sanitization
 output/FDEAA-release.html: sfr
 output/FDEAA-release.html: smartcard
+output/FDEAA-release.html: softwarebased
 output/FDEAA-release.html: un
 output/FDEAA-release.html: v1
 output/FDEAA-release.html: v2
@@ -184,6 +192,7 @@ output/FDEAA-sd.html: KWK
 output/FDEAA-sd.html: KeySBox
 output/FDEAA-sd.html: KeySize
 output/FDEAA-sd.html: Labelling
+output/FDEAA-sd.html: MMMM
 output/FDEAA-sd.html: NISP
 output/FDEAA-sd.html: NIST’s
 output/FDEAA-sd.html: OEAP
@@ -199,8 +208,10 @@ output/FDEAA-sd.html: acvp
 output/FDEAA-sd.html: cLen
 output/FDEAA-sd.html: cPPs
 output/FDEAA-sd.html: decryptions
+output/FDEAA-sd.html: ee
 output/FDEAA-sd.html: evaluator’s
 output/FDEAA-sd.html: fail’
+output/FDEAA-sd.html: fde
 output/FDEAA-sd.html: lifecycle
 output/FDEAA-sd.html: miniscule
 output/FDEAA-sd.html: nLen
@@ -252,6 +263,7 @@ output/FDEAA.html: L1
 output/FDEAA.html: L2
 output/FDEAA.html: Labelling
 output/FDEAA.html: MBRs
+output/FDEAA.html: MMMM
 output/FDEAA.html: NISP
 output/FDEAA.html: OEAP
 output/FDEAA.html: P9
@@ -288,8 +300,10 @@ output/FDEAA.html: checksums
 output/FDEAA.html: choses
 output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
+output/FDEAA.html: ee
 output/FDEAA.html: elmemnts
 output/FDEAA.html: fcs
+output/FDEAA.html: fde
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: inorder
@@ -303,6 +317,7 @@ output/FDEAA.html: preauthentication
 output/FDEAA.html: sanitization
 output/FDEAA.html: sfr
 output/FDEAA.html: smartcard
+output/FDEAA.html: softwarebased
 output/FDEAA.html: subkey
 output/FDEAA.html: un
 output/FDEAA.html: v1
