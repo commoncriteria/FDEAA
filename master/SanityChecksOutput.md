@@ -9,8 +9,6 @@
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[24]""/f-element[3]""
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to fcs-kyc-ext-1-1-sel-1 from attribute
-        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[14]""/depends[1]""/on[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'fcs-kdf-ext-1'.

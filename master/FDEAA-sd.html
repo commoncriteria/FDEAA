@@ -291,7 +291,7 @@
       
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
-      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#man-sfrs" style="text-indent:10px">2.1<span>TOE SFR Evaluation Activities</span></a><a href="#fcs" style="text-indent:20px">2.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">2.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">2.1.3<span>Protection of the TSF (FPT)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.2<span>Evaluation Activities for Optional SFRs</span></a><a href="#fpt" style="text-indent:20px">2.2.1<span>Protection of the TSF (FPT)</span></a><a href="#sel-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#fcs" style="text-indent:20px">2.3.1<span>Cryptographic Support (FCS)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.5<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#adv" style="text-indent:10px">3.1<span>ADV: Development</span></a><a href="#agd" style="text-indent:10px">3.2<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:10px">3.3<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:10px">3.4<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:10px">3.5<span>Class AVA: Vulnerability Assessment</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition is
+      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#man-sfrs" style="text-indent:10px">2.1<span>TOE SFR Evaluation Activities</span></a><a href="#fcs" style="text-indent:20px">2.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">2.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">2.1.3<span>Protection of the TSF (FPT)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.2<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#fcs" style="text-indent:20px">2.3.1<span>Cryptographic Support (FCS)</span></a><a href="#fpt" style="text-indent:20px">2.3.2<span>Protection of the TSF (FPT)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.5<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#adv" style="text-indent:10px">3.1<span>ADV: Development</span></a><a href="#agd" style="text-indent:10px">3.2<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:10px">3.3<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:10px">3.4<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:10px">3.5<span>Class AVA: Vulnerability Assessment</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition is
     to describe the security functionality of 
     
     products in terms of 
@@ -692,94 +692,14 @@ The following sections list Common Criteria and technology terms used in this do
                           broken without a cryptographic exhaust or the initial authorization value and the
                           effective strength of the BEV is maintained throughout the key chain.</p>
                         <p>The evaluator shall verify the KMD includes a description of the strength of keys
-                          throughout the key chain.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-PCC-EXT-1"><h4>FCS_PCC_EXT.1 Cryptographic Password Construction and Conditioning</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_PCC_EXT.1</div>
-                    
-                    
-                    
-                    
-                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall ensure the TSS describes the manner in which the TOE enforces
-                      the construction of passwords, including the length, and requirements on characters
-                      (number and type). The evaluator also verifies that the TSS provides a description of
-                      how the password is conditioned and the evaluator ensures it satisfies the requirement.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea"><p>The evaluator shall examine the KMD to ensure that the formation of the BEV and
-                      intermediary keys is described and that the key sizes match that selected by the ST
-                      author.</p><p>The evaluator shall check that the KMD describes the method by which the
-                        password/passphrase is first encoded and then fed to the SHA algorithm. The settings
-                        for the algorithm (padding, blocking, etc.) shall be described, and the evaluator shall
-                        verify that these are supported by the selections in this component as well as the
-                        selections concerning the hash function itself. The evaluator shall verify that the KMD
-                        contains a description of how the output of the hash function is used to form the
-                        submask that will be input into the function and is the same length as the BEV as
-                        specified above.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                      <p>The evaluator shall also perform the following tests:</p>
-                      <span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_PCC_EXT.1:1</a>:
-      Ensure that the TOE supports passwords/passphrases of a minimum
-                          length of 64 characters.</li>
-                        <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_PCC_EXT.1:2</a>:
-      If the TOE supports a password/passphrase length up to a maximum
-                          number of characters, n (which would be greater than 64), then ensure that the
-                          TOE will not accept more than n characters.</li>
-                        <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_PCC_EXT.1:3</a>:
-      Ensure that the TOE supports passwords consisting of all characters
-                          assigned and supported by the ST author.</li>
-                      </ul></span></div></div></span></div><div class="comp" id="FCS-SMC-EXT-1"><h4>FCS_SMC_EXT.1 Submask Combining </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_SMC_EXT.1</div>
-                    
-                      
-                      
-                      
-                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">If the submasks produced from the authorization factors are XORed together to form
-                      the BEV or intermediate key, the TSS section shall identify how this is performed (e.g.,
-                      if there are ordering requirements, checks performed, etc.). The evaluator shall also
-                      confirm that the TSS describes how the length of the output produced is at least the
-                      same as that of the BEV.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that an approved combination is used
-                        and does not result in the weakening or exposure of key material.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following test:<span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FCS_SMC_EXT.1:1</a>:
-      (conditional): If there is more than one authorization factor, ensure that failure
-                          to supply a required authorization factor does not result in access to the encrypted data.</li>
-                      </ul></span></div></div></span></div><div class="comp" id="FCS_SNI_EXT.1"><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><span class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></div>
+                          throughout the key chain.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS_SNI_EXT.1"><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><span class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></div>
                     
                     
                     
                     
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                       <p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generating using an RBG described in FCS_RBG.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</p>
-                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
-                      <div class="eacategory">TSS</div><div class="ea">
-                        <p>The evaluator shall examine the TSS to determine which authorization factors support
-                          validation.</p>
-                        <p>The evaluator shall examine the TSS to review a high-level description if multiple
-                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</p></div>
-                      <div class="eacategory">Guidance</div><div class="ea">
-                        <p>(conditional) If the validation functionality is configurable, the evaluator shall examine
-                          the operational guidance to ensure it describes how to configure the TOE to ensure the
-                          limits regarding validation attempts can be established.</p>
-                        <p>(conditional) If the validation functionality is specified by the ST author, the evaluator
-                          shall examine the operational guidance to ensure that it states the values that the TOE
-                          uses for limits regarding validation attempts.</p></div>
-                      <div class="eacategory">KMD</div><div class="ea">
-                        <p>The evaluator shall examine the KMD to verify that it described the method the TOE
-                          employs to limit the number of consecutively failed authorization attempts.</p>
-                        <p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
-                          is performed. The description of the validation process in the KMD provides detailed
-                          information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submask(s).</p></div>
-                      <div class="eacategory">Tests</div><div class="ea">
-                        The evaluator shall perform the following tests:
-                        <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_VAL_EXT.1.1:1</a>:
-      The evaluator shall determine the limit on the average rate of the number of
-                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
-                            that number of incorrect authorization factors in consecutive attempts to access the
-                            protected data. If the limit mechanism includes any “lockout” period, the time period
-                            tested should include at least one such period. Then the evaluator will verify that the
-                            TOE behaves as described in the TSS.</li>
-                          <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_VAL_EXT.1.1:2</a>:
-      For each validated authorization factor, ensure that when the user provides an
-                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
-                            the TOE (e.g., to the EE).</li>
-                        </ul></span></div>
-                  </span></div><h2 class="indexable" data-level="2" id="FMT">2.1.2 Security Management (FMT)</h2><div class="comp" id="FMT-MOF-1-1"><h4>FMT_MOF.1 Management of Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF.1</div>
+                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><h2 class="indexable" data-level="2" id="FMT">2.1.2 Security Management (FMT)</h2><div class="comp" id="FMT-MOF-1-1"><h4>FMT_MOF.1 Management of Functions Behavior</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_MOF.1</div>
                   
                   
                   
@@ -896,16 +816,7 @@ The following sections list Common Criteria and technology terms used in this do
               
                  
             <div class="eacategory">TSS</div><div class="ea"><div class="ea">There are no TSS evaluation activities for this SFR. Evaluation of this SFR is performed as part of evaluating FMT_MOF.1 and FMT_SMF.1.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no guidance evaluation activities for this SFR. Evaluation of this SFR is performed as part of evaluating FMT_MOF.1 and FMT_SMF.1.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR. Evaluation of this SFR is performed
-                as part of evaluating FMT_MOF.1 and FMT_SMF.1.</div></div></span></div><h2 class="indexable" data-level="2" id="fpt">2.1.3 Protection of the TSF (FPT)</h2><div class="comp" id=""><h4>FPT_FLS.1 Failure with Preservation of Secure State</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FLS.1</div>              
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                The evaluator shall verify that the TSF describes how the TOE enters an error state in the event of a DRBG self-test failure.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator shall verify that the guidance documentation describes the error state that results from a DRBG self-test failure and the actions that a user or administrator should take in response to attempt to resolve the error state.
-              </div></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FPT-KYP-EXT-1"><h4>FPT_KYP_EXT.1 Protection of Key and Key Material </h4><span class="activity_pane_body"><div class="component-activity-header">FPT_KYP_EXT.1</div>
+                as part of evaluating FMT_MOF.1 and FMT_SMF.1.</div></div></span></div><h2 class="indexable" data-level="2" id="fpt">2.1.3 Protection of the TSF (FPT)</h2><div class="comp" id="FPT-KYP-EXT-1"><h4>FPT_KYP_EXT.1 Protection of Key and Key Material </h4><span class="activity_pane_body"><div class="component-activity-header">FPT_KYP_EXT.1</div>
                 
                 
                 
@@ -972,27 +883,7 @@ The following sections list Common Criteria and technology terms used in this do
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2><h2 class="indexable" data-level="2" id="fpt">2.2.1 Protection of the TSF (FPT)</h2><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                <p>
-                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
-                </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <span href="#entropyappendix" class="dynref" data-format=""></span>. 
-                </p>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
-                </p>
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>
-                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
-                </p><p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
-                </p>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="sel-sfrs">2.3 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.3.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-1-AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/AKG</div>
+                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.3 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.3.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-1-AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/AKG</div>
                     
                     
                     
@@ -1392,7 +1283,7 @@ The following sections list Common Criteria and technology terms used in this do
                         key size. This 3-tuple of plaintext, IV, and key is provided as input to the below
                         algorithm to generate the remaining 99 3-tuples, and to run each 3-tuple through 1000
                         iterations of AES-CBC encryption.</p>
-                      <p># Input: PT, IV, Key <span style="" class="comment " id="Comment-7-"> May need to revisit </span>
+                      <p># Input: PT, IV, Key <span style="" class="comment " id="Comment-5-"> May need to revisit </span>
                         <br/>Key[0] = Key
                         <br/>IV[0] = IV
                         <br/>PT[0] = PT</p>
@@ -1469,7 +1360,37 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key derivation function
                     and shall verify the key derivation uses an approved derivation mode and key expansion
                     algorithm according to SP 800-108 and SP 800-132.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall examine the vendor’s KMD to ensure that all keys used are derived
-                    using an approved method and a description of how and when the keys are derived.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-RBG-1"><h4>FCS_RBG.1 Cryptographic Operation (Random Bit Generation)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_RBG.1.1</div>
+                    using an approved method and a description of how and when the keys are derived.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-PCC-EXT-1"><h4>FCS_PCC_EXT.1 Cryptographic Password Construction and Conditioning</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_PCC_EXT.1</div>
+                    
+                    
+                    
+                    
+                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall ensure the TSS describes the manner in which the TOE enforces
+                      the construction of passwords, including the length, and requirements on characters
+                      (number and type). The evaluator also verifies that the TSS provides a description of
+                      how the password is conditioned and the evaluator ensures it satisfies the requirement.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea"><p>The evaluator shall examine the KMD to ensure that the formation of the BEV and
+                      intermediary keys is described and that the key sizes match that selected by the ST
+                      author.</p><p>The evaluator shall check that the KMD describes the method by which the
+                        password/passphrase is first encoded and then fed to the SHA algorithm. The settings
+                        for the algorithm (padding, blocking, etc.) shall be described, and the evaluator shall
+                        verify that these are supported by the selections in this component as well as the
+                        selections concerning the hash function itself. The evaluator shall verify that the KMD
+                        contains a description of how the output of the hash function is used to form the
+                        submask that will be input into the function and is the same length as the BEV as
+                        specified above.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                      <p>The evaluator shall also perform the following tests:</p>
+                      <span class="testlist-"><ul>
+                        <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_PCC_EXT.1:1</a>:
+      Ensure that the TOE supports passwords/passphrases of a minimum
+                          length of 64 characters.</li>
+                        <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_PCC_EXT.1:2</a>:
+      If the TOE supports a password/passphrase length up to a maximum
+                          number of characters, n (which would be greater than 64), then ensure that the
+                          TOE will not accept more than n characters.</li>
+                        <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_PCC_EXT.1:3</a>:
+      Ensure that the TOE supports passwords consisting of all characters
+                          assigned and supported by the ST author.</li>
+                      </ul></span></div></div></span></div><div class="comp" id="FCS-RBG-1"><h4>FCS_RBG.1 Cryptographic Operation (Random Bit Generation)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_RBG.1.1</div>
                   <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify that the TSS identifies the DRBGs used by the TOE.</div>
                   <div class="eacategory">Guidance</div><div class="ea">If the DRBG functionality is configurable, the evaluator shall verify that the operational guidance includes instructions on how to configure this behavior.</div>
                   <div class="eacategory">Tests</div><div class="ea">
@@ -1582,7 +1503,86 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea">
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="agd">3.2 AGD: Guidance Documentation</h1><div class="comp" id=""><h4>AGD_OPE.1 Operational User Guidance (AGD_OPE.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>AGD_PRE.1 Preparative Procedures (AGD_PRE.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="alc">3.3 Class ALC: Life-cycle Support</h1><div class="comp" id=""><h4>ALC_CMC.1 Labelling of the TOE (ALC_CMC.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>ALC_CMS.1 TOE CMS Coverage (ALC_CMS.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ate">3.4 Class ATE: Tests</h1><div class="comp" id=""><h4>ATE_IND.1 Independent Testing – Conformance (ATE_IND.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ava">3.5 Class AVA: Vulnerability Assessment</h1><div class="comp" id=""><h4>AVA_VAN.1 Vulnerability Survey (AVA_VAN.1)</h4><span class="activity_pane_body"></span></div><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-SMC-EXT-1"><h4>FCS_SMC_EXT.1 Submask Combining </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_SMC_EXT.1</div>
+                    
+                      
+                      
+                      
+                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">If the submasks produced from the authorization factors are XORed together to form
+                      the BEV or intermediate key, the TSS section shall identify how this is performed (e.g.,
+                      if there are ordering requirements, checks performed, etc.). The evaluator shall also
+                      confirm that the TSS describes how the length of the output produced is at least the
+                      same as that of the BEV.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that an approved combination is used
+                        and does not result in the weakening or exposure of key material.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following test:<span class="testlist-"><ul>
+                        <li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FCS_SMC_EXT.1:1</a>:
+      (conditional): If there is more than one authorization factor, ensure that failure
+                          to supply a required authorization factor does not result in access to the encrypted data.</li>
+                      </ul></span></div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
+                      <div class="eacategory">TSS</div><div class="ea">
+                        <p>The evaluator shall examine the TSS to determine which authorization factors support
+                          validation.</p>
+                        <p>The evaluator shall examine the TSS to review a high-level description if multiple
+                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
+                          validated before combining, once combined validation takes place).</p></div>
+                      <div class="eacategory">Guidance</div><div class="ea">
+                        <p>(conditional) If the validation functionality is configurable, the evaluator shall examine
+                          the operational guidance to ensure it describes how to configure the TOE to ensure the
+                          limits regarding validation attempts can be established.</p>
+                        <p>(conditional) If the validation functionality is specified by the ST author, the evaluator
+                          shall examine the operational guidance to ensure that it states the values that the TOE
+                          uses for limits regarding validation attempts.</p></div>
+                      <div class="eacategory">KMD</div><div class="ea">
+                        <p>The evaluator shall examine the KMD to verify that it described the method the TOE
+                          employs to limit the number of consecutively failed authorization attempts.</p>
+                        <p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
+                          is performed. The description of the validation process in the KMD provides detailed
+                          information how the TOE validates the submasks. The KMD describes how the process
+                          works, such that it does not expose any material that might compromise the submask(s).</p></div>
+                      <div class="eacategory">Tests</div><div class="ea">
+                        The evaluator shall perform the following tests:
+                        <span class="testlist-"><ul>
+                          <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_VAL_EXT.1.1:1</a>:
+      The evaluator shall determine the limit on the average rate of the number of
+                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
+                            that number of incorrect authorization factors in consecutive attempts to access the
+                            protected data. If the limit mechanism includes any “lockout” period, the time period
+                            tested should include at least one such period. Then the evaluator will verify that the
+                            TOE behaves as described in the TSS.</li>
+                          <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_VAL_EXT.1.1:2</a>:
+      For each validated authorization factor, ensure that when the user provides an
+                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
+                            the TOE (e.g., to the EE).</li>
+                        </ul></span></div>
+                  </span></div><h2 class="indexable" data-level="2" id="fpt">2.3.2 Protection of the TSF (FPT)</h2><div class="comp" id=""><h4>FPT_FLS.1 Failure with Preservation of Secure State</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FLS.1</div>              
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                The evaluator shall verify that the TSF describes how the TOE enters an error state in the event of a DRBG self-test failure.
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator shall verify that the guidance documentation describes the error state that results from a DRBG self-test failure and the actions that a user or administrator should take in response to attempt to resolve the error state.
+              </div></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                <p>
+                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
+                </p><p>
+                  Note that this information may also be placed in the entropy documentation specified by <span href="#entropyappendix" class="dynref" data-format=""></span>. 
+                </p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
+                </p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <p>
+                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
+                </p><p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
+                </p>
+              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="agd">3.2 AGD: Guidance Documentation</h1><div class="comp" id=""><h4>AGD_OPE.1 Operational User Guidance (AGD_OPE.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>AGD_PRE.1 Preparative Procedures (AGD_PRE.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="alc">3.3 Class ALC: Life-cycle Support</h1><div class="comp" id=""><h4>ALC_CMC.1 Labelling of the TOE (ALC_CMC.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>ALC_CMS.1 TOE CMS Coverage (ALC_CMS.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ate">3.4 Class ATE: Tests</h1><div class="comp" id=""><h4>ATE_IND.1 Independent Testing – Conformance (ATE_IND.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ava">3.5 Class AVA: Vulnerability Assessment</h1><div class="comp" id=""><h4>AVA_VAN.1 Vulnerability Survey (AVA_VAN.1)</h4><span class="activity_pane_body"></span></div><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
 guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appendix A -  References</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr>
 
 <tr><td><span id="bibCC"> [CC] </span></td><td>Common Criteria for Information Technology Security Evaluation - <ul><li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
@@ -1595,7 +1595,7 @@ guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appen
 <tr><td><span id="bibfdeiee"></span>[FDE–EE]</td><td>
         
         <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1 , MMMM DD, 2025
-        <span style="" class="comment " id="Comment-10-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. further input is needed on how the PP should be referenced. </span></a>
+        <span style="" class="comment " id="Comment-8-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. further input is needed on how the PP should be referenced. </span></a>
     </td></tr>
 
  </table></body></html>
