@@ -1283,7 +1283,7 @@ The following sections list Common Criteria and technology terms used in this do
                         key size. This 3-tuple of plaintext, IV, and key is provided as input to the below
                         algorithm to generate the remaining 99 3-tuples, and to run each 3-tuple through 1000
                         iterations of AES-CBC encryption.</p>
-                      <p># Input: PT, IV, Key <span style="" class="comment " id="Comment-5-"> May need to revisit </span>
+                      <p># Input: PT, IV, Key <span style="" class="comment " id="Comment-4-"> May need to revisit </span>
                         <br/>Key[0] = Key
                         <br/>IV[0] = IV
                         <br/>PT[0] = PT</p>
@@ -1463,7 +1463,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <div class="eacategory">Guidance</div><div class="ea">If the ST claims that the DRBG state can be updated on demand, the evaluator shall verify that the operational guidance has instructions for how to perform this operation.</div>
                   <div class="eacategory">Tests</div>
 			There are no test activities for this element.<br/><br/>
-                </span></div><div class="comp" id="FCS-RBG-2"><h4>FCS_RBG.2 </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.2</div>
+                </span></div><div class="comp" id=""><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.2</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
@@ -1473,7 +1473,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea">
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-RBG-3"><h4>FCS_RBG.3 </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.3</div>
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.3</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
@@ -1483,7 +1483,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea">
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-RBG-4"><h4>FCS_RBG.4 </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.4</div>
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.4</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.
                   </p>
@@ -1493,7 +1493,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea">
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-RBG-5"><h4>FCS_RBG.5 </h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.5</div>
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.5 Random Bit Generation (Combining Noise Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.5</div>
                   <p>
                     Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source's relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
@@ -1595,7 +1595,7 @@ guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appen
 <tr><td><span id="bibfdeiee"></span>[FDE–EE]</td><td>
         
         <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1 , MMMM DD, 2025
-        <span style="" class="comment " id="Comment-8-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. further input is needed on how the PP should be referenced. </span></a>
+        <span style="" class="comment " id="Comment-6-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. further input is needed on how the PP should be referenced. </span></a>
     </td></tr>
 
  </table></body></html>
