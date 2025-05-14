@@ -694,7 +694,8 @@ The following sections list Common Criteria and technology terms used in this do
         decryption of the BEV and eventual decryption of the DEK. Note
         that these values may or may not be used to establish the particular
         identity of the user. </td></tr>
-<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the AA to the EE intended to link the key chains
+<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the FDE Authorization
+        Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</td></tr>
 <tr><td><div id="Data_Encryption_Key">Data Encryption Key (DEK)</div></td><td>A key used to encrypt data-at-rest.</td></tr>
 <tr><td><div id="Full_Drive_Encryption">Full Drive Encryption (FDE)</div></td><td>Refers to partitions of logical blocks of user accessible data as
@@ -962,11 +963,12 @@ The following sections list Common Criteria and technology terms used in this do
 	  
 	
   <h2 id="SFRs" class="indexable" data-level="2">5.1 Security Functional Requirements</h2>
-    <p>The individual security functional requirements are specified in the sections below.</p>
+    The individual security functional requirements are specified in the sections below.
     
     <h3 class="indexable" data-level="3" id="ss-audit-table">5.1.1 Auditable Events for Mandatory SFRs</h3>
-			
-		
+      <table class="sort_kids_" border="1"><caption data-sortkey="#0"><span class="ctr" data-myid="t-audit-mandatory" data-counter-type="ct-Table" id="t-audit-mandatory">Table <span class="counter">2</span></span>: Auditable Events for Mandatory Requirements</caption><tr data-sortkey="#1"><th>Requirement</th><th>Auditable Events</th><th>Additional Audit Record Contents</th></tr><tr data-sortkey="FPT_TUD_EXT.1"><td rowspan="2"><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FPT_TUD_EXT.1#"><td></td></tr><tr data-sortkey="FPT_TUD_EXT.1.9"><td>Any failure to verify the integrity of the update.</td><td>None.</td></tr></table>
+    
+    
       <h3 id="fcs" class="indexable" data-level="3">5.1.2 Cryptographic Support (FCS)</h3>
 	  
 
@@ -1002,8 +1004,7 @@ The following sections list Common Criteria and technology terms used in this do
               <p>
                 Use of multiple authorization factors is preferable; if more than one authorization factor is used, the submasks produced must be combined using <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> specified in Appendix A.</p></i>
             </span></div></div></div>
-          
-          
+                        
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a></div>
               
             
@@ -1033,6 +1034,7 @@ The following sections list Common Criteria and technology terms used in this do
                 </ul></span>
                 
               </div></div></div></div></div>
+        
             <div class="comp" id="FCS_AFA_EXT.2"><h4>FCS_AFA_EXT.2 Timing of Authorization Factor Acquisition</h4>
               
               
@@ -1238,7 +1240,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <p>Several selections allow assignment of a ‘value that does not contain any CSP’. This means that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses some other specified data not drawn from an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> meeting <a href="#FCS_RBG.1">FCS_RBG.1</a> requirements, and not being any of the particular values listed as other selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain current or residual data that itself requires confidentiality protection.</p>
                   
                 </i></span></div></div></div>
-              
+          
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_CKM.6.1">FCS_CKM.6.1</a></div>
                       <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of what it means for keys and key material to be no longer needed and when then should be expected to be destroyed.</div>
                       <div class="eacategory">Guidance</div><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
@@ -1797,7 +1799,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <p>When the <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode is selected, a cryptographic key of 256-bit or of 512-bit is allowed as specified in <abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> 1619. <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES key is divided into two <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> keys of equal size - for example, <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128 is used as the underlying algorithm, when 256-bit key and <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode are selected. <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256 is used when a 512-bit key and <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode are selected.</p>
               
                 </i></span></div></div></div>
-              
+          
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></div>
                   
                     
@@ -1909,7 +1911,7 @@ The following sections list Common Criteria and technology terms used in this do
                         running 1000 iterations with the same values using a known good implementation.</p>
                       <p>The evaluator shall test the decrypt functionality using the same test as above,
                         exchanging CT and PT, and replacing <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Encrypt with <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC-Decrypt.</p>
-                      <p><u><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM Test</b></u></p>
+                      <p><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM Test</b></p>
                      
                       <p>The evaluator shall test the authenticated encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM for each
                         combination of the following input parameter lengths:</p>
@@ -1933,7 +1935,7 @@ The following sections list Common Criteria and technology terms used in this do
                         supplying the inputs to the implementer and receiving the results in response. To
                         determine correctness, the evaluator shall compare the resulting values to those
                         obtained by submitting the same inputs to a known good implementation.</p>
-                      <p><b><u><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES Test</u></b></p>
+                      <p><b><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES Test</b></p>
                       <p>The evaluator shall test the encrypt functionality of <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES for each combination of
                         the following input parameter lengths:</p>
                       <p><b>   256 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128) and 512 bit (for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256) keys</b></p>
@@ -1982,6 +1984,7 @@ The following sections list Common Criteria and technology terms used in this do
                     and shall verify the key derivation uses an approved derivation mode and key expansion
                     algorithm according to SP 800-108 and SP 800-132.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall examine the vendor’s <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure that all keys used are derived
                     using an approved method and a description of how and when the keys are derived.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div></div></div></div>
+        
             <div class="comp" id="FCS_KYC_EXT.1"><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4>
               
               
@@ -2140,8 +2143,7 @@ The following sections list Common Criteria and technology terms used in this do
                   in accordance with [<b>assignment</b>: 
      <span class="assignable-content">list of standards</span>].
                 </div></div>
-              
-              
+                            
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the DRBGs used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</div>
                   <div class="eacategory">Guidance</div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> functionality is configurable, the evaluator shall verify that the operational guidance includes instructions on how to configure this behavior.</div>
@@ -2197,9 +2199,9 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="element-activity-header"><a href="#FCS_RBG.1.2">FCS_RBG.1.2</a></div>
                   
                     Documentation will be produced - and the evaluator shall perform the
-                    activities - in accordance with  and
-                    the
-                    Clarification to the Entropy Documentation and Assessment Annex.
+                    activities - in accordance with  and the 
+                    ,
+                      Clarification to the Entropy Documentation and Assessment Annex.
                   
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div>
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this element.<br/><br/>
@@ -2216,6 +2218,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <div class="eacategory">Tests</div>
 			There are no test activities for this element.<br/><br/>
                 </div></div></div>
+        
         <div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a>.
       </i></b></div>
@@ -2232,8 +2235,7 @@ The following sections list Common Criteria and technology terms used in this do
                   entropy rate of the noise source is so that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> can collect a sufficiently large sample of noise data to be
                   conditioned into a seed value.
                 </span></div></div></div>
-              
-              
+                        
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG.2">FCS_RBG.2</a></div>
                   <p>
                     The evaluator shall examine the entropy documentation required by <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a> to verify that it identifies, for each <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> function implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> external interface used to seed the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> applies to the output data to create a seed of sufficient size with full entropy.
@@ -2245,6 +2247,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
+        
         <div class="comp" id="FCS_RBG.3"><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a>.
       </i></b></div>
@@ -2256,7 +2259,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with entropy from a single noise source that is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary. Min-entropy should be expressed as a ratio of entropy bits to sampled bits so that the total amount of data needed to ensure full entropy is known, as well as the conditioning function by which that data is reduced in size to the seed.</span></div></div></div>
-              
+          
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG.3">FCS_RBG.3</a></div>
                   <p>
                     The evaluator shall examine the entropy documentation required by <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a> to verify that it identifies, for each <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> function implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise source used to seed the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> applies to the output data to create a seed of sufficient size with full entropy.
@@ -2283,7 +2286,7 @@ The following sections list Common Criteria and technology terms used in this do
                   This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with entropy from multiple noise sources that are within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary. 
                   <a href="#FCS_RBG.5">FCS_RBG.5</a> defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.
                 </span></div></div></div>
-              
+          
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG.4">FCS_RBG.4</a></div>
                   <p>
                     The evaluator shall examine the entropy documentation required by <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a> to verify that it identifies, for each <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> function implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, each <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise source used to seed the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.
@@ -2295,6 +2298,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
+        
         <div class="comp" id="FCS_RBG.5"><h4>FCS_RBG.5 Random Bit Generation (Combining Noise Sources)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a>.
       </i></b></div>
@@ -2310,7 +2314,7 @@ The following sections list Common Criteria and technology terms used in this do
     </span><span class="note">
                   Examples of typical combining operations include, but are not limited to, XORing or hashing.
                 </span></div></div></div>
-              
+          
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG.5">FCS_RBG.5</a></div>
                   <p>
                     Using the entropy sources specified in <a href="#FCS_RBG.4">FCS_RBG.4</a>, the evaluator shall examine the entropy documentation required by <a href="#FCS_RBG.1.2">FCS_RBG.1.2</a> to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source's relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> applies to the output data to create a seed of sufficient size with full entropy.
@@ -2322,6 +2326,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
+        
             <div class="comp" id="FCS_SMC_EXT.1"><h4>FCS_SMC_EXT.1 Submask Combining </h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  .
       </i></b></div>
@@ -2354,6 +2359,7 @@ The following sections list Common Criteria and technology terms used in this do
       (conditional): If there is more than one authorization factor, ensure that failure
                           to supply a required authorization factor does not result in access to the encrypted data.</li>
                       </ul></span></div></div></div></div></div>
+        
             <div class="comp" id="FCS_SNI_EXT.1"><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4>
               
               
@@ -2457,8 +2463,8 @@ The following sections list Common Criteria and technology terms used in this do
                             the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>).</li>
                         </ul></span></div>
                   </div></div></div>
-
       
+    
       <h3 id="FMT" class="indexable" data-level="3">5.1.3 Security Management (FMT)</h3>
         <div class="comp" id="FMT_MOF.1"><h4>FMT_MOF.1 Management of Functions Behavior</h4>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1"><a href="#FMT_MOF.1.1" class="abbr">FMT_MOF.1.1</a></div><div class="reqdesc">
@@ -2466,7 +2472,6 @@ The following sections list Common Criteria and technology terms used in this do
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note"><i>“Modify the behaviour of” refers to any change in how or when a Compliant power state may occur. Only privileged users are allowed to enable or disable Compliant power saving state(s) via modification of “use of Compliant power saving state” function.</i></span></div></div></div>
-
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1">FMT_MOF.1</a></div>
                   
@@ -2487,6 +2492,7 @@ The following sections list Common Criteria and technology terms used in this do
                           saving states, the evaluator shall present a non-privileged authorization credential to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> and validates that changes to Compliant power saving state behavior are not allowed.
                           </li>
                     </ul></span></div></div></div></div></div>
+        
         <div class="comp" id="FMT_SMF.1"><h4>FMT_SMF.1 Specification of Management Functions</h4>
         <div class="element"><div class="reqid" id="FMT_SMF.1.1"><a href="#FMT_SMF.1.1" class="abbr">FMT_SMF.1.1</a></div><div class="reqdesc">
           The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of performing the following management functions: [
@@ -2506,7 +2512,7 @@ The following sections list Common Criteria and technology terms used in this do
             <p>Changing the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> would require the data to be re-encrypted with the new <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, but allows the user the ability to generate new DEKs.</p>
             <p>For the purposes of this document, key sanitization means to destroy the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, using one of the approved destruction methods. In some implementations, changing the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> could be the same functionality as cryptographically erasing the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</p>
           </i></span></div></div></div>
-        
+          
       <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_SMF.1">FMT_SMF.1</a></div>
                 
                 
@@ -2599,8 +2605,8 @@ The following sections list Common Criteria and technology terms used in this do
                       and observe each time that when a power saving state is configured to no longer be
                       used, none of the behavior causes the disabled state to be entered.</li>
                   </ul></span></p>
-
                 </div></div></div></div></div>
+        
       <div class="comp" id="FMT_SMR.1"><h4>FMT_SMR.1 Security Roles</h4>
         <div class="element"><div class="reqid" id="FMT_SMR.1.1"><a href="#FMT_SMR.1.1" class="abbr">FMT_SMR.1.1</a></div><div class="reqdesc">
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain the roles [<i>authorized user</i>].
@@ -2615,8 +2621,9 @@ The following sections list Common Criteria and technology terms used in this do
               
                  
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. Evaluation of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is performed as part of evaluating <a href="#FMT_MOF.1">FMT_MOF.1</a> and <a href="#FMT_SMF.1">FMT_SMF.1</a>.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no guidance evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. Evaluation of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is performed as part of evaluating <a href="#FMT_MOF.1">FMT_MOF.1</a> and <a href="#FMT_SMF.1">FMT_SMF.1</a>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. Evaluation of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is performed
-                as part of evaluating <a href="#FMT_MOF.1">FMT_MOF.1</a> and <a href="#FMT_SMF.1">FMT_SMF.1</a>.</div></div></div></div></div>
+                as part of evaluating <a href="#FMT_MOF.1">FMT_MOF.1</a> and <a href="#FMT_SMF.1">FMT_SMF.1</a>.</div></div></div></div></div>        
       
+    
       <h3 id="fpt" class="indexable" data-level="3">5.1.4 Protection of the TSF (FPT)</h3>
         
         
@@ -2672,6 +2679,7 @@ The following sections list Common Criteria and technology terms used in this do
                       of wrapped or encrypted keys in non-volatile memory and plaintext keys in non-volatile
                       memory meet one of the criteria for storage.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div></div></div></div>
+        
         <div class="comp" id="FPT_PWR_EXT.1"><h4>FPT_PWR_EXT.1 Power Saving States</h4>
           
           
@@ -2695,6 +2703,7 @@ The following sections list Common Criteria and technology terms used in this do
                 shall validate that the guidance documentation states how non-Compliant power states
                 are disabled.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall confirm that for each listed compliant state all key/key materials
                 are removed from volatile memory by using the test defined in <a href="#FCS_CKM.6">FCS_CKM.6</a>.</div></div></div></div></div>
+        
         <div class="comp" id="FPT_PWR_EXT.2"><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4>
           
           
@@ -2791,6 +2800,7 @@ The following sections list Common Criteria and technology terms used in this do
       Note:
     </span><span class="note"><i>While this component requires the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to implement the update functionality itself, it is acceptable to perform the cryptographic checks using functionality available in the Operational Environment.</i></span></div></div></div>
           
+          
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></div>
                 
                   
@@ -2831,7 +2841,7 @@ The following sections list Common Criteria and technology terms used in this do
       
 
 	<h3 id="obj-req-map" class="indexable" data-level="3">5.1.5 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="8"><a href="#T.UNAUTHORIZED_DATA_ACCESS">T.UNAUTHORIZED_​DATA_​ACCESS</a></td><td><a href="#FCS_AFA_EXT.2">FCS_AFA_EXT.2</a></td><td>Mitigates this threat by requiring authentication to be re-entered upon return from a compliant power state. </td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">3</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="8"><a href="#T.UNAUTHORIZED_DATA_ACCESS">T.UNAUTHORIZED_​DATA_​ACCESS</a></td><td><a href="#FCS_AFA_EXT.2">FCS_AFA_EXT.2</a></td><td>Mitigates this threat by requiring authentication to be re-entered upon return from a compliant power state. </td></tr>
 <tr><td><a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a></td><td>Mitigates this threat by verifying the correct authentication and limits attempts to decrypt the data.</td></tr>
 <tr><td><a href="#FMT_MOF.1">FMT_MOF.1</a></td><td>Mitigates this threat by restricting the authorized user's ability to modify compliant power states.</td></tr>
 <tr><td><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td>Mitigates this threat by ensuring the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> provides the functions necessary to manage important aspects of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> including requests to change and erase the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</td></tr>
@@ -2897,7 +2907,7 @@ The following sections list Common Criteria and technology terms used in this do
   <p>
     
     <table>
-      <head><b><span class="ctr" data-myid="toe-sec" data-counter-type="ct-Table" id="toe-sec">Table <span class="counter">3</span>: TOE Security Assurance Requirements</span></b></head>
+      <head><b><span class="ctr" data-myid="toe-sec" data-counter-type="ct-Table" id="toe-sec">Table <span class="counter">4</span>: TOE Security Assurance Requirements</span></b></head>
       <tr>
      <td><b>Functional Class</b></td>
      <td><b>Functional Components</b></td>
@@ -3020,7 +3030,7 @@ The following sections list Common Criteria and technology terms used in this do
 
 	All extended components specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> are listed in this table:
 
-<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">4</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="Cryptographic Support (FCS)"><td>Cryptographic Support (FCS)</td><td>FCS_AFA_EXT Authorization Factor Acquisition<br/>FCS_KDF_EXT Cryptographic Key Derivation<br/>FCS_KYC_EXT Key Chaining<br/>FCS_PCC_EXT Cryptographic Password Construction and Conditioning<br/>FCS_SMC_EXT Submask Combining<br/>FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)<br/>FCS_VAL_EXT Validation of Cryptographic Elements<br/></td></tr><tr data-sortkey="Protection of the TSF (FPT)"><td>Protection of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> (FPT)</td><td>FPT_KYP_EXT Key and Key Material Protection<br/>FPT_PWR_EXT Power Management<br/>FPT_TUD_EXT Trusted Update<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">B.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="Cryptographic Support (FCS)"><h3 id="ext-comp-FCS" class="indexable" data-level="3">B.2.1 Cryptographic Support (FCS)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
+<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">5</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="Cryptographic Support (FCS)"><td>Cryptographic Support (FCS)</td><td>FCS_AFA_EXT Authorization Factor Acquisition<br/>FCS_KDF_EXT Cryptographic Key Derivation<br/>FCS_KYC_EXT Key Chaining<br/>FCS_PCC_EXT Cryptographic Password Construction and Conditioning<br/>FCS_SMC_EXT Submask Combining<br/>FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)<br/>FCS_VAL_EXT Validation of Cryptographic Elements<br/></td></tr><tr data-sortkey="Protection of the TSF (FPT)"><td>Protection of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> (FPT)</td><td>FPT_KYP_EXT Key and Key Material Protection<br/>FPT_PWR_EXT Power Management<br/>FPT_TUD_EXT Trusted Update<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">B.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="Cryptographic Support (FCS)"><h3 id="ext-comp-FCS" class="indexable" data-level="3">B.2.1 Cryptographic Support (FCS)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
 	 FCS class originally defined by <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2:
 	<h3 id="ext-comp-FCS_AFA_EXT" class="indexable" data-level="4">B.2.1.1 FCS_AFA_EXT Authorization Factor Acquisition</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family address the ability for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to accept a variety of authorization factors. 
             </div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FCS_AFA_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">2</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>,
@@ -3049,8 +3059,9 @@ The following sections list Common Criteria and technology terms used in this do
              Key Chaining (Initiator),
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to maintain a key chain for a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> that is provided to a component external to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p><p>FCS_KYC_EXT.2,
              Key Chaining (Recipient) ,
-             <p>requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be able to accept a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> that is then chained to a <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> used by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> through some method.</p>
-            <p> Note that this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> does not include FCS_KYC_EXT.2; it is only included here to provide a complete definition of the FCS_KYC_EXT family.</p></p><h4>Management: FCS_KYC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_KYC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>
+             requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be able to accept a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> that is then chained to a <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> used
+            by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> through some method. <br/><br/>
+            Note that this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> does not include FCS_KYC_EXT.2; it is only included here to provide a complete definition of the FCS_KYC_EXT family.</p><h4>Management: FCS_KYC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_KYC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>
                 FCS_CKM.1 Cryptographic Key Generation
                 </td></tr></table><h4 id="ext-comp-FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a key chain of: 
                     [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_126">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_127">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
@@ -3209,7 +3220,7 @@ The following sections list Common Criteria and technology terms used in this do
     </ul>
   </p>
 
-<h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
+<h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">6</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AA"><abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr></span></td><td><span id="long_abbr_AA">Authorization Acquisition</span></td></tr>
 <tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
@@ -3279,7 +3290,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_USB"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr></span></td><td><span id="long_abbr_USB">Universal Serial Bus</span></td></tr>
 <tr><td><span class="term" id="abbr_XOR"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span></td><td><span id="long_abbr_XOR">Exclusive or</span></td></tr>
 <tr><td><span class="term" id="abbr_XTS"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr></span></td><td><span id="long_abbr_XTS">XEX (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr> Encrypt <abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>) Tweakable Block Cipher with Ciphertext Stealing</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">6</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">7</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
 				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 

@@ -353,7 +353,8 @@ The following sections list Common Criteria and technology terms used in this do
         decryption of the BEV and eventual decryption of the DEK. Note
         that these values may or may not be used to establish the particular
         identity of the user. </td></tr>
-<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the AA to the EE intended to link the key chains
+<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the FDE Authorization
+        Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</td></tr>
 <tr><td><div id="Data_Encryption_Key">Data Encryption Key (DEK)</div></td><td>A key used to encrypt data-at-rest.</td></tr>
 <tr><td><div id="Full_Drive_Encryption">Full Drive Encryption (FDE)</div></td><td>Refers to partitions of logical blocks of user accessible data as
@@ -809,7 +810,6 @@ The following sections list Common Criteria and technology terms used in this do
                       and observe each time that when a power saving state is configured to no longer be
                       used, none of the behavior causes the disabled state to be entered.</li>
                   </ul></span></p>
-
                 </div></div></span></div><div class="comp" id="FMT-SMR-1"><h4>FMT_SMR.1 Security Roles</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMR.1</div>
               
               
@@ -1312,7 +1312,7 @@ The following sections list Common Criteria and technology terms used in this do
                         running 1000 iterations with the same values using a known good implementation.</p>
                       <p>The evaluator shall test the decrypt functionality using the same test as above,
                         exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.</p>
-                      <p><u><b>AES-GCM Test</b></u></p>
+                      <p><b>AES-GCM Test</b></p>
                      
                       <p>The evaluator shall test the authenticated encrypt functionality of AES-GCM for each
                         combination of the following input parameter lengths:</p>
@@ -1336,7 +1336,7 @@ The following sections list Common Criteria and technology terms used in this do
                         supplying the inputs to the implementer and receiving the results in response. To
                         determine correctness, the evaluator shall compare the resulting values to those
                         obtained by submitting the same inputs to a known good implementation.</p>
-                      <p><b><u>XTS-AES Test</u></b></p>
+                      <p><b>XTS-AES Test</b></p>
                       <p>The evaluator shall test the encrypt functionality of XTS-AES for each combination of
                         the following input parameter lengths:</p>
                       <p><b>   256 bit (for AES-128) and 512 bit (for AES-256) keys</b></p>
@@ -1445,9 +1445,9 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="element-activity-header">FCS_RBG.1.2</div>
                   
                     Documentation will be produced - and the evaluator shall perform the
-                    activities - in accordance with  and
-                    the
-                    Clarification to the Entropy Documentation and Assessment Annex.
+                    activities - in accordance with  and the 
+                    ,
+                      Clarification to the Entropy Documentation and Assessment Annex.
                   
                   <div class="eacategory">TSS</div>
 			There are no additional TSS evaluation activities for this element.<br/><br/>
