@@ -45,6 +45,7 @@ output/FDEAA-release-linkable.html: L2
 output/FDEAA-release-linkable.html: Labelling
 output/FDEAA-release-linkable.html: MBRs
 output/FDEAA-release-linkable.html: MMMM
+output/FDEAA-release-linkable.html: NAS
 output/FDEAA-release-linkable.html: NISP
 output/FDEAA-release-linkable.html: OEAP
 output/FDEAA-release-linkable.html: P9
@@ -64,6 +65,7 @@ output/FDEAA-release-linkable.html: SEDs
 output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
+output/FDEAA-release-linkable.html: TD0606
 output/FDEAA-release-linkable.html: Tweakable
 output/FDEAA-release-linkable.html: VAN1
 output/FDEAA-release-linkable.html: Valu
@@ -129,6 +131,7 @@ output/FDEAA-release.html: L2
 output/FDEAA-release.html: Labelling
 output/FDEAA-release.html: MBRs
 output/FDEAA-release.html: MMMM
+output/FDEAA-release.html: NAS
 output/FDEAA-release.html: P9
 output/FDEAA-release.html: PBKDF2
 output/FDEAA-release.html: PINs
@@ -141,6 +144,7 @@ output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
 output/FDEAA-release.html: SEDs
 output/FDEAA-release.html: Sanitization
+output/FDEAA-release.html: TD0606
 output/FDEAA-release.html: Tweakable
 output/FDEAA-release.html: VAN1
 output/FDEAA-release.html: Valu
@@ -272,6 +276,7 @@ output/FDEAA.html: L2
 output/FDEAA.html: Labelling
 output/FDEAA.html: MBRs
 output/FDEAA.html: MMMM
+output/FDEAA.html: NAS
 output/FDEAA.html: NISP
 output/FDEAA.html: OEAP
 output/FDEAA.html: P9
@@ -291,6 +296,7 @@ output/FDEAA.html: SEDs
 output/FDEAA.html: SHAVS
 output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
+output/FDEAA.html: TD0606
 output/FDEAA.html: Tweakable
 output/FDEAA.html: VAN1
 output/FDEAA.html: Valu
