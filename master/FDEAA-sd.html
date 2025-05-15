@@ -435,13 +435,13 @@ The following sections list Common Criteria and technology terms used in this do
                 TSS section is performed as part of FCS_PCC_EXT.1 Evaluation Activities.
                 Additionally in this case, the evaluator shall verify that the operational guidance
                 discusses the characteristics of external authorization factors (e.g., how the
-                authorization factor must be generated; format(s) or standards that the authorization
+                authorization factor must be generated; formats or standards that the authorization
                 factor must meet) that are able to be used by the TOE.</p>
               <p>If other authorization factors are specified, then for each factor, the TSS specifies how
                 the factors are input into the TOE.</p>
             </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance includes instructions for all of the
               authorization factors. The AGD will discuss the characteristics of external
-              authorization factors (e.g., how the authorization factor is generated; format(s) or
+              authorization factors (e.g., how the authorization factor is generated; formats or
               standards that the authorization factor must meet, configuration of the TPM device
               used) that are able to be used by the TOE.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
                 <p>The evaluator shall examine the Key Management Description to confirm that the initial authorization factors (submasks) directly contribute to the unwrapping of the BEV.</p>
@@ -458,11 +458,11 @@ The following sections list Common Criteria and technology terms used in this do
                     
                     
                     
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS for a description of authorization factors and which of the factors are used to gain access to user data after the TOE entered a Compliant power saving state. The TSS is inspected to ensure it describes that each authorization factor satisfies the requirements of FCS_AFA_EXT.1.1.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the guidance documentation for a description of authorization factors used to access plaintext data when resuming from a Compliant power saving state.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS for a description of authorization factors and which of the factors are used to gain access to user data after the TOE entered a compliant power saving state. The TSS is inspected to ensure it describes that each authorization factor satisfies the requirements of FCS_AFA_EXT.1.1.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the guidance documentation for a description of authorization factors used to access plaintext data when resuming from a compliant power saving state.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                       <p>The evaluator shall perform the following test:</p>
                       <ul>
-                        <li>Enter the TOE into a Compliant power saving state</li>
-                        <li>Force the TOE to resume from a Compliant power saving state</li>
+                        <li>Enter the TOE into a compliant power saving state</li>
+                        <li>Force the TOE to resume from a compliant power saving state</li>
                         <li>Release an invalid authorization factor and verify that access to decrypted plaintext data is denied</li>
                         <li>Release a valid authorization factor and verify that access to decrypted plaintext data is granted.</li>
                       </ul>
@@ -484,14 +484,14 @@ The following sections list Common Criteria and technology terms used in this do
                         volatile memory. This description includes details of how each identified key is
                         introduced into volatile memory (e.g. by derivation from user input, or by unwrapping
                         a wrapped key stored in non-volatile memory) and how they are overwritten.</p>
-                      <p>The evaluator shall check to ensure the TSS lists each type of key that is stored in in
+                      <p>The evaluator shall check to ensure the TSS lists each type of key that is stored in
                         non-volatile memory, and identifies how the TOE interacts with the underlying
                         platform to manage keys (e.g., store, retrieve, destroy). The description includes details
                         on the method of how the TOE interacts with the platform, including an identification
                         and description of the interfaces it uses to manage keys (e.g., file system APIs, platform
                         key store APIs). </p>
                       <p>The evaluator examines the interface description for each different media type to ensure
-                        that the interface supports the selection(s) and description in the TSS.</p>
+                        that the interface supports the selections and description in the TSS.</p>
                       <p>The evaluator shall check that the TSS identifies any configurations or circumstances
                         that may not strictly conform to the key destruction requirement. If the ST makes use
                         of the open assignment and fills in the type of pattern that is used, the evaluator
@@ -606,10 +606,10 @@ The following sections list Common Criteria and technology terms used in this do
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
                 <div class="element-activity-header">FCS_CKM.6.2/Power</div>
                     <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify the TSS provides a description of what keys and key material
-                      are destroyed when entering any Compliant power saving state.</div>
+                      are destroyed when entering any compliant power saving state.</div>
                       <div class="eacategory">Guidance</div><div class="ea">The evaluator shall validate that guidance documentation contains clear warnings and
-                        information on conditions in which the TOE may end up in a non-Compliant power
-                        saving state indistinguishable from a Compliant power saving state. In that case it must
+                        information on conditions in which the TOE may end up in a non-compliant power
+                        saving state indistinguishable from a compliant power saving state. In that case it must
                         contain mitigation instructions on what to do in such scenarios.</div>
                       <div class="eacategory">KMD</div><div class="ea">
                         <p>The evaluator shall verify the KMD includes a description of the areas where keys and
@@ -625,7 +625,7 @@ The following sections list Common Criteria and technology terms used in this do
                 be used in the update function, additional Evaluation Activities to those listed below
                 are covered in other evaluation activities sections in this document. The following
                 activities deal only with the implementation for the digital signature algorithm; the
-                evaluator performs the testing appropriate for the algorithm(s) selected in the
+                evaluator performs the testing appropriate for the algorithms selected in the
                 component.
               </p>
               <p>Hash functions and/or random number generation required by these algorithms must
@@ -705,18 +705,18 @@ The following sections list Common Criteria and technology terms used in this do
                   
                   
                   
-              <div class="eacategory">TSS</div><div class="ea"><div class="ea">If support for Compliant power saving state(s) are claimed in the ST, the evaluator shall
+              <div class="eacategory">TSS</div><div class="ea"><div class="ea">If support for compliant power saving states are claimed in the ST, the evaluator shall
                     ensure the TSS describes how these are managed and shall ensure that TSS describes
                     how only privileged users (administrators) are allowed to manage the states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator to check if guidance documentation describes which authorization
-                    factors are required to change Compliant power saving state behavior and properties.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following tests:
+                    factors are required to change compliant power saving state behavior and properties.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following tests:
                     <span class="testlist-"><ul>
                       <li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FMT_MOF.1:1</a>:
       (conditional): If the product supports changes to compliant power saving
-                        states, the evaluator shall present a privileged authorization credential to the TSF and validates that changes to Compliant power saving state behavior and properties are
+                        states, the evaluator shall present a privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior and properties are
                         allowed.</li>
                         <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FMT_MOF.1:2</a>:
       (conditional): If the product supports changes to compliant power
-                          saving states, the evaluator shall present a non-privileged authorization credential to the TSF and validates that changes to Compliant power saving state behavior are not allowed.
+                          saving states, the evaluator shall present a non-privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior are not allowed.
                           </li>
                     </ul></span></div></div></span></div><div class="comp" id="FMT-SMF-1"><h4>FMT_SMF.1 Specification of Management Functions</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF.1</div>
                 
@@ -832,9 +832,9 @@ The following sections list Common Criteria and technology terms used in this do
               
               
                
-              <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall validate the TSS contains a list of Compliant power saving states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall ensure that guidance documentation contains a list of Compliant
+              <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall validate the TSS contains a list of compliant power saving states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall ensure that guidance documentation contains a list of compliant
                 power saving states. If additional power saving states are supported, then the evaluator
-                shall validate that the guidance documentation states how non-Compliant power states
+                shall validate that the guidance documentation states how non-compliant power states
                 are disabled.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall confirm that for each listed compliant state all key/key materials
                 are removed from volatile memory by using the test defined in FCS_CKM.6.</div></div></span></div><div class="comp" id="FPT-PWR-EXT-2-1"><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.2</div>
                 
@@ -842,10 +842,10 @@ The following sections list Common Criteria and technology terms used in this do
                   
                   
               <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall validate that the TSS contains a list of conditions under which the
-                  TOE enters a Compliant power saving state. </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall check that the guidance contains a list of conditions under which
-                    the TOE enters a Compliant power saving state. Additionally, the evaluator shall verify
+                  TOE enters a compliant power saving state. </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall check that the guidance contains a list of conditions under which
+                    the TOE enters a compliant power saving state. Additionally, the evaluator shall verify
                     that the guidance documentation states whether unexpected power-loss events may
-                    result in entry to a non-Compliant power saving state and, if that is the case, validate
+                    result in entry to a non-compliant power saving state and, if that is the case, validate
                     that the documentation contains information on mitigation measures.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall trigger each condition in the list of identified conditions and ensure
                     the TOE ends up in a compliant power saving state by running the test identified in
                     FCS_CKM.6.</div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
@@ -862,7 +862,7 @@ The following sections list Common Criteria and technology terms used in this do
                     details on the protection and maintenance of the TOE update credentials.</p>
                     <p>If the Operational Environment performs the signature verification, then the evaluator
                       shall examine the TSS to ensure it describes, for each platform identified in the ST, the
-                      interface(s) used by the TOE to invoke this cryptographic functionality.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                      interfaces used by the TOE to invoke this cryptographic functionality.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                     <p>The evaluator ensures that the operational guidance describes how the TOE obtains
                       vendor updates to the TOE; the processing associated with verifying the digital
                       signature of the updates (as defined in FCS_COP.1/SigVer); and the actions that take place
@@ -891,7 +891,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall ensure that the TSS identifies the key sizes supported by the TOE.
                       If the ST specifies more than one scheme, the evaluator shall examine the TSS to verify
                       that it identifies the usage for each scheme.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
-                      configure the TOE to use the selected key generation scheme(s) and key size(s) for all
+                      configure the TOE to use the selected key generation schemes and key sizes for all
                       uses specified by the AGD documentation and defined in this cPP.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">If the TOE uses an asymmetric key as part of the key chain, the KMD should detail
                       how the asymmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p>The following tests require the developer to provide access to a test platform that
                       provides the evaluator with tools that are typically not found on factory products.</p>
@@ -918,12 +918,12 @@ The following sections list Common Criteria and technology terms used in this do
                           <p>To test the key generation method for the Random Provable primes method and for all
                             the Primes with Conditions methods, the evaluator must seed the TSF key generation
                             routine with sufficient data to deterministically generate the RSA key pair. This
-                            includes the random seed(s), the public exponent of the RSA key, and the desired key
+                            includes the random seeds, the public exponent of the RSA key, and the desired key
                             length. For each key length supported, the evaluator shall have the TSF generate 25
                             key pairs. The evaluator shall verify the correctness of the TSF’s implementation by
                             comparing values generated by the TSF with those generated from a known good
                             implementation.</p>
-                            <p><b><i>Key Generation for FIPS PUB 186-4 RSA Schemes</i></b></p>
+                      <p><b><i>Key Generation for FIPS PUB 186-4 RSA Schemes</i></b></p>
                             <p><i>FIPS 186-4 ECC Key Generation Test</i></p>
                             <p>For each supported NIST curve, i.e., P-256, P-384 and P-521, the evaluator shall
                               require the implementation under test (IUT) to generate 10 private/public key pairs.
@@ -987,7 +987,7 @@ The following sections list Common Criteria and technology terms used in this do
                     the product, that the TSS includes a description of the protection provided by the
                     product for this key. The evaluator shall ensure that the TSS identifies the key sizes
                     supported by the TOE.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
-                      configure the TOE to use the selected key size(s) for all uses specified by the AGD
+                      configure the TOE to use the selected key sizes for all uses specified by the AGD
                       documentation and defined in this cPP.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">If the TOE uses a symmetric key as part of the key chain, the KMD should detail how
                       the symmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-HASH"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/Hash</div>
                     
@@ -1198,7 +1198,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                                           
                     
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key wrap function(s)
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key wrap functions
                       and shall verify the key wrap uses an approved key wrap algorithm according to the
                       appropriate specification.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that all keys are wrapped using the
                       approved method and a description of when the key wrapping occurs.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-SKC"><h4>FCS_COP.1/SKC Cryptographic Operation (AES Data Encryption/Decryption)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/SKC</div>
@@ -1283,7 +1283,7 @@ The following sections list Common Criteria and technology terms used in this do
                         key size. This 3-tuple of plaintext, IV, and key is provided as input to the below
                         algorithm to generate the remaining 99 3-tuples, and to run each 3-tuple through 1000
                         iterations of AES-CBC encryption.</p>
-                      <p># Input: PT, IV, Key <span style="" class="comment " id="Comment-4-"> May need to revisit </span>
+                      <p># Input: PT, IV, Key 
                         <br/>Key[0] = Key
                         <br/>IV[0] = IV
                         <br/>PT[0] = PT</p>
@@ -1371,7 +1371,7 @@ The following sections list Common Criteria and technology terms used in this do
                       how the password is conditioned and the evaluator ensures it satisfies the requirement.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea"><p>The evaluator shall examine the KMD to ensure that the formation of the BEV and
                       intermediary keys is described and that the key sizes match that selected by the ST
                       author.</p><p>The evaluator shall check that the KMD describes the method by which the
-                        password/passphrase is first encoded and then fed to the SHA algorithm. The settings
+                        passwords and passphrase is first encoded and then fed to the SHA algorithm. The settings
                         for the algorithm (padding, blocking, etc.) shall be described, and the evaluator shall
                         verify that these are supported by the selections in this component as well as the
                         selections concerning the hash function itself. The evaluator shall verify that the KMD
@@ -1384,7 +1384,7 @@ The following sections list Common Criteria and technology terms used in this do
       Ensure that the TOE supports passwords/passphrases of a minimum
                           length of 64 characters.</li>
                         <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_PCC_EXT.1:2</a>:
-      If the TOE supports a password/passphrase length up to a maximum
+      If the TOE supports a passwords and passphrase length up to a maximum
                           number of characters, n (which would be greater than 64), then ensure that the
                           TOE will not accept more than n characters.</li>
                         <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_PCC_EXT.1:3</a>:
@@ -1537,7 +1537,7 @@ The following sections list Common Criteria and technology terms used in this do
                         <p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
                           is performed. The description of the validation process in the KMD provides detailed
                           information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submask(s).</p></div>
+                          works, such that it does not expose any material that might compromise the submasks.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">
                         The evaluator shall perform the following tests:
                         <span class="testlist-"><ul>
@@ -1582,7 +1582,196 @@ The following sections list Common Criteria and technology terms used in this do
                 </p><p>
                   If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
                 </p>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="agd">3.2 AGD: Guidance Documentation</h1><div class="comp" id=""><h4>AGD_OPE.1 Operational User Guidance (AGD_OPE.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>AGD_PRE.1 Preparative Procedures (AGD_PRE.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="alc">3.3 Class ALC: Life-cycle Support</h1><div class="comp" id=""><h4>ALC_CMC.1 Labelling of the TOE (ALC_CMC.1)</h4><span class="activity_pane_body"></span></div><div class="comp" id=""><h4>ALC_CMS.1 TOE CMS Coverage (ALC_CMS.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ate">3.4 Class ATE: Tests</h1><div class="comp" id=""><h4>ATE_IND.1 Independent Testing – Conformance (ATE_IND.1)</h4><span class="activity_pane_body"></span></div><h1 class="indexable" data-level="1" id="class-ava">3.5 Class AVA: Vulnerability Assessment</h1><div class="comp" id=""><h4>AVA_VAN.1 Vulnerability Survey (AVA_VAN.1)</h4><span class="activity_pane_body"></span></div><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
+              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ADV_FSP.1</div>
+            
+            There are no specific evaluation activities associated with these SARs, except
+            ensuring the information is provided. The functional specification documentation is
+            provided to support the evaluation activities described in <span href="#SFRs" class="dynref">Section 5.1 Security Functional Requirements</span>, and
+            other activities described for AGD, ATE, and AVA SARs. The requirements on the content
+            of the functional specification information is implicitly assessed by virtue of the
+            other evaluation activities being performed; if the evaluator is unable to perform an
+            activity because there is insufficient interface information, then an adequate
+            functional specification has not been provided.
+            
+          </span></div><h1 class="indexable" data-level="1" id="agd">3.2 AGD: Guidance Documentation</h1><div class="comp" id=""><h4>AGD_OPE.1 Operational User Guidance (AGD_OPE.1)</h4><span class="activity_pane_body"><div class="component-activity-header">AGD_OPE.1</div>
+          
+          <p>
+            Some of the contents of the operational guidance will be verified by the
+            evaluation activities in <span href="#SFRs" class="dynref">Section 5.1 Security Functional Requirements</span> and evaluation of the TOE
+            according to the <span href="#bibCEM" class="dynref" data-format="">[CEM]</span>. The following additional
+            information is also required.
+          </p><p>
+            If cryptographic functions are provided by the 
+            TOE, the operational guidance shall contain instructions for 
+            configuring the cryptographic engine associated with the evaluated configuration of 
+            the TOE. It shall provide a warning to the administrator that use of 
+            other cryptographic engines was not evaluated nor tested during the CC evaluation of 
+            the TOE.
+          </p><p>
+            The documentation must describe the process for verifying 
+            updates to the TOE by verifying a digital signature – this may
+            be done by the TOE or the underlying platform. 
+          </p><p>
+            The evaluator shall verify that this process includes the following steps: </p>
+          <ul>      
+            <li>Instructions for obtaining the 
+              update itself. This should include instructions for making the update accessible to 
+              the TOE (e.g., placement in a specific directory).</li>    
+            <li>Instructions for initiating the update process, as well as discerning whether the process was 
+              successful or unsuccessful. This includes generation of the digital signature. 
+              The TOE will likely contain security functionality that does not 
+              fall in the scope of evaluation under this PP. The operational guidance shall make it 
+              clear to an administrator which security functionality is covered by the evaluation 
+              activities.</li></ul>
+          
+        </span></div><div class="comp" id=""><h4>AGD_PRE.1 Preparative Procedures (AGD_PRE.1)</h4><span class="activity_pane_body"><div class="component-activity-header">AGD_PRE.1</div>
+          
+          As indicated in the introduction above, there are significant expectations
+          with respect to the documentation—especially when configuring the operational
+          environment to support TOE functional requirements. The evaluator 
+          shall check to ensure that the guidance provided for the TOE 
+          adequately addresses all platforms claimed for the TOE in the ST.
+          
+        </span></div><h1 class="indexable" data-level="1" id="alc">3.3 Class ALC: Life-cycle Support</h1><div class="comp" id=""><h4>ALC_CMC.1 Labelling of the TOE (ALC_CMC.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ALC_CMC.1</div>
+           
+          The evaluator shall check the ST to ensure that it contains an identifier
+          (such as a product name/version number) that specifically identifies the version that
+          meets the requirements of the ST. Further, the evaluator shall check the operational guidance
+          and TOE samples received for testing to ensure that the version
+          number is consistent with that in the ST. If the vendor maintains a website
+          advertising the TOE, the evaluator shall examine the information on 
+          the website to ensure that the information in the ST is sufficient to distinguish the
+          product.
+          
+        </span></div><div class="comp" id=""><h4>ALC_CMS.1 TOE CMS Coverage (ALC_CMS.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ALC_CMS.1</div>
+          
+          The "evaluation evidence required by the SARs" in this PP is limited to the
+          information in the ST coupled with the guidance provided to administrators and users
+          under the AGD requirements. By ensuring that the TOE is specifically
+          identified and that this identification is consistent in the ST and in the AGD
+          guidance (as done in the evaluation activity for ALC_CMC.1), the evaluator implicitly
+          confirms the information required by this component. Life-cycle support is targeted
+          aspects of the developer’s life-cycle and instructions to providers of applications
+          for the developer’s devices, rather than an in-depth examination of the TSF
+          manufacturer’s development and configuration management process.
+          This is not meant to diminish the critical role that a developer’s practices play in
+          contributing to the overall trustworthiness of a product; rather, it’s a reflection on
+          the information to be made available for evaluation.
+          
+          <p>
+            The evaluator shall ensure that the developer has identified (in guidance documentation for application
+            developers concerning the targeted platform) one or more development environments
+            appropriate for use in developing applications for the developer’s platform. For each
+            of these development environments, the developer shall provide information on how to
+            configure the environment to ensure that buffer overflow protection mechanisms in the
+            environment(s) are invoked (e.g., compiler flags). The evaluator shall ensure that
+            this documentation also includes an indication of whether such protections are on by
+            default, or have to be specifically enabled. The evaluator shall ensure that the 
+            TSF is uniquely identified (with respect to other products from the 
+            TSF vendor), and that documentation provided by the developer in 
+            association with the requirements in the ST is associated with the 
+            TSF using this unique identification. </p> 
+           
+        </span></div><div class="comp" id=""><h4>ALC_FLR.1 Basic Flaw Remediation (ALC_FLR.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ALC_FLR.1</div>
+           
+          The evaluator shall inspect the TSS and verify it identifies how to access the flaw remediation procedures.
+           
+        </span></div><div class="comp" id=""><h4>ALC_FLR.2 Flaw Reporting Procedures (ALC_FLR.2)</h4><span class="activity_pane_body"><div class="component-activity-header">ALC_FLR.2</div>
+          
+          The evaluator shall inspect the TSS and verify it identifies how to access the flaw remediation procedures.
+          
+          <p>
+            The evaluator shall inspect the guidance document and verify it describes how to access the flaw remediation guidance.</p>
+           
+        </span></div><div class="comp" id=""><h4>ALC_FLR.3 Systematic Flaw Remediation (ALC_FLR.3)</h4><span class="activity_pane_body"><div class="component-activity-header">ALC_FLR.3</div>
+          
+          The evaluator shall inspect the TSS and verify it identifies how to access the flaw remediation procedures.
+          
+          <p>
+            The evaluator shall inspect the guidance document and verify it describes how to access the flaw remediation guidance.
+          </p>
+           
+        </span></div><h1 class="indexable" data-level="1" id="class-ate">3.4 Class ATE: Tests</h1><div class="comp" id=""><h4>ATE_IND.1 Independent Testing – Conformance (ATE_IND.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ATE_IND.1</div>
+          <p>
+            The evaluator shall prepare a test plan and report documenting the testing
+            aspects of the system, including any application crashes during testing. The evaluator
+            shall determine the root cause of any application crashes and include that information
+            in the report. The test plan covers all of the testing actions contained in
+            the <span href="#bibCEM" class="dynref" data-format="">[CEM]</span> and the body of this PP’s evaluation activities.
+          </p><p>
+            While it is not necessary to have one test case per test listed in an evaluation activity, the
+            evaluator must document in the test plan that each applicable testing requirement in
+            the ST is covered. The test plan identifies the platforms to be tested, and for those
+            platforms not included in the test plan but included in the ST, the test plan provides
+            a justification for not testing the platforms. This justification must address the
+            differences between the tested platforms and the untested platforms, and make an
+            argument that the differences do not affect the testing to be performed. It is not
+            sufficient to merely assert that the differences have no effect; rationale must be
+            provided. If all platforms claimed in the ST are tested, then no rationale is
+            necessary. The test plan describes the composition of each platform to be tested, and
+            any setup that is necessary beyond what is contained in the AGD documentation. It
+            should be noted that the evaluator is expected to follow the AGD documentation for
+            installation and setup of each platform either as part of a test or as a standard
+            pre-test condition. This may include special test drivers or tools. For each driver or
+            tool, an argument (not just an assertion) should be provided that the driver or tool
+            will not adversely affect the performance of the functionality by the TOE and its platform.
+          </p><p>
+            This also includes the configuration of the
+            cryptographic engine to be used. The cryptographic algorithms implemented by this
+            engine are those specified by this PP and used by the cryptographic protocols being
+            evaluated (e.g SSH). The test plan identifies high-level test objectives
+            as well as the test procedures to be followed to achieve those objectives. These
+            procedures include expected results. 
+          </p><p>
+            The test report (which could just be an annotated
+            version of the test plan) details the activities that took place when the test
+            procedures were executed, and includes the actual results of the tests. This shall be
+            a cumulative account, so if there was a test run that resulted in a failure; a fix
+            installed; and then a successful re-run of the test, the report would show a “fail”
+            and “pass” result (and the supporting details), and not just the “pass” result.
+          </p>
+        </span></div><h1 class="indexable" data-level="1" id="class-ava">3.5 Class AVA: Vulnerability Assessment</h1><div class="comp" id=""><h4>AVA_VAN.1 Vulnerability Survey (AVA_VAN.1)</h4><span class="activity_pane_body"><div class="component-activity-header">AVA_VAN.1</div>
+          <p>
+            The evaluator shall generate a report to document their findings with respect to this 
+            requirement. This report could physically be part of the overall test report mentioned in
+            ATE_IND, or a separate document. The evaluator performs a search of public information to find
+            vulnerabilities that have been found in similar applications with a particular focus on network 
+            protocols the application uses and document formats it parses.
+          </p><p>
+            The evaluator documents the sources consulted and the vulnerabilities found in the report.
+          </p><p>
+            For each vulnerability found, the evaluator either provides a rationale with respect to its 
+            non-applicability, or the evaluator formulates a test (using the guidelines provided in ATE_IND)
+            to confirm the vulnerability, if suitable. Suitability is determined by assessing the attack 
+            vector needed to take advantage of the vulnerability. If exploiting the vulnerability requires
+            expert skills and an electron microscope, for instance, then a test would not be suitable and 
+            an appropriate justification would be formulated.
+          </p>
+          <div class="dependent">The following content should be included if:<ul><li>
+           the TOE implements 
+           
+             ""
+           </li><li>
+           the TOE implements 
+           
+             ""
+           </li><li>
+           the TOE implements 
+           
+             ""
+           </li><li>
+           the TOE implements 
+           
+             ""
+           </li></ul><div class="dependent-content"><div>
+            
+            
+            
+            	
+            The evaluator shall also run a virus scanner with the most current virus definitions against the 
+            application files and verify that no files are flagged as malicious.
+          </div></div></div>
+        </span></div><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
 guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appendix A -  References</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr>
 
 <tr><td><span id="bibCC"> [CC] </span></td><td>Common Criteria for Information Technology Security Evaluation - <ul><li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
@@ -1595,7 +1784,7 @@ guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appen
 <tr><td><span id="bibfdeiee"></span>[FDE–EE]</td><td>
         
         <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1 , MMMM DD, 2025
-        <span style="" class="comment " id="Comment-6-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. further input is needed on how the PP should be referenced. </span></a>
+        <span style="" class="comment " id="Comment-2-">URL/Date needs to be updated. Also, fde-ee was reference as "ee" throughout this document. Further input is needed on how the PP should be referenced. </span></a>
     </td></tr>
 
  </table></body></html>
