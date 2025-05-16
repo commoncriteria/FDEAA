@@ -80,8 +80,6 @@ output/FDEAA-release-linkable.html: checksums
 output/FDEAA-release-linkable.html: chipsets
 output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
-output/FDEAA-release-linkable.html: ee
-output/FDEAA-release-linkable.html: fde
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: href
 output/FDEAA-release-linkable.html: iTC
@@ -156,9 +154,7 @@ output/FDEAA-release.html: cPPs
 output/FDEAA-release.html: checksums
 output/FDEAA-release.html: chipsets
 output/FDEAA-release.html: crypto
-output/FDEAA-release.html: ee
 output/FDEAA-release.html: enquiries
-output/FDEAA-release.html: fde
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: multifactor
@@ -216,10 +212,8 @@ output/FDEAA-sd.html: acvp
 output/FDEAA-sd.html: cLen
 output/FDEAA-sd.html: cPPs
 output/FDEAA-sd.html: decryptions
-output/FDEAA-sd.html: ee
 output/FDEAA-sd.html: evaluator’s
 output/FDEAA-sd.html: fail’
-output/FDEAA-sd.html: fde
 output/FDEAA-sd.html: lifecycle
 output/FDEAA-sd.html: miniscule
 output/FDEAA-sd.html: nLen
@@ -312,8 +306,6 @@ output/FDEAA.html: checksums
 output/FDEAA.html: chipsets
 output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
-output/FDEAA.html: ee
-output/FDEAA.html: fde
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: lifecycle
