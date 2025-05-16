@@ -1292,7 +1292,7 @@ The following sections list Common Criteria and technology terms used in this do
                           <p>Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory<a id="period_344" href="#period_344">. </a>If
                             a copy is found, then the test fails<a id="period_345" href="#period_345">. </a></p>
                             <p>Step 7 ensures that partial key fragments do not remain in memory<a id="period_346" href="#period_346">. </a>If a fragment is
-                              found, there is a miniscule chance that it is not within the context of a key (e.g., some
+                              found, there is a minuscule chance that it is not within the context of a key (e.g., some
                               random bits that happen to match)<a id="period_347" href="#period_347">. </a>If this is the case the test should be repeated with a
                               different key in Step #1<a id="period_348" href="#period_348">. </a>If a fragment is found the test fails<a id="period_349" href="#period_349">. </a></p>
                               <p>The following tests apply only for the selection of &#8220;logically addresses the storage location&#8230;&#8221;, since the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in this instance has more
@@ -1611,7 +1611,8 @@ The following sections list Common Criteria and technology terms used in this do
                       sure the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-KEM-KWS decryption process detects the error<a id="period_480" href="#period_480">. </a></li>
                     <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_COP.1/KeyEncap:8</a>:
       The evaluator shall attempt to successfully recover the secret value Z, derive the
-                      key wrapping key, KWK, and unwrap the KWA-cipher text following the RSAKEM-KWS decryption process given in NISP SP 800-56B section 7.2.3.4<a id="period_481" href="#period_481">. </a>If the
+                      key wrapping key, KWK, and unwrap the KWA-cipher text following the RSAKEM-KWS
+                      decryption process given in <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B section 7.2.3.4<a id="period_481" href="#period_481">. </a>If the
                       key-wrapping algorithm is <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM, the evaluator shall verify that the value of
                       any (unwrapped) associated data, A, that was passed with the wrapped keying
                       material is correct The evaluator shall feed into the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&#8217;s <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-KEM-KWS

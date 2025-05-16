@@ -46,7 +46,6 @@ output/FDEAA-release-linkable.html: Labelling
 output/FDEAA-release-linkable.html: MBRs
 output/FDEAA-release-linkable.html: MMMM
 output/FDEAA-release-linkable.html: NAS
-output/FDEAA-release-linkable.html: NISP
 output/FDEAA-release-linkable.html: OEAP
 output/FDEAA-release-linkable.html: P9
 output/FDEAA-release-linkable.html: PBKDF2
@@ -84,7 +83,6 @@ output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: href
 output/FDEAA-release-linkable.html: iTC
 output/FDEAA-release-linkable.html: lifecycle
-output/FDEAA-release-linkable.html: miniscule
 output/FDEAA-release-linkable.html: multifactor
 output/FDEAA-release-linkable.html: nLen
 output/FDEAA-release-linkable.html: nist
@@ -196,7 +194,6 @@ output/FDEAA-sd.html: KeySBox
 output/FDEAA-sd.html: KeySize
 output/FDEAA-sd.html: Labelling
 output/FDEAA-sd.html: MMMM
-output/FDEAA-sd.html: NISP
 output/FDEAA-sd.html: NIST’s
 output/FDEAA-sd.html: OEAP
 output/FDEAA-sd.html: PCI
@@ -215,7 +212,6 @@ output/FDEAA-sd.html: decryptions
 output/FDEAA-sd.html: evaluator’s
 output/FDEAA-sd.html: fail’
 output/FDEAA-sd.html: lifecycle
-output/FDEAA-sd.html: miniscule
 output/FDEAA-sd.html: nLen
 output/FDEAA-sd.html: nist
 output/FDEAA-sd.html: pass’
@@ -271,7 +267,6 @@ output/FDEAA.html: Labelling
 output/FDEAA.html: MBRs
 output/FDEAA.html: MMMM
 output/FDEAA.html: NAS
-output/FDEAA.html: NISP
 output/FDEAA.html: OEAP
 output/FDEAA.html: P9
 output/FDEAA.html: PBKDF2
@@ -309,7 +304,6 @@ output/FDEAA.html: decryptions
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: lifecycle
-output/FDEAA.html: miniscule
 output/FDEAA.html: multifactor
 output/FDEAA.html: nLen
 output/FDEAA.html: nist
