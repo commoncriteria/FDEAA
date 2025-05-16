@@ -36,7 +36,6 @@ output/FDEAA-release-linkable.html: IUT
 output/FDEAA-release-linkable.html: K1
 output/FDEAA-release-linkable.html: K2
 output/FDEAA-release-linkable.html: KRKs
-output/FDEAA-release-linkable.html: KTS6
 output/FDEAA-release-linkable.html: KWK
 output/FDEAA-release-linkable.html: KeySBox
 output/FDEAA-release-linkable.html: KeySize
@@ -60,7 +59,6 @@ output/FDEAA-release-linkable.html: S3
 output/FDEAA-release-linkable.html: S4
 output/FDEAA-release-linkable.html: S5
 output/FDEAA-release-linkable.html: SATA
-output/FDEAA-release-linkable.html: SEDs
 output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
@@ -121,7 +119,6 @@ output/FDEAA-release.html: Electrotechnical
 output/FDEAA-release.html: G2
 output/FDEAA-release.html: G3
 output/FDEAA-release.html: KRKs
-output/FDEAA-release.html: KTS6
 output/FDEAA-release.html: L1
 output/FDEAA-release.html: L2
 output/FDEAA-release.html: Labelling
@@ -138,7 +135,6 @@ output/FDEAA-release.html: S3
 output/FDEAA-release.html: S4
 output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
-output/FDEAA-release.html: SEDs
 output/FDEAA-release.html: Sanitization
 output/FDEAA-release.html: TD0606
 output/FDEAA-release.html: Tweakable
@@ -257,7 +253,6 @@ output/FDEAA.html: IUT
 output/FDEAA.html: K1
 output/FDEAA.html: K2
 output/FDEAA.html: KRKs
-output/FDEAA.html: KTS6
 output/FDEAA.html: KWK
 output/FDEAA.html: KeySBox
 output/FDEAA.html: KeySize
@@ -281,7 +276,6 @@ output/FDEAA.html: S3
 output/FDEAA.html: S4
 output/FDEAA.html: S5
 output/FDEAA.html: SATA
-output/FDEAA.html: SEDs
 output/FDEAA.html: SHAVS
 output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
