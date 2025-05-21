@@ -1386,6 +1386,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FCS_AFA_EXT.2">FCS_AFA_EXT.2</a></td><td>Mitigates this threat by requiring a valid authorization to decrypt the protected material.</td></tr>
 <tr><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
 <tr><td><a href="#FCS_CKM.6/Power">FCS_CKM.6/Power</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
+<tr><td><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></td><td>Mitigates this threat by performing cryptographic hashing services.</td></tr>
 <tr><td><a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></td><td>Mitigates this threat by requiring chaining of keys to produce a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>.</td></tr>
 <tr><td><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></td><td>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>'s and salting.</td></tr>
 <tr><td><a href="#FMT_MOF.1">FMT_MOF.1</a></td><td>Mitigates this threat by restricting the ability to modified compliant power states to authorized users.</td></tr>
@@ -1394,11 +1395,10 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_KYP_EXT.1">FPT_KYP_EXT.1</a></td><td>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</td></tr>
 <tr><td><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to meet a compliant power saving state that protects and/or destroys key materials.</td></tr>
 <tr><td><a href="#FPT_PWR_EXT.2">FPT_PWR_EXT.2</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to enter into a safe state based on each condition. </td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring a password that is not subject to a brute force attack.</td></tr>
 <tr><td><a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</td></tr>
-<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
-<tr><td><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> (selection-based)</td><td>Mitigates this threat by performing cryptographic hashing services.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a> (selection-based)</td><td>Mitigates this threat by performing keyed-hash message authentication.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a> (selection-based)</td><td>Mitigates this threat by performing key encryption and decryption.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a> (selection-based)</td><td>Mitigates this threat by performing key transport.</td></tr>
@@ -1414,7 +1414,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_FLS.1">FPT_FLS.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that a malfunctioning <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> function cannot be used to generate potentially insecure keys.</td></tr>
 <tr><td><a href="#FPT_TST.1">FPT_TST.1</a> (selection-based)</td><td>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</td></tr>
 <tr class="major-row"><td rowspan="10"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_​EXHAUST</a></td><td><a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></td><td>Mitigates this threat by ensuring ensures all keys protecting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are of the same strength.</td></tr>
-<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a>(selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a>(optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a>(selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </td></tr>
 <tr><td><a href="#FCS_RBG.2">FCS_RBG.2</a> (selection-based)</td><td>Mitigates this threat by ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</td></tr>
@@ -1801,7 +1801,7 @@ The following sections list Common Criteria and technology terms used in this do
             This also includes the configuration of the
             cryptographic engine to be used. The cryptographic algorithms implemented by this
             engine are those specified by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and used by the cryptographic protocols being
-            evaluated (e.g SSH). The test plan identifies high-level test objectives
+            evaluated (e.g., SSH). The test plan identifies high-level test objectives
             as well as the test procedures to be followed to achieve those objectives. These
             procedures include expected results. 
           </p><p>
