@@ -33,6 +33,8 @@
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
+* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
+* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
@@ -45,3 +47,11 @@
  Failed to find a reference to entropyappendix.
  Failed to find a reference to bibCEM.
  Failed to find a reference to bibCEM.
+* Warning: Since FCS_AFA_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
+                       
+* Warning: Since FCS_KYC_EXT.1.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
+                       
+* Warning: Since FCS_SNI_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
+                       
+* Warning: Since FCS_SNI_EXT.1.3 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
+                       
