@@ -1517,7 +1517,7 @@ The following sections list Common Criteria and technology terms used in this do
       Note:
     </span><span class="note">
               The key size [k] in the assignment falls into a range between L1 and L2 (defined in <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10118 for the appropriate hash function for
-              example for <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256 L1 = 512, L2 =256) where L2 ≤ k ≤ L1.
+              example for <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256 L1 = 512, L2 =256) where L2 ≤ k ≤ L1.<br/><br/>
               
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs a key derivation operation as part of maintaining and deriving a key chain (<a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>, 
               <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs validation of a submask, intermediate key, or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using a keyed hash operation (<a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>).
@@ -1613,7 +1613,7 @@ The following sections list Common Criteria and technology terms used in this do
               This requirement is used in the body of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author chooses to use key transport in the key chaining approach that is specified in 
               <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.<br/><br/>
               
-              a.	This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key encryption as part of maintaining and deriving a key chain (<a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>, <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key encryption as part of maintaining and deriving a key chain (<a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>, <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
               when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> uses key encryption as part of password conditioning.
             </span></div></div></div>
           
@@ -1726,7 +1726,7 @@ The following sections list Common Criteria and technology terms used in this do
         
             
             <div class="comp" id="FCS_COP.1/KeyWrap"><h4>FCS_COP.1/KeyWrap Cryptographic Operation (Key Wrapping)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
-	  <a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, <a href="#FCS_PCC_EXT.1.1">FCS_PCC_EXT.1.1</a>, <a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a>.
+	  <a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, <a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a>.
       </i></b></div>
               
               
@@ -1742,7 +1742,7 @@ The following sections list Common Criteria and technology terms used in this do
                   This requirement is used in the body of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author chooses to use key wrapping in the key chaining approach that is specified in 
                   <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.<br/><br/>
                   
-                  a.	This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key wrapping as part of maintaining and deriving a key chain (<a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>, <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
+                  This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key wrapping as part of maintaining and deriving a key chain (<a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>, <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
                   when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs validation of a submask, intermediate key, or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using a key wrap operation (<a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>).                
                 </span></div></div></div>
           
@@ -2197,12 +2197,7 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="element"><div class="reqid" id="FCS_RBG.1.1"><a href="#FCS_RBG.1.1" class="abbr">FCS_RBG.1.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform deterministic random bit generation services using
                   [<b>selection</b>: <span class="selectable-content" id="_s_190"><i>Hash_DRBG (any)</i></span>, <span class="selectable-content" id="_s_191"><i>HMAC_DRBG (any)</i></span>, <span class="selectable-content" id="_s_192"><i>CTR_DRBG (<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>)</i></span>] in accordance with [<b>selection</b>: <span class="selectable-content" id="_s_193"><i><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18031:2011</i></span>, <span class="selectable-content" id="fcs-rbg-1-1-nist"><i><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A</i></span>] after initialization with a seed.
-                <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-                  This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is claimed when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> requires the use of random bit generation for submask generation (<a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>,
-                  <a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>) or salt generation (<a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a>).
-                </span></div></div></div>
+                </div></div>
               
               <div class="element"><div class="reqid" id="FCS_RBG.1.2"><a href="#FCS_RBG.1.2" class="abbr">FCS_RBG.1.2</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use a [<b>selection</b>: <span class="selectable-content" id="internal-seed"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise source [<b>assignment</b>: 
@@ -2236,7 +2231,12 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content">time</span>]</span></li></ul>]
                   in accordance with [<b>assignment</b>: 
      <span class="assignable-content">list of standards</span>].
-                </div></div>
+                <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                  This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is claimed when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> requires the use of random bit generation for submask generation (<a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>,
+                  <a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a>) or salt generation (<a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a>).
+                </span></div></div></div>
                         
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the DRBGs used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</div>
