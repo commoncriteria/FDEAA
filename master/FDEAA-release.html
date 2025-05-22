@@ -1549,18 +1549,7 @@ The following sections list Common Criteria and technology terms used in this do
             <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>-enforcing and <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>-supporting <abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr>.</div></div><div class="element"><div class="reqid" id="ADV_FSP.1.3C"><a href="#ADV_FSP.1.3C" class="abbr">ADV_FSP.1.3C</a></div><div class="reqdesc">The functional specification shall provide rationale for the implicit
             categorization of interfaces as <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>-non-interfering.</div></div><div class="element"><div class="reqid" id="ADV_FSP.1.4C"><a href="#ADV_FSP.1.4C" class="abbr">ADV_FSP.1.4C</a></div><div class="reqdesc">The tracing shall demonstrate that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> trace to <abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFIs</a></abbr> in the functional specification.</div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ADV_FSP.1.1E"><a href="#ADV_FSP.1.1E" class="abbr">ADV_FSP.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all requirements
             for content and presentation of evidence.</div></div><div class="element"><div class="reqid" id="ADV_FSP.1.2E"><a href="#ADV_FSP.1.2E" class="abbr">ADV_FSP.1.2E</a></div><div class="reqdesc">The evaluator shall determine that the functional specification is an accurate
-            and complete instantiation of the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ADV_FSP.1">ADV_FSP.1</a></div>
-            
-            There are no specific evaluation activities associated with these <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>, except
-            ensuring the information is provided. The functional specification documentation is
-            provided to support the evaluation activities described in <a href="#SFRs" class="dynref">Section 5.1 Security Functional Requirements</a>, and
-            other activities described for AGD, ATE, and AVA <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>. The requirements on the content
-            of the functional specification information is implicitly assessed by virtue of the
-            other evaluation activities being performed; if the evaluator is unable to perform an
-            activity because there is insufficient interface information, then an adequate
-            functional specification has not been provided.
-            
-          </div></div></div>
+            and complete instantiation of the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</div></div></div>
       
   
     
@@ -1616,38 +1605,7 @@ The following sections list Common Criteria and technology terms used in this do
           error), their consequences, and implications for maintaining secure operation.</div></div><div class="element"><div class="reqid" id="AGD_OPE.1.6C"><a href="#AGD_OPE.1.6C" class="abbr">AGD_OPE.1.6C</a></div><div class="reqdesc">The operational user guidance shall, for each user role, describe the security
           measures to be followed in order to fulfill the security objectives for the
           operational environment as described in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.</div></div><div class="element"><div class="reqid" id="AGD_OPE.1.7C"><a href="#AGD_OPE.1.7C" class="abbr">AGD_OPE.1.7C</a></div><div class="reqdesc">The operational user guidance shall be clear and reasonable.</div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="AGD_OPE.1.1E"><a href="#AGD_OPE.1.1E" class="abbr">AGD_OPE.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all requirements
-          for content and presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#AGD_OPE.1">AGD_OPE.1</a></div>
-          
-          <p>
-            Some of the contents of the operational guidance will be verified by the
-            evaluation activities in <a href="#SFRs" class="dynref">Section 5.1 Security Functional Requirements</a> and evaluation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-            according to the <a href="#bibCEM" class="dynref" data-format="">[CEM]</a>. The following additional
-            information is also required.
-          </p><p>
-            If cryptographic functions are provided by the 
-            <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the operational guidance shall contain instructions for 
-            configuring the cryptographic engine associated with the evaluated configuration of 
-            the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. It shall provide a warning to the administrator that use of 
-            other cryptographic engines was not evaluated nor tested during the <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> evaluation of 
-            the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-          </p><p>
-            The documentation must describe the process for verifying 
-            updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> by verifying a digital signature – this may
-            be done by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or the underlying platform. 
-          </p><p>
-            The evaluator shall verify that this process includes the following steps: </p>
-          <ul>      
-            <li>Instructions for obtaining the 
-              update itself. This should include instructions for making the update accessible to 
-              the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., placement in a specific directory).</li>    
-            <li>Instructions for initiating the update process, as well as discerning whether the process was 
-              successful or unsuccessful. This includes generation of the digital signature. 
-              The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> will likely contain security functionality that does not 
-              fall in the scope of evaluation under this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. The operational guidance shall make it 
-              clear to an administrator which security functionality is covered by the evaluation 
-              activities.</li></ul>
-          
-        </div></div></div>
+          for content and presentation of evidence.</div></div></div>
     
     <div class="comp" id="AGD_PRE.1"><h4>AGD_PRE.1 Preparative Procedures (AGD_PRE.1)</h4>As with the operational guidance, the developer should look to the Evaluation Activities to determine the required content with respect to preparative procedures.
            
@@ -1667,15 +1625,7 @@ The following sections list Common Criteria and technology terms used in this do
           operational environment in accordance with the security objectives for the operational
           environment as described in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.</div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="AGD_PRE.1.1E"><a href="#AGD_PRE.1.1E" class="abbr">AGD_PRE.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all requirements
           for content and presentation of evidence.</div></div><div class="element"><div class="reqid" id="AGD_PRE.1.2E"><a href="#AGD_PRE.1.2E" class="abbr">AGD_PRE.1.2E</a></div><div class="reqdesc">The evaluator shall apply the preparative procedures to confirm that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-          can be prepared securely for operation.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#AGD_PRE.1">AGD_PRE.1</a></div>
-          
-          As indicated in the introduction above, there are significant expectations
-          with respect to the documentation—especially when configuring the operational
-          environment to support <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> functional requirements. The evaluator 
-          shall check to ensure that the guidance provided for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> 
-          adequately addresses all platforms claimed for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.
-          
-        </div></div></div>
+          can be prepared securely for operation.</div></div></div>
     
   
   <h3 class="indexable" data-level="3" id="alc">5.2.4 Class ALC: Life-cycle Support</h3>
@@ -1697,18 +1647,7 @@ The following sections list Common Criteria and technology terms used in this do
             <li>Software Identification (SWID) tags, if available</li>
           </ul>
         </span></div></div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ALC_CMC.1.1E"><a href="#ALC_CMC.1.1E" class="abbr">ALC_CMC.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all
-          requirements for content and presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ALC_CMC.1">ALC_CMC.1</a></div>
-           
-          The evaluator shall check the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> to ensure that it contains an identifier
-          (such as a product name/version number) that specifically identifies the version that
-          meets the requirements of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. Further, the evaluator shall check the operational guidance
-          and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> samples received for testing to ensure that the version
-          number is consistent with that in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. If the vendor maintains a website
-          advertising the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the evaluator shall examine the information on 
-          the website to ensure that the information in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> is sufficient to distinguish the
-          product.
-          
-        </div></div></div>
+          requirements for content and presentation of evidence.</div></div></div>
     
     <div class="comp" id="ALC_CMS.1"><h4>ALC_CMS.1 TOE CMS Coverage (ALC_CMS.1)</h4>
       Given the scope of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and its associated evaluation evidence requirements, the evaluator performs the <abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr> work units associated with <a href="#ALC_CMS.1">ALC_CMS.1</a>.
@@ -1718,36 +1657,7 @@ The following sections list Common Criteria and technology terms used in this do
       
     <h4>Developer action elements: </h4><div class="element"><div class="reqid" id="ALC_CMS.1.1D"><a href="#ALC_CMS.1.1D" class="abbr">ALC_CMS.1.1D</a></div><div class="reqdesc">The developer shall provide a configuration list for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</div></div><h4>Content and presentation elements: </h4><div class="element"><div class="reqid" id="ALC_CMS.1.1C"><a href="#ALC_CMS.1.1C" class="abbr">ALC_CMS.1.1C</a></div><div class="reqdesc">The configuration list shall include the following: the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
           itself; and the evaluation evidence required by the <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>.</div></div><div class="element"><div class="reqid" id="ALC_CMS.1.2C"><a href="#ALC_CMS.1.2C" class="abbr">ALC_CMS.1.2C</a></div><div class="reqdesc">The configuration list shall uniquely identify the configuration items.</div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ALC_CMS.1.1E"><a href="#ALC_CMS.1.1E" class="abbr">ALC_CMS.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all requirements
-          for content and presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ALC_CMS.1">ALC_CMS.1</a></div>
-          
-          The "evaluation evidence required by the <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>" in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is limited to the
-          information in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> coupled with the guidance provided to administrators and users
-          under the AGD requirements. By ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is specifically
-          identified and that this identification is consistent in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> and in the AGD
-          guidance (as done in the evaluation activity for <a href="#ALC_CMC.1">ALC_CMC.1</a>), the evaluator implicitly
-          confirms the information required by this component. Life-cycle support is targeted
-          aspects of the developer’s life-cycle and instructions to providers of applications
-          for the developer’s devices, rather than an in-depth examination of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>
-          manufacturer’s development and configuration management process.
-          This is not meant to diminish the critical role that a developer’s practices play in
-          contributing to the overall trustworthiness of a product; rather, it’s a reflection on
-          the information to be made available for evaluation.
-          
-          <p>
-            The evaluator shall ensure that the developer has identified (in guidance documentation for application
-            developers concerning the targeted platform) one or more development environments
-            appropriate for use in developing applications for the developer’s platform. For each
-            of these development environments, the developer shall provide information on how to
-            configure the environment to ensure that buffer overflow protection mechanisms in the
-            environment(s) are invoked (e.g., compiler flags). The evaluator shall ensure that
-            this documentation also includes an indication of whether such protections are on by
-            default, or have to be specifically enabled. The evaluator shall ensure that the 
-            <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> is uniquely identified (with respect to other products from the 
-            <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> vendor), and that documentation provided by the developer in 
-            association with the requirements in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> is associated with the 
-            <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> using this unique identification. </p> 
-           
-        </div></div></div>
+          for content and presentation of evidence.</div></div></div>
     
     
     
@@ -1773,46 +1683,7 @@ The following sections list Common Criteria and technology terms used in this do
           that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> operates as specified.<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">The evaluator should test the application on the most current
-          fully patched version of the platform.</span></div></div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ATE_IND.1">ATE_IND.1</a></div>
-          <p>
-            The evaluator shall prepare a test plan and report documenting the testing
-            aspects of the system, including any application crashes during testing. The evaluator
-            shall determine the root cause of any application crashes and include that information
-            in the report. The test plan covers all of the testing actions contained in
-            the <a href="#bibCEM" class="dynref" data-format="">[CEM]</a> and the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>’s evaluation activities.
-          </p><p>
-            While it is not necessary to have one test case per test listed in an evaluation activity, the
-            evaluator must document in the test plan that each applicable testing requirement in
-            the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> is covered. The test plan identifies the platforms to be tested, and for those
-            platforms not included in the test plan but included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, the test plan provides
-            a justification for not testing the platforms. This justification must address the
-            differences between the tested platforms and the untested platforms, and make an
-            argument that the differences do not affect the testing to be performed. It is not
-            sufficient to merely assert that the differences have no effect; rationale must be
-            provided. If all platforms claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> are tested, then no rationale is
-            necessary. The test plan describes the composition of each platform to be tested, and
-            any setup that is necessary beyond what is contained in the AGD documentation. It
-            should be noted that the evaluator is expected to follow the AGD documentation for
-            installation and setup of each platform either as part of a test or as a standard
-            pre-test condition. This may include special test drivers or tools. For each driver or
-            tool, an argument (not just an assertion) should be provided that the driver or tool
-            will not adversely affect the performance of the functionality by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and its platform.
-          </p><p>
-            This also includes the configuration of the
-            cryptographic engine to be used. The cryptographic algorithms implemented by this
-            engine are those specified by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and used by the cryptographic protocols being
-            evaluated (e.g., SSH). The test plan identifies high-level test objectives
-            as well as the test procedures to be followed to achieve those objectives. These
-            procedures include expected results. 
-          </p><p>
-            The test report (which could just be an annotated
-            version of the test plan) details the activities that took place when the test
-            procedures were executed, and includes the actual results of the tests. This shall be
-            a cumulative account, so if there was a test run that resulted in a failure; a fix
-            installed; and then a successful re-run of the test, the report would show a “fail”
-            and “pass” result (and the supporting details), and not just the “pass” result.
-          </p>
-        </div></div></div>
+          fully patched version of the platform.</span></div></div></div></div>
 
   
   <h3 class="indexable" data-level="3" id="class-ava">5.2.6 Class AVA: Vulnerability Assessment</h3>
@@ -2014,48 +1885,7 @@ The following sections list Common Criteria and technology terms used in this do
           and Exposures (CVE) dictionary for publicly known vulnerabilities.  Public domain
           sources also include sites which provide free checking of files for viruses.</span></div></div></div><div class="element"><div class="reqid" id="AVA_VAN.1.3E"><a href="#AVA_VAN.1.3E" class="abbr">AVA_VAN.1.3E</a></div><div class="reqdesc">The evaluator shall conduct penetration testing, based on the identified
           potential vulnerabilities, to determine that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is resistant to
-          attacks performed by an attacker possessing Basic attack potential.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#AVA_VAN.1">AVA_VAN.1</a></div>
-          <p>
-            The evaluator shall generate a report to document their findings with respect to this 
-            requirement. This report could physically be part of the overall test report mentioned in
-            ATE_IND, or a separate document. The evaluator performs a search of public information to find
-            vulnerabilities that have been found in similar applications with a particular focus on network 
-            protocols the application uses and document formats it parses.
-          </p><p>
-            The evaluator documents the sources consulted and the vulnerabilities found in the report.
-          </p><p>
-            For each vulnerability found, the evaluator either provides a rationale with respect to its 
-            non-applicability, or the evaluator formulates a test (using the guidelines provided in ATE_IND)
-            to confirm the vulnerability, if suitable. Suitability is determined by assessing the attack 
-            vector needed to take advantage of the vulnerability. If exploiting the vulnerability requires
-            expert skills and an electron microscope, for instance, then a test would not be suitable and 
-            an appropriate justification would be formulated.
-          </p>
-          <div class="dependent">The following content should be included if:<ul><li>
-           the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
-           
-             ""
-           </li><li>
-           the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
-           
-             ""
-           </li><li>
-           the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
-           
-             ""
-           </li><li>
-           the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
-           
-             ""
-           </li></ul><div class="dependent-content"><div>
-            
-            
-            
-            	
-            The evaluator shall also run a virus scanner with the most current virus definitions against the 
-            application files and verify that no files are flagged as malicious.
-          </div></div></div>
-        </div></div></div>
+          attacks performed by an attacker possessing Basic attack potential.</div></div></div>
   
   
   
@@ -2091,11 +1921,7 @@ The following sections list Common Criteria and technology terms used in this do
           of each security flaw be provided, as well as the status of finding a correction to that flaw.</div></div><div class="element"><div class="reqid" id="ALC_FLR.1.3C"><a href="#ALC_FLR.1.3C" class="abbr">ALC_FLR.1.3C</a></div><div class="reqdesc">The flaw remediation procedures shall require that corrective actions be identified for
           each of the security flaws.</div></div><div class="element"><div class="reqid" id="ALC_FLR.1.4C"><a href="#ALC_FLR.1.4C" class="abbr">ALC_FLR.1.4C</a></div><div class="reqdesc">The flaw remediation procedures documentation shall describe the methods used to
           provide flaw information, corrections and guidance on corrective actions to <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> users.</div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ALC_FLR.1.1E"><a href="#ALC_FLR.1.1E" class="abbr">ALC_FLR.1.1E</a></div><div class="reqdesc">The evaluator shall confirm that the information provided meets all requirements for
-          content and presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ALC_FLR.1">ALC_FLR.1</a></div>
-           
-          The evaluator shall inspect the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify it identifies how to access the flaw remediation procedures.
-           
-        </div></div></div><div class="comp" id="ALC_FLR.2"><h4>ALC_FLR.2 Flaw Reporting Procedures (ALC_FLR.2)</h4><div class="statustag"><b><i>This <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr> is optional and may be claimed at the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>-Author's discretion.</i></b></div>
+          content and presentation of evidence.</div></div></div><div class="comp" id="ALC_FLR.2"><h4>ALC_FLR.2 Flaw Reporting Procedures (ALC_FLR.2)</h4><div class="statustag"><b><i>This <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr> is optional and may be claimed at the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>-Author's discretion.</i></b></div>
       
       
       
@@ -2138,14 +1964,7 @@ The following sections list Common Criteria and technology terms used in this do
           developer any suspected security flaws in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
         </div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ALC_FLR.2.1E"><a href="#ALC_FLR.2.1E" class="abbr">ALC_FLR.2.1E</a></div><div class="reqdesc">
           The evaluator shall confirm that the information provided meets all requirements for content and
-          presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ALC_FLR.2">ALC_FLR.2</a></div>
-          
-          The evaluator shall inspect the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify it identifies how to access the flaw remediation procedures.
-          
-          <p>
-            The evaluator shall inspect the guidance document and verify it describes how to access the flaw remediation guidance.</p>
-           
-        </div></div></div><div class="comp" id="ALC_FLR.3"><h4>ALC_FLR.3 Systematic Flaw Remediation (ALC_FLR.3)</h4><div class="statustag"><b><i>This <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr> is optional and may be claimed at the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>-Author's discretion.</i></b></div>
+          presentation of evidence.</div></div></div><div class="comp" id="ALC_FLR.3"><h4>ALC_FLR.3 Systematic Flaw Remediation (ALC_FLR.3)</h4><div class="statustag"><b><i>This <abbr class="dyn-abbr"><a href="#abbr_SAR">SAR</a></abbr> is optional and may be claimed at the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>-Author's discretion.</i></b></div>
       
       
       
@@ -2205,15 +2024,7 @@ The following sections list Common Criteria and technology terms used in this do
           and enquiries about security issues involving the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
         </div></div><h4>Evaluator action elements: </h4><div class="element"><div class="reqid" id="ALC_FLR.3.1E"><a href="#ALC_FLR.3.1E" class="abbr">ALC_FLR.3.1E</a></div><div class="reqdesc">
           The evaluator shall confirm that the information provided meets all requirements for content and
-          presentation of evidence.</div></div><div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#ALC_FLR.3">ALC_FLR.3</a></div>
-          
-          The evaluator shall inspect the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify it identifies how to access the flaw remediation procedures.
-          
-          <p>
-            The evaluator shall inspect the guidance document and verify it describes how to access the flaw remediation guidance.
-          </p>
-           
-        </div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.2 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4>                            
+          presentation of evidence.</div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.2 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4>                            
               <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">
                   <span style="" class="comment " id="Comment-1-">Reminder - Update all crypto <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> with the crypto catalog versions when available.</span>
                 The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>asymmetric</b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: <b>[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_18"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_19">2048-bit</span>, <span class="selectable-content" id="_s_20">3072-bit</span>, <span class="selectable-content" id="_s_21">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, “Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)”, Appendix B.3</span></li><li style=""><span class="selectable-content" id="_s_22"><abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes using “<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” of [<b>selection</b>: <span class="selectable-content" id="_s_23">P-256</span>, <span class="selectable-content" id="_s_24">P-384</span>, <span class="selectable-content" id="_s_25">P-521</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, “Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)”, Appendix  B.4</span></li><li style=""><span class="selectable-content" id="_s_26"><abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> schemes using cryptographic key sizes of 
