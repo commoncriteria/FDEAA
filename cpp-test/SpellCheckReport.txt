@@ -15,6 +15,7 @@ output/FDEAA-release-linkable.html: ACPV
 output/FDEAA-release-linkable.html: AESAVS
 output/FDEAA-release-linkable.html: AESCBC
 output/FDEAA-release-linkable.html: Adleman
+output/FDEAA-release-linkable.html: Appendicize
 output/FDEAA-release-linkable.html: BEVs
 output/FDEAA-release-linkable.html: C0
 output/FDEAA-release-linkable.html: C1
@@ -109,6 +110,7 @@ output/FDEAA-release.html: 90A
 output/FDEAA-release.html: 9C
 output/FDEAA-release.html: ACPI
 output/FDEAA-release.html: Adleman
+output/FDEAA-release.html: Appendicize
 output/FDEAA-release.html: BEVs
 output/FDEAA-release.html: CC1
 output/FDEAA-release.html: CCL
@@ -236,6 +238,7 @@ output/FDEAA.html: ACPV
 output/FDEAA.html: AESAVS
 output/FDEAA.html: AESCBC
 output/FDEAA.html: Adleman
+output/FDEAA.html: Appendicize
 output/FDEAA.html: BEVs
 output/FDEAA.html: C0
 output/FDEAA.html: C1
