@@ -1,6 +1,8 @@
 output/FDEAA-release-linkable.html: 0x00
 output/FDEAA-release-linkable.html: 0x00007A4B
 output/FDEAA-release-linkable.html: 0x01
+output/FDEAA-release-linkable.html: 10C
+output/FDEAA-release-linkable.html: 11C
 output/FDEAA-release-linkable.html: 38E
 output/FDEAA-release-linkable.html: 38F
 output/FDEAA-release-linkable.html: 4C
@@ -8,7 +10,9 @@ output/FDEAA-release-linkable.html: 56B
 output/FDEAA-release-linkable.html: 5C
 output/FDEAA-release-linkable.html: 6C
 output/FDEAA-release-linkable.html: 7C
+output/FDEAA-release-linkable.html: 8C
 output/FDEAA-release-linkable.html: 90A
+output/FDEAA-release-linkable.html: 9C
 output/FDEAA-release-linkable.html: AAD
 output/FDEAA-release-linkable.html: ACPI
 output/FDEAA-release-linkable.html: ACPV
@@ -77,6 +81,7 @@ output/FDEAA-release-linkable.html: checksums
 output/FDEAA-release-linkable.html: chipsets
 output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
+output/FDEAA-release-linkable.html: enquiries
 output/FDEAA-release-linkable.html: fcs
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: href
@@ -222,6 +227,8 @@ output/FDEAA-sd.html: subkey
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
+output/FDEAA.html: 10C
+output/FDEAA.html: 11C
 output/FDEAA.html: 38E
 output/FDEAA.html: 38F
 output/FDEAA.html: 4C
@@ -229,7 +236,9 @@ output/FDEAA.html: 56B
 output/FDEAA.html: 5C
 output/FDEAA.html: 6C
 output/FDEAA.html: 7C
+output/FDEAA.html: 8C
 output/FDEAA.html: 90A
+output/FDEAA.html: 9C
 output/FDEAA.html: AAD
 output/FDEAA.html: ACPI
 output/FDEAA.html: ACPV
@@ -301,6 +310,7 @@ output/FDEAA.html: checksums
 output/FDEAA.html: chipsets
 output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
+output/FDEAA.html: enquiries
 output/FDEAA.html: fcs
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
