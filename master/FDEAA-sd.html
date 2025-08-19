@@ -359,7 +359,7 @@ The following sections list Common Criteria and technology terms used in this do
         decryption of the BEV and eventual decryption of the DEK. Note
         that these values may or may not be used to establish the particular
         identity of the user. </td></tr>
-<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the FDE Authorization
+<tr><td><div id="Border_Encryption_Value">Border Encryption Value (BEV)</div></td><td>A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</td></tr>
 <tr><td><div id="Data_Encryption_Key">Data Encryption Key (DEK)</div></td><td>A key used to encrypt data-at-rest.</td></tr>
@@ -1277,11 +1277,13 @@ The following sections list Common Criteria and technology terms used in this do
                       <p><b>AES-CBC Multi-Block Message Test</b></p>
                       <p>The evaluator shall test the encrypt functionality by encrypting nine i-block messages
                         for each selected key size, for 2 ≤ i ≤ 10. For each test, the evaluator shall supply a key,
-                        an IV, and a plaintext message of length i blocks, and encrypt the message using AESCBC. The resulting ciphertext values shall be compared to the results of encrypting the
+                        an IV, and a plaintext message of length i blocks, and encrypt the message
+                        using AES-CBC. The resulting ciphertext values shall be compared to the results of encrypting the
                         plaintext messages using a known good implementation</p>
                       <p>The evaluator shall test the decrypt functionality by decrypting nine i-block messages
                         for each selected key size, for 2 ≤ i ≤ 10. For each test, the evaluator shall supply a key,
-                        an IV, and a ciphertext message of length i blocks, and decrypt the message using AESCBC. The resulting plaintext values shall be compared to the results of decrypting the
+                        an IV, and a ciphertext message of length i blocks, and decrypt the message
+                        using AES-CBC. The resulting plaintext values shall be compared to the results of decrypting the
                         ciphertext messages using a known good implementation.</p>
                       <p><b>AES-CBC Monte Carlo Tests</b></p>
                       <p>The evaluator shall test the encrypt functionality for each selected key size using 100
@@ -1790,7 +1792,8 @@ guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appen
               April 2017.</li></ul></td></tr>
 <tr><td><span id="bibfdeiee"></span>[FDE–EE]</td><td>
         
-        <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1,
-          MMMM DD, 2025</a></td></tr>
+        <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
+          Protection Profile for Full Drive Encryption – Encryption Engine, Version 3.0,
+          MMMM DD, 2025</a><span style="" class="comment " id="Comment-3-">Adjust date once finalized</span></td></tr>
 
  </table></body></html>

@@ -627,7 +627,7 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br><a href="#Comment-2-">Comment: Comment-2-</a><br></div><h1 class="title" style="page-break-before:auto;">collaborative Protection Profile for Full Drive Encryption &#8211; Authorization Acquisition</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><br><br><br><br><br>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br><a href="#Comment-2-">Comment: Comment-2-</a><br><a href="#Comment-3-">Comment: Comment-3-</a><br></div><h1 class="title" style="page-break-before:auto;">collaborative Protection Profile for Full Drive Encryption &#8211; Authorization Acquisition</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><br><br><br><br><br>
       Version: 3.0<br>2025-05-30<br><b>Full Disk Encryption international Technical Community</b><br></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr>
 <tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr>
 <tr><td>2.0</td><td>2024-03-28</td><td>Updated for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, or whatever</td></tr>
@@ -697,7 +697,7 @@ The following sections list Common Criteria and technology terms used in this do
         decryption of the BEV and eventual decryption of the DEK<a id="period_36" href="#period_36">. </a>Note
         that these values may or may not be used to establish the particular
         identity of the user<a id="period_37" href="#period_37">. </a></td></tr>
-<tr><td><div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div></td><td>A value passed from the FDE Authorization
+<tr><td><div id="Border_Encryption_Value">Border Encryption Value (BEV)</div></td><td>A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components<a id="period_38" href="#period_38">. </a></td></tr>
 <tr><td><div id="Data_Encryption_Key">Data Encryption Key (DEK)</div></td><td>A key used to encrypt data-at-rest<a id="period_39" href="#period_39">. </a></td></tr>
@@ -862,7 +862,7 @@ The following sections list Common Criteria and technology terms used in this do
 					This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not claim conformance to 
 					any Protection Profile<a id="period_110" href="#period_110">. </a>				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
 					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-					<ul><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for File Encryption Enterprise Management Version 1.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is not conformant to any 
+					<ul><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for File Encryption Enterprise Management Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is not conformant to any 
 						Functional or Assurance Packages<a id="period_111" href="#period_111">. </a></dd></dl>
   <h1 class="indexable" data-level="1" id="sec-spd">3 Security Problem Definition</h1>
 
@@ -3089,11 +3089,13 @@ The following sections list Common Criteria and technology terms used in this do
                       <p><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC Multi-Block Message Test</b></p>
                       <p>The evaluator shall test the encrypt functionality by encrypting nine i-block messages
                         for each selected key size, for 2 &#8804; i &#8804; 10<a id="period_1000" href="#period_1000">. </a>For each test, the evaluator shall supply a key,
-                        an <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, and a plaintext message of length i blocks, and encrypt the message using AESCBC<a id="period_1001" href="#period_1001">. </a>The resulting ciphertext values shall be compared to the results of encrypting the
+                        an <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, and a plaintext message of length i blocks, and encrypt the message
+                        using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC<a id="period_1001" href="#period_1001">. </a>The resulting ciphertext values shall be compared to the results of encrypting the
                         plaintext messages using a known good implementation</p>
                       <p>The evaluator shall test the decrypt functionality by decrypting nine i-block messages
                         for each selected key size, for 2 &#8804; i &#8804; 10<a id="period_1002" href="#period_1002">. </a>For each test, the evaluator shall supply a key,
-                        an <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, and a ciphertext message of length i blocks, and decrypt the message using AESCBC<a id="period_1003" href="#period_1003">. </a>The resulting plaintext values shall be compared to the results of decrypting the
+                        an <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, and a ciphertext message of length i blocks, and decrypt the message
+                        using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC<a id="period_1003" href="#period_1003">. </a>The resulting plaintext values shall be compared to the results of decrypting the
                         ciphertext messages using a known good implementation<a id="period_1004" href="#period_1004">. </a></p>
                       <p><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC Monte Carlo Tests</b></p>
                       <p>The evaluator shall test the encrypt functionality for each selected key size using 100
@@ -3801,7 +3803,7 @@ The following sections list Common Criteria and technology terms used in this do
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AA"><abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr></span></td><td><span id="long_abbr_AA">Authorization Acquisition</span></td></tr>
 <tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
-<tr><td><span class="term" id="abbr_BEV"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span></td><td><span id="long_abbr_BEV">Border Encryption Valu</span></td></tr>
+<tr><td><span class="term" id="abbr_BEV"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span></td><td><span id="long_abbr_BEV">Border Encryption Value</span></td></tr>
 <tr><td><span class="term" id="abbr_BIOS"><abbr class="dyn-abbr"><a href="#abbr_BIOS">BIOS</a></abbr></span></td><td><span id="long_abbr_BIOS">Basic Input Output System</span></td></tr>
 <tr><td><span class="term" id="abbr_CBC"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr></span></td><td><span id="long_abbr_CBC">Cipher Block Chaining</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
@@ -3883,5 +3885,6 @@ The following sections list Common Criteria and technology terms used in this do
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_1359" href="#period_1359">. </a></li>
           </ul></span></td></tr><tr><td><span id="bibfdeiee">[<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>&#8211;<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>]</span></td><td><span class="description">
         
-        <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption &#8211; Encryption Engine, Version 2.1,
-          MMMM DD, 2025</a></span></td></tr></table></body></html>
+        <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
+          Protection Profile for Full Drive Encryption &#8211; Encryption Engine, Version 3.0,
+          MMMM DD, 2025</a><span style="" class="comment " id="Comment-3-">Adjust date once finalized</span></span></td></tr></table></body></html>
