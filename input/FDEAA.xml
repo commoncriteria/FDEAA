@@ -128,7 +128,6 @@
       <suppress>Distributed TOE</suppress>   
       <term abbr='AA' full="Authorization Acquisition"></term>
       <term full="Advanced Encryption Standard" abbr="AES"></term>
-      <term full="Assurance">Grounds for confidence that a TOE meets the SFRs [CC1].</term>
       <term full="Authorization Factor">A value that a user knows, has, or is (e.g. password, token, etc.)
         submitted to the TOE to establish that the user is in the community
         authorized to use the hard disk. This value is used in the derivation or
@@ -224,8 +223,6 @@
       <term abbr='SPI' full="Serial Peripheral Interface"></term>
       <term full="Submask">A submask is a bit string that can be generated and stored in a number
         of ways.</term>
-      <term abbr='TOE' full="Target of Evaluation">A set of software, firmware and/or hardware possibly accompanied by
-        guidance. [CC1]</term>
       <term abbr='TPM' full="Trusted Platform Module"></term>
       <term abbr='TSF' full="TOE Security Functionality"></term>
       <term abbr='TSS' full="TOE Summary Specification"></term>
