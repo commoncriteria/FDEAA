@@ -2512,7 +2512,7 @@
                 </note>
                 <aactivity>
                     <TSS>
-                      <h:p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generating using an RBG described in FCS_RBG.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</h:p>
+                      <h:p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generated using an RBG described in FCS_RBG.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</h:p>
                       <h:p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</h:p></TSS>
                     <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
                     <CustomEA name="KMD">There are no KMD evaluation activities for this SFR.</CustomEA>
