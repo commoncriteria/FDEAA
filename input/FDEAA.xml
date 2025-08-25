@@ -112,7 +112,7 @@
         
         <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe"/></h:p>
 
-        <h:p>The FDE cPP - Authorization Acquisition describes the requirements for the Authorization Acquisition piece and details the security requirements and assurance activities necessary to interact with a user and result in the availability of sending a Border Encryption Value (BEV)to the Encryption Engine.</h:p>
+        <h:p>The FDE cPP - Authorization Acquisition describes the requirements for the Authorization Acquisition piece and details the security requirements and assurance activities necessary to interact with a user and result in the availability of sending a Border Encryption Value (BEV) to the Encryption Engine.</h:p>
         <h:p>The FDE cPP - Encryption Engine describes the requirements for the Encryption Engine piece and details the necessary security requirements and assurance activities for the actual encryption/decryption of the data by the DEK. Each cPP will also have a set of core requirements for management functions, proper handling of cryptographic keys, updates performed in a trusted manner, audit and self-tests. </h:p>
         <h:p>This TOE description defines the scope and functionality of the Authorization Acquisition, and
             the Security Problem Definition describes the assumptions made about the operating
@@ -311,7 +311,7 @@
      </h:p>
     </section>
     <section title="Interface/Boundary" id="sec-TOEInterface-Boundary">
-      The interface and boundary between the AA and the EE will vary based on the implementation. If one vendor provides the entire FDE solution, then it is may choose to not implement an interface between the AA and EE components. If a vendor provides a solution for one of the components, then the assumptions below state that the channel between the two components is sufficiently secure. Although standards and specifications exist for the interface between AA and EE components, the cPP does not require vendors to follow the standards in this version.
+      The interface and boundary between the AA and the EE will vary based on the implementation. If one vendor provides the entire FDE solution, then it may choose to not implement an interface between the AA and EE components. If a vendor provides a solution for one of the components, then the assumptions below state that the channel between the two components is sufficiently secure. Although standards and specifications exist for the interface between AA and EE components, the cPP does not require vendors to follow the standards in this version.
     </section>
     </section>
     
@@ -449,8 +449,8 @@
 		  <threat id="t-keyspace-exhaust" name="T.KEYSPACE_EXHAUST">
 		    <description>Threat agents may perform a cryptographic exhaust against the key space. Poorly chosen encryption algorithms and parameters allow attackers to exhaust the key space through brute force and give them unauthorized access to the data.</description>
 		    <addressed-by>FCS_KYC_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring ensures all keys protecting the BEV are of the same strength.</rationale>        
-		    <addressed-by>FCS_CKM.1/AKG(optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
-		    <addressed-by>FCS_CKM.1/SKG(selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
+		    <addressed-by>FCS_CKM.1/AKG (optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
+		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure DRBG. </rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
@@ -2497,9 +2497,9 @@
                     <selectable id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</selectable>
                     <selectable id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner <selectables linebreak='yes'>
                       <selectable id="sel-fcs-sni-ext-1-3-sel-2a">CBC: IVs shall be non-repeating and unpredictable</selectable>
-                      <selectable id="sel-fcs-sni-ext-1-3-sel-3b">CCM: Nonce shall be non-repeating and unpredictable</selectable>
-                      <selectable id="sel-fcs-sni-ext-1-3-sel-4c">XTS: No IV. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</selectable>
-                      <selectable> id="sel-fcs-sni-ext-1-1-sel-2"GCM: IV shall be non-repeating. The number of invocations of GCM shall not exceed 2^32 for a given secret key</selectable>
+                      <selectable id="sel-fcs-sni-ext-1-3-sel-2b">CCM: Nonce shall be non-repeating and unpredictable</selectable>
+                      <selectable id="sel-fcs-sni-ext-1-3-sel-2c">XTS: No IV. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</selectable>
+                      <selectable id="sel-fcs-sni-ext-1-3-sel-2d">GCM: IV shall be non-repeating. The number of invocations of GCM shall not exceed 2^32 for a given secret key</selectable>
                     </selectables>
                   </selectable>
                 </selectables>.</title>
@@ -3274,7 +3274,7 @@
     <section title="ASE: Security Target" id="ase">
       <h:p>The ST is evaluated as per ASE activities defined in the CEM. In addition, there may be Evaluation Activities specified within the SD that call for necessary descriptions to be included in the TSS that are specific to the TOE technology type.</h:p>
       <h:p>The SFRs in this cPP allow for conformant implementations to incorporate a wide range of acceptable key management approaches as long as basic principles are satisfied. Given the criticality of the key management scheme, this cPP requires the developer to provide a detailed description of their key management implementation. This information can be submitted as an appendix to the ST and marked proprietary, as this level of detailed information is not expected to be made publicly available. See Appendix E for details on the expectation of the developer’s Key Management Description</h:p><h:p>In addition, if the TOE includes a random bit generator Appendix D provides a description of the information expected to be provided regarding the quality of the entropy.</h:p>
-      <h:p><h:b>ASE_TSS.1.1C </h:b> The TOE summary specification shall describe how the TOE meets each SFR, <h:b>including a proprietary Key Management Description (Appendix E), and <h:i>[selection: Entropy Essay, list of all of 3rd 9 party software libraries (including version numbers), 3rd 10 party hardware components (including model/version numbers), no other cPP specified proprietary documentation]</h:i>.</h:b></h:p>
+      <h:p><h:b>ASE_TSS.1.1C </h:b> The TOE summary specification shall describe how the TOE meets each SFR, <h:b>including a proprietary Key Management Description (Appendix E), and <h:i>[selection: Entropy Essay, list of all of 3rd party software libraries (including version numbers), 3rd party hardware components (including model/version numbers), no other cPP specified proprietary documentation]</h:i>.</h:b></h:p>
     </section>
 
     <section title="ADV: Development" id="adv">
