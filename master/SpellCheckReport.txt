@@ -80,7 +80,6 @@ output/FDEAA-release-linkable.html: chipsets
 output/FDEAA-release-linkable.html: crypto
 output/FDEAA-release-linkable.html: decryptions
 output/FDEAA-release-linkable.html: enquiries
-output/FDEAA-release-linkable.html: fcs
 output/FDEAA-release-linkable.html: fulfils
 output/FDEAA-release-linkable.html: href
 output/FDEAA-release-linkable.html: iTC
@@ -92,8 +91,6 @@ output/FDEAA-release-linkable.html: nmap
 output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: reinstantiating
 output/FDEAA-release-linkable.html: sanitization
-output/FDEAA-release-linkable.html: sel
-output/FDEAA-release-linkable.html: sni
 output/FDEAA-release-linkable.html: subkey
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: uninstantiating
@@ -154,7 +151,6 @@ output/FDEAA-release.html: checksums
 output/FDEAA-release.html: chipsets
 output/FDEAA-release.html: crypto
 output/FDEAA-release.html: enquiries
-output/FDEAA-release.html: fcs
 output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: multifactor
@@ -163,8 +159,6 @@ output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: reinstantiating
 output/FDEAA-release.html: sanitization
-output/FDEAA-release.html: sel
-output/FDEAA-release.html: sni
 output/FDEAA-release.html: un
 output/FDEAA-release.html: uninstantiating
 output/FDEAA-release.html: v1
@@ -304,7 +298,6 @@ output/FDEAA.html: chipsets
 output/FDEAA.html: crypto
 output/FDEAA.html: decryptions
 output/FDEAA.html: enquiries
-output/FDEAA.html: fcs
 output/FDEAA.html: fulfils
 output/FDEAA.html: iTC
 output/FDEAA.html: lifecycle
@@ -316,8 +309,6 @@ output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: reinstantiating
 output/FDEAA.html: sanitization
-output/FDEAA.html: sel
-output/FDEAA.html: sni
 output/FDEAA.html: subkey
 output/FDEAA.html: un
 output/FDEAA.html: uninstantiating
