@@ -2,8 +2,6 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and speci"/assignable[1]"cryptogra"
 * Error: Found a "assignable" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and speci"/assignable[2]"list of s"
-* Error: Found a "assignable" element that is buried under stricken text:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and crypt"/assignable[1]"cryptogra"
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/f-element[2]""
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
