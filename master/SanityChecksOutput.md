@@ -45,6 +45,9 @@
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[22]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/f-element[1]""/note[1]"The selec"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[5]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[11]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[16]""
  Failed to find a reference to bibCEM.
  Failed to find a reference to bibCEM.
  Failed to find a reference to entropyappendix.
