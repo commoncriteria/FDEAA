@@ -1,1 +1,0 @@
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:810:158: error: value of attribute "status" is invalid; must be equal to "feat-based", "invisible", "objective", "optional" or "sel-based"

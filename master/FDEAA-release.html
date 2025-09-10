@@ -1398,7 +1398,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_KYP_EXT.1">FPT_KYP_EXT.1</a></td><td>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</td></tr>
 <tr><td><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to meet a compliant power saving state that protects and/or destroys key materials.</td></tr>
 <tr><td><a href="#FPT_PWR_EXT.2">FPT_PWR_EXT.2</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to enter into a safe state based on each condition. </td></tr>
-<tr><td>FCS_CKM.1/AKG (optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_KDF_EXT.1">FCS_KDF_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring a password that is not subject to a brute force attack.</td></tr>
 <tr><td><a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
@@ -1417,7 +1417,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_FLS.1">FPT_FLS.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that a malfunctioning <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> function cannot be used to generate potentially insecure keys.</td></tr>
 <tr><td><a href="#FPT_TST.1">FPT_TST.1</a> (selection-based)</td><td>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</td></tr>
 <tr class="major-row"><td rowspan="10"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_​EXHAUST</a></td><td><a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></td><td>Mitigates this threat by ensuring ensures all keys protecting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are of the same strength.</td></tr>
-<tr><td>FCS_CKM.1/AKG (optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (optional)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </td></tr>
 <tr><td><a href="#FCS_RBG.2">FCS_RBG.2</a> (selection-based)</td><td>Mitigates this threat by ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</td></tr>
@@ -2040,7 +2040,26 @@ The following sections list Common Criteria and technology terms used in this do
         the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
         if certain selections are made, then additional requirements below must be included.
  	</p>
-		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+           <a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>.
+           </i></b></div>
+				
+              <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">
+                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>asymmetric</b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: <b>[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_18"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_19">2048-bit</span>, <span class="selectable-content" id="_s_20">3072-bit</span>, <span class="selectable-content" id="_s_21">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, “Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)”, Appendix B.3</span></li><li style=""><span class="selectable-content" id="_s_22"><abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes using “<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” of [<b>selection</b>: <span class="selectable-content" id="_s_23">P-256</span>, <span class="selectable-content" id="_s_24">P-384</span>, <span class="selectable-content" id="_s_25">P-521</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, “Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)”, Appendix  B.4</span></li><li style=""><span class="selectable-content" id="_s_26"><abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> schemes using cryptographic key sizes of 
+                    [<b>selection</b>: <span class="selectable-content" id="_s_27">2048-bit</span>, <span class="selectable-content" id="_s_28">3072-bit</span>, <span class="selectable-content" id="_s_29">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, “Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)”, Appendix B.1</span></li></ul>]</b> 
+                  <s>and specified cryptographic key sizes 
+                    [<b>assignment</b>: 
+     <span class="assignable-content">cryptographic key sizes</span>] 
+                    that meet the following: 
+                    [<b>assignment</b>: 
+     <span class="assignable-content">list of standards</span>].</s>
+                <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                  Asymmetric keys may be used to “wrap” a key or submask. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in FCS_COP.                                    
+                </span></div></div></div>
+              
+            </div><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FCS_AFA_EXT.1.1">FCS_AFA_EXT.1.1</a>, <a href="#FCS_KDF_EXT.1.1">FCS_KDF_EXT.1.1</a>, <a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, <a href="#FCS_SNI_EXT.1.1">FCS_SNI_EXT.1.1</a>, <a href="#FCS_SNI_EXT.1.3">FCS_SNI_EXT.1.3</a>, <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, <a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a>.
            </i></b></div>
               
