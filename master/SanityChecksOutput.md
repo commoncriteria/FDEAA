@@ -1,7 +1,7 @@
 * Error: Found a "assignable" element that is buried under stricken text:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and speci"/assignable[1]"cryptogra"
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[2]"The TSF s"/h:s[1]"and speci"/assignable[1]"cryptogra"
 * Error: Found a "assignable" element that is buried under stricken text:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and speci"/assignable[2]"list of s"
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/title[2]"The TSF s"/h:s[1]"and speci"/assignable[2]"list of s"
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/f-element[2]""
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
@@ -41,7 +41,6 @@
 * Error: Detected multiple elements with an id of 'fmt-smf-1'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[22]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/f-element[1]""/note[1]"The selec"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[5]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[11]""
