@@ -1176,33 +1176,6 @@
         
             <f-component cc-id="fcs_ckm.6" iteration="Power" name="Cryptographic Key and Key Material Destruction (Power Management)" id="fcs-ckm-6-power">
               <f-element id="fcs-ckm-6e1-pwr">
-                <!--fcs_ckm-4-1-a -->
-                <title>                  
-                  The TSF shall <h:b><selectables>
-                    <selectable>instruct the operational environment to clear</selectable>
-                    <selectable>erase</selectable>
-                  </selectables></h:b> [<h:i>cryptographic keys and key material from volatile
-                    memory</h:i>] when [<h:i>transitioning to a compliant power saving state as
-                      defined by FPT_PWR_EXT.1</h:i>] that meets the following: [<h:i>a key
-                        destruction method specified in FCS_CKM.6</h:i>].
-                </title>
-                <note role="application">In some cases, erasure of keys from volatile memory is
-                  only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.</note>
-                <aactivity level="element">
-                  <TSS>
-                    The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <h:ul>
-                      <h:li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</h:li>
-                      <h:li>if and how memory locations for (temporary) keys are tracked;</h:li>
-                      <h:li>details of the interface used for key erasure when relying on the OE for memory clearing.</h:li></h:ul></TSS>
-                  <Guidance>The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</Guidance>
-                  <CustomEA name="KMD">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</CustomEA>
-                  <Tests>There are no test evaluation activities for this SFR.</Tests>
-                </aactivity>
-              </f-element>
-              <f-element id="fcs-ckm-6e2-pwr">
-                <!-- fcs_ckm-ext-4-1-b-->
                 <title>
                   The TSF shall destroy [<h:i>all key material, BEV, and authentication factors
                     stored in plaintext</h:i>] when [<h:i>transitioning to a compliant power saving
@@ -1228,6 +1201,30 @@
                             FCS_CKM.6 for the destruction.</h:p></CustomEA>
                       <Tests>There are no test evaluation activities for this SFR.</Tests>
                   </aactivity>
+              </f-element>
+              <f-element id="fcs-ckm-6e2-pwr">
+                <title>
+                  The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in
+                  accordance with a specified cryptographic key destruction method <h:b><selectables>
+                    <selectable>instruct the operational environment to clear</selectable>
+                    <selectable>erase</selectable>
+                  </selectables></h:b> that meets the following: [<h:i>a key
+                        destruction method specified in FCS_CKM.6</h:i>].
+                </title>
+                <note role="application">In some cases, erasure of keys from volatile memory is
+                  only supported by the operational environment, in which case the operational
+                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.</note>
+                <aactivity level="element">
+                  <TSS>
+                    The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <h:ul>
+                      <h:li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</h:li>
+                      <h:li>if and how memory locations for (temporary) keys are tracked;</h:li>
+                      <h:li>details of the interface used for key erasure when relying on the OE for memory clearing.</h:li></h:ul></TSS>
+                  <Guidance>The evaluator shall check the guidance documentation if the TOE depends on the
+                    Operational Environment for memory clearing and how that is achieved.</Guidance>
+                  <CustomEA name="KMD">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</CustomEA>
+                  <Tests>There are no test evaluation activities for this SFR.</Tests>
+                </aactivity>
               </f-element>
           
             </f-component>
