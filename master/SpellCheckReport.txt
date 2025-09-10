@@ -25,7 +25,6 @@ output/FDEAA-release-linkable.html: CAVS
 output/FDEAA-release-linkable.html: CCL
 output/FDEAA-release-linkable.html: CMAC
 output/FDEAA-release-linkable.html: CSP
-output/FDEAA-release-linkable.html: CSPs
 output/FDEAA-release-linkable.html: DEKs
 output/FDEAA-release-linkable.html: DRBGs
 output/FDEAA-release-linkable.html: ECD
@@ -50,7 +49,6 @@ output/FDEAA-release-linkable.html: NAS
 output/FDEAA-release-linkable.html: OEAP
 output/FDEAA-release-linkable.html: P9
 output/FDEAA-release-linkable.html: PBKDF2
-output/FDEAA-release-linkable.html: PCI
 output/FDEAA-release-linkable.html: PINs
 output/FDEAA-release-linkable.html: PSS
 output/FDEAA-release-linkable.html: Pre30
@@ -111,7 +109,6 @@ output/FDEAA-release.html: Adleman
 output/FDEAA-release.html: BEVs
 output/FDEAA-release.html: CCL
 output/FDEAA-release.html: CSP
-output/FDEAA-release.html: CSP’
 output/FDEAA-release.html: DEKs
 output/FDEAA-release.html: DRBGs
 output/FDEAA-release.html: ECD
@@ -153,7 +150,6 @@ output/FDEAA-release.html: fulfils
 output/FDEAA-release.html: iTC
 output/FDEAA-release.html: multifactor
 output/FDEAA-release.html: nmap
-output/FDEAA-release.html: pool’
 output/FDEAA-release.html: preauthentication
 output/FDEAA-release.html: reinstantiating
 output/FDEAA-release.html: sanitization
@@ -175,7 +171,6 @@ output/FDEAA-sd.html: C1
 output/FDEAA-sd.html: CAVS
 output/FDEAA-sd.html: CMAC
 output/FDEAA-sd.html: CSP
-output/FDEAA-sd.html: CSPs
 output/FDEAA-sd.html: DEKs
 output/FDEAA-sd.html: DRBGs
 output/FDEAA-sd.html: GFSBox
@@ -190,7 +185,6 @@ output/FDEAA-sd.html: Labelling
 output/FDEAA-sd.html: MMMM
 output/FDEAA-sd.html: NIST’s
 output/FDEAA-sd.html: OEAP
-output/FDEAA-sd.html: PCI
 output/FDEAA-sd.html: PP’s
 output/FDEAA-sd.html: RSADP
 output/FDEAA-sd.html: RSAKEM
@@ -237,8 +231,6 @@ output/FDEAA.html: CAVS
 output/FDEAA.html: CCL
 output/FDEAA.html: CMAC
 output/FDEAA.html: CSP
-output/FDEAA.html: CSPs
-output/FDEAA.html: CSP’
 output/FDEAA.html: DEKs
 output/FDEAA.html: DRBGs
 output/FDEAA.html: ECD
@@ -264,7 +256,6 @@ output/FDEAA.html: NAS
 output/FDEAA.html: OEAP
 output/FDEAA.html: P9
 output/FDEAA.html: PBKDF2
-output/FDEAA.html: PCI
 output/FDEAA.html: PINs
 output/FDEAA.html: PSS
 output/FDEAA.html: Pre30
@@ -301,7 +292,6 @@ output/FDEAA.html: multifactor
 output/FDEAA.html: nLen
 output/FDEAA.html: nist
 output/FDEAA.html: nmap
-output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: reinstantiating
 output/FDEAA.html: sanitization

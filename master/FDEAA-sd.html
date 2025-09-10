@@ -469,135 +469,7 @@ The following sections list Common Criteria and technology terms used in this do
                         <li>Release an invalid authorization factor and verify that access to decrypted plaintext data is denied</li>
                         <li>Release a valid authorization factor and verify that access to decrypted plaintext data is granted.</li>
                       </ul>
-                    </div></div></span></div><div class="comp" id="FCS-CKM-6"><h4>FCS_CKM.6 Cryptographic Key and Key Material Destruction (Destruction Timing/Method)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1</div>
-                      <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify the TSS provides a high level description of what it means for keys and key material to be no longer needed and when then should be expected to be destroyed.</div>
-                      <div class="eacategory">Guidance</div><div class="ea">There are no AGD evaluation activities for this SFR.</div>
-                      <div class="eacategory">KMD</div><div class="ea">
-                        <p>The evaluator shall verify the KMD includes a description of the areas where keys and
-                          key material reside and when the keys and key material are no longer needed.</p>
-                        <p>The evaluator shall verify the KMD includes a key lifecycle, that includes a description
-                          where key material reside, how the key material is used, how it is determined that keys
-                          and key material are no longer needed, and how the material is destroyed once it is not
-                          needed and that the documentation in the KMD follows FCS_CKM.4(a) for the
-                          destruction.</p></div>
-                      <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
-                  <div class="element-activity-header">FCS_CKM.6.2</div>
-                    <div class="eacategory">TSS</div><div class="ea">
-                      <p>The evaluator examines the TSS to ensure it describes how the keys are managed in
-                        volatile memory. This description includes details of how each identified key is
-                        introduced into volatile memory (e.g. by derivation from user input, or by unwrapping
-                        a wrapped key stored in non-volatile memory) and how they are overwritten.</p>
-                      <p>The evaluator shall check to ensure the TSS lists each type of key that is stored in
-                        non-volatile memory, and identifies how the TOE interacts with the underlying
-                        platform to manage keys (e.g., store, retrieve, destroy). The description includes details
-                        on the method of how the TOE interacts with the platform, including an identification
-                        and description of the interfaces it uses to manage keys (e.g., file system APIs, platform
-                        key store APIs). </p>
-                      <p>The evaluator examines the interface description for each different media type to ensure
-                        that the interface supports the selections and description in the TSS.</p>
-                      <p>The evaluator shall check that the TSS identifies any configurations or circumstances
-                        that may not strictly conform to the key destruction requirement. If the ST makes use
-                        of the open assignment and fills in the type of pattern that is used, the evaluator
-                        examines the TSS to ensure it describes how that pattern is obtained and used. The
-                        evaluator shall verify that the pattern does not contain any CSPs.</p></div>
-                      
-
-                    <div class="eacategory">Guidance</div><div class="ea">
-                      <p>There are a variety of concerns that may prevent or delay key destruction in some cases.
-                        The evaluator shall check that the guidance documentation identifies configurations or
-                        circumstances that may not strictly conform to the key destruction requirement, and
-                        that this description is consistent with the relevant parts of the TSS and any other
-                        relevant Required Supplementary Information. The evaluator shall check that the
-                        guidance documentation provides guidance on situations where key destruction may
-                        be delayed at the physical layer.</p>
-                      <p>For example, when the TOE does not have full access to the physical memory, it is
-                        possible that the storage may be implementing wear-leveling and garbage collection.
-                        This may create additional copies of the key that are logically inaccessible but persist
-                        physically. In this case, it is assumed the drive supports the TRIM command and
-                        implements garbage collection to destroy these persistent copies when not actively
-                        engaged in other tasks. </p>
-                      <p>Drive vendors implement garbage collection in a variety of different ways, as such
-                        there is a variable amount of time until data is truly removed from these solutions.
-                        There is a risk that data may persist for a longer amount of time if it is contained in a
-                        block with other data not ready for erasure. It is assumed the operating system and file
-                        system of the OE support TRIM, instructing the non-volatile memory to erase copies
-                        via garbage collection upon their deletion. </p>
-                      <p>It is assumed that if a RAID array is being used, only set-ups that support TRIM are
-                        utilized. It is assumed if the drive is connected via PCI-Express, the operating system
-                        supports TRIM over that channel. It is assumed the drive is healthy and contains minimal corrupted data and will be end of life before a significant amount of damage
-                        to drive health occurs, it is assumed there is a risk small amounts of potentially
-                        recoverable data may remain in damaged areas of the drive.</p>
-                      <p>Finally, it is assumed the keys are not stored using a method that would be inaccessible
-                        to TRIM, such as being contained in a file less than 982 bytes which would be
-                        completely contained in the master file table.</p></div>
-                    
-                    <div class="eacategory">KMD</div><div class="ea"> Refer to the TSS. KMD is combined with the TSS.</div>
-                    <div class="eacategory">Tests</div><div class="ea">
-                      <span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_CKM.6.2:1</a>:
-       Applied to each key held as plaintext in volatile memory and subject to
-                          destruction by overwrite by the TOE (whether or not the plaintext value is subsequently
-                          encrypted for storage in volatile or non-volatile memory). In the case where the only
-                          selection made for the destruction method key was removal of power, then this test is
-                          unnecessary. The evaluator shall:<ol type="1">
-                            <li>Record the value of the key in the TOE subject to clearing.</li>
-                            <li>Cause the TOE to perform a normal cryptographic processing with the key
-                              from Step #1.</li>
-                            <li>Cause the TOE to clear the key.</li>
-                            <li>Cause the TOE to stop the execution but not exit.</li>
-                            <li>Cause the TOE to dump the entire memory of the TOE into a binary file.</li>
-                            <li>Search the content of the binary file created in Step #5 for instances of the
-                              known key value from Step #1.</li>
-                            <li>Break the key value from Step #1 into 3 similar sized pieces and perform a
-                              search using each piece.</li>
-                          </ol>
-                          <p>Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory. If
-                            a copy is found, then the test fails. </p>
-                            <p>Step 7 ensures that partial key fragments do not remain in memory. If a fragment is
-                              found, there is a minuscule chance that it is not within the context of a key (e.g., some
-                              random bits that happen to match). If this is the case the test should be repeated with a
-                              different key in Step #1. If a fragment is found the test fails.</p>
-                              <p>The following tests apply only for the selection of “logically addresses the storage location…”, since the TOE in this instance has more
-                                visibility into what is happening within the underlying platform (e.g., a logical view of
-                                the media). For the selection of “instructs the underlying platform…”, the TOE has no visibility into the inner workings and
-                                completely relies on the underlying platform, so there is no reason to test the TOE
-                                beyond test 1.</p>
-                              <p>For the selection of “logically addresses the storage location…”, the following tests are used to determine the TOE is able to request
-                                the platform to overwrite the key with a TOE supplied pattern.</p>
-                          </li>
-                          <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:2</a>:
-      
-                            Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media (e.g., MBR file system):<ol type="1">
-                              <li>Record the value of the key in the TOE subject to clearing.</li>
-                              <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                              <li>Cause the TOE to clear the key.</li>
-                              <li>Search the logical view that the key was stored in for instances of the known
-                                key value from Step #1. If a copy is found, then the test fails.</li>
-                              <li>Break the key value from Step #1 into 3 similar sized pieces and perform a
-                                search using each piece. If a fragment is found then the test is repeated (as
-                                described for Use Case 1 test 1 above), and if a fragment is found in the
-                                repeated test then the test fails.</li>
-                              
-
-                            </ol>
-                          </li>
-                          <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_CKM.6.2:3</a>:
-      
-                            Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
-                              <li>Record the logical storage location of the key in the TOE subject to clearing</li>
-                              <li>Cause the TOE to perform a normal cryptographic processing with the key
-                                from Step #1.</li>
-                              <li>Cause the TOE to clear the key.</li>
-                              <li>Read the logical storage location in Step #1 of non-volatile memory to ensure
-                                the appropriate pattern is utilized.</li>
-                            </ol>
-                            <p>
-                              The test succeeds if correct pattern is used to overwrite the key in the memory location. If the pattern is not found the test fails.
-                            </p>
-                          </li>
-                      </ul></span>
-                    </div>
-                </span></div><div class="comp" id="FCS-CKM-6-POWER"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1/Power</div>
+                    </div></div></span></div><div class="comp" id="FCS-CKM-6-POWER"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1/Power</div>
                   <div class="eacategory">TSS</div><div class="ea">
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
                       <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
@@ -766,11 +638,11 @@ The following sections list Common Criteria and technology terms used in this do
                     how only privileged users (administrators) are allowed to manage the states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator to check if guidance documentation describes which authorization
                     factors are required to change compliant power saving state behavior and properties.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following tests:
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FMT_MOF.1:1</a>:
+                      <li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FMT_MOF.1:1</a>:
       (conditional): If the product supports changes to compliant power saving
                         states, the evaluator shall present a privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior and properties are
                         allowed.</li>
-                        <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FMT_MOF.1:2</a>:
+                        <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FMT_MOF.1:2</a>:
       (conditional): If the product supports changes to compliant power
                           saving states, the evaluator shall present a non-privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior are not allowed.
                           </li>
@@ -826,7 +698,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall initialize the TOE such that
                     it requires the user to input an authorization factor in order to access encrypted data.</p>
                   <p>
-                    <span class="testlist-"><ul><li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FMT_SMF.1:1</a>:
+                    <span class="testlist-"><ul><li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FMT_SMF.1:1</a>:
       The evaluator shall first provision user authorization factors, and then verify
                       all authorization values supported allow the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
@@ -841,23 +713,23 @@ The following sections list Common Criteria and technology terms used in this do
                     <p>If item e) is selected in FMT_SMF.1.1: If additional management functions are
                       claimed, the evaluator shall verify that the additional features function as described. </p>
                   <p><span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FMT_SMF.1:2</a>:
+                    <li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FMT_SMF.1:2</a>:
       (conditional): If the TOE provides default authorization values, the
                       evaluator shall change these values in the course of taking ownership of the device
                       as described in the operational guidance. The evaluator shall then confirm that the
                       (old) authorization values are no longer valid for data access.</li>
-                    <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FMT_SMF.1:3</a>:
+                    <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FMT_SMF.1:3</a>:
       (conditional): If the TOE provides key recovery capability whose effects are
                       visible at the TOE interface, then the evaluator shall devise a test that ensures that
                       the key recovery capability has been or can be disabled following the guidance
                       provided by the vendor.</li>
-                    <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FMT_SMF.1:4</a>:
+                    <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FMT_SMF.1:4</a>:
       (conditional): If the TOE provides the ability to configure the power saving
                       states that are entered by certain events, the evaluator shall devise a test that causes
                       the TOE to enter a specific power saving state, configure the TSF so that this
                       activity causes a different state to be entered, repeat the activity, and observe the
                       new state is entered as configured.</li>
-                    <li class="test-"><a id="_t_26" class="defined" href="#_t_26">Test FMT_SMF.1:5</a>:
+                    <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FMT_SMF.1:5</a>:
       (conditional): If the TOE provides the ability to disable the use of one or
                       more power saving states, the evaluator shall devise a test that enables all supported
                       power saving states and demonstrates that the TOE can enter into each of these
@@ -929,12 +801,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                      <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
@@ -1117,14 +989,14 @@ The following sections list Common Criteria and technology terms used in this do
                   following tests, specific to which key transport scheme was employed.</p>
                 <p>
                   If the KTS-OAEP scheme was selected, the evaluator shall perform the following tests:<span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FCS_COP.1/KeyEncap:1</a>:
+                    <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_COP.1/KeyEncap:1</a>:
       The evaluator shall inspect each cipher text, C, produced by the RSA-OAEP
                       encryption operation of the TOE and make sure it is the correct length, either 256
                       or 384 bytes depending on RSA key size. The evaluator shall also feed into the
                       TOE’s RSA-OEAP decryption operation some cipher texts that are the wrong
                       length and verify that the erroneous input is detected and that the decryption
                       operation exits with an error code.</li>
-                    <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FCS_COP.1/KeyEncap:2</a>:
+                    <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_COP.1/KeyEncap:2</a>:
       The evaluator shall convert each cipher text, C, produced by the RSA-OAEP
                       encryption operation of the TOE to the correct cipher text integer, c, and use the
                       decryption primitive to compute em = RSADP((n,d),c) and convert em to the
@@ -1133,7 +1005,7 @@ The following sections list Common Criteria and technology terms used in this do
                       operation some cipher texts where the first byte of EM was set to a value other
                       than 0x00, and verify that the erroneous input is detected and that the decryption
                       operation exits with an error code.</li>
-                    <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_COP.1/KeyEncap:3</a>:
+                    <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FCS_COP.1/KeyEncap:3</a>:
       The evaluator shall decrypt each cipher text, C, produced by the RSA-OAEP
                       encryption operation of the TOE using RSADP, and perform the OAEP decoding
                       operation (described in NIST SP 800-56B section 7.2.2.4) to recover HA’ || X. For
@@ -1141,7 +1013,7 @@ The following sections list Common Criteria and technology terms used in this do
                       algorithm and verify that HA' = Hash(A). The evaluator shall also force the TOE
                       to perform some RSA-OAEP decryptions where the A value is passed incorrectly,
                       and the evaluator shall verify that an error is detected.</li>
-                    <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_COP.1/KeyEncap:4</a>:
+                    <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FCS_COP.1/KeyEncap:4</a>:
       The evaluator shall check the format of the ‘X’ string recovered in OAEP.Test.3
                       to ensure that the format is of the form PS || 01 || K, where PS consists of zero or
                       more consecutive 0x00 bytes and K is the transported keying material. The
@@ -1150,7 +1022,7 @@ The following sections list Common Criteria and technology terms used in this do
                       the leftmost non-zero byte is not 0x01). These incorrectly formatted ‘X’ variables
                       shall be detected by the RSA-OEAP decrypt function.
                     </li>
-                    <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_COP.1/KeyEncap:5</a>:
+                    <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FCS_COP.1/KeyEncap:5</a>:
       The evaluator shall trigger all detectable decryption errors and validate that the
                       returned error codes are the same and that no information is given back to the
                       sender on which type of error occurred. The evaluator shall also validate that no
@@ -1160,7 +1032,7 @@ The following sections list Common Criteria and technology terms used in this do
                 </p>
                 <p>If the KTS-KEM-KWS scheme was selected, the evaluator shall perform the following
                   tests:<span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_COP.1/KeyEncap:6</a>:
+                    <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_COP.1/KeyEncap:6</a>:
       The evaluator shall inspect each cipher text, C, produced by RSA-KEM-KWS
                       encryption operation of the TOE and make sure the length (in bytes) of the cipher
                       text, cLen, is greater than nLen (the length, in bytes, of the modulus of the RSA
@@ -1168,7 +1040,7 @@ The following sections list Common Criteria and technology terms used in this do
                       the key wrapping algorithm. The evaluator shall feed into the RSA-KEM-KWS
                       decryption operation a cipher text of unsupported length and verify that an error
                       is detected and that the decryption process stops.</li>
-                    <li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_COP.1/KeyEncap:7</a>:
+                    <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_COP.1/KeyEncap:7</a>:
       The evaluator shall separate the cipher text, C, produced by the sender-side of the
                       TOE into its C0 and C1 components and use the RSA decryption primitive to
                       recover the secret value, Z, from C0. The evaluator shall check that the unsigned
@@ -1178,7 +1050,7 @@ The following sections list Common Criteria and technology terms used in this do
                       decryption process detects the error. Similarly, the evaluator shall construct
                       examples where the cipher text is created with a secret value Z = n – 1 and make
                       sure the RSA-KEM-KWS decryption process detects the error.</li>
-                    <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_COP.1/KeyEncap:8</a>:
+                    <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_COP.1/KeyEncap:8</a>:
       The evaluator shall attempt to successfully recover the secret value Z, derive the
                       key wrapping key, KWK, and unwrap the KWA-cipher text following the RSAKEM-KWS
                       decryption process given in NIST SP 800-56B section 7.2.3.4. If the
@@ -1191,7 +1063,7 @@ The following sections list Common Criteria and technology terms used in this do
                       Similarly, if the key-wrapping algorithm is AES-CCM, the evaluator shall attempt
                       at least one decryption where the wrong nonce is given to the RSA-KEM-KWS
                       decryption operation and verify that a decryption error is detected.</li>
-                    <li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_COP.1/KeyEncap:9</a>:
+                    <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_COP.1/KeyEncap:9</a>:
       The evaluator shall trigger all detectable decryption errors and validate that the
                       resulting error codes are the same and that no information is given back to the
                       sender on which type of error occurred. The evaluator shall also validate that no
@@ -1386,14 +1258,14 @@ The following sections list Common Criteria and technology terms used in this do
                         specified above.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                       <p>The evaluator shall also perform the following tests:</p>
                       <span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_PCC_EXT.1:1</a>:
+                        <li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_PCC_EXT.1:1</a>:
       Ensure that the TOE supports passwords/passphrases of a minimum
                           length of 64 characters.</li>
-                        <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_PCC_EXT.1:2</a>:
+                        <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_PCC_EXT.1:2</a>:
       If the TOE supports a passwords and passphrase length up to a maximum
                           number of characters, n (which would be greater than 64), then ensure that the
                           TOE will not accept more than n characters.</li>
-                        <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_PCC_EXT.1:3</a>:
+                        <li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_PCC_EXT.1:3</a>:
       Ensure that the TOE supports passwords consisting of all characters
                           assigned and supported by the ST author.</li>
                       </ul></span></div></div></span></div><div class="comp" id="FCS-RBG-1"><h4>FCS_RBG.1 Cryptographic Operation (Random Bit Generation)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_RBG.1.1</div>
@@ -1520,7 +1392,7 @@ The following sections list Common Criteria and technology terms used in this do
                       confirm that the TSS describes how the length of the output produced is at least the
                       same as that of the BEV.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that an approved combination is used
                         and does not result in the weakening or exposure of key material.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following test:<span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FCS_SMC_EXT.1:1</a>:
+                        <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_SMC_EXT.1:1</a>:
       (conditional): If there is more than one authorization factor, ensure that failure
                           to supply a required authorization factor does not result in access to the encrypted data.</li>
                       </ul></span></div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
@@ -1547,14 +1419,14 @@ The following sections list Common Criteria and technology terms used in this do
                       <div class="eacategory">Tests</div><div class="ea">
                         The evaluator shall perform the following tests:
                         <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_VAL_EXT.1.1:1</a>:
+                          <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_VAL_EXT.1.1:1</a>:
       The evaluator shall determine the limit on the average rate of the number of
                             consecutive failed authorization attempts. The evaluator will test the TOE by entering
                             that number of incorrect authorization factors in consecutive attempts to access the
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</li>
-                          <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_VAL_EXT.1.1:2</a>:
+                          <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_VAL_EXT.1.1:2</a>:
       For each validated authorization factor, ensure that when the user provides an
                             incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
                             the TOE (e.g., to the EE).</li>
