@@ -63,7 +63,6 @@ output/FDEAA-release-linkable.html: SATA
 output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
-output/FDEAA-release-linkable.html: TD0606
 output/FDEAA-release-linkable.html: Tweakable
 output/FDEAA-release-linkable.html: VAN1
 output/FDEAA-release-linkable.html: XCCDF
@@ -136,7 +135,6 @@ output/FDEAA-release.html: S4
 output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
 output/FDEAA-release.html: Sanitization
-output/FDEAA-release.html: TD0606
 output/FDEAA-release.html: Tweakable
 output/FDEAA-release.html: VAN1
 output/FDEAA-release.html: XCCDF
@@ -275,7 +273,6 @@ output/FDEAA.html: SATA
 output/FDEAA.html: SHAVS
 output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
-output/FDEAA.html: TD0606
 output/FDEAA.html: Tweakable
 output/FDEAA.html: VAN1
 output/FDEAA.html: XCCDF
