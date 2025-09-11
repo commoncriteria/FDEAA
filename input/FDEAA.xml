@@ -619,7 +619,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.PHYSICAL">
-			  <description><h:p>The Operational Environment will provide a secure physical computing space such than an adversary is not able to make modifications to the environment or to the TOE itself.</h:p><h:p>Rationale: As stated in section 1.6, the use case for this cPP is to protect data at rest on a device where the adversary receives it in a powered off state and has no prior access.</h:p> </description>
+			  <description><h:p>The Operational Environment will provide a secure physical computing space such that an adversary is not able to make modifications to the environment or to the TOE itself.</h:p><h:p>Rationale: As stated in section 1.6, the use case for this cPP is to protect data at rest on a device where the adversary receives it in a powered off state and has no prior access.</h:p> </description>
 		  </SOE>
 	    
 	    <SOE name="OE.PLATFORM_IA">
