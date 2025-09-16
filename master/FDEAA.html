@@ -1242,17 +1242,7 @@ The following sections list Common Criteria and technology terms used in this do
                 </div></div></div>
         
             <div class="comp" id="FCS_CKM.6/Power"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4>
-              <div class="element"><div class="reqid" id="FCS_CKM.6.1/Power"><a href="#FCS_CKM.6.1/Power" class="abbr">FCS_CKM.6.1/Power</a></div><div class="reqdesc">                  
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_80">instruct the operational environment to clear</span>, <span class="selectable-content" id="_s_81">erase</span>]</b> [<i>cryptographic keys and key material from volatile
-                    memory</i>] when [<i>transitioning to a compliant power saving state as
-                      defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>] that meets the following: [<i>a key
-                        destruction method specified in <a href="#FCS_CKM.6">FCS_CKM.6</a></i>].
-                <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">In some cases, erasure of keys from volatile memory is
-                  only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.</span></div></div></div>
-              <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">
+              <div class="element"><div class="reqid" id="FCS_CKM.6.1/Power"><a href="#FCS_CKM.6.1/Power" class="abbr">FCS_CKM.6.1/Power</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy [<i>all key material, <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>, and authentication factors
                     stored in plaintext</i>] when [<i>transitioning to a compliant power saving
                       state as defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>].
@@ -1262,18 +1252,17 @@ The following sections list Common Criteria and technology terms used in this do
                   state indistinguishable from a compliant power state (e.g. as result of sudden or
                   unexpected power loss). For those scenarios, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or the operational
                   environment guidance documentation must provide procedures to support destruction of key material (e.g., automated reboot with memory clearing in early stages of the system’s power-on sequence).</span></div></div></div>
+              <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1">FCS_CKM.6.1</a> in
+                  accordance with a specified cryptographic key destruction method <b>[<b>selection</b>: <span class="selectable-content" id="_s_80">instruct the operational environment to clear</span>, <span class="selectable-content" id="_s_81">erase</span>]</b> that meets the following: [<i>a key
+                        destruction method specified in <a href="#FCS_CKM.6">FCS_CKM.6</a></i>].
+                <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">In some cases, erasure of keys from volatile memory is
+                  only supported by the operational environment, in which case the operational
+                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.</span></div></div></div>
           
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_CKM.6.1/Power">FCS_CKM.6.1/Power</a></div>
-                  <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
-                    The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> outlines: <ul>
-                      <li>if and when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> or the Operational Environment is used to destroy keys from volatile memory;</li>
-                      <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory clearing.</li></ul></div>
-                  <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div>
-                  <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> lists each type of key, its origin, possible memory locations in volatile memory.</div>
-                  <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
-                <div class="element-activity-header"><a href="#FCS_CKM.6.2/Power">FCS_CKM.6.2/Power</a></div>
                     <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a description of what keys and key material
                       are destroyed when entering any compliant power saving state.</div>
                       <div class="eacategory">Guidance</div><div class="ea">The evaluator shall validate that guidance documentation contains clear warnings and
@@ -1288,7 +1277,17 @@ The following sections list Common Criteria and technology terms used in this do
                             destroyed once it is not needed and that the documentation in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> follows
                             <a href="#FCS_CKM.6">FCS_CKM.6</a> for the destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
-                  </div></div></div>
+                  <div class="element-activity-header"><a href="#FCS_CKM.6.2/Power">FCS_CKM.6.2/Power</a></div>
+                  <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
+                    The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> outlines: <ul>
+                      <li>if and when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> or the Operational Environment is used to destroy keys from volatile memory;</li>
+                      <li>if and how memory locations for (temporary) keys are tracked;</li>
+                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory clearing.</li></ul></div>
+                  <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> depends on the
+                    Operational Environment for memory clearing and how that is achieved.</div>
+                  <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> lists each type of key, its origin, possible memory locations in volatile memory.</div>
+                  <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
+                </div></div></div>
         
             <div class="comp" id="FCS_COP.1/Hash"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4>
               <div class="element"><div class="reqid" id="FCS_COP.1.1/Hash"><a href="#FCS_COP.1.1/Hash" class="abbr">FCS_COP.1.1/Hash</a></div><div class="reqdesc">The <b>application</b>  shall perform [<i>cryptographic hashing services</i>] in accordance with a specified cryptographic algorithm  

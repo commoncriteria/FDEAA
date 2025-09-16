@@ -598,16 +598,6 @@ The following sections list Common Criteria and technology terms used in this do
                       </ul></span>
                     </div>
                 </span></div><div class="comp" id="FCS-CKM-6-POWER"><h4>FCS_CKM.6/Power Cryptographic Key and Key Material Destruction (Power Management)</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_CKM.6.1/Power</div>
-                  <div class="eacategory">TSS</div><div class="ea">
-                    The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
-                      <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
-                      <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div>
-                  <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div>
-                  <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
-                  <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
-                <div class="element-activity-header">FCS_CKM.6.2/Power</div>
                     <div class="eacategory">TSS</div><div class="ea">The evaluator shall verify the TSS provides a description of what keys and key material
                       are destroyed when entering any compliant power saving state.</div>
                       <div class="eacategory">Guidance</div><div class="ea">The evaluator shall validate that guidance documentation contains clear warnings and
@@ -622,7 +612,17 @@ The following sections list Common Criteria and technology terms used in this do
                             destroyed once it is not needed and that the documentation in the KMD follows
                             FCS_CKM.6 for the destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
-                  </span></div><div class="comp" id="FCS-COP-1-HASH"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/Hash</div>
+                  <div class="element-activity-header">FCS_CKM.6.2/Power</div>
+                  <div class="eacategory">TSS</div><div class="ea">
+                    The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
+                      <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
+                      <li>if and how memory locations for (temporary) keys are tracked;</li>
+                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div>
+                  <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
+                    Operational Environment for memory clearing and how that is achieved.</div>
+                  <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
+                  <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
+                </span></div><div class="comp" id="FCS-COP-1-HASH"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/Hash</div>
                     
                     
                     
