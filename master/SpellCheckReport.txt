@@ -5,7 +5,6 @@ output/FDEAA-release-linkable.html: 10C
 output/FDEAA-release-linkable.html: 10x
 output/FDEAA-release-linkable.html: 11C
 output/FDEAA-release-linkable.html: 38D
-output/FDEAA-release-linkable.html: 38E
 output/FDEAA-release-linkable.html: 38F
 output/FDEAA-release-linkable.html: 4C
 output/FDEAA-release-linkable.html: 56A
@@ -23,7 +22,6 @@ output/FDEAA-release-linkable.html: BEVs
 output/FDEAA-release-linkable.html: C0
 output/FDEAA-release-linkable.html: C1
 output/FDEAA-release-linkable.html: CCL
-output/FDEAA-release-linkable.html: CMAC
 output/FDEAA-release-linkable.html: CNSA
 output/FDEAA-release-linkable.html: CSP
 output/FDEAA-release-linkable.html: CSPs
@@ -39,8 +37,6 @@ output/FDEAA-release-linkable.html: H15
 output/FDEAA-release-linkable.html: H25
 output/FDEAA-release-linkable.html: H5
 output/FDEAA-release-linkable.html: IUT
-output/FDEAA-release-linkable.html: K1
-output/FDEAA-release-linkable.html: K2
 output/FDEAA-release-linkable.html: KATs
 output/FDEAA-release-linkable.html: KRKs
 output/FDEAA-release-linkable.html: KWK
@@ -70,7 +66,6 @@ output/FDEAA-release-linkable.html: S4
 output/FDEAA-release-linkable.html: S5
 output/FDEAA-release-linkable.html: SATA
 output/FDEAA-release-linkable.html: SHAVS
-output/FDEAA-release-linkable.html: SP800
 output/FDEAA-release-linkable.html: Sanitization
 output/FDEAA-release-linkable.html: Stateful
 output/FDEAA-release-linkable.html: Tweakable
@@ -100,7 +95,6 @@ output/FDEAA-release-linkable.html: nmap
 output/FDEAA-release-linkable.html: preauthentication
 output/FDEAA-release-linkable.html: reinstantiating
 output/FDEAA-release-linkable.html: sanitization
-output/FDEAA-release-linkable.html: subkey
 output/FDEAA-release-linkable.html: un
 output/FDEAA-release-linkable.html: uninstantiating
 output/FDEAA-release.html: 10C
@@ -184,21 +178,17 @@ output/FDEAA-sd.html: 0x00007A4B
 output/FDEAA-sd.html: 0x01
 output/FDEAA-sd.html: 10x
 output/FDEAA-sd.html: 38D
-output/FDEAA-sd.html: 38E
 output/FDEAA-sd.html: 56B
 output/FDEAA-sd.html: 90A
 output/FDEAA-sd.html: AAD
 output/FDEAA-sd.html: C0
 output/FDEAA-sd.html: C1
-output/FDEAA-sd.html: CMAC
 output/FDEAA-sd.html: CSP
 output/FDEAA-sd.html: CSPs
 output/FDEAA-sd.html: DEKs
 output/FDEAA-sd.html: DRBGs
 output/FDEAA-sd.html: HA’
 output/FDEAA-sd.html: IUT
-output/FDEAA-sd.html: K1
-output/FDEAA-sd.html: K2
 output/FDEAA-sd.html: KATs
 output/FDEAA-sd.html: KWK
 output/FDEAA-sd.html: KeyGen
@@ -212,7 +202,6 @@ output/FDEAA-sd.html: PP’s
 output/FDEAA-sd.html: RSADP
 output/FDEAA-sd.html: RSAKEM
 output/FDEAA-sd.html: SHAVS
-output/FDEAA-sd.html: SP800
 output/FDEAA-sd.html: Sanitization
 output/FDEAA-sd.html: XMSS
 output/FDEAA-sd.html: X’
@@ -226,7 +215,6 @@ output/FDEAA-sd.html: lifecycle
 output/FDEAA-sd.html: nLen
 output/FDEAA-sd.html: pass’
 output/FDEAA-sd.html: preauthentication
-output/FDEAA-sd.html: subkey
 output/FDEAA.html: 0x00
 output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 0x01
@@ -234,7 +222,6 @@ output/FDEAA.html: 10C
 output/FDEAA.html: 10x
 output/FDEAA.html: 11C
 output/FDEAA.html: 38D
-output/FDEAA.html: 38E
 output/FDEAA.html: 38F
 output/FDEAA.html: 4C
 output/FDEAA.html: 56A
@@ -252,7 +239,6 @@ output/FDEAA.html: BEVs
 output/FDEAA.html: C0
 output/FDEAA.html: C1
 output/FDEAA.html: CCL
-output/FDEAA.html: CMAC
 output/FDEAA.html: CNSA
 output/FDEAA.html: CSP
 output/FDEAA.html: CSPs
@@ -270,8 +256,6 @@ output/FDEAA.html: H25
 output/FDEAA.html: H5
 output/FDEAA.html: HA’
 output/FDEAA.html: IUT
-output/FDEAA.html: K1
-output/FDEAA.html: K2
 output/FDEAA.html: KATs
 output/FDEAA.html: KRKs
 output/FDEAA.html: KWK
@@ -301,7 +285,6 @@ output/FDEAA.html: S4
 output/FDEAA.html: S5
 output/FDEAA.html: SATA
 output/FDEAA.html: SHAVS
-output/FDEAA.html: SP800
 output/FDEAA.html: Sanitization
 output/FDEAA.html: Stateful
 output/FDEAA.html: Tweakable
@@ -332,6 +315,5 @@ output/FDEAA.html: pool’
 output/FDEAA.html: preauthentication
 output/FDEAA.html: reinstantiating
 output/FDEAA.html: sanitization
-output/FDEAA.html: subkey
 output/FDEAA.html: un
 output/FDEAA.html: uninstantiating

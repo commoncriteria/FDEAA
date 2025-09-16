@@ -967,7 +967,7 @@ The following sections list Common Criteria and technology terms used in this do
                       configure the TOE to use the selected key sizes for all uses specified by the AGD
                       documentation and defined in this cPP.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">If the TOE uses a symmetric key as part of the key chain, the KMD should detail how
                       the symmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-KEYHASH"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyedHash</div>
-              
+                
               
               
               
@@ -980,30 +980,14 @@ The following sections list Common Criteria and technology terms used in this do
                   used by the HMAC function: key length, hash function used, block size, and output
                   MAC length used.
                 </p>
-                <p>If CMAC was selected: </p>
-                <p>The evaluator shall examine the TSS to ensure that it specifies the following
-                  values used by the CMAC function: key length, block cipher used, block size
-                  (of the cipher), and output MAC length used.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p>If HMAC was selected:</p>
                 <p>For each of the supported parameter sets, the evaluator shall compose 15 sets of test
                   data. Each set shall consist of a key and message data. The evaluator shall have the TSF
                   generate HMAC tags for these sets of test data. The resulting MAC tags shall be
                   compared to the result of generating HMAC tags with the same key using a known
                   good implementation.</p>
-                <p>
-                  If CMAC was selected: 
-                </p>
-                <p>For each of the supported parameter sets, the evaluator shall compose at least
-                  15 sets of test data. Each set shall consist of a key and message data. The test
-                  data shall include messages of different lengths, some with partial blocks as the
-                  last block and some with full blocks as the last block. The test data keys shall
-                  include cases for which subkey K1 is generated both with and without using the
-                  irreducible polynomial R_b, as well as cases for which subkey K2 is generated
-                  from K1 both with and without using the irreducible polynomial R_b. (The
-                  subkey generation and polynomial R_b are as defined in SP800-38E.) The
-                  evaluator shall have the TSF generate CMAC tags for these sets of test data.
-                  The resulting MAC tags shall be compared to the result of generating CMAC
-                  tags with the same key using a known good implementation.</p></div></div></span></div><div class="comp" id="FCS-COP-1-KE"><h4>FCS_COP.1/KeyEnc Cryptographic Operation (Key Encryption)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
+                </div></div></span></div><div class="comp" id="FCS-COP-1-KE"><h4>FCS_COP.1/KeyEnc Cryptographic Operation (Key Encryption)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
               
               
               
