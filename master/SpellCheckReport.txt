@@ -54,7 +54,6 @@ output/FDEAA-release-linkable.html: Merkle
 output/FDEAA-release-linkable.html: Micali
 output/FDEAA-release-linkable.html: NAS
 output/FDEAA-release-linkable.html: OEAP
-output/FDEAA-release-linkable.html: P9
 output/FDEAA-release-linkable.html: PBKDF2
 output/FDEAA-release-linkable.html: PCI
 output/FDEAA-release-linkable.html: PINs
@@ -139,7 +138,6 @@ output/FDEAA-release.html: MMMM
 output/FDEAA-release.html: Merkle
 output/FDEAA-release.html: Micali
 output/FDEAA-release.html: NAS
-output/FDEAA-release.html: P9
 output/FDEAA-release.html: PBKDF2
 output/FDEAA-release.html: PINs
 output/FDEAA-release.html: Pre30
@@ -273,7 +271,6 @@ output/FDEAA.html: Merkle
 output/FDEAA.html: Micali
 output/FDEAA.html: NAS
 output/FDEAA.html: OEAP
-output/FDEAA.html: P9
 output/FDEAA.html: PBKDF2
 output/FDEAA.html: PCI
 output/FDEAA.html: PINs
