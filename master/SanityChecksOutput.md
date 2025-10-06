@@ -3,16 +3,14 @@
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/f-element[3]""
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[3]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[11]""/on-sel[1]""
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[10]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[12]""/on-sel[1]""
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[11]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[13]""/on-sel[1]""
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[12]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[14]""/on-sel[1]""
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[13]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[9]""/depends[5]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
@@ -27,10 +25,6 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[11]""/depends[6]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[18]""/depends[3]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[3]""/f-component[1]""/depends[3]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[3]""/f-component[5]""/depends[3]""/on-sel[1]""
 * Error: Detected dangling id-reference to windows from attribute
         ref/PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:div[1]""/depends[1]""/ref[1]""
 * Error: Detected dangling id-reference to linux from attribute
