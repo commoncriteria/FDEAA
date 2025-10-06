@@ -738,7 +738,7 @@ The following sections list Common Criteria and technology terms used in this do
                                              
                       
                   <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS contains a high-level description of the BEV sizes– that it supports BEV outputs of no fewer than 256.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
-                        <p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_COP.1/KeyWrap and FCS_KDF_EXT.1.</p>
+                        <p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_COP.1/KeyWrap and FCS_CKM.5.1.</p>
                         <p>The evaluator shall examine the KMD to ensure that it describes how the key chain
                           process functions, such that it does not expose any material that might compromise any
                           key in the chain. (e.g. using a key directly as a compare value against a TPM) This
@@ -1158,15 +1158,309 @@ for i = 1 to 1000:
 		   <p style="text-align: left">Using a set of 100 (key, plaintext and 128-bit random tweak value) 3-tuples, the evaluator shall obtain the ciphertext that results from XTS-AES encrypt.</p> 
 		   <p style="text-align: left">The evaluator may supply a data unit sequence number instead of the tweak value if the implementation supports it. The data unit sequence number is a base-10 number ranging between 0 and 255 that implementations convert to a tweak value internally.</p> 
 		   <p style="text-align: left">The evaluator shall test the decrypt functionality of XTS-AES using the same test as for encrypt, replacing plaintext values with ciphertext values and XTS-AES encrypt with XTS-AES decrypt.</p> 
-		   </div></div></span></div><div class="comp" id="FCS-KDF-EXT-1"><h4>FCS_KDF_EXT.1 Cryptographic Key Derivation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_KDF_EXT.1</div>
-                  
-                  
-                  
-                  
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key derivation function
-                    and shall verify the key derivation uses an approved derivation mode and key expansion
-                    algorithm according to SP 800-108 and SP 800-132.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall examine the vendor’s KMD to ensure that all keys used are derived
-                    using an approved method and a description of how and when the keys are derived.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-PCC-EXT-1"><h4>FCS_PCC_EXT.1 Cryptographic Password Construction and Conditioning</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_PCC_EXT.1</div>
+		   </div></div></span></div><div class="comp" id="SFR-FCS-CKM-5"><h4>FCS_CKM.5 Cryptographic Key Derivation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.5</div>
+					
+							
+					
+				<div class="eacategory">TSS</div><div class="ea"><div class="ea">
+						The evaluator shall verify that the TSS describes and documents:<ul>
+						<li>that the security strengths of the Pseudo-Random functions for the key 
+							derivation methods are sufficient for the security strength of the keys derived through those
+							methods.</li>
+						<li>that the security strengths of the input parameters are sufficient for the security
+							strength of the keys derived through these methods.</li>
+						<li>that, if concatenated keys or intermediary keys are input parameters, the TSS describes
+							the sources of the keys, and the order in which they are concatenated, along with any
+							other values that are concatenated with them. This may occur in instances when input
+							keying material for the KDF comes from two independent sources, for example, a client
+							and a server.</li>
+						<li>that, if KDF-XOR is selected the TSS describes this method as there is no standard that
+							specifies how to derive a key from two keys using only XOR.</li>
+						<li>that, if KDF-ENC is selected, the TSS documents the encryption algorithm used from
+							FCS_COP.1/SKC or FCS_COP.1/AEAD with 256-bit keys, and describes which of the inputs is the
+							plaintext and which is the key. There are no standards that specify how to derive a key
+							from two keys using encryption (KDF-ENC).</li>
+						<li>that, for KDF-MAC-1S, KDF-MAC-2S, and KDF-KMAC, the TSS documents that for
+							each invocation of a KDF that reuses the same input shared secret or key, each invocation
+							must use a distinct context string, IV, or salt. The TSS must also describe the composition
+							and sizes of these input parameters. The evaluator must ensure that the context string, IV,
+							and salt are generated in conformance with the relevant standards.</li>
+						<li>that, if the TOE uses the derived key in a key chain/hierarchy, that TSS describes how the
+							key is used as part of the key chain/hierarchy.</li>
+						</ul>
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+						The evaluator shall verify that the Guidance instructs the administrator how to set any configurable
+						parameters, such as context strings, salts, and IVs.<p></p>
+						The evaluator shall verify that the Guidance instructs the administrator how to configure the TOE to
+						choose specific PRFs, modes, and parameters.
+					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The evaluator shall perform the following test or witness respective tests 
+						executed by the developer. The tests must be executed on a platform that is as 
+						close as practically possible to the operational platform (but which may be 
+						instrumented in terms of, for example, use of a debug mode). Where the test is
+						not carried out on the TOE itself, the test platform shall be identified and
+						the differences between test environment and TOE execution environment shall be
+						described.<p></p>
+						
+						
+						<br/><b>KDF in Counter Mode</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-CTR</td>
+								<td valign="top">[<b>selection:</b> Direct Generation from a Random Bit Generator as 
+									specified in FCS_RBG.1, Concatenated keys]</td>
+								<td valign="top">KPF2 - KDF in Counter Mode using [<b>selection:</b> 
+									AES-256-CMAC, HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512] as the PRF</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">[<b>selection:</b> ISO/IEC 11770-6:2016
+									(Subclause 7.3.2) [KPF2], NIST SP 800-108 Revision 1 Update 1 (Section 4.1) 
+									[KDF in Counter Mode]]</td>
+							</tr>
+						</table><p></p>						
+						To test the TOE’s ability to derive cryptographic keys using KDF in Counter 
+						Mode/KDF2, the evaluator shall perform the Counter KDF Algorithm Functional
+						Test using the following input parameters:<ul>
+						<li>Pseudo Random Function (PRF) [AES-256-CMAC, HMAC-SHA-256, HMAC-SHA-512]</li>
+						<li>Derived key length [256, 512] bits</li>
+						<li>Location of the counter [after fixed data, before fixed data, middle fixed data]</li>
+						<li>Counter length [8, 16, 24, 32] bits</li></ul><p></p>
+						<br/><i><b>Counter KDF Algorithm Functional Test</b></i><br/>
+						For each supported combination of the above input parameters the evaluator 
+						shall require the implementation under test to derive two keys using random 
+						data. The evaluator shall compare the resulting keys with keys generated using 
+						a known-good implementation using the same input parameters.<p></p>
+						
+						
+						<br/><b>KDF in Feedback Mode</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-FB</td>
+								<td valign="top">[<b>selection:</b> Direct Generation from a Random Bit Generator as 
+									specified in FCS_RBG.1, Concatenated keys]</td>
+								<td valign="top">KPF3 - KDF in Feedback Mode using [<b>selection:</b> 
+									AES-256-CMAC, HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512] as the PRF</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">[<b>selection:</b> ISO/IEC 11770-6:2016
+									(Subclause 7.3.3) [KPF3], NIST SP 800-108 Revision 1 Update 1 (Section 4.2) 
+									[KDF in Feedback Mode]]</td>
+							</tr>
+						</table><p></p>						
+						To test the TOE’s ability to derive cryptographic keys using KDF in Feedback 
+						Mode/KDF3, the evaluator shall perform the Feedback KDF Algorithm Functional
+						Test using the following input parameters:<ul>
+						<li>Pseudo Random Function (PRF) [AES-256-CMAC, HMAC-SHA-256, HMAC-SHA-512]</li>
+						<li>Derived key length [256, 512] bits</li>
+						<li>Location of the counter [none, after fixed data, before fixed data, before iterator]</li>
+						<li>Counter length [0, 8, 16, 24, 32] bits</li></ul><p></p>		
+						<br/><i><b>Feedback KDF Algorithm Functional Test</b></i><br/>
+						For each supported combination of the above input parameters the evaluator 
+						shall require the implementation under test to derive two keys using random 
+						data. The evaluator shall compare the resulting keys with keys generated using 
+						a known-good implementation using the same input parameters.<p></p>
+
+						
+						<br/><b>KDF in Double-Pipeline Iteration Mode</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-DPI</td>
+								<td valign="top">[<b>selection:</b> Direct Generation from a Random Bit Generator as 
+									specified in FCS_RBG.1, Concatenated keys]</td>
+								<td valign="top">KPF4 - KDF in Double-Pipeline Iteration Mode using [<b>selection:</b> 
+									HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512] as the PRF</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">[<b>selection:</b> ISO/IEC 11770-6:2016
+									(Subclause 7.3.4) [KPF4], NIST SP 800-108 Revision 1 Update 1 (Section 4.3) 
+									[KDF in Double-Pipeline Iteration Mode]]</td>
+							</tr>
+						</table><p></p>						
+						To test the TOE’s ability to derive cryptographic keys using KDF in Double Pipeline Iteration  
+						Mode/KDF4, the evaluator shall perform the Double Pipeline Iteration KDF Algorithm Functional
+						Test using the following input parameters:<ul>
+						<li>Pseudo Random Function (PRF) [HMAC-SHA-256, HMAC-SHA-512]</li>
+						<li>Derived key length [256, 512] bits</li>
+						<li>Location of the counter [none, after fixed data, before fixed data, before iterator]</li>
+						<li>Counter length [0, 8, 16, 24, 32] bits</li></ul><p></p>
+						<br/><i><b>Double Pipeline Iteration KDF Algorithm Functional Test</b></i><br/>
+						For each supported combination of the above input parameters the evaluator 
+						shall require the implementation under test to derive two keys using random 
+						data. The evaluator shall compare the resulting keys with keys generated using 
+						a known-good implementation using the same input parameters.<p></p>
+
+						
+						<br/><b>KDF XORing Keys</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-XOR</td>
+								<td valign="top">More than one intermediary keys</td>
+								<td valign="top">exclusive OR (XOR)</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">N/A</td>
+							</tr>
+						</table><p></p>						
+						There are no tests for this key derivation method. <p></p>
+
+						
+						<br/><b>KDF by Encrypting Keys</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-ENC</td>
+								<td valign="top">Two keys</td>
+								<td valign="top">Encrypting using an algorithm specified in 
+									[<b>selection:</b> FCS_COP.1/SKC, FCS_COP.1/AEAD] with a 256-bit key</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">N/A</td>
+							</tr>
+						</table><p></p>						
+						Specific testing for this key derivation method is covered by testing for the
+						supported symmetric encryption algorithms in FCS_COP.1/SKC or FCS_COP.1/AEAD.<p></p>
+
+						
+						<br/><b>KDF by Hashing a Shared Secret</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-HASH</td>
+								<td valign="top">Shared secret</td>
+								<td valign="top">Hash function [<b>selection:</b> SHA-384, SHA-512]</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">NIST SP 800-56C Revision 2 (Section 4.1, Option 1) 
+									[One-Step Key Derivation]</td>
+							</tr>
+						</table><p></p>						
+						To test the TOE’s ability to derive cryptographic keys by hashing a shared 
+						secret (a.k.a. One-Step HASH-based Key Derivation), the evaluator shall perform 
+						the Algorithm Functional Test using the following input
+						parameters:<ul>
+						<li>Auxiliary Function [SHA-384, SHA-512]</li>
+						<li>Derived key length [256, 384, 512] bits</li></ul><p></p>
+						<br/><i><b>Algorithm Functional Test</b></i><br/>
+						For each supported fixed information pattern and combination of the above input
+						parameters the evaluator shall require the implementation under test to derive
+						15 keys using random data for a shared secret that is the same size as the 
+						derived key. The evaluator shall compare the resulting keys with keys derived
+						using a known-good implementation using the same fixed information patterns and
+						input parameters.<p></p>
+
+						
+						<br/><b>One-Step MAC-based KDF</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-MAC-1S</td>
+								<td valign="top">Shared secret, salt, output length, fixed information</td>
+								<td valign="top">Keyed Hash function [<b>selection:</b> HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512]</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">NIST SP 800-56C Revision 2 (Section 4.1, Options 2, 3) 
+									[One-Step Key Derivation]</td>
+							</tr>
+						</table><p></p>			
+						To test the TOE’s ability to derive cryptographic keys using One-Step
+						MAC-based Key Derivation, the evaluator shall perform the Algorithm Functional
+						Test using the following input parameters:<ul>
+						<li>Auxiliary Function [HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512]</li>
+						<li>Salt [0s, random]</li>
+						<li>Derived key length [256, 384, 512] bits</li>
+						<li>Fixed information pattern </li></ul><p></p>		
+						<br/><i><b>Algorithm Functional Test</b></i><br/>
+						For each supported fixed information pattern and combination of the above input
+						parameters the evaluator shall require the implementation under test to derive
+						15 keys using random data for a shared secret. The evaluator shall compare 
+						the resulting keys with keys derived using a known-good implementation using the 
+						same fixed information patterns and input parameters.<p></p>
+
+						
+						<br/><b>Two-Step MAC-based KDF</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Key Type</td>
+								<td valign="top">Input Parameters</td>
+								<td valign="top">Key Derivation Algorithm</td>
+								<td valign="top">Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KDF-MAC-2S</td>
+								<td valign="top">Shared secret, salt, IV, output length, 
+									fixed information, and [<b>selection:</b> auxiliary shared secret, 
+									no other parameters]</td>
+								<td valign="top">MAC Step [<b>selection:</b> 
+									HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512] as randomness extraction and; 
+									KDF Step [<b>selection:</b> 
+									KDF-CTR, KDF-FB, KDF-DPI]</td>
+								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
+								<td valign="top">NIST SP 800-56C Revision 2 (Section 5) [Two-Step Key Derivation]</td>
+							</tr>
+						</table><p></p>			
+						To test the TOE’s ability to derive cryptographic keys using Two-Step MAC-based Key Derivation,
+						the evaluator shall perform the Algorithm Functional Test using the following input
+						parameters:<ul>
+						<li>MAC mode [HMAC-SHA-256; HMAC-SHA-384, HMAC-SHA-512]</li>
+						<li>KDF Mode [Counter, feedback, Double Pipeline Iteration]</li>
+						<li>Salt [0s, random]</li>
+						<li>Length of shared secret [224-65535]</li>
+						<li>Length of Auxiliary Shared Secret [0, 112-65535]</li>
+						<li>Derived key length [256, 384, 512] bits</li>
+						<li>Fixed information pattern </li>
+						<li>Counter location [none, before fixed data, after fixed data, before iterator]</li>
+						<li>Counter length [0, 8, 16, 24, 32]</li></ul><p></p>		
+						<br/><i><b>Algorithm Functional Test</b></i><br/>
+						The evaluator shall define a test group for each supported combination of KDF mode, MAC
+						mode, fixed information pattern, derived key length, counter location, counter length, salt
+						method, and five random pairs of shared secrets &amp; auxiliary secrets (if supported) such that
+						collectively the minimum length, maximum length and three random lengths of each are
+						included in each test group. For each test group, the evaluator shall require the implementation
+						under test to derive 25 keys using random data for a shared secret, either a random salt or a salt
+						of all 0s, and, if supported, an auxiliary shared secret consisting of random data. The evaluator
+						shall compare the resulting keys with keys derived using a known-good implementation using
+						the same input parameters.
+					</div></div></span></div><div class="comp" id="FCS-PCC-EXT-1"><h4>FCS_PCC_EXT.1 Cryptographic Password Construction and Conditioning</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_PCC_EXT.1</div>
                     
                     
                     
