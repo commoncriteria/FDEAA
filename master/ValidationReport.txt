@@ -1,1 +1,0 @@
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:678:79: error: value of attribute "fam-id" is invalid; must be a string matching the regular expression "F[A-Z][A-Z]_[A-Z0-9^]{2,10}_EXT"
