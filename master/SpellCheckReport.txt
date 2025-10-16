@@ -249,7 +249,6 @@ output/FDEAA-sd.html: SHAVS
 output/FDEAA-sd.html: Sanitization
 output/FDEAA-sd.html: Subclause
 output/FDEAA-sd.html: XMSS
-output/FDEAA-sd.html: XORing
 output/FDEAA-sd.html: X’
 output/FDEAA-sd.html: cLen
 output/FDEAA-sd.html: cPPs

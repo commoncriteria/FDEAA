@@ -1174,12 +1174,8 @@ for i = 1 to 1000:
 							other values that are concatenated with them. This may occur in instances when input
 							keying material for the KDF comes from two independent sources, for example, a client
 							and a server.</li>
-						<li>that, if KDF-XOR is selected the TSS describes this method as there is no standard that
-							specifies how to derive a key from two keys using only XOR.</li>
-						<li>that, if KDF-ENC is selected, the TSS documents the encryption algorithm used from
-							FCS_COP.1/SKC or FCS_COP.1/AEAD with 256-bit keys, and describes which of the inputs is the
-							plaintext and which is the key. There are no standards that specify how to derive a key
-							from two keys using encryption (KDF-ENC).</li>
+						
+						
 						<li>that, for KDF-MAC-1S, KDF-MAC-2S, and KDF-KMAC, the TSS documents that for
 							each invocation of a KDF that reuses the same input shared secret or key, each invocation
 							must use a distinct context string, IV, or salt. The TSS must also describe the composition
@@ -1308,46 +1304,6 @@ for i = 1 to 1000:
 						a known-good implementation using the same input parameters.<p></p>
 
 						
-						<br/><b>KDF XORing Keys</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Key Type</td>
-								<td valign="top">Input Parameters</td>
-								<td valign="top">Key Derivation Algorithm</td>
-								<td valign="top">Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top">KDF-XOR</td>
-								<td valign="top">More than one intermediary keys</td>
-								<td valign="top">exclusive OR (XOR)</td>
-								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
-								<td valign="top">N/A</td>
-							</tr>
-						</table><p></p>						
-						There are no tests for this key derivation method. <p></p>
-
-						
-						<br/><b>KDF by Encrypting Keys</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Key Type</td>
-								<td valign="top">Input Parameters</td>
-								<td valign="top">Key Derivation Algorithm</td>
-								<td valign="top">Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top">KDF-ENC</td>
-								<td valign="top">Two keys</td>
-								<td valign="top">Encrypting using an algorithm specified in 
-									[<b>selection:</b> FCS_COP.1/SKC, FCS_COP.1/AEAD] with a 256-bit key</td>
-								<td valign="top">[<b>selection:</b> 256, 384, 512] bits</td>
-								<td valign="top">N/A</td>
-							</tr>
-						</table><p></p>						
-						Specific testing for this key derivation method is covered by testing for the
-						supported symmetric encryption algorithms in FCS_COP.1/SKC or FCS_COP.1/AEAD.<p></p>
 
 						
 						<br/><b>KDF by Hashing a Shared Secret</b><p></p>
