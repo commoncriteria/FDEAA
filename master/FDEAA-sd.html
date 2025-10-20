@@ -1160,35 +1160,38 @@ for i = 1 to 1000:
 		   <p style="text-align: left">The evaluator shall test the decrypt functionality of XTS-AES using the same test as for encrypt, replacing plaintext values with ciphertext values and XTS-AES encrypt with XTS-AES decrypt.</p> 
 		   </div></div></span></div><div class="comp" id="SFR-FCS-CKM-5"><h4>FCS_CKM.5 Cryptographic Key Derivation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.5</div>
 					
-							
+						
+						
 					
 				<div class="eacategory">TSS</div><div class="ea"><div class="ea">
-						The evaluator shall verify that the TSS describes and documents:<ul>
-						<li>that the security strengths of the Pseudo-Random functions for the key 
-							derivation methods are sufficient for the security strength of the keys derived through those
-							methods.</li>
-						<li>that the security strengths of the input parameters are sufficient for the security
-							strength of the keys derived through these methods.</li>
-						<li>that, if concatenated keys or intermediary keys are input parameters, the TSS describes
-							the sources of the keys, and the order in which they are concatenated, along with any
-							other values that are concatenated with them. This may occur in instances when input
-							keying material for the KDF comes from two independent sources, for example, a client
-							and a server.</li>
-						
-						
-						<li>that, for KDF-MAC-1S, KDF-MAC-2S, and KDF-KMAC, the TSS documents that for
-							each invocation of a KDF that reuses the same input shared secret or key, each invocation
-							must use a distinct context string, IV, or salt. The TSS must also describe the composition
-							and sizes of these input parameters. The evaluator must ensure that the context string, IV,
-							and salt are generated in conformance with the relevant standards.</li>
-						<li>that, if the TOE uses the derived key in a key chain/hierarchy, that TSS describes how the
-							key is used as part of the key chain/hierarchy.</li>
-						</ul>
+						The evaluator shall verify the TSS includes a description of the key derivation function
+						and shall verify the key derivation function uses an approved derivation mode and key expansion
+						algorithm according to list of standards.
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
 						The evaluator shall verify that the Guidance instructs the administrator how to set any configurable
 						parameters, such as context strings, salts, and IVs.<p></p>
 						The evaluator shall verify that the Guidance instructs the administrator how to configure the TOE to
 						choose specific PRFs, modes, and parameters.
+					</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
+					The evaluator shall verify that the KMD describes and documents:<ul>
+						<li>that the security strengths of the Pseudo-Random functions for the key 
+							derivation methods are sufficient for the security strength of the keys derived through those
+							methods.</li>
+						<li>that the security strengths of the input parameters are sufficient for the security
+							strength of the keys derived through these methods.</li>
+						<li>that, if concatenated keys or intermediary keys are input parameters, the KMD describes
+							the sources of the keys, and the order in which they are concatenated, along with any
+							other values that are concatenated with them. This may occur in instances when input
+							keying material for the KDF comes from two independent sources, for example, a client
+							and a server.</li>
+						<li>that, for KDF-MAC-1S, KDF-MAC-2S, and KDF-KMAC, the KMD documents that for
+							each invocation of a KDF that reuses the same input shared secret or key, each invocation
+							must use a distinct context string, IV, or salt. The KMD must also describe the composition
+							and sizes of these input parameters. The evaluator must ensure that the context string, IV,
+							and salt are generated in conformance with the relevant standards.</li>
+						<li>that, if the TOE uses the derived key in a key chain/hierarchy, that KMD describes how the
+							key is used as part of the key chain/hierarchy.</li>
+						</ul>
 					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 						The evaluator shall perform the following test or witness respective tests 
 						executed by the developer. The tests must be executed on a platform that is as 
