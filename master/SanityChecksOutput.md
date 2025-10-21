@@ -1,7 +1,7 @@
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[24]""/f-element[2]""
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/f-element[2]""
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[24]""/f-element[3]""
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/f-element[3]""
 * Warning: This document still has at least one comment.
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[10]""/on-sel[1]""
@@ -43,10 +43,12 @@
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
+* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
+* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
