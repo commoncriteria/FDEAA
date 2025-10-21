@@ -7,7 +7,11 @@ output/FDEAA-release-linkable.html: 10x
 output/FDEAA-release-linkable.html: 11C
 output/FDEAA-release-linkable.html: 1S
 output/FDEAA-release-linkable.html: 2S
+output/FDEAA-release-linkable.html: 38A
+output/FDEAA-release-linkable.html: 38B
+output/FDEAA-release-linkable.html: 38C
 output/FDEAA-release-linkable.html: 38D
+output/FDEAA-release-linkable.html: 38E
 output/FDEAA-release-linkable.html: 38F
 output/FDEAA-release-linkable.html: 4C
 output/FDEAA-release-linkable.html: 56A
@@ -70,6 +74,7 @@ output/FDEAA-release-linkable.html: Micali
 output/FDEAA-release-linkable.html: NAS
 output/FDEAA-release-linkable.html: OEAP
 output/FDEAA-release-linkable.html: PBKDF2
+output/FDEAA-release-linkable.html: PBKDFs
 output/FDEAA-release-linkable.html: PCI
 output/FDEAA-release-linkable.html: PINs
 output/FDEAA-release-linkable.html: PRFs
@@ -119,6 +124,11 @@ output/FDEAA-release.html: 10C
 output/FDEAA-release.html: 11C
 output/FDEAA-release.html: 1S
 output/FDEAA-release.html: 2S
+output/FDEAA-release.html: 38A
+output/FDEAA-release.html: 38B
+output/FDEAA-release.html: 38C
+output/FDEAA-release.html: 38D
+output/FDEAA-release.html: 38E
 output/FDEAA-release.html: 38F
 output/FDEAA-release.html: 4C
 output/FDEAA-release.html: 56A
@@ -168,6 +178,7 @@ output/FDEAA-release.html: Merkle
 output/FDEAA-release.html: Micali
 output/FDEAA-release.html: NAS
 output/FDEAA-release.html: PBKDF2
+output/FDEAA-release.html: PBKDFs
 output/FDEAA-release.html: PINs
 output/FDEAA-release.html: PRFs
 output/FDEAA-release.html: Pre30
@@ -271,7 +282,11 @@ output/FDEAA.html: 10x
 output/FDEAA.html: 11C
 output/FDEAA.html: 1S
 output/FDEAA.html: 2S
+output/FDEAA.html: 38A
+output/FDEAA.html: 38B
+output/FDEAA.html: 38C
 output/FDEAA.html: 38D
+output/FDEAA.html: 38E
 output/FDEAA.html: 38F
 output/FDEAA.html: 4C
 output/FDEAA.html: 56A
@@ -336,6 +351,7 @@ output/FDEAA.html: Micali
 output/FDEAA.html: NAS
 output/FDEAA.html: OEAP
 output/FDEAA.html: PBKDF2
+output/FDEAA.html: PBKDFs
 output/FDEAA.html: PCI
 output/FDEAA.html: PINs
 output/FDEAA.html: PRFs

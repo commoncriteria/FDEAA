@@ -45,7 +45,6 @@
         ref/PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:div[1]""/depends[4]""/ref[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr'.
 * Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
 * Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
 * Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
@@ -62,8 +61,12 @@
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
+* Error: Detected multiple elements with an id of 'sel-fcs-otv-ext-xts'.
 * Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
 * Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
