@@ -960,27 +960,66 @@ The following sections list Common Criteria and technology terms used in this do
                       configure the TOE to use the selected key sizes for all uses specified by the AGD
                       documentation and defined in this cPP.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">If the TOE uses a symmetric key as part of the key chain, the KMD should detail how
                       the symmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-KEYHASH"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyedHash</div>
-                
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                <p>
-                  If HMAC was selected:
-                </p>
-                <p>
-                  The evaluator shall examine the TSS to ensure that it specifies the following values
-                  used by the HMAC function: key length, hash function used, block size, and output
-                  MAC length used.
-                </p>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>If HMAC was selected:</p>
-                <p>For each of the supported parameter sets, the evaluator shall compose 15 sets of test
-                  data. Each set shall consist of a key and message data. The evaluator shall have the TSF
-                  generate HMAC tags for these sets of test data. The resulting MAC tags shall be
-                  compared to the result of generating HMAC tags with the same key using a known
-                  good implementation.</p>
-                </div></div></span></div><div class="comp" id="FCS-COP-1-KEYENC"><h4>FCS_COP.1/KeyEnc Cryptographic Operation - Key Encryption</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
+					
+					
+					
+					
+				<div class="eacategory">TSS</div><div class="ea"><div class="ea">
+						The evaluator shall examine the TSS to ensure that the size of the key is sufficient for the desired
+						security strength of the output.<p></p>
+						The evaluator shall examine the TSS to verify that if HMAC-SHA-256 is selected, that it is being 
+						used only as a PRF or MAC step in a key derivation function.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests are conditional based upon the selections made in the SFR. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the TOE itself, the test platform shall be identified and the differences
+						between test environment and TOE execution environment shall be described.<p></p>
+
+						
+						<br/><b>HMAC</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Keyed Hash Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">HMAC-SHA-256</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 9797-2:2021 (Section 7 “MAC Algorithm 2”), FIPS PUB 198-1] </td>
+							</tr>
+							<tr>
+								<td valign="top">HMAC-SHA-384</td>
+								<td valign="top">[<b>selection:</b> (ISO, FIPS) 384, (FIPS) 256] bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 9797-2:2021 (Section 7 “MAC Algorithm 2”), FIPS PUB 198-1] </td>
+							</tr>
+							<tr>
+								<td valign="top">HMAC-SHA-512</td>
+								<td valign="top">[<b>selection:</b> (ISO, FIPS) 512, (FIPS) 384, 256] bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 9797-2:2021 (Section 7 “MAC Algorithm 2”), FIPS PUB 198-1] </td>
+							</tr>
+						</table><p></p>	
+						To test the TOE’s ability to generate keyed hashes using HMAC the evaluator shall perform the
+						Algorithm Functional Test for each combination of claimed HMAC algorithm the following
+						parameters:<ul>
+						<li>Hash function [SHA-256, SHA-384, SHA-512]</li>
+						<li>Key length [8-65536] bits by 8s</li>
+						<li>MAC length [32-[digest size of hash function (256, 384, 512)]] bits</li></ul><p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						For each supported Hash function the evaluator shall generate 150 test cases using random input
+						messages of 128 bits, random supported key lengths, random keys, and random supported MAC
+						lengths such that across the 150 test cases:<ul>
+						<li>The key length includes the minimum, the maximum, a key length equal to the block
+							size, and key lengths that are both larger and smaller than the block size.</li>
+						<li>The MAC size includes the minimum, the maximum, and two other random values.</li></ul><p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.	
+					</div></div></span></div><div class="comp" id="FCS-COP-1-KEYENC"><h4>FCS_COP.1/KeyEnc Cryptographic Operation - Key Encryption</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
 					
 					
 					

@@ -62,8 +62,6 @@ output/FDEAA-release-linkable.html: KPF4
 output/FDEAA-release-linkable.html: KRKs
 output/FDEAA-release-linkable.html: KeyGen
 output/FDEAA-release-linkable.html: KeySbox
-output/FDEAA-release-linkable.html: L1
-output/FDEAA-release-linkable.html: L2
 output/FDEAA-release-linkable.html: LMS
 output/FDEAA-release-linkable.html: LMSOTS
 output/FDEAA-release-linkable.html: Labelling
@@ -171,8 +169,6 @@ output/FDEAA-release.html: KPF2
 output/FDEAA-release.html: KPF3
 output/FDEAA-release.html: KPF4
 output/FDEAA-release.html: KRKs
-output/FDEAA-release.html: L1
-output/FDEAA-release.html: L2
 output/FDEAA-release.html: LMS
 output/FDEAA-release.html: Labelling
 output/FDEAA-release.html: M24
@@ -348,8 +344,6 @@ output/FDEAA.html: KPF4
 output/FDEAA.html: KRKs
 output/FDEAA.html: KeyGen
 output/FDEAA.html: KeySbox
-output/FDEAA.html: L1
-output/FDEAA.html: L2
 output/FDEAA.html: LMS
 output/FDEAA.html: LMSOTS
 output/FDEAA.html: Labelling
