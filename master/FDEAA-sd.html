@@ -1103,61 +1103,200 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key wrap functions
                       and shall verify the key wrap uses an approved key wrap algorithm according to the
                       appropriate specification.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that all keys are wrapped using the
-                      approved method and a description of when the key wrapping occurs.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-SKC"><h4>FCS_COP.1/SKC Cryptographic Operation (AES Data Encryption/Decryption)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/SKC</div>
-                  
-              
-                    
-                    
-                    
+                      approved method and a description of when the key wrapping occurs.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this SFR.</div></div></span></div><div class="comp" id="FCS-COP-1-SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/SKC</div>
 					
-            
+					There is no AGD for this activity.
 					
 					
-					
-					
-					
-					
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key size used for
-                    encryption and the mode used for encryption.
-					<p style="text-align: left">Conditional: If AES-GCM is selected, the evaluator shall verify the tag length is described in the TSS and that a tag length of at 
-					least 128 is used unless the following "Appendix C: Requirements and Guidelines for Using Short Tags" is being followed from NIST SP 800-38D.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">If multiple encryption modes are supported, the evaluator examines the guidance
-                      documentation to determine that the method of choosing a specific mode/key size by
-                      the end user is described.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p style="text-align: left">The evaluator shall perform all of the following tests for each algorithm implemented by the TSF and used to satisfy the requirements of this PP:</p> 
-					
-					<p style="text-align: left"><b>AES-CBC Known Answer Tests</b></p> 
-					<p style="text-align: left">There are four Known Answer Tests (KATs), described below. In all KATs, the plaintext, ciphertext, and IV values shall be 128-bit blocks. The results from each test may either be obtained by the evaluator directly or by supplying the inputs to the implementer and receiving the results in response. To determine correctness, the evaluator shall compare the resulting values to those obtained by submitting the same inputs to a known good implementation.</p> 
-					<ul><li><p style="text-align: left">KAT-1. To test the encrypt functionality of AES-CBC, the evaluator shall supply a set of 5 plaintext values and obtain the ciphertext value that results from AES-CBC encryption of the given plaintext using a key value of all zeros and an IV of all zeros. Five plaintext values shall be encrypted with a 256-bit all- zeros key. To test the decrypt functionality of AES-CBC, the evaluator shall perform the same test as for encrypt, using 10 ciphertext values as input and AES-CBC decryption.</p></li>
-					<li><p style="text-align: left">KAT-2. To test the encrypt functionality of AES-CBC, the evaluator shall supply a set of 5 key values and obtain the ciphertext value that results from AES-CBC encryption of an all-zeros plaintext using the given key value and an IV of all zeros. The keys shall be 256-bit keys. To test the decrypt functionality of AES-CBC, the evaluator shall perform the same test as for encrypt, using an all-zero ciphertext value as input and AES-CBC decryption.</p></li>
-					<li><p style="text-align: left">KAT-3. To test the encrypt functionality of AES-CBC, the evaluator shall supply the set of key values described below and obtain the ciphertext value that results from AES encryption of an all-zeros plaintext using the given key value and an IV of all zeros. The set of keys shall have 256-bit keys. Key i in each set shall have the leftmost i bits be ones and the rightmost N-i bits be zeros, for i in [1,N]. To test the decrypt functionality of AES-CBC, the evaluator shall supply the sets of key and ciphertext value pairs described below and obtain the plaintext value that results from AES-CBC decryption of the given ciphertext using the given key and an IV of all zeros. The set of key/ciphertext pairs shall have 256-bit key/ciphertext pairs. Key i in each set shall have the leftmost i bits be ones and the rightmost N-i bits be zeros, for i in [1,N]. The ciphertext value in each pair shall be the value that results in an all-zeros plaintext when decrypted with its corresponding key.</p></li>
-					<li><p style="text-align: left">KAT-4. To test the encrypt functionality of AES-CBC, the evaluator shall supply the set of 128 plaintext values described below and obtain the ciphertext values that result from AES-CBC encryption of the given plaintext using a 256-bit key value of all zeros with an IV of all zeros. Plaintext value i in each set shall have the leftmost i bits be ones and the rightmost 128-i bits be zeros, for i in [1,128].</p></li></ul> 
-					<p style="text-align: left">To test the decrypt functionality of AES-CBC, the evaluator shall perform the same test as for encrypt, using ciphertext values of the same form as the plaintext in the encrypt test as input and AES-CBC decryption.</p> <p style="text-align: left"></p> 
-					<p style="text-align: left"><b>AES-CBC Multi-Block Message Test</b></p> <p style="text-align: left">The evaluator shall test the encrypt functionality by encrypting an i-block message where 1 &lt; i ‌‌&lt;= 10. The evaluator shall choose a key, an IV and plaintext message of length i blocks and encrypt the message, using the mode to be tested, with the chosen key and IV. The ciphertext shall be compared to the result of encrypting the same plaintext message with the same key and IV using a known good implementation. The evaluator shall also test the decrypt functionality for each mode by decrypting an i-block message where 1 &lt; i ‌‌&lt;=10. The evaluator shall choose a key, an IV and a ciphertext message of length i blocks and decrypt the message, using the mode to be tested, with the chosen key and IV. The plaintext shall be compared to the result of decrypting the same ciphertext message with the same key and IV using a known good implementation.</p> 
-					<p style="text-align: left"><b>AES-CBC Monte Carlo Tests</b></p> <p style="text-align: left">The evaluator shall test the encrypt functionality using a set of 100 plaintext, IV, and key 3-tuples. 100 of these shall use shall use 256-bit keys. The plaintext and IV values shall be 128-bit blocks. For each 3-tuple, 1000 iterations shall be run as follows:</p> 
-					<pre><code># Input: PT, IV, Key 
-for i = 1 to 1000: 
-      if i == 1: 
-           CT[1] = AES-CBC-Encrypt(Key, IV, PT) 
-           PT = IV 
-      else: 
-           CT[i] = AES-CBC-Encrypt(Key, PT) 
-           PT = CT[i-1]</code></pre> 
-		   <p style="text-align: left">The ciphertext computed in the 1000th iteration (i.e., CT[1000]) is the result for that trial. This result shall be compared to the result of running 1000 iterations with the same values using a known good implementation.</p> 
-		   <p style="text-align: left"></p> <p style="text-align: left">The evaluator shall test the decrypt functionality using the same test as for encrypt, exchanging CT and PT and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.</p> 
-		   
-		   <p style="text-align: left"><b>AES-GCM Monte Carlo Tests</b></p> <p style="text-align: left">The evaluator shall test the authenticated encrypt functionality of AES-GCM for each combination of the following input parameter lengths:</p> 
-		   <ul><li><p style="text-align: left">256-bit keys</p></li><li><p style="text-align: left">Two plaintext lengths. One of the plaintext lengths shall be a non-zero integer multiple of 128 bits, if supported. The other plaintext length shall not be an integer multiple of 128 bits, if supported.</p></li><li><p style="text-align: left">Three AAD lengths. One AAD length shall be 0, if supported. One AAD length shall be a non-zero integer multiple of 128 bits, if supported. One AAD length shall not be an integer multiple of 128 bits, if supported.</p></li><li><p style="text-align: left">Two IV lengths. If 96 bit IV is supported, 96 bits shall be one of the two IV lengths tested.</p></li></ul> 
-		   <p style="text-align: left">The evaluator shall test the encrypt functionality using a set of 10 key, plaintext, AAD, and IV tuples for each combination of parameter lengths above and obtain the ciphertext value and tag that results from AES-GCM authenticated encrypt. Each supported tag length shall be tested at least once per set of 10. The IV value may be supplied by the evaluator or the implementation being tested, as long as it is known.</p> <p style="text-align: left"></p> 
-		   <p style="text-align: left">The evaluator shall test the decrypt functionality using a set of 10 key, ciphertext, tag, AAD, and IV 5-tuples for each combination of parameter lengths above and obtain a Pass/Fail result on authentication and the decrypted plaintext if Pass. The set shall include five tuples that Pass and five that Fail.</p> 
-		   <p style="text-align: left">The results from each test may either be obtained by the evaluator directly or by supplying the inputs to the implementer and receiving the results in response. To determine correctness, the evaluator shall compare the resulting values to those obtained by submitting the same inputs to a known good implementation.</p> 
-		   
-		   <p style="text-align: left"><b>AES-XTS Tests</b></p> 
-		   <p style="text-align: left">The evaluator shall test the encrypt functionality of XTS-AES for each combination of the following input parameter lengths:</p> 
-		   <p style="text-align: left">512 bit (for AES-256) keys</p> 
-		   <p style="text-align: left">Three data unit (i.e., plaintext) lengths. One of the data unit lengths shall be a non-zero integer multiple of 128 bits, if supported. One of the data unit lengths shall not be an integer multiple of 128 bits, if supported. The third data unit length shall be either the longest supported data unit length or 216 bits, whichever is smaller.</p> 
-		   <p style="text-align: left">Using a set of 100 (key, plaintext and 128-bit random tweak value) 3-tuples, the evaluator shall obtain the ciphertext that results from XTS-AES encrypt.</p> 
-		   <p style="text-align: left">The evaluator may supply a data unit sequence number instead of the tweak value if the implementation supports it. The data unit sequence number is a base-10 number ranging between 0 and 255 that implementations convert to a tweak value internally.</p> 
-		   <p style="text-align: left">The evaluator shall test the decrypt functionality of XTS-AES using the same test as for encrypt, replacing plaintext values with ciphertext values and XTS-AES encrypt with XTS-AES decrypt.</p> 
-		   </div></div></span></div><div class="comp" id="SFR-FCS-CKM-5"><h4>FCS_CKM.5 Cryptographic Key Derivation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.5</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+						The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
+						tweak values, and counters in conformance with the relevant specifications.<p></p>
+						If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
+						full-length keys by methods that ensure that the two key halves are different and independent.
+						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
+						specification to confirm that it describes how the IV is generated and that the same IV is never
+						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
+						that for each invocation of GCM, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.
+					</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<p></p>
+						The following tests are conditional based upon the selections made in the SFR. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the TOE
+						itself, the test platform shall be identified and the differences between test
+						environment and TOE execution environment shall be described.<p></p>
+
+						
+						<br/><b>AES-CBC</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">AES-CBC</td>
+								<td valign="top">AES in CBC mode with non-repeating and unpredictable IVs</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+										FIPS PUB 197] [AES]<p></p>
+									[<b>selection:</b>  ISO/IEC 10116:2017 (Clause 7),
+										NIST SP 800-38A] [CBC]</td>
+							</tr>
+						</table><p></p>
+
+						To test the TOE’s ability to encrypt/decrypt data using AES in CBC mode, the evaluator
+						shall perform Algorithm Functional Tests and Monte Carlo Tests using the following
+						input parameters:<ul>
+						<li>Key size [256] bits</li>
+						<li>Direction [encryption, decryption]</li></ul><p></p>
+						<br/><b>Algorithm Functional Tests</b><p></p>
+						Algorithm Functional Tests are designed to verify the correct operation of the logical
+						components of the algorithm implementation under normal operation using different block sizes.
+						For AES-CBC, there are two types of AFTs:<p></p>
+						<br/><b><i>Known-Answer Tests</i></b><p></p>
+						For each combination of direction and claimed key size, the TOE must be tested using the
+						GFSBox, KeySbox, VarTxt, and VarKey test cases listed in Appendixes B through E of <i>The
+						Advanced Encryption Standard Algorithm Validation Suite (AESAVS)</i>, NIST, 15 November 2002.<p></p>
+						<br/><b><i>Multi-Block Message Tests</i></b><p></p>
+						For each combination of direction and claimed key size, the TOE must be tested against 10 test
+						cases consisting of a random IV, random key, and random plaintext/ciphertext. The
+						plaintext/ciphertext starts with a length of 16 bytes and increases by 16 bytes for each test case
+						until reaching 160 bytes.<p></p>
+						<br/><b><i>Monte Carlo Tests</i></b><p></p>
+						Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE
+						must process the test cases according to the following algorithm once for each combination of
+						direction and key size:<p></p>
+						<pre>
+						Key[0] = Key
+						IV[0] = IV
+						PT[0] = PT
+						for i = 0 to 99 {
+							Output Key[i], IV[i], PT[0]
+							for j = 0 to 999 {
+								if (j == 0) {
+									CT[j] = AES-CBC-Encrypt(Key[i], IV[i], PT[j])
+									PT[j+1] = IV[i]
+								} else {
+									CT[j] = AES-CBC-Encrypt(Key[i], PT[j])
+									PT[j+1] = CT[j-1]
+								}
+							}
+							Output CT[j]
+							AES_KEY_SHUFFLE(Key, CT)
+							IV[i+1] = CT[j]
+							PT[0] = CT[j-1]
+						}
+						</pre><p></p>
+						where <pre>AES_KEY_SHUFFLE</pre> is defined as: <p></p>
+						<pre>
+						If ( keylen = 128 )
+							Key[i+1] = Key[i] xor MSB(CT[j], 128)
+						If ( keylen = 192 )
+							Key[i+1] = Key[i] xor (LSB(CT[j-1], 64) || MSB(CT[j], 128))
+						If ( keylen = 256 )
+							Key[i+1] = Key[i] xor (MSB(CT[j-1], 128) || MSB(CT[j], 128))
+						</pre><p></p>
+						The above pseudocode is for encryption. For decryption, swap all instances of CT and PT.<p></p>
+						The initial IV, key, and plaintext/ciphertext should be random.<p></p>
+						The evaluator shall test the decrypt functionality using the same test as above,
+						exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.<p></p>
+
+
+						
+						<br/><b>XTS-AES</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">XTS-AES</td>
+								<td valign="top">AES in XTS mode with unique tweak values that are consecutive
+									non-negative integers starting at an arbitrary non-negative integer</td>
+								<td valign="top">512 bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+										FIPS PUB 197] [AES]<p></p>
+									[<b>selection:</b> IEEE Std. 1619-2018,
+										NIST SP 800-38E] [XTS]</td>
+							</tr>
+						</table><p></p>
+						To test the TOE’s ability to encrypt/decrypt data using AES in XTS mode, the evaluator shall
+						perform the Single Data Unit Test and the Multiple Data Unit Test using the following input
+						parameters:<ul>
+						<li>Direction [encryption, decryption]</li>
+						<li>Key size [512] bits</li>
+						<li>Tweak value format [128-bit hex string, data unit sequence number]</li></ul><p></p>
+						<br/><b>Single Data Unit Test</b><p></p>
+						For each combination of claimed key size, direction, and supported tweak value format, the
+						evaluator shall generate 50 test cases consisting of random payload data. The payload data size is
+						determined randomly for each test case from supported values within the range [128-65536] bits.
+						The payload size and data unit size must be equal.<p></p>
+						<br/><b>Multiple Data Unit Test</b><p></p>
+						For each combination of claimed key size, direction, and supported tweak value format, the
+						evaluator shall generate 50 test cases consisting of random payload data. The payload data size is
+						determined randomly for each test case from supported values within the range [128-65536] bits.
+						Likewise, the data unit size is determined randomly for each test case from supported values
+						within the range [128-65535] bits. The payload size and data unit size must not be equal.<p></p>
+						The evaluator shall verify the correctness of the TSF’s implementation by comparing values
+						generated by the TSF with those generated by a known good implementation using the same
+						input parameters.<p></p>
+
+                                                
+						<br/><b>AES-GCM</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">AES-GCM </td>
+								<td valign="top">AES in GCM mode with nonrepeating IVs using
+									[<b>selection:</b> deterministic, RBG-based] IV construction;
+									the tag must be of length [<b>selection:</b> 96, 104, 112, 120, or 128] bits.</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+									FIPS PUB 197] [AES]<p></p>
+									[<b>selection:</b>  ISO/IEC 19772:2020 (Clause 10), NIST SP 800-38D] [GCM]</td>
+							</tr>
+						</table><p></p>
+						To test the TOE’s implementation of AES-GCM authenticated encryption functionality the
+						evaluator shall perform the Encryption Algorithm Functional Tests and Decryption Algorithm
+						Functional Tests as described below using the following input parameters:<ul>
+						<li>Key Size [256] bits</li>
+						<li>Associated data size [0-65536] bits</li>
+						<li>Payload size [0-65536] bits</li>
+						<li>IV size [96] bits</li>
+						<li>Tag size [96, 104, 112, 120, 128] bits</li></ul><p></p>
+						<br/><b>Encryption Algorithm Functional Tests</b><p></p>
+						The evaluator shall generate 15 test cases using random data for each combination of
+						the above parameters as follows:<p></p><ul>
+						<li>Each claimed key size,</li>
+						<li>Each supported tag size,</li>
+						<li>Four supported non-zero payload sizes, such that two are multiples of 128 bits
+							and two are not multiples of 128 bits,</li>
+						<li>Four supported non-zero associated data sizes, such that two are multiples of
+							128 bits and two are not multiples of 128 bits, and</li>
+						<li>An associated data size of zero, if supported.</li></ul><p></p>
+						Note that the IV size is always 96 bits.<p></p>
+						The evaluator shall compare the output from each test case against results generated by a known-
+						good implementation with the same input parameters.<p></p>
+						<br/><b><i>Decryption Algorithm Functional Tests</i></b><p></p>
+						The evaluator shall test the authenticated decrypt functionality of AES-GCM by supplying 15
+						test cases for the supported combinations of the parameters as described above. For each
+						parameter combination the evaluator shall introduce an error into either the Ciphertext or the Tag
+						such that approximately half of the cases are correct and half the cases contain errors.
+					</div></div></span></div><div class="comp" id="SFR-FCS-CKM-5"><h4>FCS_CKM.5 Cryptographic Key Derivation</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.5</div>
 					
 						
 						

@@ -1,0 +1,3 @@
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:1676:16: error: element "guidance" not allowed here; expected the element end-tag or element "CustomEA", "Guidance", "KMD" or "Tests"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:1676:50: error: text not allowed here; expected element "ref-id"
+/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:1676:61: error: element "guidance" incomplete; missing required element "ref-id"
