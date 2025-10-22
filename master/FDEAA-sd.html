@@ -980,17 +980,28 @@ The following sections list Common Criteria and technology terms used in this do
                   generate HMAC tags for these sets of test data. The resulting MAC tags shall be
                   compared to the result of generating HMAC tags with the same key using a known
                   good implementation.</p>
-                </div></div></span></div><div class="comp" id="FCS-COP-1-KE"><h4>FCS_COP.1/KeyEnc Cryptographic Operation (Key Encryption)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
-              
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS includes a description of the key size used for
-                encryption and the mode used for the key encryption.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">If multiple key encryption modes are supported, the evaluator examines the guidance
-                documentation to determine that the method of choosing a specific mode/key size by
-                the end user is described.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall examine the vendor’s KMD to verify that it includes a description
-                of how key encryption will be used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The AES test should be followed in FCS_COP.1/SKC Cryptographic Operation (AES
-                Data Encryption/Decryption.</div></div></span></div><div class="comp" id="FCS-COP-1-KEYENCAP"><h4>FCS_COP.1/KeyEncap Cryptographic Operation (Key Transport)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEncap</div>
+                </div></div></span></div><div class="comp" id="FCS-COP-1-KEYENC"><h4>FCS_COP.1/KeyEnc Cryptographic Operation - Key Encryption</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEnc</div>
+					
+					
+					
+					
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+						The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
+						tweak values, and counters in conformance with the relevant specifications.<p></p>
+						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
+						specification to confirm that it describes how the IV is generated and that the same IV is never
+						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
+						that for each invocation of GCM, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+						If multiple key encryption modes are supported, the evaluator examines the guidance
+						documentation to determine that the method of choosing a specific mode/key size by
+						the end user is described.
+					</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
+						The evaluator shall examine the vendor's KMD to verify that it includes a description
+						of how key encryption will be used as part of the key chain.
+					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The AES test should be followed in FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography
+					</div></div></span></div><div class="comp" id="FCS-COP-1-KEYENCAP"><h4>FCS_COP.1/KeyEncap Cryptographic Operation (Key Transport)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/KeyEncap</div>
               
               
               
