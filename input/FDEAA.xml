@@ -2892,12 +2892,12 @@
           <f-element id="fcs-kyc-ext-2-2">
             <title>
               The TSF shall maintain a chain of intermediary keys originating from the BEV to the DEK using the following methods: <selectables linebreak="yes">
-                <selectable>asymmetric key generation as specified in FCS_CKM.1<h:b>/AKG</h:b></selectable>
-                <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1<h:b>/SKG</h:b></selectable>
+                <selectable>asymmetric key generation as specified in FCS_CKM.1/AKG</selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1/SKG</selectable>
                 <selectable>key derivation as specified in FCS_CKM.5.1</selectable>
-                <selectable>key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
-                <selectable>key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
-                <selectable>key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
+                <selectable>key wrapping as specified in FCS_COP.1/KeyWrap</selectable>
+                <selectable>key transport as specified in FCS_COP.1/KeyEncap</selectable>
+                <selectable>key encryption as specified in FCS_COP.1/KeyEnc</selectable>
               </selectables> while maintaining an effective strength of <selectables>
                 <selectable>128 bits</selectable>
                 <selectable>256 bits</selectable>
@@ -2943,8 +2943,8 @@
                     <selectable id="fcs-pcc-ext-1-2-sel-1"><assignable>10000 or more</assignable> iterations</selectable>
                     <selectable id="fcs-pcc-ext-1-2-sel-2"><assignable>1 or more</assignable>iterations and
                       <assignable>10000 or more</assignable> subsequent rounds
-                      of AES operations with a device key and PBKDF2 output per FCS_COP.1<h:b>/KeyEnc</h:b> or
-                      FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
+                      of AES operations with a device key and PBKDF2 output per FCS_COP.1/KeyEnc or
+                      FCS_COP.1/KeyEncap</selectable>
                   </selectables> and output cryptographic key sizes 
                   <selectables>
                     <selectable>128 bits</selectable>
