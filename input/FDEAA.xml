@@ -3448,17 +3448,17 @@
                     <selectable id="sel-fcs-val-ext-1-1-sel-1c">BEV</selectable>
                   </selectables>
                   using the following methods: <selectables linebreak="yes">
-                    <selectable id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in FCS_COP.1<h:b>/KeyWrap</h:b>;</selectable>
+                    <selectable id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in FCS_COP.1/KeyWrap;</selectable>
                     <selectable id="sel-fcs-val-ext-1-1-sel-2a">hash the <selectables>
                       <selectable>submask</selectable>
                       <selectable>intermediate key</selectable>
                       <selectable>BEV</selectable>
                     </selectables>
                     as specified in <selectables>
-                      <selectable id="fcs-val-ext-1-1-hash">FCS_COP.1<h:b>/Hash</h:b></selectable>
-                      <selectable id="fcs-val-ext-1-1-keyhash">FCS_COP.1<h:b>/KeyedHash</h:b></selectable>
+                      <selectable id="fcs-val-ext-1-1-hash">FCS_COP.1/Hash</selectable>
+                      <selectable id="fcs-val-ext-1-1-keyhash">FCS_COP.1/KeyedHash</selectable>
                     </selectables> and compare it to a stored hashed <selectables><selectable>submask</selectable><selectable> intermediate key</selectable><selectable>BEV</selectable></selectables>;</selectable>
-                    <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1<h:b>/SKC</h:b> and compare it against a stored known value </selectable>
+                    <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value </selectable>
                   </selectables>.
                 </title>
                 
@@ -3470,14 +3470,14 @@
                       <selectable>BEV</selectable>
                     </selectables>
                     using the following methods: <selectables linebreak="yes">
-                      <selectable>key wrap as specified in FCS_COP.1;</selectable>
+                      <selectable>key wrap as specified in FCS_COP.1/KeyWrap;</selectable>
                       <selectable>hash the <selectables>
                         <selectable>submask</selectable>
                         <selectable>intermediate key</selectable>
                         <selectable>BEV</selectable>
                       </selectables>
                         as specified in <assignable>cryptographic operation requirement</assignable> and compare it to a stored hashed <selectables><selectable>submask</selectable><selectable> intermediate key</selectable><selectable>BEV</selectable></selectables>;</selectable>
-                      <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1 and compare it against a stored known value </selectable>
+                      <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value </selectable>
                     </selectables>.
                   </title>
                 </ext-comp-def-title>
