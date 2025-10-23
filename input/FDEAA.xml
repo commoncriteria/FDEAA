@@ -3011,8 +3011,7 @@
                     <selectable id="fcs-pcc-ext-1-2-sel-1"><assignable>10000 or more</assignable> iterations</selectable>
                     <selectable id="fcs-pcc-ext-1-2-sel-2"><assignable>1 or more</assignable>iterations and
                       <assignable>10000 or more</assignable> subsequent rounds
-                      of AES operations with a device key and PBKDF2 output per FCS_COP.1/KeyEnc or
-                      FCS_COP.1/KeyEncap</selectable>
+                      of AES operations with a device key and PBKDF2 output per FCS_COP.1/KeyEnc</selectable>
                   </selectables> and output cryptographic key sizes 
                   <selectables>
                     <selectable>128 bits</selectable>
