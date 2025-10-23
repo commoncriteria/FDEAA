@@ -616,60 +616,120 @@ The following sections list Common Criteria and technology terms used in this do
                     Operational Environment for memory erasure and how that is achieved.</div>
                   <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
-                </span></div><div class="comp" id="FCS-COP-1-HASH"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/Hash</div>
+                </span></div><div class="comp" id="FCS-COP-1-HASH"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/Hash</div> 
                     
                     
+					
                     
-                    
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall check that the association of the hash function with other TSF
-                      cryptographic functions (for example, the digital signature verification function) is
-                      documented in the TSS.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator checks the operational guidance documents to determine that any system
-                      configuration necessary to enable required hash size functionality is provided.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                      <p>The TSF hashing functions can be implemented in one of two modes. The first mode
-                        is the byte-oriented mode. In this mode the TSF only hashes messages that are an
-                        integral number of bytes in length; i.e., the length (in bits) of the message to be hashed
-                        is divisible by 8. The second mode is the bit-oriented mode. In this mode the TSF
-                        hashes messages of arbitrary length. As there are different tests for each mode, an
-                        indication is given in the following sections for the bit-oriented vs. the byte-oriented
-                        test mode.</p>
-                      <p>
-                        The evaluator shall perform all of the following tests for each hash algorithm implemented by the TSF and used to satisfy the requirements of this cPP.
-                      </p>
-                      <p><u>Short Messages Test Bit-oriented Mode</u></p>
-                      <p>The evaluators devise an input set consisting of m+1 messages, where m is the block
-                        length of the hash algorithm. The length of the messages range sequentially from 0 to
-                        m bits. The message text shall be pseudorandomly generated. The evaluators compute
-                        the message digest for each of the messages and ensure that the correct result is
-                        produced when the messages are provided to the TSF.</p>
-                        <p><u>Short Messages Test Byte-oriented Mode</u></p>
-                        <p>The evaluators devise an input set consisting of m/8+1 messages, where m is the block
-                          length of the hash algorithm. The length of the messages range sequentially from 0 to
-                          m/8 bytes, with each message being an integral number of bytes. The message text shall
-                          be pseudorandomly generated. The evaluators compute the message digest for each of
-                          the messages and ensure that the correct result is produced when the messages are
-                          provided to the TSF.</p>
-                        <p><u>Selected Long Messages Test Bit-oriented Mode</u></p>
-                        <p>The evaluators devise an input set consisting of m messages, where m is the block
-                          length of the hash algorithm. For SHA-256, the length of the i-th message is 512 +
-                          99*i, where 1 ≤ i ≤ m. For SHA-384 and SHA-512, the length of the i-th message is
-                          1024 + 99*i, where 1 ≤ i ≤ m. The message text shall be pseudorandomly generated.
-                          The evaluators compute the message digest for each of the messages and ensure that
-                          the correct result is produced when the messages are provided to the TSF.</p>
-                        <p><u>Selected Long Messages Test Byte-oriented Mode</u></p>
-                        <p>The evaluators devise an input set consisting of m/8 messages, where m is the block
-                          length of the hash algorithm. For SHA-256, the length of the i-th message is 512 +
-                          8*99*i, where 1 ≤ i ≤ m/8. For SHA-384 and SHA-512, the length of the i-th message
-                          is 1024 + 8*99*i, where 1 ≤ i ≤ m/8. The message text shall be pseudorandomly
-                          generated. The evaluators compute the message digest for each of the messages and
-                          ensure that the correct result is produced when the messages are provided to the TSF.</p>
-                        <p><u>Pseudorandomly Generated Messages Test</u></p>
-                        <p>This test is for byte-oriented implementations only. The evaluators randomly generate
-                          a seed that is n bits long, where n is the length of the message digest produced by the
-                          hash function to be tested. The evaluators then formulate a set of 100 messages and
-                          associated digests by following the algorithm provided in Figure 1 of the NIST Secure
-                          Hash Algorithm Validation System (SHAVS)
-                          (https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-ValidationProgram/documents/shs/SHAVS.pdf). The evaluators then ensure that the correct
-                          result is produced when the messages are provided to the TSF.</p></div></div></span></div><div class="comp" id="FCS-COP-1-SIGVER"><h4>FCS_COP.1/SigVer Cryptographic Operation (Signature Verification)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/SigVer</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
+						used only as a PRF or MAC step in a key derivation function or as part of LMS, and not as a hash algorithm.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<p></p>
+						The following tests are conditional based upon the selections made in the SFR. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the TOE
+						itself, the test platform shall be identified and the differences between test
+						environment and TOE execution environment shall be described.<p></p>
+
+						<br/><b>SHA-256, SHA-384, SHA-512</b><p></p> 
+						To test the TOE’s ability to generate hash digests using SHA2 the evaluator shall
+						perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Test for each claimed
+						SHA2 algorithm.<p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						The evaluator shall generate a number of test cases equal to the block size of the hash (512 for
+						SHA2-256; 1024 for the other SHA2 algorithms).<p></p>
+						Each test case is to consist of random data of a random length between 0 and 65536 bits, or the
+						largest size supported.<p></p>
+						Each test case is to consist of random data of a random length between 0 and 65536 bits, or the
+						largest size supported.<p></p>
+						<br/><b>Monte Carlo Test</b><p></p>
+						Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.<p></p>
+						There are two versions of the Monte Carlo test for SHA-1 and SHA-2. Either one is acceptable.
+						For the Standard Monte Carlo test the message hashed is always three times the length of the
+						initial seed.<p></p>
+						<pre>
+		For j = 0 to 99
+			A = B = C = SEED
+			For i = 0 to 999
+				MSG = A || B || C
+				MD = SHA(MSG)
+				A = B
+				B = C
+				C = MD
+			Output MD
+			SEED = MD
+						</pre><p></p>
+						For the alternate version of the Monte Carlo Test, the hashed message is always the same length as
+						the seed.<p></p>
+						<pre>
+		INITIAL_SEED_LENGTH = LEN(SEED)
+		For j = 0 to 99
+			A = B = C = SEED
+			For i = 0 to 999
+				MSG = A || B || C
+				if LEN(MSG) &gt;= INITIAL_SEED_LENGTH:
+					MSG = leftmost INITIAL_SEED_LENGTH bits of MSG
+				else:
+					MSG = MSG || INITIAL_SEED_LENGTH - LEN(MSG) 0 bits
+				MD = SHA(MSG)
+				A = B
+				B = C
+				C = MD
+			Output MD
+			SEED = MD	
+						</pre><p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.<p></p>
+						<br/><b>Large Data Test</b><p></p>
+						The implementation must be tested against one test case each on large data messages of 1GB,
+						2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example,
+						consist of a repeated pattern of 64 bits.<p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.<p></p>
+						
+						<br/><b>SHA3-384, SHA3-512</b> 
+						To test the TOE’s ability to generate hash digests using SHA3 the evaluator shall perform the
+						Algorithm Functional Test, Monte Carlo Test, and Large Data Tests for each claimed SHA3
+						algorithm.
+						<br/><b>Algorithm Functional Test</b><p></p>
+						Generate a test case consisting of random data for every message length from 0 bits (or the
+						smallest supported message size) to rate bits, where rate equals<ul>
+						<li>832 for SHA3-384 and</li>
+						<li>576 for SHA3-512.</li></ul><p></p>
+						Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits
+						starting at length rate, and continuing until 65535 is exceeded.<p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.<p></p>
+						<br/><b>Monte Carlo Test</b><p></p>
+						Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.<p></p>
+						For this Monte Carlo Test, the hashed message is always the same length as the seed.<p></p>
+						<pre>
+		MD[0] = SEED
+		INITIAL_SEED_LENGTH = LEN(SEED)
+		For 100 iterations
+			For i = 1 to 1000
+				MSG = MD[i-1];
+				if LEN(MSG) &gt;= INITIAL_SEED_LENGTH:
+					MSG = leftmost INITIAL_SEED_LENGTH bits of MSG
+				else:
+					MSG = MSG || INITIAL_SEED_LENGTH - LEN(MSG) 0 bits
+				MD[i] = SHA3(MSG)
+			MD[0] = MD[1000]
+			Output MD[0]
+						</pre><p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.<p></p>
+						<br/><b>Large Data Test</b><p></p>
+						The implementation must be tested against one test case each on large data messages of 1GB,
+						2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example,
+						consist of a repeated pattern of 64 bits.<p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.
+                    </div></div></span></div><div class="comp" id="FCS-COP-1-SIGVER"><h4>FCS_COP.1/SigVer Cryptographic Operation (Signature Verification)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_COP.1/SigVer</div>
               <p>This requirement is used to verify digital signatures attached to updates from the TOE
                 manufacturer before installing those updates on the TOE. Because this component is to
                 be used in the update function, additional Evaluation Activities to those listed below

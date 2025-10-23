@@ -3,7 +3,9 @@ output/FDEAA-release-linkable.html: 0x00007A4B
 output/FDEAA-release-linkable.html: 10C
 output/FDEAA-release-linkable.html: 10x
 output/FDEAA-release-linkable.html: 11C
+output/FDEAA-release-linkable.html: 1GB
 output/FDEAA-release-linkable.html: 1S
+output/FDEAA-release-linkable.html: 2GB
 output/FDEAA-release-linkable.html: 2S
 output/FDEAA-release-linkable.html: 38A
 output/FDEAA-release-linkable.html: 38B
@@ -12,6 +14,7 @@ output/FDEAA-release-linkable.html: 38D
 output/FDEAA-release-linkable.html: 38E
 output/FDEAA-release-linkable.html: 38F
 output/FDEAA-release-linkable.html: 4C
+output/FDEAA-release-linkable.html: 4GB
 output/FDEAA-release-linkable.html: 56A
 output/FDEAA-release-linkable.html: 56B
 output/FDEAA-release-linkable.html: 56C
@@ -21,6 +24,7 @@ output/FDEAA-release-linkable.html: 64s
 output/FDEAA-release-linkable.html: 6C
 output/FDEAA-release-linkable.html: 7C
 output/FDEAA-release-linkable.html: 8C
+output/FDEAA-release-linkable.html: 8GB
 output/FDEAA-release-linkable.html: 8s
 output/FDEAA-release-linkable.html: 90A
 output/FDEAA-release-linkable.html: 9C
@@ -85,7 +89,6 @@ output/FDEAA-release-linkable.html: S4
 output/FDEAA-release-linkable.html: S5
 output/FDEAA-release-linkable.html: SATA
 output/FDEAA-release-linkable.html: SHA3
-output/FDEAA-release-linkable.html: SHAVS
 output/FDEAA-release-linkable.html: Sanitization
 output/FDEAA-release-linkable.html: Stateful
 output/FDEAA-release-linkable.html: Subclause
@@ -219,16 +222,20 @@ output/FDEAA-release.html: uninstantiating
 output/FDEAA-sd.html: 0s
 output/FDEAA-sd.html: 0x00007A4B
 output/FDEAA-sd.html: 10x
+output/FDEAA-sd.html: 1GB
 output/FDEAA-sd.html: 1S
+output/FDEAA-sd.html: 2GB
 output/FDEAA-sd.html: 2S
 output/FDEAA-sd.html: 38A
 output/FDEAA-sd.html: 38C
 output/FDEAA-sd.html: 38D
 output/FDEAA-sd.html: 38E
 output/FDEAA-sd.html: 38F
+output/FDEAA-sd.html: 4GB
 output/FDEAA-sd.html: 56B
 output/FDEAA-sd.html: 56C
 output/FDEAA-sd.html: 64s
+output/FDEAA-sd.html: 8GB
 output/FDEAA-sd.html: 8s
 output/FDEAA-sd.html: 90A
 output/FDEAA-sd.html: AESAVS
@@ -262,7 +269,7 @@ output/FDEAA-sd.html: PCI
 output/FDEAA-sd.html: PP’s
 output/FDEAA-sd.html: PRFs
 output/FDEAA-sd.html: RSASVE
-output/FDEAA-sd.html: SHAVS
+output/FDEAA-sd.html: SHA3
 output/FDEAA-sd.html: Sanitization
 output/FDEAA-sd.html: Subclause
 output/FDEAA-sd.html: VarKey
@@ -284,7 +291,9 @@ output/FDEAA.html: 0x00007A4B
 output/FDEAA.html: 10C
 output/FDEAA.html: 10x
 output/FDEAA.html: 11C
+output/FDEAA.html: 1GB
 output/FDEAA.html: 1S
+output/FDEAA.html: 2GB
 output/FDEAA.html: 2S
 output/FDEAA.html: 38A
 output/FDEAA.html: 38B
@@ -293,6 +302,7 @@ output/FDEAA.html: 38D
 output/FDEAA.html: 38E
 output/FDEAA.html: 38F
 output/FDEAA.html: 4C
+output/FDEAA.html: 4GB
 output/FDEAA.html: 56A
 output/FDEAA.html: 56B
 output/FDEAA.html: 56C
@@ -302,6 +312,7 @@ output/FDEAA.html: 64s
 output/FDEAA.html: 6C
 output/FDEAA.html: 7C
 output/FDEAA.html: 8C
+output/FDEAA.html: 8GB
 output/FDEAA.html: 8s
 output/FDEAA.html: 90A
 output/FDEAA.html: 9C
@@ -367,7 +378,6 @@ output/FDEAA.html: S4
 output/FDEAA.html: S5
 output/FDEAA.html: SATA
 output/FDEAA.html: SHA3
-output/FDEAA.html: SHAVS
 output/FDEAA.html: Sanitization
 output/FDEAA.html: Stateful
 output/FDEAA.html: Subclause
