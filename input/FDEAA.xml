@@ -605,7 +605,7 @@
 	  <SOEs>
 		<SOE name="OE.INITIAL_DRIVE_STATE">
 			  <description><h:p>The OE provides a newly provisioned or initialized storage device free of protected data in areas not targeted for encryption.</h:p><h:p>
-          Rationale: Since the cPP requires all protected data to encrypted A.INITIAL_DRIVE_STATE assumes that the initial state of the device targeted for FDE is free of protected data in those areas of the drive where encryption will not be invoked (e.g., MBR and AA/EE pre-authentication software). Given this known start state, the product (once installed and operational) ensures partitions of logical blocks of user accessible data is protected.
+          Rationale: Since the cPP requires all protected data to encrypted [A.INITIAL_DRIVE_STATE] assumes that the initial state of the device targeted for FDE is free of protected data in those areas of the drive where encryption will not be invoked (e.g., MBR and AA/EE pre-authentication software). Given this known start state, the product (once installed and operational) ensures partitions of logical blocks of user accessible data is protected.
         </h:p> </description>
 		  </SOE>
 	    
@@ -619,7 +619,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.PLATFORM_IA">
-			  <description><h:p>The Operational Environment will provide individual user identification and authentication mechanisms that operate independently of the authorization factors used by the TOE.</h:p><h:p>Rationale: While the product may provide authorization factors to the Operating system's login interface, it must not change or degrade the functionality of the actual interface. A.PLATFORM_I&amp;A requires that the product not interfere or change the normal platform I&amp;A functionality.</h:p></description>
+			  <description><h:p>The Operational Environment will provide individual user identification and authentication mechanisms that operate independently of the authorization factors used by the TOE.</h:p><h:p>Rationale: While the product may provide authorization factors to the Operating system's login interface, it must not change or degrade the functionality of the actual interface. [A.PLATFORM_IA] requires that the product not interfere or change the normal platform I&amp;A functionality.</h:p></description>
 		  </SOE>
 	    
 	     <SOE name="OE.PLATFORM_STATE">
@@ -629,7 +629,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.POWER_DOWN">
-			  <description><h:p>Volatile memory is erased after power-off so memory remnant attacks are infeasible.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to not leave the storage device unattended until powered down or placed in a managed power state such as “hibernation mode”. A.POWER_DOWN stipulates that such memory remnant attacks are infeasible given the device is in a powered-down or “hibernation mode” state.</h:p></description>
+			  <description><h:p>Volatile memory is erased after power-off so memory remnant attacks are infeasible.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to not leave the storage device unattended until powered down or placed in a managed power state such as “hibernation mode”. [A.POWER_DOWN] stipulates that such memory remnant attacks are infeasible given the device is in a powered-down or “hibernation mode” state.</h:p></description>
 		  </SOE>
 	    
 	    <SOE name="OE.SINGLE_USE_ET">
@@ -642,7 +642,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.TRAINED_USERS">
-			  <description><h:p>Authorized users will be properly trained and follow all guidance for securing the TOE and authorization factors. </h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to guidance, not store external token authorization factors with the device, and power down the TOE when required (OE.PLATFORM_STATE) The platform in which the storage device resides (or an external storage device is connected) is free of malware that could interfere with the correct operation of the product.</h:p>
+			  <description><h:p>Authorized users will be properly trained and follow all guidance for securing the TOE and authorization factors. </h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to guidance, not store external token authorization factors with the device, and power down the TOE when required [OE.PLATFORM_STATE] The platform in which the storage device resides (or an external storage device is connected) is free of malware that could interfere with the correct operation of the product.</h:p>
         <h:p>A platform free of malware [A.PLATFORM_STATE] prevents an attack vector that could potentially interfere with the correct operation of the product.</h:p></description>
 		  </SOE>
 	    	    
