@@ -128,12 +128,9 @@
       <suppress>Distributed TOE</suppress>   
       <term abbr='AA' full="Authorization Acquisition"></term>
       <term full="Advanced Encryption Standard" abbr="AES"></term>
-      <term full="Authorization Factor">A value that a user knows, has, or is (e.g. password, token, etc.)
-        submitted to the TOE to establish that the user is in the community
-        authorized to use the hard disk. This value is used in the derivation or
-        decryption of the BEV and eventual decryption of the DEK. Note
-        that these values may or may not be used to establish the particular
-        identity of the user. </term>
+      <term full="Authorization factor" abbr="AF">A value submitted by the user, present on the host, or present on a separate protected hardware physical 
+        device used to establish that the user is in the community authorized to use the TOE. The authorization factors are used
+        to generate the KEK. Note that these AFs are not used to establish the particular identity of the user.</term>
         
       <term abbr='BEV' full="Border Encryption Value">A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
@@ -297,12 +294,12 @@
     </h:p>        
       <figure entity="images/fde-authorization_acquisition.png" title="Authorization Acquisition Details" id="toe"/>    
     <h:p>
-      Authorization factors may be unique to individual users or may be used by a group of individuals. In other words, the EE requires authorization factors from the AA to establish that the possessor of the authorization factor belongs to the community of users authorized to access information stored on the storage device (and does not require specific user authorization). Examples of authorization factors include, but are not limited to, passwords, passphrases, or randomly generated values stored on USB tokens or a pin to release a key on hardware storage media such as a Trusted Platform Module (TPM).
+      Authorization factors may be unique to individual users or may be used by a group of individuals. In other words, the EE requires authorization factors from the AA to establish that the possessor of the authorization factor belongs to the community of users authorized to access information stored on the storage device (and does not require specific user authorization). Authorization factors are the specific value provided one of the supported authorization methods. Examples of authorization methods include, but are not limited to, passwords, passphrases, or randomly generated values stored on USB tokens or a pin to release a key on hardware storage media such as a Trusted Platform Module (TPM).
     </h:p>
      </section>
      <section title="Authorization Acquisition Security Capabilities" id="sec-TOEauthorization-acquisition_security_capabilities">
      <h:p>
-      The AA collects authorization factors which the EE uses to access data on the storage device and perform a variety of management functions. Depending on the type of authorization factor, the AA may condition them further. For example, it may apply an approved password-based key derivation function (e.g. PBKDF2) on passwords. An external token containing a randomly generated value of sufficient strength may require no further conditioning on the authorization factors. The AA may then combine one or more authorization factors in such a way that maintains the strength of both factors.
+      The AA collects authorization factors which the EE uses to access data on the storage device and perform a variety of management functions. Depending on the type of authorization method, the AA may condition them further. For example, it may apply an approved password-based key derivation function (e.g. PBKDF2) on passwords. An external token containing a randomly generated value of sufficient strength may require no further conditioning on the authorization factor. The AA may then combine one or more authorization factors in such a way that maintains the strength of both factors.
      </h:p><h:p>
      The AA serves as the main management interface to the EE. However, the EE may also offer management functionality. The requirements in the EE cPP address how the EE should handle these features. The management functionality may include the ability to send commands to the EE such as changing a DEK, setting up new users, managing KEKs and other intermediate keys, and performing a key sanitization (e.g. overwrite of the DEK). It may also forward commands that partition the drive for use by multiple users. However, this document defers the management of partitions and assumes that administrators will only provision and manage the data on whole drives.
      </h:p>
@@ -390,13 +387,13 @@
 		
 		  <threat id="t-auth-guessing" name="T.AUTHORIZATION_GUESSING">
 		    <description>
-		      Threat agents may exercise host software to repeatedly guess authorization factors, such as passwords and PINs. Successful guessing of the authorization factors may cause the TOE to release BEV or otherwise put it in a state in which it discloses protected data to unauthorized users. 
+		      Threat agents may exercise host software to repeatedly guess authorization factors, such as passwords and PINs. Successful guessing of an authorization factor may cause the TOE to release BEV or otherwise put it in a state in which it discloses protected data to unauthorized users. 
 		    </description>
-		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring a set of authorization factors that will be difficult to guess.</rationale>
+		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring a set of authorization methods that will be difficult to guess.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_PCC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multifactor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization factors such as passwords and pins.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization methods such as passwords and pins.</rationale>
 		  </threat>
 		  
 		  <threat id="t-keying_material_compromise" name="T.KEYING_MATERIAL_COMPROMISE">
@@ -407,7 +404,7 @@
 		      in unencrypted sectors of the storage device and on other peripherals in the operating environment
 		      (OE), (e.g., BIOS configuration, SPI flash).
 		    </description>
-		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the authorization factors to be accepted by the TOE.</rationale>
+		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the authorization methods to be accepted by the TOE.</rationale>
 		    <addressed-by>FCS_AFA_EXT.2</addressed-by><rationale>Mitigates this threat by requiring a valid authorization to decrypt the protected material.</rationale>
 		    <addressed-by>FCS_CKM.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
@@ -613,8 +610,7 @@
 		  </SOE>
 	    
 		 <SOE name="OE.PASSPHRASE_STRENGTH">
-			  <description><h:p>An authorized user will be responsible for ensuring that the passphrase authorization factor conforms to guidance from the Enterprise using the TOE.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization
-          factors that conform to administrative guidance.</h:p>
+			  <description><h:p>An authorized user will be responsible for ensuring that the passphrase authorization factor conforms to guidance from the Enterprise using the TOE.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to administrative guidance.</h:p>
            </description>
 		  </SOE>
 	    
@@ -699,16 +695,16 @@
 	            <comp-lev>requires authorization factors to be accepted by the TOE.</comp-lev>
 	<management>
     The following actions could be considered for the management functions in FMT:<h:ul>
-      <h:li>Change the authorization factors to be used</h:li>
-      <h:li>Generate external authorization factors using the TSF DRBG</h:li>
+      <h:li>Change the authorization factors and methods to be used.</h:li>
+      <h:li>Generate external authorization factors using the TSF DRBG.</h:li>
     </h:ul></management>
 	<audit/>
 	<dependencies>No dependencies.</dependencies>
           <f-element id="fcs-afa-ext-1-1">
             <title>
-              The TSF shall accept the following authorization factors: <selectables linebreak='yes'>
-                <selectable id="submask-derived">a submask derived from a password authorization factor conditioned as defined in FCS_PCC_EXT.1,</selectable>
-                <selectable id="sel-fcs-afa-ext-1-1-sel-2a"> an external smart card factor that is protecting a submask that is 
+              The TSF shall accept authorization factors from the following methods: <selectables linebreak='yes'>
+                <selectable id="submask-derived">a submask derived from a password conditioned as defined in FCS_PCC_EXT.1,</selectable>
+                <selectable id="sel-fcs-afa-ext-1-1-sel-2a"> an external smart card that is protecting a submask that is 
                   <selectables>
                     <selectable id="sel-fcs-afa-ext-1-1-sel-1b">generated by the TOE (using the RBG as specified in FCS_RBG.1)</selectable>
                     <selectable id="sel-fcs-afa-ext-1-1-sel-2b">generated by the Host Platform</selectable>
@@ -720,41 +716,40 @@
                      <selectable id="sel-fcs-afa-ext-1-1-sel-5c">a configurable PIN</selectable>
                   </selectables>,
                   </selectable>
-                <selectable id="sel-fcs-afa-ext-1-1-sel-6a">an external USB token factor that is at least the same security strength as the BEV, and is protecting a submask generated by the TOE, using the RBG as specified in FCS_RBG.1,</selectable>
-                <selectable id="sel-fcs-afa-ext-1-1-sel-6b">an external USB token factor that is at least the same security strength as the BEV, and is protecting a submask generated by the Host Platform</selectable>
+                <selectable id="sel-fcs-afa-ext-1-1-sel-6a">an external USB token that is at least the same security strength as the BEV, and is protecting a submask generated by the TOE, using the RBG as specified in FCS_RBG.1,</selectable>
+                <selectable id="sel-fcs-afa-ext-1-1-sel-6b">an external USB token that is at least the same security strength as the BEV, and is protecting a submask generated by the Host Platform</selectable>
               </selectables>
             </title>
-            <note role="application"><h:p>This requirement specifies what authorization factors
-              the TOE accepts from the user. A password entered by the user is one authorization factor that the TOE must be able to condition, as specified in FCS_PCC_EXT.1. Another option is a smart card authorization factor, with the differentiating feature being how the value is generated – either by the TOE’s RBG or by the platform. An external USB token may also be used, with the submask value generated either by the TOE’s RBG or by the platform.</h:p>
-              <h:p>The TOE may accept any number of authorization factors, and these are categorized as “submasks”. The ST author selects the authorization factors they support, and there may be multiple methods for a selection. </h:p>
+            <note role="application"><h:p>
+              <h:p>The TOE may accept any number of authorization methods.  The TOE may support any number of specific authorization factors for those methods and these are categorized as “submasks”. The ST author selects the authorization methods they support.</h:p>
               <h:p>
-                Use of multiple authorization factors is preferable; if more than one authorization factor is used, the submasks produced must be combined using FCS_SMC_EXT.1 specified in Appendix A.</h:p>
+                Use of multi-factor authorization is preferable; if more than one authorization factor is used, the submasks produced must be combined using FCS_SMC_EXT.1 specified in Appendix A.</h:p>
               <h:p>The TOE’s use of symmetric key generation (i.e., deterministic random bit generation) and symmetric encryption determines whether the selection-based requirements FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC are claimed.</h:p>
             </note>
             <aactivity >
-              <TSS><h:p>The evaluator shall first examine the TSS to ensure that the authorization factors
-                specified in the ST are described. For password-based factors the examination of the
+              <TSS><h:p>The evaluator shall first examine the TSS to ensure that the authorization methods
+                specified in the ST are described. For password-based authorization the examination of the
                 TSS section is performed as part of FCS_PCC_EXT.1 Evaluation Activities.
-                Additionally in this case, the evaluator shall verify that the operational guidance
+                If external authorization methods are supported the evaluator shall verify that the operational guidance
                 discusses the characteristics of external authorization factors (e.g., how the
                 authorization factor must be generated; formats or standards that the authorization
                 factor must meet) that are able to be used by the TOE.</h:p>
-              <h:p>If other authorization factors are specified, then for each factor, the TSS specifies how
+              <h:p>If other authorization methods are specified, then for each factor, the TSS specifies how
                 the factors are input into the TOE.</h:p>
             </TSS>
             <Guidance>The evaluator shall verify that the AGD guidance includes instructions for all of the
-              authorization factors. The AGD will discuss the characteristics of external
-              authorization factors (e.g., how the authorization factor is generated; formats or
+              authorization methods. The AGD will discuss the characteristics of external
+              authorization methods (e.g., how the authorization factor is generated; formats or
               standards that the authorization factor must meet, configuration of the TPM device
               used) that are able to be used by the TOE.</Guidance>
               <CustomEA name="KMD">
                 <h:p>The evaluator shall examine the Key Management Description to confirm that the initial authorization factors (submasks) directly contribute to the unwrapping of the BEV.</h:p>
                 <h:p>The evaluator shall verify the KMD describes how a submask is produced from the authorization factor (including any associated standards to which this process might conform), and verification is performed to ensure the length of the submask meets the required size (as specified in this requirement).</h:p></CustomEA>
               <Tests>
-                <h:p>The password authorization factor is tested in FCS_PCC_EXT.1.</h:p>
+                <h:p>The password authorization method is tested in FCS_PCC_EXT.1.</h:p>
                 <h:p>The evaluator shall also perform the following tests:</h:p>
                 <testlist>
-                  <test>(conditional): If there is more than one authorization factor, ensure that failure to supply a required authorization factor does not result in access to the decrypted plaintext data.</test>
+                  <test>For each supported authorization method, ensure that failure to supply a required authorization factor does not result in access to the decrypted plaintext data.</test>
                 </testlist>
                 
               </Tests>
@@ -776,7 +771,7 @@
                   upon transition from any compliant power saving state specified in FPT_PWR_EXT.1 prior to permitting access to plaintext data.</title>
                 <note role="application">This should be accomplished by erasing keys that are no longer needed so that keys must be derived or decrypted again.</note>
                 <aactivity>
-                  <TSS>The evaluator shall examine the TSS for a description of authorization factors and which of the factors are used to gain access to user data after the TOE entered a compliant power saving state. The TSS is inspected to ensure it describes that each authorization factor satisfies the requirements of FCS_AFA_EXT.1.1.</TSS>
+                  <TSS>The evaluator shall examine the TSS for a description of authorization methods and which of the methods are used to gain access to user data after the TOE entered a compliant power saving state. The TSS is inspected to ensure it describes that each authorization method satisfies the requirements of FCS_AFA_EXT.1.1.</TSS>
                     <Guidance>The evaluator shall examine the guidance documentation for a description of authorization factors used to access plaintext data when resuming from a compliant power saving state.</Guidance>
                     <CustomEA name="KMD">There are no KMD evaluation activities for this SFR.</CustomEA>
                     <Tests>
@@ -3357,7 +3352,7 @@
                       <CustomEA name="KMD">The evaluator shall review the KMD to ensure that an approved combination is used
                         and does not result in the weakening or exposure of key material.</CustomEA>
                       <Tests>The evaluator shall perform the following test:<testlist>
-                        <test>(conditional): If there is more than one authorization factor, ensure that failure
+                        <test>(conditional): If multi-factor authorization is supported, ensure that failure
                           to supply a required authorization factor does not result in access to the encrypted data.</test>
                       </testlist></Tests>
                   </aactivity>
@@ -3502,7 +3497,7 @@
                 
                   <aactivity level="element">
                       <TSS>
-                        <h:p>The evaluator shall examine the TSS to determine which authorization factors support
+                        <h:p>The evaluator shall examine the TSS to determine which authorization methods support
                           validation.</h:p>
                         <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
                           submasks are used within the TOE, how the submasks are validated (e.g., each submask
@@ -3530,7 +3525,7 @@
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</test>
-                          <test>For each validated authorization factor, ensure that when the user provides an
+                          <test>For each validated authorization method, ensure that when the user provides an
                             incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
                             the TOE (e.g., to the EE).</test>
                         </testlist></Tests>
@@ -3596,15 +3591,15 @@
                     ensure the TSS describes how these are managed and shall ensure that TSS describes
                     how only privileged users (administrators) are allowed to manage the states.</TSS>
                   <Guidance>The evaluator to check if guidance documentation describes which authorization
-                    factors are required to change compliant power saving state behavior and properties.</Guidance>
+                    methods are required to change compliant power saving state behavior and properties.</Guidance>
                   <CustomEA name="KMD">There are no KMD evaluation activities for this SFR.</CustomEA>
                   <Tests>The evaluator shall perform the following tests:
                     <testlist>
                       <test>(conditional): If the product supports changes to compliant power saving
-                        states, the evaluator shall present a privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior and properties are
+                        states, the evaluator shall present a privileged authorization factor to the TSF and validates that changes to compliant power saving state behavior and properties are
                         allowed.</test>
                         <test>(conditional): If the product supports changes to compliant power
-                          saving states, the evaluator shall present a non-privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior are not allowed.
+                          saving states, the evaluator shall present a non-privileged authorization factor to the TSF and validates that changes to compliant power saving state behavior are not allowed.
                           </test>
                     </testlist></Tests>
               </aactivity>
@@ -3619,14 +3614,14 @@
             <h:i><h:ol type='a'>
               <h:li>forwarding requests to change the DEK to the EE</h:li>
               <h:li>forwarding requests to cryptographically erase the DEK to the EE</h:li>
-              <h:li>allowing authorized users to change authorization values or set of authorization values used within the supported authorization method,</h:li>
+              <h:li>allowing authorized users to change an authorization factor or set of authorization factors used within the supported authorization method</h:li>
               <h:li>initiate TOE firmware/software updates</h:li>
               <h:li><selectables>
                 <selectable>no other functions</selectable>
                 <selectable>specify the power saving state properties</selectable>
-                <selectable> define the allowable power saving states</selectable>
+                <selectable>define the allowable power saving states</selectable>
                 <selectable>generate authorization factors using the TSF RBG</selectable>
-                <selectable>configure authorization factors</selectable>
+                <selectable>configure authorization method</selectable>
                 <selectable>configure cryptographic functionality</selectable>
                 <selectable>disable key recovery functionality</selectable>
                 <selectable>securely update the public key needed for trusted update</selectable>
@@ -3641,17 +3636,16 @@
             <h:p>The intent of this requirement is to express the management capabilities that the TOE possesses. This means that the TOE must be able to perform the listed functions.  “Configure cryptographic functionality” could include key management functions; for example, the BEV will be wrapped or encrypted, and the EE will need to unwrap or decrypt the BEV. In item e, if no other management functions are provided (or claimed), then “no other functions” should be selected</h:p>
             <h:p>Changing the DEK would require the data to be re-encrypted with the new DEK, but allows the user the ability to generate new DEKs.</h:p>
             <h:p>For the purposes of this document, key sanitization means to destroy the DEK, using one of the approved destruction methods. In some implementations, changing the DEK could be the same functionality as cryptographically erasing the DEK.</h:p>
+			<h:p>If multiple independent authorization methods are supported then configure authorization methods must be selected.</h:p>
           </note>
             <aactivity>
                 <TSS>
-                  <h:p>If item a&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes
                     how the TOE sends the request to the EE to change the DEK.</h:p>
-                  <h:p>If item b&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes
                     how the TOE sends the request to the EE to cryptographically erase the DEK. </h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
-                    the methods by which users may change the set of all authorization factor values
-                    supported.</h:p>
-                  <h:p>If item d&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes the authorization methods supported that are subject to change by a user.</h:p>
+                  <h:p>The evaluator shall ensure the TSS describes
                     the process to initiate TOE firmware/software updates. </h:p>
                   <h:p>If item e&#41; is selected in FMT_SMF.1.1: If power saving states can be managed, the
                     evaluator shall ensure that the TSS describes how this is performed, including how the
@@ -3660,57 +3654,51 @@
                     TSS describes the additional functions.</h:p>
                 </TSS>
                 <Guidance>
-                  <h:p>If item a&#41; and/or b&#41; is selected in FMT_SMF.1.1: The evaluator shall examine the
+                  <h:p>The evaluator shall examine the
                     operational guidance to ensure that it describes how the functions for A and B can be
                     initiated by the user.</h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                  <h:p>The evaluator shall examine the operational
                     guidance to ensure that it describes how selected authorization factor values are
-                    changed. </h:p>
-                  <h:p>If item d&#41; is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                    changed.</h:p>
+					
+                  <h:p>The evaluator shall examine the operational
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
-                  <h:p>If item e&#41; is selected in FMT_SMF.1.1: Default Authorization Factors: It may be the
-                    case that the TOE arrives with default authorization factors in place. If it does, then the
-                    selection in section E must be made so that there is a mechanism to change these
-                    authorization factors. The operational guidance shall describe the method by which the
-                    user changes these factors when they are taking ownership of the device. The TSS shall
-                    describe the default authorization factors that exist. </h:p>
                   <h:p>Disable Key Recovery: The guidance for disabling this capability shall be described in
                     the AGD documentation.</h:p>
-                  <h:p>Power Saving: The guidance shall describe the power saving states that are supported
+                  <h:p>If item e specify the power saving state properties&#41 ; is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
                     by the TSF, how these states are applied, how to configure when these states are applied
                     (if applicable), and how to enable/disable the use of specific power saving states (if
                     applicable).</h:p>
+					<h:p>If item e configure authorization method&#41 ; is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                    guidance to ensure that it describes how selected authorization methods are
+                    changed.</h:p>
                 </Guidance>
                 <CustomEA name="KMD">There are no KMD evaluation activities for this SFR</CustomEA>
                 <Tests>
                   
                   <h:p>
-                  If item a&#41; and/or b&#41; is selected in FMT_SMF.1.1: The evaluator shall verify that the
+                  The evaluator shall verify that the
                   TOE has the functionality to forward a command to the EE to change and
                   cryptographically erase the DEK. The actual testing of the cryptographic erase will take
                   place in the EE.
                   </h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall initialize the TOE such that
+                  <h:p>The evaluator shall initialize the TOE such that
                     it requires the user to input an authorization factor in order to access encrypted data.</h:p>
                   <h:p>
-                    <testlist><test>The evaluator shall first provision user authorization factors, and then verify
-                      all authorization values supported allow the user access to the encrypted data. Then
+                    <testlist><test>The evaluator shall first provision user authorization factors for each method, and then verify
+                      a valid authorization factor for each authorization method supported allows the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
-                      authorization factor values to a new one. Then he or she will verify that the TOE
+                      authorization factor value to a new one for each method. Then he or she will verify that the TOE
                       denies access to the user’s encrypted data when he or she uses the old or original
-                      authorization factor values to gain access.</test>
+                      authorization factor value to gain access for each method.</test>
                     
                   </testlist>
                   </h:p>
-                  <h:p>If item d&#41; is selected in FMT_SMF.1.1: The evaluator shall verify that the TOE has the
+                  <h:p>The evaluator shall verify that the TOE has the
                     functionality to initiate TOE firmware/software updates.</h:p>
                     <h:p>If item e&#41; is selected in FMT_SMF.1.1: If additional management functions are
-                      claimed, the evaluator shall verify that the additional features function as described. </h:p>
+                      claimed, the evaluator shall verify that the additional features function as described.</h:p>
                   <h:p><testlist>
-                    <test>(conditional): If the TOE provides default authorization values, the
-                      evaluator shall change these values in the course of taking ownership of the device
-                      as described in the operational guidance. The evaluator shall then confirm that the
-                      (old) authorization values are no longer valid for data access.</test>
                     <test>(conditional): If the TOE provides key recovery capability whose effects are
                       visible at the TOE interface, then the evaluator shall devise a test that ensures that
                       the key recovery capability has been or can be disabled following the guidance
@@ -5053,10 +5041,10 @@
     <h:li>When or if the key would be no longer needed, along with a justification.</h:li>
   </h:ul>The essay will also describe the following topics:</h:p>
   <h:p><h:ul>
-    <h:li>A description of all authorization factors that are supported by the product and how each factor is handled, including any conditioning and combining performed.</h:li>
+    <h:li>A description of all authorization methods that are supported by the product and how each factor is handled, including any conditioning and combining performed.</h:li>
     <h:li>If validation is supported, the process for validation shall be described, noting what value is used for validation and the process used to perform the validation. It shall describe how this process ensures no keys in the key chain are weakened or exposed by this process.</h:li>
     <h:li>The authorization process that leads to the ultimate release of the BEV. This section shall detail the key chain used by the product. It shall describe which keys are used in the protection of the BEV and how they meet the derivation, key wrap, or a combination of the two requirements, including the direct chain from the initial authorization to the BEV. It shall also include any values that add into that key chain or interact with the key chain and the protections that ensure those values do not weaken or expose the overall strength of the key chain.</h:li>
-    <h:li>The diagram and essay will clearly illustrate the key hierarchy to ensure that at no point the chain could be broken without a cryptographic exhaust or all of the initial authorization values and the effective strength of the BEV is maintained throughout the Key Chain. 
+    <h:li>The diagram and essay will clearly illustrate the key hierarchy to ensure that at no point the chain could be broken without a cryptographic exhaust or all of the initial authorization factors and the effective strength of the BEV is maintained throughout the Key Chain. 
       </h:li>
     <h:li>A description of the data encryption engine, its components, and details about its implementation (e.g. for hardware: integrated within the device’s main SOC or separate co-processor, for software: initialization of the product, drivers, libraries (if applicable), logical interfaces for encryption/decryption, and areas which are not encrypted (e.g. boot loaders, portions associated with the Master Boot Record (MBRs), partition tables, etc.)). The description should also include the data flow from the device’s host interface to the device’s persistent media storing the data, information on those conditions in which the data bypasses the data encryption engine (e.g. read-write operations to an unencrypted Master Boot Record area). The description should be detailed enough to verify all platforms to ensure that when the user enables encryption, the product encrypts all hard storage devices. It should also describe the platform’s boot initialization, the encryption initialization process, and at what moment the product enables the encryption.</h:li>
     <h:li>The process for destroying keys when they are no longer needed by describing the storage location of all keys and the protection of all keys stored in non-volatile memory.</h:li>
