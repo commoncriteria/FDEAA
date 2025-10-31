@@ -1,4 +1,0 @@
-output/FDEAA-sd.html: PP’s
-output/FDEAA-sd.html: evaluator’s
-output/FDEAA-sd.html: fail’
-output/FDEAA-sd.html: pass’
