@@ -508,7 +508,7 @@
   </assumption><assumption name="A.PLATFORM_IA">
     <description>The product does not interfere with or change the normal platform identification and authentication functionality such as the operating system login. It may provide authorization factors to the operating system's login interface, but it will not change or degrade the functionality of the actual interface.</description>
     <objective-refer ref="OE.PLATFORM_IA">
-      <rationale>The operational environment objective OE.PLATFORM_I&amp;A is realized through A.PLATFORM_I&amp;A.</rationale>
+      <rationale>The operational environment objective OE.PLATFORM_I&amp;A is realized through A.PLATFORM_IA.</rationale>
     </objective-refer>
   </assumption>   
         
