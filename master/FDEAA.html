@@ -4637,43 +4637,43 @@ The following sections list Common Criteria and technology terms used in this do
                   <p>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</p>
                 </span></div></div></div>
              
-            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a></div>
-                      <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
+            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a></div>
+                      
+                      
+                      
+                      
+                  <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
                         <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine which authorization methods support
                           validation.</p>
                         <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to review a high-level description if multiple
                           submasks are used within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</p></div>
-                      <div class="eacategory">Guidance</div><div class="ea">
+                          validated before combining, once combined validation takes place).</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                         <p>(conditional) If the validation functionality is configurable, the evaluator shall examine
                           the operational guidance to ensure it describes how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to ensure the
                           limits regarding validation attempts can be established.</p>
                         <p>(conditional) If the validation functionality is specified by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author, the evaluator
                           shall examine the operational guidance to ensure that it states the values that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                          uses for limits regarding validation attempts.</p></div>
-                      <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
+                          uses for limits regarding validation attempts.</p></div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
                         <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to verify that it described the method the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
                           employs to limit the number of consecutively failed authorization attempts.</p>
                         <p>The evaluator shall examine the vendor’s <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure it describes how validation
                           is performed. The description of the validation process in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> provides detailed
                           information how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> validates the submasks. The <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> describes how the process
-                          works, such that it does not expose any material that might compromise the submasks.</p></div>
-                      <div class="eacategory">Tests</div><div class="ea">
+                          works, such that it does not expose any material that might compromise the submasks.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                         The evaluator shall perform the following tests:
                         <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_VAL_EXT.1.1:1</a>:
+                          <li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_VAL_EXT.1:1</a>:
       The evaluator shall determine the limit on the average rate of the number of
                             consecutive failed authorization attempts. The evaluator will test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> by entering
                             that number of incorrect authorization factors in consecutive attempts to access the
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> behaves as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</li>
-                          <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_VAL_EXT.1.1:2</a>:
+                          <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_VAL_EXT.1:2</a>:
       For each validated authorization method, ensure that when the user provides an
                             incorrect authorization factor, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prevents the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> from being forwarded outside
                             the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>).</li>
-                        </ul></span></div>
-                  </div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.2 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_FLS.1"><h4>FPT_FLS.1 Failure with Preservation of Secure State</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+                        </ul></span></div></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.2 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_FLS.1"><h4>FPT_FLS.1 Failure with Preservation of Secure State</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FCS_AFA_EXT.1.1">FCS_AFA_EXT.1.1</a>, <a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, <a href="#FCS_SNI_EXT.1.1">FCS_SNI_EXT.1.1</a>.
            </i></b></div>
           
