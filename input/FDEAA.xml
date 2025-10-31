@@ -3665,11 +3665,11 @@
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
                   <h:p>Disable Key Recovery: The guidance for disabling this capability shall be described in
                     the AGD documentation.</h:p>
-                  <h:p>If item e&#41; "specify the power saving state properties"; is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
+                  <h:p>If item e&#41; "specify the power saving state properties" is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
                     by the TSF, how these states are applied, how to configure when these states are applied
                     (if applicable), and how to enable/disable the use of specific power saving states (if
                     applicable).</h:p>
-					<h:p>If item e&#41; "configure authorization method"; is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+					<h:p>If item e&#41; "configure authorization method" is selected in FMT_SMF.1.1: The evaluator shall examine the operational
                     guidance to ensure that it describes how selected authorization methods are
                     changed.</h:p>
                 </Guidance>
@@ -3950,9 +3950,7 @@
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
                 <selectable>during initial start-up</selectable>
-                <selectable>periodically during normal operation</selectable>
-                <selectable>at the request of the authorized user</selectable>
-                <selectable>at the conditions <assignable>conditions under which self-test should occur</assignable></selectable>
+                <<selectable>at the conditions [<h:i>before the function is first invoked</h:i>]</selectable>
               </selectables>
               to demonstrate the correct operation of <selectables>
                 <selectable><assignable>parts of  TSF</assignable></selectable>
@@ -3978,7 +3976,10 @@
                 <selectable>TSF</selectable>
               </selectables>.
             </title>
-            <note role="application">This SFR is a required dependency of FCS_RBG.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.</note>
+            <note role="application">This SFR is a required dependency of FCS_RBG.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
+			
+			<h:p>The tests regarding cryptographic functions implemented in the TOE can be deferred, as long as the tests are performed before the function is invoked.<h:p/>
+			<h:p>If any FCS_COP functions are implemented by the TOE, the TSS should describe the known answer self-tests for those functions.</h:p></note>
             <aactivity>
               <TSS>
                 <h:p>
