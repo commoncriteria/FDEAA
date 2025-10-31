@@ -352,12 +352,9 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation. </td></tr>
 <tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation.</td></tr>
 <tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
-</table><h3 id="tech-terms" class="indexable" data-level="2">1.3.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Authorization_Factor">Authorization Factor</div></td><td>A value that a user knows, has, or is (e.g. password, token, etc.)
-        submitted to the TOE to establish that the user is in the community
-        authorized to use the hard disk. This value is used in the derivation or
-        decryption of the BEV and eventual decryption of the DEK. Note
-        that these values may or may not be used to establish the particular
-        identity of the user. </td></tr>
+</table><h3 id="tech-terms" class="indexable" data-level="2">1.3.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Authorization_factor">Authorization factor (AF)</div></td><td>A value submitted by the user, present on the host, or present on a separate protected hardware physical 
+        device used to establish that the user is in the community authorized to use the TOE. The authorization factors are used
+        to generate the KEK. Note that these AFs are not used to establish the particular identity of the user.</td></tr>
 <tr><td><div id="Border_Encryption_Value">Border Encryption Value (BEV)</div></td><td>A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</td></tr>
@@ -433,27 +430,27 @@ The following sections list Common Criteria and technology terms used in this do
             
               
               
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea"><p>The evaluator shall first examine the TSS to ensure that the authorization factors
-                specified in the ST are described. For password-based factors the examination of the
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea"><p>The evaluator shall first examine the TSS to ensure that the authorization methods
+                specified in the ST are described. For password-based authorization the examination of the
                 TSS section is performed as part of FCS_PCC_EXT.1 Evaluation Activities.
-                Additionally in this case, the evaluator shall verify that the operational guidance
+                If external authorization methods are supported the evaluator shall verify that the operational guidance
                 discusses the characteristics of external authorization factors (e.g., how the
                 authorization factor must be generated; formats or standards that the authorization
                 factor must meet) that are able to be used by the TOE.</p>
-              <p>If other authorization factors are specified, then for each factor, the TSS specifies how
+              <p>If other authorization methods are specified, then for each factor, the TSS specifies how
                 the factors are input into the TOE.</p>
             </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance includes instructions for all of the
-              authorization factors. The AGD will discuss the characteristics of external
-              authorization factors (e.g., how the authorization factor is generated; formats or
+              authorization methods. The AGD will discuss the characteristics of external
+              authorization methods (e.g., how the authorization factor is generated; formats or
               standards that the authorization factor must meet, configuration of the TPM device
               used) that are able to be used by the TOE.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
                 <p>The evaluator shall examine the Key Management Description to confirm that the initial authorization factors (submasks) directly contribute to the unwrapping of the BEV.</p>
                 <p>The evaluator shall verify the KMD describes how a submask is produced from the authorization factor (including any associated standards to which this process might conform), and verification is performed to ensure the length of the submask meets the required size (as specified in this requirement).</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>The password authorization factor is tested in FCS_PCC_EXT.1.</p>
+                <p>The password authorization method is tested in FCS_PCC_EXT.1.</p>
                 <p>The evaluator shall also perform the following tests:</p>
                 <span class="testlist-"><ul>
                   <li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FCS_AFA_EXT.1:1</a>:
-      (conditional): If there is more than one authorization factor, ensure that failure to supply a required authorization factor does not result in access to the decrypted plaintext data.</li>
+      For each supported authorization method, ensure that failure to supply a required authorization factor does not result in access to the decrypted plaintext data.</li>
                 </ul></span>
                 
               </div></div></span></div><div class="comp" id="FCS-AFA-EXT-2"><h4>FCS_AFA_EXT.2 Timing of Authorization Factor Acquisition</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_AFA_EXT.2</div>
@@ -461,7 +458,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                     
                     
-                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS for a description of authorization factors and which of the factors are used to gain access to user data after the TOE entered a compliant power saving state. The TSS is inspected to ensure it describes that each authorization factor satisfies the requirements of FCS_AFA_EXT.1.1.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the guidance documentation for a description of authorization factors used to access plaintext data when resuming from a compliant power saving state.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall examine the TSS for a description of authorization methods and which of the methods are used to gain access to user data after the TOE entered a compliant power saving state. The TSS is inspected to ensure it describes that each authorization method satisfies the requirements of FCS_AFA_EXT.1.1.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall examine the guidance documentation for a description of authorization factors used to access plaintext data when resuming from a compliant power saving state.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                       <p>The evaluator shall perform the following test:</p>
                       <ul>
                         <li>Enter the TOE into a compliant power saving state</li>
@@ -823,15 +820,15 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="eacategory">TSS</div><div class="ea"><div class="ea">If support for compliant power saving states are claimed in the ST, the evaluator shall
                     ensure the TSS describes how these are managed and shall ensure that TSS describes
                     how only privileged users (administrators) are allowed to manage the states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator to check if guidance documentation describes which authorization
-                    factors are required to change compliant power saving state behavior and properties.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following tests:
+                    methods are required to change compliant power saving state behavior and properties.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following tests:
                     <span class="testlist-"><ul>
                       <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FMT_MOF.1:1</a>:
       (conditional): If the product supports changes to compliant power saving
-                        states, the evaluator shall present a privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior and properties are
+                        states, the evaluator shall present a privileged authorization factor to the TSF and validates that changes to compliant power saving state behavior and properties are
                         allowed.</li>
                         <li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FMT_MOF.1:2</a>:
       (conditional): If the product supports changes to compliant power
-                          saving states, the evaluator shall present a non-privileged authorization credential to the TSF and validates that changes to compliant power saving state behavior are not allowed.
+                          saving states, the evaluator shall present a non-privileged authorization factor to the TSF and validates that changes to compliant power saving state behavior are not allowed.
                           </li>
                     </ul></span></div></div></span></div><div class="comp" id="FMT-SMF-1"><h4>FMT_SMF.1 Specification of Management Functions</h4><span class="activity_pane_body"><div class="component-activity-header">FMT_SMF.1</div>
                 
@@ -839,14 +836,12 @@ The following sections list Common Criteria and technology terms used in this do
                 
                 
             <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                  <p>If item a) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes
                     how the TOE sends the request to the EE to change the DEK.</p>
-                  <p>If item b) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes
                     how the TOE sends the request to the EE to cryptographically erase the DEK. </p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
-                    the methods by which users may change the set of all authorization factor values
-                    supported.</p>
-                  <p>If item d) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes the authorization methods supported that are subject to change by a user.</p>
+                  <p>The evaluator shall ensure the TSS describes
                     the process to initiate TOE firmware/software updates. </p>
                   <p>If item e) is selected in FMT_SMF.1.1: If power saving states can be managed, the
                     evaluator shall ensure that the TSS describes how this is performed, including how the
@@ -854,69 +849,62 @@ The following sections list Common Criteria and technology terms used in this do
                     additional management functions are claimed in the ST, the evaluator shall ensure the
                     TSS describes the additional functions.</p>
                 </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                  <p>If item a) and/or b) is selected in FMT_SMF.1.1: The evaluator shall examine the
+                  <p>The evaluator shall examine the
                     operational guidance to ensure that it describes how the functions for A and B can be
                     initiated by the user.</p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                  <p>The evaluator shall examine the operational
                     guidance to ensure that it describes how selected authorization factor values are
-                    changed. </p>
-                  <p>If item d) is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                    changed.</p>
+					
+                  <p>The evaluator shall examine the operational
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</p>
-                  <p>If item e) is selected in FMT_SMF.1.1: Default Authorization Factors: It may be the
-                    case that the TOE arrives with default authorization factors in place. If it does, then the
-                    selection in section E must be made so that there is a mechanism to change these
-                    authorization factors. The operational guidance shall describe the method by which the
-                    user changes these factors when they are taking ownership of the device. The TSS shall
-                    describe the default authorization factors that exist. </p>
                   <p>Disable Key Recovery: The guidance for disabling this capability shall be described in
                     the AGD documentation.</p>
-                  <p>Power Saving: The guidance shall describe the power saving states that are supported
+                  <p>If item e) "specify the power saving state properties"; is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
                     by the TSF, how these states are applied, how to configure when these states are applied
                     (if applicable), and how to enable/disable the use of specific power saving states (if
                     applicable).</p>
+					<p>If item e) "configure authorization method"; is selected in FMT_SMF.1.1: The evaluator shall examine the operational
+                    guidance to ensure that it describes how selected authorization methods are
+                    changed.</p>
                 </div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   
                   <p>
-                  If item a) and/or b) is selected in FMT_SMF.1.1: The evaluator shall verify that the
+                  The evaluator shall verify that the
                   TOE has the functionality to forward a command to the EE to change and
                   cryptographically erase the DEK. The actual testing of the cryptographic erase will take
                   place in the EE.
                   </p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall initialize the TOE such that
+                  <p>The evaluator shall initialize the TOE such that
                     it requires the user to input an authorization factor in order to access encrypted data.</p>
                   <p>
                     <span class="testlist-"><ul><li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FMT_SMF.1:1</a>:
-      The evaluator shall first provision user authorization factors, and then verify
-                      all authorization values supported allow the user access to the encrypted data. Then
+      The evaluator shall first provision user authorization factors for each method, and then verify
+                      a valid authorization factor for each authorization method supported allows the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
-                      authorization factor values to a new one. Then he or she will verify that the TOE
+                      authorization factor value to a new one for each method. Then he or she will verify that the TOE
                       denies access to the user’s encrypted data when he or she uses the old or original
-                      authorization factor values to gain access.</li>
+                      authorization factor value to gain access for each method.</li>
                     
                   </ul></span>
                   </p>
-                  <p>If item d) is selected in FMT_SMF.1.1: The evaluator shall verify that the TOE has the
+                  <p>The evaluator shall verify that the TOE has the
                     functionality to initiate TOE firmware/software updates.</p>
                     <p>If item e) is selected in FMT_SMF.1.1: If additional management functions are
-                      claimed, the evaluator shall verify that the additional features function as described. </p>
+                      claimed, the evaluator shall verify that the additional features function as described.</p>
                   <p><span class="testlist-"><ul>
                     <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FMT_SMF.1:2</a>:
-      (conditional): If the TOE provides default authorization values, the
-                      evaluator shall change these values in the course of taking ownership of the device
-                      as described in the operational guidance. The evaluator shall then confirm that the
-                      (old) authorization values are no longer valid for data access.</li>
-                    <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FMT_SMF.1:3</a>:
       (conditional): If the TOE provides key recovery capability whose effects are
                       visible at the TOE interface, then the evaluator shall devise a test that ensures that
                       the key recovery capability has been or can be disabled following the guidance
                       provided by the vendor.</li>
-                    <li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FMT_SMF.1:4</a>:
+                    <li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FMT_SMF.1:3</a>:
       (conditional): If the TOE provides the ability to configure the power saving
                       states that are entered by certain events, the evaluator shall devise a test that causes
                       the TOE to enter a specific power saving state, configure the TSF so that this
                       activity causes a different state to be entered, repeat the activity, and observe the
                       new state is entered as configured.</li>
-                    <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FMT_SMF.1:5</a>:
+                    <li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FMT_SMF.1:4</a>:
       (conditional): If the TOE provides the ability to disable the use of one or
                       more power saving states, the evaluator shall devise a test that enables all supported
                       power saving states and demonstrates that the TOE can enter into each of these
@@ -988,12 +976,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                      <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
@@ -2043,11 +2031,11 @@ The following sections list Common Criteria and technology terms used in this do
                       same as that of the BEV.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that an approved combination is used
                         and does not result in the weakening or exposure of key material.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following test:<span class="testlist-"><ul>
                         <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_SMC_EXT.1:1</a>:
-      (conditional): If there is more than one authorization factor, ensure that failure
+      (conditional): If multi-factor authorization is supported, ensure that failure
                           to supply a required authorization factor does not result in access to the encrypted data.</li>
                       </ul></span></div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
                       <div class="eacategory">TSS</div><div class="ea">
-                        <p>The evaluator shall examine the TSS to determine which authorization factors support
+                        <p>The evaluator shall examine the TSS to determine which authorization methods support
                           validation.</p>
                         <p>The evaluator shall examine the TSS to review a high-level description if multiple
                           submasks are used within the TOE, how the submasks are validated (e.g., each submask
@@ -2077,7 +2065,7 @@ The following sections list Common Criteria and technology terms used in this do
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</li>
                           <li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_VAL_EXT.1.1:2</a>:
-      For each validated authorization factor, ensure that when the user provides an
+      For each validated authorization method, ensure that when the user provides an
                             incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
                             the TOE (e.g., to the EE).</li>
                         </ul></span></div>

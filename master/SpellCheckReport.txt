@@ -30,6 +30,7 @@ output/FDEAA-release-linkable.html: 9C
 output/FDEAA-release-linkable.html: ACPI
 output/FDEAA-release-linkable.html: AESAVS
 output/FDEAA-release-linkable.html: AFTs
+output/FDEAA-release-linkable.html: AFs
 output/FDEAA-release-linkable.html: Adleman
 output/FDEAA-release-linkable.html: BEVs
 output/FDEAA-release-linkable.html: CCL
@@ -143,6 +144,7 @@ output/FDEAA-release.html: 8C
 output/FDEAA-release.html: 90A
 output/FDEAA-release.html: 9C
 output/FDEAA-release.html: ACPI
+output/FDEAA-release.html: AFs
 output/FDEAA-release.html: Adleman
 output/FDEAA-release.html: BEVs
 output/FDEAA-release.html: CCL
@@ -236,6 +238,7 @@ output/FDEAA-sd.html: 8s
 output/FDEAA-sd.html: 90A
 output/FDEAA-sd.html: AESAVS
 output/FDEAA-sd.html: AFTs
+output/FDEAA-sd.html: AFs
 output/FDEAA-sd.html: CMAC
 output/FDEAA-sd.html: CSP
 output/FDEAA-sd.html: CSPs
@@ -314,6 +317,7 @@ output/FDEAA.html: 9C
 output/FDEAA.html: ACPI
 output/FDEAA.html: AESAVS
 output/FDEAA.html: AFTs
+output/FDEAA.html: AFs
 output/FDEAA.html: Adleman
 output/FDEAA.html: BEVs
 output/FDEAA.html: CCL
