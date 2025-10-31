@@ -87,7 +87,6 @@ output/FDEAA-release-linkable.html: S4
 output/FDEAA-release-linkable.html: S5
 output/FDEAA-release-linkable.html: SATA
 output/FDEAA-release-linkable.html: SHA3
-output/FDEAA-release-linkable.html: SNI
 output/FDEAA-release-linkable.html: Sanitization
 output/FDEAA-release-linkable.html: Stateful
 output/FDEAA-release-linkable.html: Subclause
@@ -189,7 +188,6 @@ output/FDEAA-release.html: S4
 output/FDEAA-release.html: S5
 output/FDEAA-release.html: SATA
 output/FDEAA-release.html: SHA3
-output/FDEAA-release.html: SNI
 output/FDEAA-release.html: Sanitization
 output/FDEAA-release.html: Stateful
 output/FDEAA-release.html: Subclause
@@ -374,7 +372,6 @@ output/FDEAA.html: S4
 output/FDEAA.html: S5
 output/FDEAA.html: SATA
 output/FDEAA.html: SHA3
-output/FDEAA.html: SNI
 output/FDEAA.html: Sanitization
 output/FDEAA.html: Stateful
 output/FDEAA.html: Subclause
