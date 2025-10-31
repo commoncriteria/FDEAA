@@ -163,7 +163,7 @@
         the data only after successful authorization to the FDE solution. The
         exceptions include the necessity to leave a portion of the storage device
         (the size may vary based on implementation) unencrypted for such
-        things as the Master Boot Record (MBR) or other AA/EE preauthentication software. These FDE cPPs interpret the term “full drive
+        things as the Master Boot Record (MBR) or other AA/EE pre-authentication software. These FDE cPPs interpret the term “full drive
         encryption” to allow FDE solutions to leave a portion of the storage
         device unencrypted so long as it contains no protected data.</term>
       <term abbr='FFC' full="Finite Field Cryptography"></term>
@@ -392,7 +392,7 @@
 		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring a set of authorization methods that will be difficult to guess.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_PCC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</rationale>
-		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multifactor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
+		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multi-factor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization methods such as passwords and pins.</rationale>
 		  </threat>
 		  
@@ -1959,7 +1959,7 @@
 							</h:tr>
 							<h:tr>
 								<h:td valign="top">AES-CCM </h:td>
-								<h:td valign="top">AES in CCM mode with nonrepeating nonce, minimum size
+								<h:td valign="top">AES in CCM mode with non-repeating nonce, minimum size
 									of 64 bits</h:td>
 								<h:td valign="top">256 bits</h:td>
 								<h:td valign="top">
@@ -2358,7 +2358,7 @@
 							</h:tr>
 							<h:tr>
 								<h:td valign="top">AES-GCM </h:td>
-								<h:td valign="top">AES in GCM mode with nonrepeating IVs using
+								<h:td valign="top">AES in GCM mode with non-repeating IVs using
 									[<h:b>selection:</h:b> deterministic, RBG-based] IV construction;
 									the tag must be of length [<h:b>selection:</h:b> 96, 104, 112, 120, or 128] bits.</h:td>
 								<h:td valign="top">256 bits</h:td>
