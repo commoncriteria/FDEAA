@@ -3391,15 +3391,12 @@
                   <selectables>
 						<tabularize id="fcs-otv-sels" title="Allowed choices for FCS_OTV_EXT.1">
 							<selectcol>Algorithm or Mode</selectcol>
-							<reqtext>using the output of a <selectables>
-							<selectable>random bit generator as defined in FCS_RBG.1</selectable>
-							<selectable>deterministic OTV construction</selectable>
-							<selectable><assignable>OTV construction method</assignable></selectable></selectables 
-							and	sizes of length that meet the following:</reqtext>
+							<reqtext>using the output of a [selection: random bit generator as defined
+					in FCS_RBG.1, deterministic OTV construction, [assignment: OTV construction method]] and
+					sizes of length that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
 							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
 										completion of the selection operations of FCS_OTV_EXT.1.</reqtext>
-										<selectcol>Notes</selectcol>
 						</tabularize>
 
 						<!-- HMAC -->
@@ -3410,10 +3407,6 @@
 								<selectable>FIPS PUB 198-1</selectable>
 								<selectable>NIST SP 800-56C Revision 2</selectable>
 							</selectables></col>
-							<col>Depending on the use case, salts can be secret or known,
-								randomly generated or all zero. Secret IVs may be required,
-								e.g., for key derivation. Refer to the relevant standards for
-								your use case.></col>
 						</selectable>
 						
 						<!-- KDF -->
@@ -3425,9 +3418,6 @@
 								<selectable>NIST SP 800-135 Revision 1</selectable>
 								<selectable>ISO/IEC 11770-6:2016 (Subclause 7.3.2)</selectable>
 							</selectables></col>
-							<col>Salts and IVs are generated as directed for HMAC, AES, and
-							CAM cryptographic algorithms. Refer to the relevant
-							standards. </col>
 						</selectable>
 						</selectables>
                 </title>
