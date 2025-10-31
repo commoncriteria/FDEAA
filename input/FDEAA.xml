@@ -312,7 +312,7 @@
     <section title="Compliant Targets of Evaluation" id="sec-TOEdescription">
       <section title="TOE Boundary" id="TOEboundary">
         <h:p>
-        The environment in which the AA functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution’s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre30 OS environment and continues into OS present environment.</h:p>
+        The environment in which the AA functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution’s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre-OS environment and continues into OS present environment.</h:p>
         <h:p>
           In the Operating System environment, the Authorization Acquisition has the full range of services available from the operating system (OS), including hardware drivers, cryptographic libraries, and perhaps other services external to the TOE.
         </h:p>
