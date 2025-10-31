@@ -1,14 +1,4 @@
-output/FDEAA-release-linkable.html: multifactor
-output/FDEAA-release-linkable.html: nonrepeating
-output/FDEAA-release-linkable.html: preauthentication
-output/FDEAA-release.html: multifactor
-output/FDEAA-release.html: preauthentication
 output/FDEAA-sd.html: PP’s
 output/FDEAA-sd.html: evaluator’s
 output/FDEAA-sd.html: fail’
-output/FDEAA-sd.html: nonrepeating
 output/FDEAA-sd.html: pass’
-output/FDEAA-sd.html: preauthentication
-output/FDEAA.html: multifactor
-output/FDEAA.html: nonrepeating
-output/FDEAA.html: preauthentication
