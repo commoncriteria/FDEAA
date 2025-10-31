@@ -393,7 +393,7 @@
 		      Threat agents may exercise host software to repeatedly guess authorization factors, such as passwords and PINs. Successful guessing of the authorization factors may cause the TOE to release BEV or otherwise put it in a state in which it discloses protected data to unauthorized users. 
 		    </description>
 		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring a set of authorization factors that will be difficult to guess.</rationale>
-		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
+		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_PCC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multifactor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization factors such as passwords and pins.</rationale>
@@ -413,7 +413,7 @@
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>
 		    <addressed-by>FCS_KYC_EXT.1</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to produce a BEV.</rationale>
-		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
+		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
 		    <addressed-by>FMT_MOF.1</addressed-by><rationale>Mitigates this threat by restricting the ability to modified compliant power states to authorized users.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating</rationale>
 		    <addressed-by>FMT_SMR.1</addressed-by><rationale>Mitigates this threat by assigning users with the proper account permissions and privileges.</rationale>
@@ -686,7 +686,7 @@
         <ext-comp-def title="Submask Combining" fam-id="FCS_SMC_EXT">
           <fam-behavior>This family specifies the means by which submasks are combined, if the TOE supports more than one submask being used to derive or protect the BEV.</fam-behavior>
         </ext-comp-def>
-        <ext-comp-def title="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" fam-id="FCS_OTV_EXT">
+        <ext-comp-def title="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" fam-id="FCS_SNI_EXT">
           <fam-behavior>This family ensures that salts, nonces, and IVs are well formed.</fam-behavior>
         </ext-comp-def>
         <ext-comp-def title="Validation of Cryptographic Elements" fam-id="FCS_VAL_EXT">
@@ -877,8 +877,8 @@
               <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              <depends on-sel="fcs-otv-sel-drbg"/>
-              <depends on-sel="fcs-otv-sels"/>
+              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+              <depends on-sel="sel-fcs-sni-ext-1-3-sel-2"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
@@ -893,7 +893,7 @@
                 </title>
                 <note role="application">
                   Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the TSF DRBG is referenced for key generation (as in FCS_AFA_EXT.1, 
-                  FCS_OTV_EXT.1, and FFCS_CKM.5.1), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
+                  FCS_SNI_EXT.1, and FFCS_CKM.5.1), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
                   an authorization factor (as in FCS_KYC_EXT.1, FPT_KYP_EXT.1, and FCS_VAL_EXT.1)                  
                 </note>
                 <aactivity>
@@ -3083,7 +3083,7 @@
               <depends on-sel="sel-fcs-kdf-ext-1-1-sel-1a"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              <depends on-sel="fcs-otv-sel-drbg"/>
+              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
               
               <f-element id="fcs-rbg-1-1">
                 <title>
@@ -3215,7 +3215,7 @@
                 </title>
                 <note role="application">
                   This SFR is claimed when the TSF requires the use of random bit generation for submask generation (FCS_AFA_EXT.1,
-                  FCS_CKM.5.1) or salt generation (FCS_OTV_EXT.1).
+                  FCS_CKM.5.1) or salt generation (FCS_SNI_EXT.1).
                 </note>
                 <aactivity level="element">              
                   <TSS>
@@ -3365,6 +3365,21 @@
               
             </f-component>
         
+		<!--sel-fcs-sni-ext-1-1-sel-1 - no salts
+		sel-fcs-sni-ext-1-1-sel-2 - DRBG salts
+		sel-fcs-sni-ext-1-1-sel-3 - host drbg
+		
+		sel-fcs-sni-ext-1-2-sel-1 - no nounce
+		sel-fcs-sni-ext-1-2-sel-2 - TOE nounce
+		
+		sel-fcs-sni-ext-1-3-sel-1 - no IV
+		sel-fcs-sni-ext-1-3-sel-2 - any IC
+		
+		sel-fcs-sni-ext-1-3-sel-2a - CBC
+		sel-fcs-sni-ext-1-3-sel-2b - CCM
+		sel-fcs-sni-ext-1-3-sel-2c - XTS
+		sel-fcs-sni-ext-1-3-sel-2d - GCM
+		!-->
             <f-component cc-id="fcs_otv_ext.1" name="One Time Value (Salt, Nonce, and Initialization Vector Generation)" id="fcs_otv_ext.1">
               <consistency-rationale/>
               <comp-lev>requires the generation of salts, nonces, and IVs to be used by the cryptographic components of the TOE to be performed in the specified manner. </comp-lev>
@@ -3377,7 +3392,7 @@
 						<tabularize id="fcs-otv-sels" title="Allowed choices for FCS_OTV_EXT.1">
 							<selectcol>Algorithm or Mode</selectcol>
 							<reqtext>using the output of a <selectables>
-							<selectable id="fcs-otv-sel-drbg">random bit generator as defined in FCS_RBG.1</selectable>
+							<selectable>random bit generator as defined in FCS_RBG.1</selectable>
 							<selectable>deterministic OTV construction</selectable>
 							<selectable><assignable>OTV construction method</assignable></selectable></selectables> 
 							and	sizes of length that meet the following:</reqtext>
@@ -3827,7 +3842,7 @@
           <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-          <depends on-sel="fcs-otv-sel-drbg"/>
+          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
           <f-element id="fel-pres-sec-state">
             <title>
               The TSF shall preserve a secure state when the following types of failures occur: [<h:i>DRBG self-test failure</h:i>].              
@@ -4006,7 +4021,7 @@
           <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-          <depends on-sel="fcs-otv-sel-drbg"/>
+          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
