@@ -888,7 +888,7 @@
                 </title>
                 <note role="application">
                   Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the TSF DRBG is referenced for key generation (as in FCS_AFA_EXT.1, 
-                  FCS_SNI_EXT.1, and FFCS_CKM.5.1), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
+                  FCS_SNI_EXT.1, and FCS_CKM.5.1), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
                   an authorization factor (as in FCS_KYC_EXT.1, FPT_KYP_EXT.1, and FCS_VAL_EXT.1)                  
                 </note>
                 <aactivity>
@@ -3018,7 +3018,7 @@
                   <title>The TSF shall be capable of accepting a password of at least <assignable>64 or more</assignable> characters in the set of {upper case characters, lower case characters, numbers, and <assignable> other supported special characters</assignable>} and shall perform Password-based Key Derivation Functions in accordance with a specified cryptographic algorithm HMAC-<selectables><selectable>SHA-256</selectable><selectable>SHA384</selectable><selectable>SHA-512</selectable></selectables>, with 
                     <selectables>
                       <selectable><assignable>10000 or more</assignable> iterations</selectable>
-                      <selectable><assignable>1 or more</assignable> iterations and <assignable>10000 or more</assignable> subsequent rounds of AES operations with a device key and PBKDF2 output per FCS_COP.1 or FCS_COP.1</selectable>
+                      <selectable><assignable>1 or more</assignable> iterations and <assignable>10000 or more</assignable> subsequent rounds of AES operations with a device key and PBKDF2 output per FCS_COP.1</selectable>
                     </selectables> and output cryptographic key sizes 
                     <selectables>
                       <selectable>128 bits</selectable>
@@ -3831,7 +3831,7 @@
                   <selectable>the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
                   <selectable>the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable>wrapped as specified in FCS_COP.1</selectable>
-                    <selectable>encrypted as specified in FCS_COP.1 or FCS_COP.1</selectable>
+                    <selectable>encrypted as specified in FCS_COP.1</selectable>
                     <selectable>derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable>the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
