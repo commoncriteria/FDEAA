@@ -3495,41 +3495,7 @@
                   </title>
                 </ext-comp-def-title>
                 
-                  <aactivity level="element">
-                      <TSS>
-                        <h:p>The evaluator shall examine the TSS to determine which authorization methods support
-                          validation.</h:p>
-                        <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
-                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</h:p></TSS>
-                      <Guidance>
-                        <h:p>(conditional) If the validation functionality is configurable, the evaluator shall examine
-                          the operational guidance to ensure it describes how to configure the TOE to ensure the
-                          limits regarding validation attempts can be established.</h:p>
-                        <h:p>(conditional) If the validation functionality is specified by the ST author, the evaluator
-                          shall examine the operational guidance to ensure that it states the values that the TOE
-                          uses for limits regarding validation attempts.</h:p></Guidance>
-                      <CustomEA name="KMD">
-                        <h:p>The evaluator shall examine the KMD to verify that it described the method the TOE
-                          employs to limit the number of consecutively failed authorization attempts.</h:p>
-                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
-                          is performed. The description of the validation process in the KMD provides detailed
-                          information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submasks.</h:p></CustomEA>
-                      <Tests>
-                        The evaluator shall perform the following tests:
-                        <testlist>
-                          <test>The evaluator shall determine the limit on the average rate of the number of
-                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
-                            that number of incorrect authorization factors in consecutive attempts to access the
-                            protected data. If the limit mechanism includes any “lockout” period, the time period
-                            tested should include at least one such period. Then the evaluator will verify that the
-                            TOE behaves as described in the TSS.</test>
-                          <test>For each validated authorization method, ensure that when the user provides an
-                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
-                            the TOE (e.g., to the EE).</test>
-                        </testlist></Tests>
-                  </aactivity>
+                  
               </f-element>
               <f-element id="fcs-val-ext-1-2">
                 <title>
@@ -3574,6 +3540,42 @@
                   <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
                   <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
                 </note>
+				
+				<aactivity>
+                      <TSS>
+                        <h:p>The evaluator shall examine the TSS to determine which authorization methods support
+                          validation.</h:p>
+                        <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
+                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
+                          validated before combining, once combined validation takes place).</h:p></TSS>
+                      <Guidance>
+                        <h:p>(conditional) If the validation functionality is configurable, the evaluator shall examine
+                          the operational guidance to ensure it describes how to configure the TOE to ensure the
+                          limits regarding validation attempts can be established.</h:p>
+                        <h:p>(conditional) If the validation functionality is specified by the ST author, the evaluator
+                          shall examine the operational guidance to ensure that it states the values that the TOE
+                          uses for limits regarding validation attempts.</h:p></Guidance>
+                      <CustomEA name="KMD">
+                        <h:p>The evaluator shall examine the KMD to verify that it described the method the TOE
+                          employs to limit the number of consecutively failed authorization attempts.</h:p>
+                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
+                          is performed. The description of the validation process in the KMD provides detailed
+                          information how the TOE validates the submasks. The KMD describes how the process
+                          works, such that it does not expose any material that might compromise the submasks.</h:p></CustomEA>
+                      <Tests>
+                        The evaluator shall perform the following tests:
+                        <testlist>
+                          <test>The evaluator shall determine the limit on the average rate of the number of
+                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
+                            that number of incorrect authorization factors in consecutive attempts to access the
+                            protected data. If the limit mechanism includes any “lockout” period, the time period
+                            tested should include at least one such period. Then the evaluator will verify that the
+                            TOE behaves as described in the TSS.</test>
+                          <test>For each validated authorization method, ensure that when the user provides an
+                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
+                            the TOE (e.g., to the EE).</test>
+                        </testlist></Tests>
+                  </aactivity>
               </f-element>
              
             </f-component>
