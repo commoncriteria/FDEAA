@@ -3380,7 +3380,7 @@
 		sel-fcs-sni-ext-1-3-sel-2c - XTS
 		sel-fcs-sni-ext-1-3-sel-2d - GCM
 		!-->
-            <f-component cc-id="fcs_otv_ext.1" name="One Time Value (Salt, Nonce, and Initialization Vector Generation)" id="fcs_otv_ext.1">
+             <f-component cc-id="fcs_sni_ext.1" name="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" id="fcs_sni_ext.1">
               <consistency-rationale/>
               <comp-lev>requires the generation of salts, nonces, and IVs to be used by the cryptographic components of the TOE to be performed in the specified manner. </comp-lev>
               <management/>
