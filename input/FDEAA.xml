@@ -3386,7 +3386,7 @@
               <management/>
               <audit/>
               <dependencies>FCS_RBG.1 Cryptographic Operation (Random Bit Generation)</dependencies>
-              <f-element id="fcs-otv-ext-1-1">
+              <f-element id="fcs-sni-ext-1-1">
                 <title>The TSF shall perform cryptographic one-time value generation for 
                   <selectables>
 						<tabularize id="fcs-otv-sels" title="Allowed choices for FCS_OTV_EXT.1">
@@ -3402,8 +3402,9 @@
 						</tabularize>
 
 						<!-- HMAC -->
-						<selectable id="sel-fcs-otv-ext-hmac">
-							<col>HMAC</col>  
+						<selectable id="sel-fcs-ckm-5-kdf-ctr">
+							<col>HMAC</col>  <!-- formerly KeyDrv1 -->
+							
 							<col><selectables>
 								<selectable>FIPS PUB 198-1</selectable>
 								<selectable>NIST SP 800-56C Revision 2</selectable>
@@ -3411,12 +3412,13 @@
 							<col>Depending on the use case, salts can be secret or known,
 								randomly generated or all zero. Secret IVs may be required,
 								e.g., for key derivation. Refer to the relevant standards for
-								your use case.</col>
+								your use case.></col>
 						</selectable>
 						
 						<!-- KDF -->
-						<selectable id="sel-fcs-otv-ext-kdf">
-							<col>KDF</col>  
+						<selectable id="sel-fcs-ckm-5-kdf-ctr">
+							<col>KDF</col>  <!-- formerly KeyDrv1 -->
+							
 							<col><selectables>
 								<selectable>NIST SP 800-108 Revision 1</selectable>
 								<selectable>NIST SP 800-135 Revision 1</selectable>
@@ -3426,86 +3428,20 @@
 							CAM cryptographic algorithms. Refer to the relevant
 							standards. </col>
 						</selectable>
-						
-						<!-- PBKDF -->
-						<selectable id="sel-fcs-otv-ext-pbkdf">
-							<col>PBKDF</col>  
-							<col>NIST SP 800-132</col>
-							<col>Salts are generated and used as directed in PBKDFs.</col>
-						</selectable>
-						
-						<!-- CTR -->
-						<selectable id="sel-fcs-otv-ext-ctr">
-							<col>CTR</col>  
-							<col>NIST SP 800-38A</col>
-							<col>"Initial Counter" (nonce) shall be non-repeating. No counter
-							value shall be repeated across multiple messages with the
-							same secret key</col>
-						</selectable>
-						
-						<!-- CBC -->
-						<selectable id="sel-fcs-otv-ext-cbc">
-							<col>CBC</col>  
-							<col>NIST SP 800-38A Appendix C</col>
-							<col>Depending on the use case, IVs shall be unpredictable.
-							Repeating IVs leak information about whether the first one
-							or more blocks are shared between two messages, so IVs
-							should be non-repeating in such situations. Refer to the
-							relevant standards for your use case.</col>
-						</selectable>
-						
-						<!-- XTS -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col>XTS</col>  
-							<col><selectables><selectable>NIST SP 800-38E</selectable><selectable>IEEE Std 1619-2018</selectable>M</selectables></col>
-							<col>Tweak values shall be non-negative integers, assigned
-							consecutively, and starting at an arbitrary non-negative
-							integer (i.e., sequential nonces).</col>
-						</selectable>
-						
-						<!-- CMAC -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col>CMAC</col>  
-							<col>NIST SP 800-38B</col>
-							<col>IV is all zeroes.</col>
-						</selectable>
-						
-						<!-- KW KWP -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col><selectables><selectable>KW</selectable><selectable>KWP</selectable>M</selectables></col>  
-							<col>NIST SP 800-38F</col>
-							<col>Depending on the use case, nonces may be required. Please reference the relevant standards for your use case.</col>
-						</selectable>
-						
-						<!-- CCM -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col>CCM</col>  
-							<col>NIST SP 800-38C</col>
-							<col>Nonces shall be non-repeating.</col>
-						</selectable>
-						
-						<!-- GCM -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col>GCM</col>  
-							<col>NIST SP 800-38D</col>
-							<col>For RBG-based IV construction (section 8.2.2) the number
-							of invocations of GCM shall not exceed 2^32 for a given
-							secret key.</col>
-						</selectable>
-						
-						<!-- RSA-OAEP -->
-						<selectable id="sel-fcs-otv-ext-xts">
-							<col>RSA-OAEP</col>  
-							<col>NIST SP 800-56B Revision 2</col>
-							<col>Mask for padding shall be randomly generated.</col>
-						</selectable>
 						</selectables>
                 </title>
+                <note role="application">
+                  This requirement covers several important factors – the salt must be random, but the nonces only have to be unique. FCS_SNI_EXT.1.3 specifies how the IV should
+                  be handled for each encryption mode. CBC, XTS, and GCM are allowed for AES encryption of the data. AES-CCM is an allowed mode for Key Wrapping.<h:br/><h:br/>
+                  
+                  If the TSF uses salts in support of cryptographic operations, and these salts are generated by the TSF, then FCS_CKM.1/SKG and FCS_RBG.1 must be claimed.
                 
+                </note>
                 <aactivity>
                     <TSS>
-                      <h:p>The evaluator shall verify the TSS describes which OTV functions are leveraged and the description aligns with the requirement table.</h:p>
-                       <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
+                      <h:p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generated using an RBG described in FCS_RBG.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</h:p>
+                      <h:p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</h:p></TSS>
+                    <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
                     <CustomEA name="KMD">There are no KMD evaluation activities for this SFR.</CustomEA>
                     <Tests>There are no test evaluation activities for this SFR.</Tests>
                 </aactivity>
