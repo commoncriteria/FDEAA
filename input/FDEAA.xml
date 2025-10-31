@@ -163,7 +163,7 @@
         the data only after successful authorization to the FDE solution. The
         exceptions include the necessity to leave a portion of the storage device
         (the size may vary based on implementation) unencrypted for such
-        things as the Master Boot Record (MBR) or other AA/EE preauthentication software. These FDE cPPs interpret the term “full drive
+        things as the Master Boot Record (MBR) or other AA/EE pre-authentication software. These FDE cPPs interpret the term “full drive
         encryption” to allow FDE solutions to leave a portion of the storage
         device unencrypted so long as it contains no protected data.</term>
       <term abbr='FFC' full="Finite Field Cryptography"></term>
@@ -312,7 +312,7 @@
     <section title="Compliant Targets of Evaluation" id="sec-TOEdescription">
       <section title="TOE Boundary" id="TOEboundary">
         <h:p>
-        The environment in which the AA functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution’s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre30 OS environment and continues into OS present environment.</h:p>
+        The environment in which the AA functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution’s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre-OS environment and continues into OS present environment.</h:p>
         <h:p>
           In the Operating System environment, the Authorization Acquisition has the full range of services available from the operating system (OS), including hardware drivers, cryptographic libraries, and perhaps other services external to the TOE.
         </h:p>
@@ -392,7 +392,7 @@
 		    <addressed-by>FCS_AFA_EXT.1</addressed-by><rationale>Mitigates this threat by requiring a set of authorization methods that will be difficult to guess.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_PCC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</rationale>
-		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multifactor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
+		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multi-factor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization methods such as passwords and pins.</rationale>
 		  </threat>
 		  
@@ -561,7 +561,7 @@
             </objective-refer>
         </assumption>
         <assumption name="A.TRUSTED_CHANNEL">
-          <description>Communication among and between product components (e.g., AA and EE) is sufficiently protected to prevent information disclosure. In cases in which a single product fulfils both cPPs, then the communication between the components does not extend beyond the boundary of the TOE (e.g., communication path is within the TOE boundary). In cases in which independent products satisfy the requirements of the AA and EE, the physically close proximity of the two products during their operation means that the threat agent has very little opportunity to interpose itself in the channel between the two without the user noticing and taking appropriate actions.</description>
+          <description>Communication among and between product components (e.g., AA and EE) is sufficiently protected to prevent information disclosure. In cases in which a single product fulfills both cPPs, then the communication between the components does not extend beyond the boundary of the TOE (e.g., communication path is within the TOE boundary). In cases in which independent products satisfy the requirements of the AA and EE, the physically close proximity of the two products during their operation means that the threat agent has very little opportunity to interpose itself in the channel between the two without the user noticing and taking appropriate actions.</description>
           <objective-refer ref="OE.TRUSTED_CHANNEL">
             <rationale>The operational environment objective OE.TRUSTED_CHANNEL is realized through A.TRUSTED_CHANNEL.</rationale>
           </objective-refer>
@@ -605,7 +605,7 @@
 	  <SOEs>
 		<SOE name="OE.INITIAL_DRIVE_STATE">
 			  <description><h:p>The OE provides a newly provisioned or initialized storage device free of protected data in areas not targeted for encryption.</h:p><h:p>
-          Rationale: Since the cPP requires all protected data to encrypted A.INITIAL_DRIVE_STATE assumes that the initial state of the device targeted for FDE is free of protected data in those areas of the drive where encryption will not be invoked (e.g., MBR and AA/EE pre-authentication software). Given this known start state, the product (once installed and operational) ensures partitions of logical blocks of user accessible data is protected.
+          Rationale: Since the cPP requires all protected data to encrypted [A.INITIAL_DRIVE_STATE] assumes that the initial state of the device targeted for FDE is free of protected data in those areas of the drive where encryption will not be invoked (e.g., MBR and AA/EE pre-authentication software). Given this known start state, the product (once installed and operational) ensures partitions of logical blocks of user accessible data is protected.
         </h:p> </description>
 		  </SOE>
 	    
@@ -619,7 +619,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.PLATFORM_IA">
-			  <description><h:p>The Operational Environment will provide individual user identification and authentication mechanisms that operate independently of the authorization factors used by the TOE.</h:p><h:p>Rationale: While the product may provide authorization factors to the Operating system's login interface, it must not change or degrade the functionality of the actual interface. A.PLATFORM_I&amp;A requires that the product not interfere or change the normal platform I&amp;A functionality.</h:p></description>
+			  <description><h:p>The Operational Environment will provide individual user identification and authentication mechanisms that operate independently of the authorization factors used by the TOE.</h:p><h:p>Rationale: While the product may provide authorization factors to the Operating system's login interface, it must not change or degrade the functionality of the actual interface. [A.PLATFORM_IA] requires that the product not interfere or change the normal platform I&amp;A functionality.</h:p></description>
 		  </SOE>
 	    
 	     <SOE name="OE.PLATFORM_STATE">
@@ -629,7 +629,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.POWER_DOWN">
-			  <description><h:p>Volatile memory is erased after power-off so memory remnant attacks are infeasible.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to not leave the storage device unattended until powered down or placed in a managed power state such as “hibernation mode”. A.POWER_DOWN stipulates that such memory remnant attacks are infeasible given the device is in a powered-down or “hibernation mode” state.</h:p></description>
+			  <description><h:p>Volatile memory is erased after power-off so memory remnant attacks are infeasible.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to not leave the storage device unattended until powered down or placed in a managed power state such as “hibernation mode”. [A.POWER_DOWN] stipulates that such memory remnant attacks are infeasible given the device is in a powered-down or “hibernation mode” state.</h:p></description>
 		  </SOE>
 	    
 	    <SOE name="OE.SINGLE_USE_ET">
@@ -642,7 +642,7 @@
 		  </SOE>
 	    
 	    <SOE name="OE.TRAINED_USERS">
-			  <description><h:p>Authorized users will be properly trained and follow all guidance for securing the TOE and authorization factors. </h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to guidance, not store external token authorization factors with the device, and power down the TOE when required (OE.PLATFORM_STATE) The platform in which the storage device resides (or an external storage device is connected) is free of malware that could interfere with the correct operation of the product.</h:p>
+			  <description><h:p>Authorized users will be properly trained and follow all guidance for securing the TOE and authorization factors. </h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to guidance, not store external token authorization factors with the device, and power down the TOE when required [OE.PLATFORM_STATE] The platform in which the storage device resides (or an external storage device is connected) is free of malware that could interfere with the correct operation of the product.</h:p>
         <h:p>A platform free of malware [A.PLATFORM_STATE] prevents an attack vector that could potentially interfere with the correct operation of the product.</h:p></description>
 		  </SOE>
 	    	    
@@ -1959,7 +1959,7 @@
 							</h:tr>
 							<h:tr>
 								<h:td valign="top">AES-CCM </h:td>
-								<h:td valign="top">AES in CCM mode with nonrepeating nonce, minimum size
+								<h:td valign="top">AES in CCM mode with non-repeating nonce, minimum size
 									of 64 bits</h:td>
 								<h:td valign="top">256 bits</h:td>
 								<h:td valign="top">
@@ -2358,7 +2358,7 @@
 							</h:tr>
 							<h:tr>
 								<h:td valign="top">AES-GCM </h:td>
-								<h:td valign="top">AES in GCM mode with nonrepeating IVs using
+								<h:td valign="top">AES in GCM mode with non-repeating IVs using
 									[<h:b>selection:</h:b> deterministic, RBG-based] IV construction;
 									the tag must be of length [<h:b>selection:</h:b> 96, 104, 112, 120, or 128] bits.</h:td>
 								<h:td valign="top">256 bits</h:td>
@@ -3495,41 +3495,7 @@
                   </title>
                 </ext-comp-def-title>
                 
-                  <aactivity level="element">
-                      <TSS>
-                        <h:p>The evaluator shall examine the TSS to determine which authorization methods support
-                          validation.</h:p>
-                        <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
-                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</h:p></TSS>
-                      <Guidance>
-                        <h:p>(conditional) If the validation functionality is configurable, the evaluator shall examine
-                          the operational guidance to ensure it describes how to configure the TOE to ensure the
-                          limits regarding validation attempts can be established.</h:p>
-                        <h:p>(conditional) If the validation functionality is specified by the ST author, the evaluator
-                          shall examine the operational guidance to ensure that it states the values that the TOE
-                          uses for limits regarding validation attempts.</h:p></Guidance>
-                      <CustomEA name="KMD">
-                        <h:p>The evaluator shall examine the KMD to verify that it described the method the TOE
-                          employs to limit the number of consecutively failed authorization attempts.</h:p>
-                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
-                          is performed. The description of the validation process in the KMD provides detailed
-                          information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submasks.</h:p></CustomEA>
-                      <Tests>
-                        The evaluator shall perform the following tests:
-                        <testlist>
-                          <test>The evaluator shall determine the limit on the average rate of the number of
-                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
-                            that number of incorrect authorization factors in consecutive attempts to access the
-                            protected data. If the limit mechanism includes any “lockout” period, the time period
-                            tested should include at least one such period. Then the evaluator will verify that the
-                            TOE behaves as described in the TSS.</test>
-                          <test>For each validated authorization method, ensure that when the user provides an
-                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
-                            the TOE (e.g., to the EE).</test>
-                        </testlist></Tests>
-                  </aactivity>
+                  
               </f-element>
               <f-element id="fcs-val-ext-1-2">
                 <title>
@@ -3574,6 +3540,42 @@
                   <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
                   <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
                 </note>
+				
+				<aactivity>
+                      <TSS>
+                        <h:p>The evaluator shall examine the TSS to determine which authorization methods support
+                          validation.</h:p>
+                        <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
+                          submasks are used within the TOE, how the submasks are validated (e.g., each submask
+                          validated before combining, once combined validation takes place).</h:p></TSS>
+                      <Guidance>
+                        <h:p>(conditional) If the validation functionality is configurable, the evaluator shall examine
+                          the operational guidance to ensure it describes how to configure the TOE to ensure the
+                          limits regarding validation attempts can be established.</h:p>
+                        <h:p>(conditional) If the validation functionality is specified by the ST author, the evaluator
+                          shall examine the operational guidance to ensure that it states the values that the TOE
+                          uses for limits regarding validation attempts.</h:p></Guidance>
+                      <CustomEA name="KMD">
+                        <h:p>The evaluator shall examine the KMD to verify that it described the method the TOE
+                          employs to limit the number of consecutively failed authorization attempts.</h:p>
+                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
+                          is performed. The description of the validation process in the KMD provides detailed
+                          information how the TOE validates the submasks. The KMD describes how the process
+                          works, such that it does not expose any material that might compromise the submasks.</h:p></CustomEA>
+                      <Tests>
+                        The evaluator shall perform the following tests:
+                        <testlist>
+                          <test>The evaluator shall determine the limit on the average rate of the number of
+                            consecutive failed authorization attempts. The evaluator will test the TOE by entering
+                            that number of incorrect authorization factors in consecutive attempts to access the
+                            protected data. If the limit mechanism includes any “lockout” period, the time period
+                            tested should include at least one such period. Then the evaluator will verify that the
+                            TOE behaves as described in the TSS.</test>
+                          <test>For each validated authorization method, ensure that when the user provides an
+                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
+                            the TOE (e.g., to the EE).</test>
+                        </testlist></Tests>
+                  </aactivity>
               </f-element>
              
             </f-component>
