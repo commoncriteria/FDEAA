@@ -869,19 +869,9 @@
             </f-component>
         
             <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fcs-sni-ext-1-3-sel-2"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ei"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
               
               <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
@@ -1296,7 +1286,17 @@
         
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" name="Cryptographic Operation (Keyed Hash Algorithm)" id="fcs-cop-1-keyhash" status="sel-based">
           <depends on-sel="fcs-val-ext-1-1-keyhash"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac256"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac384"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac512"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac256"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac384"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac512"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac256"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac384"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac512"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-mac-1S"/>
+		  <depends on-sel="sel-fcs-ckm-5-kdf-mac-2S"/>
           <f-element id="fcs-cop-1e1-keyedhash">
 				<title>The TSF shall perform [keyed hash message authentication] in accordance
 					with a specified cryptographic algorithm 
@@ -1422,10 +1422,6 @@
         <f-component cc-id="fcs_cop.1" iteration="KeyEnc" name="Cryptographic Operation - Key Encryption" id="fcs-cop-1-keyenc" status="sel-based">
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
           <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
           <f-element id="fcs_cop-1-1-keyenc">
 				<title>
 					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
@@ -1514,10 +1510,6 @@
         <f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation - Key Encapsulation" id="fcs-cop-1-keyencap" status="sel-based">
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
           <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
           <f-element id="fcs_cop-1-1-keyencap">
 				<title> The TSF shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
 					<selectables>
@@ -1759,12 +1751,8 @@
         
             
             <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation - Key Wrapping" id="fcs-cop-1-keywrap" status="sel-based">
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
               <f-element id="fcs_cop-1-1-keywrap">
                 
 				<title>
@@ -2433,7 +2421,7 @@
 							<col>KPF2 - KDF in Counter Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac512">HMAC-SHA-512</selectable>
 							</selectables> as the PRF</col>
 							<col><selectables>
@@ -2457,7 +2445,7 @@
 							<col>KPF3 - KDF in Feedback Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac512">HMAC-SHA-512</selectable>
 							</selectables> as the PRF</col>
 							<col><selectables>
@@ -2480,7 +2468,7 @@
 							<col>KDF in Double Pipeline Iteration Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac512">HMAC-SHA-512</selectable>
 								</selectables> as the PRF</col>
 							<col><selectables>
@@ -3360,20 +3348,6 @@
               
             </f-component>
         
-		<!--sel-fcs-sni-ext-1-1-sel-1 - no salts
-		sel-fcs-sni-ext-1-1-sel-2 - DRBG salts
-		sel-fcs-sni-ext-1-1-sel-3 - host drbg
-		
-		sel-fcs-sni-ext-1-2-sel-1 - no nounce
-		sel-fcs-sni-ext-1-2-sel-2 - TOE nounce
-		
-		sel-fcs-sni-ext-1-3-sel-1 - no IV
-		sel-fcs-sni-ext-1-3-sel-2 - any IC
-		
-		sel-fcs-sni-ext-1-3-sel-2a - CBC
-		sel-fcs-sni-ext-1-3-sel-2b - CCM
-		sel-fcs-sni-ext-1-3-sel-2c - XTS
-		sel-fcs-sni-ext-1-3-sel-2d - GCM
 		!-->
              <f-component cc-id="fcs_sni_ext.1" name="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" id="fcs_sni_ext.1">
               <consistency-rationale/>
@@ -3462,7 +3436,7 @@
                   </selectables>
                   using the following methods: <selectables linebreak="yes">
                     <selectable id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in FCS_COP.1/KeyWrap;</selectable>
-                    <selectable id="sel-fcs-val-ext-1-1-sel-2a">hash the <selectables>
+                    <selectable id="sel-fcs-val-ext-1-1-sel-2b">hash the <selectables>
                       <selectable>submask</selectable>
                       <selectable>intermediate key</selectable>
                       <selectable>BEV</selectable>
