@@ -917,7 +917,7 @@
                 </title>
                 
                 <note role="application">Keys, including intermediate keys and key material that are no longer needed are destroyed by
-                  using an approved method, FCS_CKM.6. <h:br/><h:br/>
+                  using an approved method, FCS_CKM.6.2. <h:br/><h:br/>
                   Examples of keys are intermediate keys, submasks, and BEV. There may be instances where keys or key material that are
                   contained in persistent storage are no longer needed and require destruction. Based on their implementation, vendors 
                   will explain when certain keys are no longer needed. There are multiple situations in which key material is no longer
@@ -1167,7 +1167,6 @@
                 </title>
                 <note role="application">
 					In accordance with CNSA 1.0 and 2.0:<h:ul>
-					<h:li>SHA-1 hash is no longer permitted to be used as a hash function, </h:li>
 					<h:li>SHA3 hashes may be used only for internal hardware functionality such as
 						boot integrity checks, and</h:li>
 					<h:li>SHA-256 is permitted only for use as a PRF or MAC as part of a key derivation function,
@@ -4993,10 +4992,6 @@
             an appropriate justification would be formulated.
           </h:p>
           <h:div>
-            <depends ref="windows"/>
-            <depends ref="linux"/>
-            <depends ref="mac"/>
-            <depends ref="Solaris"/>	
             The evaluator shall also run a virus scanner with the most current virus definitions against the 
             application files and verify that no files are flagged as malicious.
           </h:div>
