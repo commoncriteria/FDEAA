@@ -871,16 +871,13 @@
             <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               
               <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
                 sizes <h:i>256 bit</h:i> that meet the following: [<h:i>no standard</h:i>].
                 </title>
                 <note role="application">
-                  Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the TSF DRBG is referenced for key generation (as in FCS_AFA_EXT.1, 
-                  FCS_SNI_EXT.1, and FCS_CKM.5.1), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
-                  an authorization factor (as in FCS_KYC_EXT.1, FPT_KYP_EXT.1, and FCS_VAL_EXT.1)                  
+                  Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the TSF DRBG is referenced for key generation where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key (as in FCS_KYC_EXT.1)                  
                 </note>
                 <aactivity>
                   <TSS>The evaluator shall review the TSS to determine that a symmetric key is supported by
@@ -1509,7 +1506,6 @@
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation - Key Encapsulation" id="fcs-cop-1-keyencap" status="sel-based">
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
-          <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
           <f-element id="fcs_cop-1-1-keyencap">
 				<title> The TSF shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
 					<selectables>
@@ -3064,6 +3060,9 @@
               <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
               <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
               <depends on-sel="sel-fcs-kdf-ext-1-1-sel-1a"/>
+			  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-dirgen"/>
+              <depends on-sel="sel-fcs-ckm-5-kdf-fb-dirgen"/>
+              <depends on-sel="sel-fcs-ckm-5-kdf-dpi-dirgen"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
               <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
