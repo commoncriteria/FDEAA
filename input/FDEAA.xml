@@ -1281,6 +1281,123 @@
           
             </f-component>
         
+		<!-- FCS_COP.1/CMAC Cryptographic Operation - CMAC -->
+		<f-component id="sfr-fcs-cop-1-cmac" cc-id="fcs_cop.1" iteration="CMAC" name="Cryptographic Operation - CMAC" status="sel-based">
+			<depends on-sel="sel-fcs-ckm-5-kdf-ctr-cmac"/>    <!-- KDFs -->
+			<depends on-sel="sel-fcs-ckm-5-kdf-fb-cmac"/>   
+			<depends on-sel="sel-fcs-ckm-5-kdf-dpi-cmac"/>   
+			<depends on-sel="sel-fcs-ckm-5-kdf-mac-2S"/>
+			<f-element id="fcs-cop-1e1-cmac">
+				<title> The TSF shall perform [CMAC] in accordance with a specified cryptographic algorithm 
+					<selectables>
+						<tabularize id="tab-fcs-cop-cmac-sels" title="Allowed choices for FCS_COP.1/CMAC">
+							<textcol>Identifier</textcol>
+							<reqtext></reqtext>
+							<selectcol>Cryptographic algorithm</selectcol>
+							<reqtext>and cryptographic key sizes</reqtext>
+							<selectcol>Cryptographic key sizes</selectcol>
+							<reqtext>that meet the following:</reqtext>
+							<selectcol>List of standards</selectcol>
+							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+										completion of the selection operations of FCS_COP.1/CMAC.</reqtext>
+						</tabularize>
+						
+						<selectable id="sel-fcs-cop-cmac-aes">
+							<col>AES-CMAC</col>
+							<col>AES using CMAC mode</col>
+						<col>256 bits</col>
+						<col><selectables>
+							<selectable>ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable>
+							<selectable>FIPS PUB 197</selectable></selectables> [AES]<h:p/>
+							<selectables>
+							<selectable>: ISO/IEC 9797-1:2011 Subclause 7.6</selectable> 
+							<selectable>NIST SP 800-38B</selectable></selectables> [CMAC]
+						</col></selectable>
+					</selectables>
+				</title>
+				<note role="application">
+					The use of 256-bit keys for AES algorithms is required by CNSA 1.0 and 2.0.
+				</note>
+				<aactivity>
+					<TSS>
+						The evaluator shall examine the TSS to verify that the IV consists of all zeros in accordance with
+						the relevant standards.
+					</TSS>
+					<Guidance/>
+					<Tests>
+						The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<h:p/>
+						The following tests are conditional based upon the selections made in the SFR. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the TOE
+						itself, the test platform shall be identified and the differences between test
+						environment and TOE execution environment shall be described.<h:p/>
+
+						<!-- AES-CMAC -->
+						<h:br/><h:b>AES-CMAC</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">AES-CMAC </h:td>
+								<h:td valign="top">AES using CMAC mode</h:td>
+								<h:td valign="top">256 bits</h:td>
+								<h:td valign="top">
+									[<h:b>selection:</h:b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+									FIPS PUB 197] [AES]<h:p/>
+									[<h:b>selection:</h:b>  ISO/IEC 9797-1:2011 (Subclause 7.6), NIST SP 800-38B] [CMAC]</h:td>
+							</h:tr>
+						</h:table><h:p/>	
+						To test the TOE’s ability to generate MAC values using AES in CMAC mode the evaluator shall
+						perform the CMAC Generation Test and CMAC Verification Test using the following input
+						parameters:<h:ul>
+						<h:li>Key Size [256] bits</h:li>
+						<h:li>Message size [0-524288] bits in increments of 8</h:li>
+						<h:li>MAC sizes [1-128] bits</h:li></h:ul><h:p/>
+						<h:br/><h:b>CMAC Generation Test</h:b><h:p/>
+						The evaluator shall generate eight test cases using random keys and data for each combination of
+						the above parameters as follows:<h:p/><h:ul>
+						<h:li>For each claimed key size,</h:li>
+						<h:li>For four message sizes as follows:<h:ul>
+							<h:li>The smallest supported message size,</h:li>
+							<h:li>The largest supported message size,</h:li>
+							<h:li>Two sizes that are divisible by the block size, and</h:li>
+							<h:li>Two sizes that are not divisible by the block size</h:li></h:ul></h:li>
+						<h:li>For three MAC sizes as follows:<h:ul>
+							<h:li>The smallest supported MAC size,</h:li>
+							<h:li>The largest supported MAC size, and</h:li>
+							<h:li>Some other supported MAC size</h:li></h:ul></h:li></h:ul><h:p/>
+						The evaluator shall compare the output from each test case against results generated by a known-
+						good implementation with the same input parameters.
+						<h:br/><h:b>CMAC Verification Test</h:b><h:p/>
+						The evaluator shall generate 20 test cases using random keys and data for each combination of
+						the above parameters as follows:<h:ul>
+						<h:li>For each claimed key size,</h:li>
+						<h:li>For four message sizes as follows:<h:ul>
+							<h:li>The smallest supported message size,</h:li>
+							<h:li>The largest supported message size,</h:li>
+							<h:li>Two sizes that are divisible by the block size, and</h:li>
+							<h:li>Two sizes that are not divisible by the block size</h:li></h:ul></h:li>
+						<h:li>For three MAC sizes as follows:<h:ul>
+							<h:li>The smallest supported MAC size,</h:li>
+							<h:li>The largest supported MAC size, and</h:li>
+							<h:li>Some other supported MAC size</h:li></h:ul></h:li></h:ul><h:p/>
+						The evaluator shall modify the tag such that 25% of the test cases in each group of 20 test
+						cases should fail.<h:p/>
+						The evaluator shall determine that the verification fails for the test cases with modified inputs,
+						and succeeds for those with unmodified inputs.
+					</Tests>
+				</aactivity>
+			</f-element>
+			<audit-event/>
+		</f-component>
+		
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" name="Cryptographic Operation (Keyed Hash Algorithm)" id="fcs-cop-1-keyhash" status="sel-based">
           <depends on-sel="fcs-val-ext-1-1-keyhash"/>
           <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac256"/>
@@ -1559,7 +1676,7 @@
               FCS_KYC_EXT.1.<h:br/><h:br/>
               NIST SP 800-57 Part 1 Revision 5 Section 5.6.2 specifies that the size of key used to protect the
               key being transported should be at least the security strength of the key it is protecting.<h:p/>
-              If this SFR is claimed, then FCS_CKM.1/AKG and FCS_CKM.6 must also be claimed.<h:p/>
+              If this SFR is claimed, then FCS_CKM.1/AKG must also be claimed.<h:p/>
               KAS1 and KTS-OAEP with the selectable parameters are CNSA 1.0 compliant. ML-KEM-1024 is CNSA 2.0 compliant.
             </note>
 				<aactivity>
