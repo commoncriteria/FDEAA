@@ -1475,8 +1475,8 @@
 					</selectables>
 				</title>
             <note role="application">
-              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain (FCS_CKM.5.1, FCS_KYC_EXT.1) or when the TSF
-              uses key encryption as part of password conditioning.
+              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain (FCS_KYC_EXT.1) or when the TSF
+              uses key encryption as part of password conditioning (FCS_PCC_EXT.1).
             </note>
                 <aactivity>
 					<TSS>
