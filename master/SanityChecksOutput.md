@@ -1,32 +1,8 @@
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[10]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[11]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[12]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[13]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[9]""/depends[5]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[9]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[10]""/depends[5]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[10]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[11]""/depends[5]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[11]""/depends[6]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[18]""/depends[3]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
-* Error: Detected multiple elements with an id of 'sel-fcs-ckm-5-kdf-ctr-hmac256'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
@@ -39,8 +15,6 @@
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
-* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
-* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
