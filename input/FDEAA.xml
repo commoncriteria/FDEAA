@@ -2134,7 +2134,8 @@
 			</selectable>
 			<selectable id="fcs_cop.1.1_SigVer_9">CNSA 1.0 Compliant Algorithms: 
 				<selectables linebreak="yes">
-				<selectable id="fcs_cop.1.1_SigVer_10" ><h:b>RSA schemes</h:b> using cryptographic key sizes of [3072-bit or greater] that meet the following: [FIPS PUB 186-5, “Digital Signature Standard (DSS),” Section 5]</selectable>
+				<selectable id="fcs_cop.1.1_SigVer_10" ><h:b>RSA schemes</h:b> using cryptographic key sizes of 
+					<selectables><selectable>3072-bits</selectable><selectable>4096-bits</selectable></selectables> that meet the following: [FIPS PUB 186-5, “Digital Signature Standard (DSS),” Section 5]</selectable>
 				<selectable id="fcs_cop.1.1_SigVer_11"><h:b>ECDSA schemes</h:b> using [“NIST curves” 
 					<selectables><selectable id="fcs_cop.1.1_SigVer_12" >P-384</selectable><selectable id="fcs_cop.1.1_SigVer_13" >P-521</selectable></selectables> 
 					] that meet the following: [FIPS PUB 186-5, “Digital Signature Standard (DSS),” Section 6]
