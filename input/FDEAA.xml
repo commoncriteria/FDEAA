@@ -3437,7 +3437,7 @@
                     <selectable>exclusive OR (XOR)</selectable>
                     <selectable>SHA-256</selectable>
                     <selectable>SHA-384</selectable>
-                    <selectable>SHA-521</selectable>
+                    <selectable>SHA-512</selectable>
                   </selectables> to generate an <assignable>types of keys</assignable>.</title>
                 </ext-comp-def-title>
                 <note role="application">
