@@ -962,6 +962,7 @@
                   that meets the following: [<h:i>no standard</h:i>].
                 </title>
                 <note role="application">
+                  <h:p>This SFR is FCS_CKM.6, to align with the numbering in the FDE EE cPP.</h:p>
                   <h:p>The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an OS kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the TOE has access will be reflected in the TSS section of the ST.</h:p>
                   <h:p>Several selections allow assignment of a ‘value that does not contain any CSP’. This means that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1 requirements, and not being any of the particular values listed as other selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain current or residual data that itself requires confidentiality protection.</h:p>
                   
@@ -2120,35 +2121,42 @@
 				<selectable id="fcs_cop.1.1_SigVer_2"><h:b>Leighton-Micali Signature Algorithm</h:b> for verification using cryptographic key sizes of 
 					<selectables>
 						<selectable id="fcs_cop.1.1_SigVer_3" >192</selectable><selectable id="fcs_cop.1.1_SigVer_4" >256</selectable>
-					</selectables> bits that meet the following [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+					</selectables> bits
 				</selectable>
 				<selectable id="fcs_cop.1.1_SigVer_5"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> for verification using cryptographic key sizes of 
 					<selectables>
 						<selectable id="fcs_cop.1.1_SigVer_6" >192</selectable><selectable id="fcs_cop.1.1_SigVer_7" >256</selectable>
-					</selectables> bits that meets the following: [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+					</selectables> bits
 				</selectable>
 				<selectable id="fcs_cop.1.1_SigVer_8" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter 
-				set ML-DSA-87 that meets the following [FIPS 204, Module-Lattice-Based Digital Signature Standard]</selectable>
+				set ML-DSA-87
 				</selectables> 
 			</selectable>
 			<selectable id="fcs_cop.1.1_SigVer_9">CNSA 1.0 Compliant Algorithms: 
 				<selectables linebreak="yes">
 				<selectable id="fcs_cop.1.1_SigVer_10" ><h:b>RSA schemes</h:b> using cryptographic key sizes of 
-					<selectables><selectable>3072-bits</selectable><selectable>4096-bits</selectable></selectables> that meet the following: [FIPS PUB 186-5, “Digital Signature Standard (DSS),” Section 5]</selectable>
+					<selectables><selectable>3072-bits</selectable><selectable>4096-bits</selectable></selectables>
+				</selectable>
 				<selectable id="fcs_cop.1.1_SigVer_11"><h:b>ECDSA schemes</h:b> using [“NIST curves” 
 					<selectables><selectable id="fcs_cop.1.1_SigVer_12" >P-384</selectable><selectable id="fcs_cop.1.1_SigVer_13" >P-521</selectable></selectables> 
-					] that meet the following: [FIPS PUB 186-5, “Digital Signature Standard (DSS),” Section 6]
+					]
 				</selectable>
 				</selectables> 
 			</selectable> 
+			</selectables>
+			that meet the following:
+			<selectables>
+			<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
+			<selectable>FIPS 204 [ML-DSA]</selectable>
+			<selectable>FIPS 186-5, Section 5 [RSA]</selectable>
+			<selectable>FIPS 186-5, Section 6 [ECDSA]</selectable>
 			</selectables>.</title>
             
             <note role="application">
               The selection should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example, 
               SHA-256 should be chosen for 2048-bit RSA or ECC with P-256, SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
               be chosen for ECC with P-521. The selection of the standard is made based on the algorithms selected.<h:br/><h:br/>
-              This SFR is mandatory for its use in verification of digital signatures for TOE updates. <h:p/>Note ML-DSA is not able to be used in any functions at the time of publication, 
-			  it is being added for future support. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
+              This SFR is mandatory for its use in verification of digital signatures for TOE updates. <h:p/>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </note>
             <aactivity>
               <h:p>This requirement is used to verify digital signatures attached to updates from the TOE
