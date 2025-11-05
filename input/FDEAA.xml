@@ -962,7 +962,6 @@
                   that meets the following: [<h:i>no standard</h:i>].
                 </title>
                 <note role="application">
-                  <h:p>This SFR is FCS_CKM.6, to align with the numbering in the FDE EE cPP.</h:p>
                   <h:p>The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an OS kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the TOE has access will be reflected in the TSS section of the ST.</h:p>
                   <h:p>Several selections allow assignment of a ‘value that does not contain any CSP’. This means that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1 requirements, and not being any of the particular values listed as other selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain current or residual data that itself requires confidentiality protection.</h:p>
                   
