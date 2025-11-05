@@ -1,4 +1,0 @@
-output/FDEAA-release-linkable.html: 38B
-output/FDEAA-release.html: 38B
-output/FDEAA-sd.html: 38B
-output/FDEAA.html: 38B
