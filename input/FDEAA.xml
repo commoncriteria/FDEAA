@@ -815,7 +815,7 @@
 								<selectable id="fcs_ckm.1.1_AK_18" >LMS_SHA256_M32_H10</selectable>
 								<selectable id="fcs_ckm.1.1_AK_19" >LMS_SHA256_M32_H15</selectable>
 								<selectable id="fcs_ckm.1.1_AK_20" >LMS_SHA256_M32_H25</selectable>
-							</selectables> that meet the following [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+							</selectables>
 						</selectable>
 						<selectable id="fcs_ckm.1.1_AK_21"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> using the parameter sets 
 							<selectables>
@@ -831,19 +831,26 @@
 								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE_10_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE_16_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_20_256</selectable>
-							</selectables> that meets the following: [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+							</selectables>
 						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism Standard</h:b> using the parameter set ML-KEM-1024 that meets the following: [FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter set ML-DSA-87 that meets the following [FIPS 204, Module-Lattice-Based Digital Signature Standard]</selectable>
+						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism Standard</h:b> using the parameter set ML-KEM-1024</selectable>
+						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter set ML-DSA-87</selectable>
 					</selectables> 
 				</selectable>
 				<selectable id="fcs_ckm.1.1_AK_36">CNSA 1.0 Compliant Algorithms: 
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables> that meet the following: [<h:i>FIPS PUB 186-5, "Digital Signature Standard (DSS)," Appendix A.1</h:i>]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_38"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_39" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_40" >no other curves</selectable></selectables> </h:i>] that meet the following: [<h:i>FIPS PUB 186-5, “Digital Signature Standard (DSS),” Appendix A.2</h:i>]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_41"><h:b>[FFC Schemes]</h:b> using [<h:i>“safe-prime” groups</h:i>] <selectables><selectable id="fcs_ckm.1.1_AK_42" >MODP-3072</selectable><selectable id="fcs_ckm.1.1_AK_43" >MODP-4096</selectable><selectable id="fcs_ckm.1.1_AK_44" >MODP-6144</selectable><selectable id="fcs_ckm.1.1_AK_45" >MODP-8192</selectable><selectable id="fcs_ckm.1.1_AK_46" >ffdhe-3072</selectable><selectable id="fcs_ckm.1.1_AK_47" >ffdhe-4096</selectable><selectable id="fcs_ckm.1.1_AK_48" >ffdhe-6144</selectable><selectable id="fcs_ckm.1.1_AK_49" >ffdhe-8192</selectable></selectables> that meet the following: [<h:i>NIST Special Publication 800-56A Revision 3, “Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography” and <selectables><selectable id="fcs_ckm.1.1_AK_50" >RFC 3526</selectable><selectable id="fcs_ckm.1.1_AK_51" >RFC 7919</selectable></selectables> </h:i>]</selectable>
+						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
+						<selectable id="fcs_ckm.1.1_AK_38"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_39" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_40" >no other curves</selectable></selectables> </h:i>]</selectable>
 					</selectables> 
 				</selectable> 
+				</selectables>
+				that meet the following:
+				<selectables>
+				<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
+				<selectable>FIPS 203 [ML-KEM]</selectable>
+				<selectable>FIPS 204 [ML-DSA]</selectable>
+				<selectable>FIPS 186-5, Appendix A.1 [RSA]</selectable>
+				<selectable>FIPS 186-5, Appendix A.2 [ECC]</selectable>
 				</selectables>.</title>
            
 			  
@@ -2130,6 +2137,7 @@
 				</selectable>
 				<selectable id="fcs_cop.1.1_SigVer_8" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter 
 				set ML-DSA-87
+				</selectable>
 				</selectables> 
 			</selectable>
 			<selectable id="fcs_cop.1.1_SigVer_9">CNSA 1.0 Compliant Algorithms: 
