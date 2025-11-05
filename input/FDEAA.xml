@@ -847,17 +847,17 @@
 				that meet the following:
 				<selectables>
 				<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
-				<selectable>FIPS 203 [ML-KEM]</selectable>
-				<selectable>FIPS 204 [ML-DSA]</selectable>
-				<selectable>FIPS 186-5, Appendix A.1 [RSA]</selectable>
-				<selectable>FIPS 186-5, Appendix A.2 [ECC]</selectable>
+				<selectable>FIPS PUB 203 [ML-KEM]</selectable>
+				<selectable>FIPS PUB 204 [ML-DSA]</selectable>
+				<selectable>FIPS PUB 186-5 Appendix A.1 [RSA]</selectable>
+				<selectable>FIPS PUB 186-5 Appendix A.2 [ECC]</selectable>
 				</selectables>.</title>
            
 			  
                 
                 <note role="application">
                   Asymmetric keys may be used to “wrap” a key or submask. This SFR should be included by the ST author when making the appropriate selection in FCS_KYC_EXT.1 or FCS_AFA_EXT.1.
-<h:p>Note that ML-DSA and ML-KEM are not usable in any functions at the time of initial publication, they are added to this requirement in support of future protocol updates. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</h:p>				  
+<h:p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</h:p>				  
                 </note>
                 <aactivity>
                     <TSS>The evaluator shall ensure that the TSS identifies the key sizes supported by the TOE.
@@ -2155,9 +2155,9 @@
 			that meet the following:
 			<selectables>
 			<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
-			<selectable>FIPS 204 [ML-DSA]</selectable>
-			<selectable>FIPS 186-5, Section 5 [RSA]</selectable>
-			<selectable>FIPS 186-5, Section 6 [ECDSA]</selectable>
+			<selectable>FIPS PUB 204 [ML-DSA]</selectable>
+			<selectable>FIPS PUB 186-5 Section 5 [RSA]</selectable>
+			<selectable>FIPS PUB 186-5 Section 6 [ECDSA]</selectable>
 			</selectables>.</title>
             
             <note role="application">
