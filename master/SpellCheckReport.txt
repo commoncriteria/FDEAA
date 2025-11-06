@@ -1,3 +1,6 @@
 output/FDEAA-release-linkable.html: encompase
+output/FDEAA-release-linkable.html: fofr
 output/FDEAA-release.html: encompase
+output/FDEAA-release.html: fofr
 output/FDEAA.html: encompase
+output/FDEAA.html: fofr
