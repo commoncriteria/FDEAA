@@ -431,7 +431,7 @@
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.4 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
-		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by obscuring the submasks via a XOR or hashing operation..</rationale>
+		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by obscuring the submasks via a XOR or hashing operation.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FPT_FLS.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that a malfunctioning DRBG function cannot be used to generate potentially insecure keys.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</rationale>
@@ -616,7 +616,7 @@
 			    areas not targeted for encryption.<h:br/><h:br/>
           Rationale: Since the cPP requires all protected data to encrypted, A.INITIAL_DRIVE_STATE assumes
           that the initial state of the device targeted 	 FDE is free of protected data in those areas of
-          the drive where encryption will not be invoked (e.g., MBR and AA and EE pre-authentication software)..
+          the drive where encryption will not be invoked (e.g., MBR and AA and EE pre-authentication software).
           Given this known start state, the product (once installed and operational) ensures partitions of 
           logical blocks of user accessible data is protected.
          </description>
