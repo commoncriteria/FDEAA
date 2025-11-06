@@ -3884,7 +3884,9 @@
               <Guidance>
                 The evaluator shall verify that the guidance documentation describes the error state that results from a DRBG self-test failure and the actions that a user or administrator should take in response to attempt to resolve the error state.
               </Guidance>
-              <Tests/>
+			  <Tests>
+			  There is no Test for this activity.
+              </Tests>
             </aactivity>
           </f-element>
           
