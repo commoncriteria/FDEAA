@@ -561,7 +561,14 @@
             </objective-refer>
         </assumption>
         <assumption name="A.TRUSTED_CHANNEL">
-          <description>Communication among and between product components (e.g., AA and EE) is sufficiently protected to prevent information disclosure. In cases in which a single product fulfills both cPPs, then the communication between the components does not extend beyond the boundary of the TOE (e.g., communication path is within the TOE boundary). In cases in which independent products satisfy the requirements of the AA and EE, the physically close proximity of the two products during their operation means that the threat agent has very little opportunity to interpose itself in the channel between the two without the user noticing and taking appropriate actions.</description>
+          <description>Communication among and between product components (e.g., AA and EE) is
+            sufficiently protected to prevent information disclosure. In cases in which a single
+            product fulfils both cPPs, the communication between the components does not 
+            extend beyond the boundary of the TOE (e.g., communication path is within the TOE
+            boundary) so this assumption is inherently met. In cases in which independent products satisfy the requirements of the
+            AA and EE, the physically close proximity of the two products during their operation
+            means that the threat agent has very little opportunity to interpose itself in the 
+            channel between the two without the user noticing and taking appropriate actions.</description>
           <objective-refer ref="OE.TRUSTED_CHANNEL">
             <rationale>The operational environment objective OE.TRUSTED_CHANNEL is realized through A.TRUSTED_CHANNEL.</rationale>
           </objective-refer>
