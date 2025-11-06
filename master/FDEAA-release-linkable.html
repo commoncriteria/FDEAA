@@ -1782,10 +1782,8 @@ The following sections list Common Criteria and technology terms used in this do
                       the key chain shall be reviewed to ensure the selected method is followed for the storage
                       of wrapped or encrypted keys in non-volatile memory and plaintext keys in non-volatile
                       memory meet one of the criteria for storage<a id="period_514" href="#period_514">. </a></p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FPT_KYP_EXT.1:1</a>:
-      If &#8220;only store keys in non-volatile memory when wrapped or encrypted&#8221; is selected, the Evaluator shall verify that <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> protects key material in a way consistent with <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> selection and description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr><a id="period_515" href="#period_515">. </a>This can be achieved by inspecting non-volatile location where <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> stores key material, by inspecting <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> memory when loading those materials from non-volatile storage using debug mode of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution<a id="period_516" href="#period_516">. </a>
-				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test<a id="period_517" href="#period_517">. </a></li>
-</div></div></div></div></div>
+                  If &#8220;only store keys in non-volatile memory when wrapped or encrypted&#8221; is selected, the Evaluator shall verify that <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> protects key material in a way consistent with <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> selection and description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr><a id="period_515" href="#period_515">. </a>This can be achieved by inspecting non-volatile location where <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> stores key material, by inspecting <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> memory when loading those materials from non-volatile storage using debug mode of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution<a id="period_516" href="#period_516">. </a>
+				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test<a id="period_517" href="#period_517">. </a></div></div></div></div></div>
         
         <div class="comp" id="FPT_PWR_EXT.1"><h4>FPT_PWR_EXT.1 Power Saving States</h4>
           
@@ -1882,12 +1880,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_543" href="#period_543">. </a>After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update<a id="period_544" href="#period_544">. </a></li>
-                      <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_545" href="#period_545">. </a>After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
