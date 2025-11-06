@@ -1,0 +1,3 @@
+output/FDEAA-release-linkable.html: encompase
+output/FDEAA-release.html: encompase
+output/FDEAA.html: encompase

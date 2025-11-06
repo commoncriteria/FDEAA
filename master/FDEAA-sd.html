@@ -1963,7 +1963,7 @@ The following sections list Common Criteria and technology terms used in this do
                       how the password is conditioned and the evaluator ensures it satisfies the requirement.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea"><p>The evaluator shall examine the KMD to ensure that the formation of the BEV and
                       intermediary keys is described and that the key sizes match that selected by the ST
                       author.</p><p>The evaluator shall check that the KMD describes the method by which the
-                        passwords and passphrase is first encoded and then fed to the SHA algorithm. The settings
+                        passwords is first encoded and then fed to the SHA algorithm. The settings
                         for the algorithm (padding, blocking, etc.) shall be described, and the evaluator shall
                         verify that these are supported by the selections in this component as well as the
                         selections concerning the hash function itself. The evaluator shall verify that the KMD
@@ -1973,10 +1973,10 @@ The following sections list Common Criteria and technology terms used in this do
                       <p>The evaluator shall also perform the following tests:</p>
                       <span class="testlist-"><ul>
                         <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_PCC_EXT.1:1</a>:
-      Ensure that the TOE supports passwords/passphrases of a minimum
+      Ensure that the TOE supports passwords of a minimum
                           length of 64 characters.</li>
                         <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_PCC_EXT.1:2</a>:
-      If the TOE supports a passwords and passphrase length up to a maximum
+      If the TOE supports a passwords length up to a maximum
                           number of characters, n (which would be greater than 64), then ensure that the
                           TOE will not accept more than n characters.</li>
                         <li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_PCC_EXT.1:3</a>:
