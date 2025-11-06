@@ -299,7 +299,7 @@
      </section>
      <section title="Authorization Acquisition Security Capabilities" id="sec-TOEauthorization-acquisition_security_capabilities">
      <h:p>
-      The AA collects authorization factors which the EE uses to access data on the storage device and perform a variety of management functions. Depending on the type of authorization method, the AA may condition them further. For example, it may apply an approved password-based key derivation function (e.g. PBKDF2) on passwords. An external token containing a randomly generated value of sufficient strength may require no further conditioning on the authorization factor. The AA may then combine one or more authorization factors in such a way that maintains the strength of both factors.
+      The AA collects authorization factors which the EE uses to access data on the storage device and perform a variety of management functions. Depending on the type of authorization method, the AA may condition them further. For example, it may apply an approved password-based key derivation function (e.g. PBKDF2) on passwords. In this cPP passwords also encompase passphrases. An external token containing a randomly generated value of sufficient strength may require no further conditioning on the authorization factor. The AA may then combine one or more authorization factors in such a way that maintains the strength of both factors.
      </h:p><h:p>
      The AA serves as the main management interface to the EE. However, the EE may also offer management functionality. The requirements in the EE cPP address how the EE should handle these features. The management functionality may include the ability to send commands to the EE such as changing a DEK, setting up new users, managing KEKs and other intermediate keys, and performing a key sanitization (e.g. overwrite of the DEK). It may also forward commands that partition the drive for use by multiple users. However, this document defers the management of partitions and assumes that administrators will only provision and manage the data on whole drives.
      </h:p>
@@ -493,9 +493,9 @@
         </assumption>
         
    <assumption name="A.PASSWORD_STRENGTH">
-    <description>Authorized users ensure passwords and passphrase authorization factors have sufficient strength and entropy to reflect the sensitivity of the data being protected.</description>
-    <objective-refer ref="OE.PASSPHRASE_STRENGTH">
-      <rationale>The operational environment objective OE.PASSPHRASE_STRENGTH is realized through A.PASSWORD_STRENGTH.</rationale>
+    <description>Authorized users ensure passwords authorization factors have sufficient strength and entropy to reflect the sensitivity of the data being protected.</description>
+    <objective-refer ref="OE.PASSWORD_STRENGTH">
+      <rationale>The operational environment objective OE.PASSWORD_STRENGTH is realized through A.PASSWORD_STRENGTH.</rationale>
     </objective-refer>
   </assumption>   
         
@@ -546,9 +546,9 @@
     </objective-refer>
   </assumption>
     <assumption name="A.TRAINED_USER">
-          <description> Authorized users follow all provided user guidance, including keeping passwords and passphrases and external tokens securely stored separately from the storage device and/or platform.</description>
-            <objective-refer ref="OE.PASSPHRASE_STRENGTH">
-              <rationale>The operational environment objective OE.PASSPHRASE_STRENGTH is realized through A.TRAINED_USER.</rationale>
+          <description> Authorized users follow all provided user guidance, including keeping passwords and external tokens securely stored separately from the storage device and/or platform.</description>
+            <objective-refer ref="OE.PASSWORD_STRENGTH">
+              <rationale>The operational environment objective OE.PASSWORD_STRENGTH is realized through A.TRAINED_USER.</rationale>
             </objective-refer>
             <objective-refer ref="OE.POWER_DOWN">
               <rationale>The operational environment objective OE.POWER_DOWN is realized through A.TRAINED_USER.</rationale>
@@ -609,8 +609,8 @@
         </h:p> </description>
 		  </SOE>
 	    
-		 <SOE name="OE.PASSPHRASE_STRENGTH">
-			  <description><h:p>An authorized user will be responsible for ensuring that the passphrase authorization factor conforms to guidance from the Enterprise using the TOE.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to administrative guidance.</h:p>
+		 <SOE name="OE.PASSWORD_STRENGTH">
+			  <description><h:p>An authorized user will be responsible for ensuring that the password authorization factor conforms to guidance from the Enterprise using the TOE.</h:p><h:p>Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to administrative guidance.</h:p>
            </description>
 		  </SOE>
 	    
@@ -3164,7 +3164,7 @@
                     <CustomEA name="KMD"><h:p>The evaluator shall examine the KMD to ensure that the formation of the BEV and
                       intermediary keys is described and that the key sizes match that selected by the ST
                       author.</h:p><h:p>The evaluator shall check that the KMD describes the method by which the
-                        passwords and passphrase is first encoded and then fed to the SHA algorithm. The settings
+                        passwords is first encoded and then fed to the SHA algorithm. The settings
                         for the algorithm (padding, blocking, etc.) shall be described, and the evaluator shall
                         verify that these are supported by the selections in this component as well as the
                         selections concerning the hash function itself. The evaluator shall verify that the KMD
@@ -3174,9 +3174,9 @@
                     <Tests>
                       <h:p>The evaluator shall also perform the following tests:</h:p>
                       <testlist>
-                        <test>Ensure that the TOE supports passwords/passphrases of a minimum
+                        <test>Ensure that the TOE supports passwords of a minimum
                           length of 64 characters.</test>
-                        <test>If the TOE supports a passwords and passphrase length up to a maximum
+                        <test>If the TOE supports a passwords length up to a maximum
                           number of characters, n (which would be greater than 64), then ensure that the
                           TOE will not accept more than n characters.</test>
                         <test>Ensure that the TOE supports passwords consisting of all characters
