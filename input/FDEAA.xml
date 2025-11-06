@@ -3949,7 +3949,7 @@
             
             <note role="application">
               The plaintext key storage in non-volatile memory is allowed for several reasons. If the keys exist within protected memory that is not user accessible on the TOE 
-              or OE, the only methods that allow it to play a security relevant role for protecting the BEV or the DEK are if it is a key split or providing additional layers 
+              or OE, the only methods that allow it to play a security relevant role fofr protecting the BEV or the DEK are if it is a key split or providing additional layers 
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
               If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
@@ -4085,7 +4085,7 @@
                 <selectable>TSF</selectable>
               </selectables>.
             </title>
-            <note role="application">This SFR is a required dependency of FCS_RBG.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
+            <note role="application">This SFR is a required dependency of FCS_RBG.1 and the cryptographic requirements that are selectable in FCS_KYC_EXT.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
 			
 			<h:p>The tests regarding cryptographic functions implemented in the TOE can be deferred, as long as the tests are performed before the function is invoked.</h:p>
 			<h:p>If any FCS_COP functions are implemented by the TOE, the TSS should describe the known answer self-tests for those functions.</h:p></note>
