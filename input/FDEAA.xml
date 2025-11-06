@@ -611,9 +611,15 @@
 	  The Operational Environment of the TOE implements technical and procedural measures to assist the TOE in correctly providing its security functionality. This part wise solution forms the security objectives for the Operational Environment and consists of a set of statements describing the goals that the Operational Environment should achieve.
 	  <SOEs>
 		<SOE name="OE.INITIAL_DRIVE_STATE">
-			  <description><h:p>The OE provides a newly provisioned or initialized storage device free of protected data in areas not targeted for encryption.</h:p><h:p>
-          Rationale: Since the cPP requires all protected data to encrypted [A.INITIAL_DRIVE_STATE] assumes that the initial state of the device targeted for FDE is free of protected data in those areas of the drive where encryption will not be invoked (e.g., MBR and AA/EE pre-authentication software). Given this known start state, the product (once installed and operational) ensures partitions of logical blocks of user accessible data is protected.
-        </h:p> </description>
+			  <description>
+			    The OE provides a newly provisioned or initialized storage device free of protected data in 
+			    areas not targeted for encryption.<h:br/><h:br/>
+          Rationale: Since the cPP requires all protected data to encrypted, A.INITIAL_DRIVE_STATE assumes
+          that the initial state of the device targeted 	 FDE is free of protected data in those areas of
+          the drive where encryption will not be invoked (e.g., MBR and AA and EE pre-authentication software).
+          Given this known start state, the product (once installed and operational) ensures partitions of 
+          logical blocks of user accessible data is protected.
+         </description>
 		  </SOE>
 	    
 		 <SOE name="OE.PASSWORD_STRENGTH">
