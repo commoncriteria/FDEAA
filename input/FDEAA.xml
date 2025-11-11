@@ -3968,7 +3968,7 @@
             
             <note role="application">
               The plaintext key storage in non-volatile memory is allowed for several reasons. If the keys exist within protected memory that is not user accessible on the TOE 
-              or OE, the only methods that allow it to play a security relevant role fofr protecting the BEV or the DEK are if it is a key split or providing additional layers 
+              or OE, the only methods that allow it to play a security relevant role for protecting the BEV or the DEK are if it is a key split or providing additional layers 
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
               If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
