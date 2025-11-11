@@ -192,6 +192,9 @@
       <term abbr='KMD' full="Key Management Description"></term>
       <term abbr='KRK' full="Key Release Key">A key used to release another key from storage, it is not used for the
         direct derivation or decryption of another key.</term>
+      <term abbr='LMS' full="Leighton-Micali Signature"></term>
+      <term abbr='ML-DSA' full="Module-Lattice-Based Digital Signature Algorithm"></term>
+      <term abbr='ML-KEM' full="Module-Lattice-Based Key-Encapsulation Mechanism"></term>
       <term abbr='MBR' full="Master Boot Record"></term>
       <term abbr='NIST' full="National Institute of Standards and Technology"></term>
       <term full="Non-Volatile Memory">A type of computer memory that will retain information without
@@ -224,6 +227,7 @@
       <term abbr='TSF' full="TOE Security Functionality"></term>
       <term abbr='TSS' full="TOE Summary Specification"></term>
       <term abbr='USB' full="Universal Serial Bus"></term>
+      <term abbr='XMSS' full="eXtended Merkle Signature Scheme"></term>
       <term abbr='XOR' full="Exclusive or"></term>
       <term abbr='XTS' full="XEX (XOR Encrypt XOR) Tweakable Block Cipher with Ciphertext Stealing"></term>
 
@@ -846,8 +850,8 @@
 								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_20_256</selectable>
 							</selectables>
 						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism Standard</h:b> using the parameter set ML-KEM-1024</selectable>
-						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter set ML-DSA-87</selectable>
+						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism</h:b> using the parameter set ML-KEM-1024</selectable>
+						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Algorithm</h:b> using the parameter set ML-DSA-87</selectable>
 					</selectables> 
 				</selectable>
 				<selectable id="fcs_ckm.1.1_AK_36">CNSA 1.0 Compliant Algorithms: 
@@ -2148,7 +2152,7 @@
 						<selectable id="fcs_cop.1.1_SigVer_6" >192</selectable><selectable id="fcs_cop.1.1_SigVer_7" >256</selectable>
 					</selectables> bits
 				</selectable>
-				<selectable id="fcs_cop.1.1_SigVer_8" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter 
+				<selectable id="fcs_cop.1.1_SigVer_8" ><h:b>Module-Lattice-Based Digital Signature Algorithm</h:b> using the parameter 
 				set ML-DSA-87
 				</selectable>
 				</selectables> 
