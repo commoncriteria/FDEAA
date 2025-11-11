@@ -13,8 +13,6 @@
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
-* Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
-* Error: Detected multiple elements with an id of 'fcs-kyc-ext-2-2-sel-2'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
