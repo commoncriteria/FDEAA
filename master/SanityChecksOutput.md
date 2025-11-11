@@ -1,8 +1,6 @@
 * Warning: This document still has at least one comment.
 * Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[3]""/on-sel[1]""
-* Error: Detected multiple elements with an id of 'toe'.
-* Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
