@@ -110,7 +110,7 @@
         Since the FDE cPPs support a variety of solutions, two cPPs describe the requirements for the FDE components shown in Figure 1.  
         </h:p>
         
-        <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe"/></h:p>
+        <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe-figure-1"/></h:p>
 
         <h:p>The FDE cPP - Authorization Acquisition describes the requirements for the Authorization Acquisition piece and details the security requirements and assurance activities necessary to interact with a user and result in the availability of sending a Border Encryption Value (BEV) to the Encryption Engine.</h:p>
         <h:p>The FDE cPP - Encryption Engine describes the requirements for the Encryption Engine piece and details the necessary security requirements and assurance activities for the actual encryption/decryption of the data by the DEK. Each cPP will also have a set of core requirements for management functions, proper handling of cryptographic keys, updates performed in a trusted manner, audit and self-tests. </h:p>
@@ -296,7 +296,7 @@
       <h:p>
       The Authorization Acquisition sends a Border Encryption Value (BEV), which could be a Key Encryption Key (KEK), a Key Releasing Key (KRK), or some other type of key to the Encryption Engine. The EE does not have to use this value directly as the key to decrypt or release the DEK. It may use it as part of a scheme that uses other intermediate keys to eventually protect the DEK. A KEK wraps other keys, notably the DEK or other intermediary keys which chain to the DEK. Key Releasing Keys (KRKs) authorize the EE to release either the DEK or other intermediary keys which chain to the DEK. Figure 2 illustrates the components within AA and its relationship with EE.
     </h:p>        
-      <figure entity="images/fde-authorization_acquisition.png" title="Authorization Acquisition Details" id="toe"/>    
+      <figure entity="images/fde-authorization_acquisition.png" title="Authorization Acquisition Details" id="toe-figure-2"/>    
     <h:p>
       Authorization factors may be unique to individual users or may be used by a group of individuals. In other words, the EE requires authorization factors from the AA to establish that the possessor of the authorization factor belongs to the community of users authorized to access information stored on the storage device (and does not require specific user authorization). Authorization factors are the specific value provided one of the supported authorization methods. Examples of authorization methods include, but are not limited to, passwords, passphrases, or randomly generated values stored on USB tokens or a pin to release a key on hardware storage media such as a Trusted Platform Module (TPM).
     </h:p>
