@@ -5185,13 +5185,13 @@
 
 <bibliography>
 
-<comment>Update references before publication.</comment>
 <!--	  <cc-entry/>   -->
 <cc-entry/>
 <entry id="bibfdeiee">
     <tag>FDE–EE</tag>
     
     <description>
+<comment>Update references before publication.</comment>
         <!-- todo: update hyperlink when PP published -->
         <h:a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
           Protection Profile for Full Drive Encryption – Encryption Engine, Version 3.0,
