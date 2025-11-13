@@ -48,6 +48,7 @@ ETR
 Electrotechnical
 FB
 FFCS
+FIA
 G2
 G3
 GFSBox
@@ -92,6 +93,7 @@ Sanitization
 Stateful
 Subclause
 Tweakable
+UAU
 VAN1
 VarKey
 VarTxt
@@ -216,6 +218,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
