@@ -1,8 +1,1 @@
-output/FDEAA-release-linkable.html: FIA
-output/FDEAA-release-linkable.html: UAU
-output/FDEAA-release.html: FIA
-output/FDEAA-release.html: UAU
-output/FDEAA-sd.html: cPP’s
-output/FDEAA.html: FIA
-output/FDEAA.html: UAU
 output/FDEAA.html: evaluat
