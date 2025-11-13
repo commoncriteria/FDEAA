@@ -1,1 +1,4 @@
+output/FDEAA-release-linkable.html: activites
+output/FDEAA-sd.html: activites
+output/FDEAA.html: activites
 output/FDEAA.html: evaluat
