@@ -5131,7 +5131,7 @@
 	<h:tr>
 	<h:td>FIA_UAU.1 – Timing of Authentication</h:td>
 	<h:td>
-	  FMT_SMR.1 has a dependency on FIA_UAU.1.  It is satisified as functions outside of restrictions of FMS_SMR.1 are not security relevant in this cPP.
+	  FMT_SMR.1 has a dependency on FIA_UAU.1.  It is satisified as functions outside of restrictions of FMT_SMR.1 are not security relevant in this cPP.
 	</h:td>
 	</h:tr>
 	
