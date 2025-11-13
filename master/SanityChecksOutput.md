@@ -1,26 +1,6 @@
 * Warning: This document still has at least one comment.
 * Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[3]""/on-sel[1]""
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
-* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
-* Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
-* Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
-* Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
-* Error: Detected multiple elements with an id of 'fmt-mof-1-1'.
-* Error: Detected multiple elements with an id of 'fmt-smf-1'.
-* Error: Detected multiple elements with an id of 'fmt-smf-1'.
-* Error: Detected multiple elements with an id of 'sel-fpt-kyp-ext-1-1-sel-3e'.
-* Error: Detected multiple elements with an id of 'sel-fpt-kyp-ext-1-1-sel-3e'.
-* Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
-* Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/note[1]"In accord"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[2]""
