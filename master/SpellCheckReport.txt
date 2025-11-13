@@ -1,11 +1,8 @@
 output/FDEAA-release-linkable.html: FIA
 output/FDEAA-release-linkable.html: UAU
-output/FDEAA-release-linkable.html: satisified
 output/FDEAA-release.html: FIA
 output/FDEAA-release.html: UAU
-output/FDEAA-release.html: satisified
 output/FDEAA-sd.html: cPP’s
 output/FDEAA.html: FIA
 output/FDEAA.html: UAU
 output/FDEAA.html: evaluat
-output/FDEAA.html: satisified
