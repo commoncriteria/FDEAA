@@ -3002,11 +3002,11 @@
                       <selectable>one, using a submask as the BEV;</selectable>
                       <selectable>intermediate keys originating from one or more submasks to the BEV using the following methods:
                         <selectables linebreak="yes">
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in FCS_COP.1</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in FCS_COP.1</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in FCS_COP.1</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in FCS_CKM.5.1</selectable>                          
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in FCS_SMC_EXT.1</selectable>
+                          <selectable>key encryption as specified in FCS_COP.1</selectable>
+                          <selectable>key transport as specified in FCS_COP.1</selectable>
+                          <selectable>key wrapping as specified in FCS_COP.1</selectable>
+                          <selectable>key derivation as specified in FCS_CKM.5.1</selectable>                          
+                          <selectable>key combining as specified in FCS_SMC_EXT.1</selectable>
                           
                           
                         </selectables></selectable></selectables>
@@ -3604,7 +3604,7 @@
                         <selectable>BEV</selectable>
                       </selectables>
                         as specified in <assignable>cryptographic operation requirement</assignable> and compare it to a stored hashed <selectables><selectable>submask</selectable><selectable> intermediate key</selectable><selectable>BEV</selectable></selectables>;</selectable>
-                      <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value </selectable>
+                      <selectable>decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value </selectable>
                     </selectables>.
                   </title>
                 </ext-comp-def-title>
@@ -3696,7 +3696,7 @@
       </section>
     
       <section title="Security Management (FMT)" id="FMT">
-        <f-component cc-id="fmt_mof.1" name="Management of Functions Behavior" id="fmt-mof-1-1">
+        <f-component cc-id="fmt_mof.1" name="Management of Functions Behavior" id="fmt-mof-1">
           <f-element id="fmt-mof-1-1">
             <title>
               The TSF shall restrict the ability to [<h:i>modify the behaviour of</h:i>] the functions [<h:i>use of compliant power saving state</h:i>] to [<h:i>authorized users</h:i>].
@@ -3724,7 +3724,7 @@
         </f-component>
         
         <f-component cc-id="fmt_smf.1" name="Specification of Management Functions" id="fmt-smf-1">
-        <f-element id="fmt-smf-1">
+        <f-element id="fmt-smf-1-1">
           <title>
           The TSF shall be capable of performing the following management functions: [
             <h:i><h:ol type='a'>
@@ -3949,7 +3949,7 @@
                     <selectable>derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable>the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
-                  <selectable id="sel-fpt-kyp-ext-1-1-sel-3e">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</selectable>
+                  <selectable>the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</selectable>
 					                 
                 </selectables>
                 </selectable>
@@ -4020,7 +4020,7 @@
          
         </f-component>
         
-        <f-component cc-id="fpt_pwr_ext.2" name="Timing of Power Saving States" id="fpt-pwr-ext-2-1">
+        <f-component cc-id="fpt_pwr_ext.2" name="Timing of Power Saving States" id="fpt-pwr-ext-2">
           <consistency-rationale/>
           <comp-lev>describes the situations that cause compliant power saving states to be entered.</comp-lev>
           <management/>
