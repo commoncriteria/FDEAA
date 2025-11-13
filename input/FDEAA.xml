@@ -5123,6 +5123,21 @@
 <!-- Appendix A includes optional, objective, and implementation-dependent requirements -->
 <!-- Appendix B is selection-based requirements -->
 <!-- Appendix C: Extended Component Definitions -->
+<appendix title="Implicitly Satisfied Requirements" id="satisfiedreqs">
+	<!-- Boilerplate goes here -->
+	<h:b><ctr ctr-type="Table" pre="Table " id="imp-sat-reqs-table">: Implicitly Satisfied Requirements</ctr></h:b>
+    <h:table>	
+		<h:tr class="header"><h:td>Requirement</h:td><h:td>Rationale for Satisfaction</h:td></h:tr>
+	<h:tr>
+	<h:td>FIA_UAU.1 – Timing of Authentication</h:td>
+	<h:td>
+	  FMT_SMR.1 has a dependency on FIA_UAU.1.  It is satisified as functions outside of restrictions of FMS_SMR.1 are not security relevant in this cPP.
+	</h:td>
+	</h:tr>
+	
+    </h:table>
+</appendix>
+
 <appendix id="apndx-entropy" title="Entropy Documentation and Assessment">
   <h:p><h:i>This is an optional appendix in the cPP, and only applies if the TOE is providing deterministic random bit generation services, e.g. the ST claims FCS_RBG.1.</h:i></h:p>
   <h:p>This appendix describes the required supplementary information for each entropy source used by the TOE.</h:p>
