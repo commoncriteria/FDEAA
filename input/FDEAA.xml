@@ -846,12 +846,12 @@
 								<selectable id="fcs_ckm.1.1_AK_27" >XMSS-SHA2_10_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_28" >XMSS-SHA2_16_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_29" >XMSS-SHA2_20_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_30" >XMSS-SHAKE_10_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE_16_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE_20_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_10_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_34" >XMSS-SHAKE_16_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_35" >XMSS-SHAKE_20_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_30" >XMSS-SHAKE256_10_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE256_16_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE256_20_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE256_10_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_34" >XMSS-SHAKE256_16_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_35" >XMSS-SHAKE256_20_256</selectable>
 							</selectables>
 						</selectable>
 						<selectable id="fcs_ckm.1.1_AK_36" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism</h:b> using the parameter set ML-KEM-1024</selectable>
