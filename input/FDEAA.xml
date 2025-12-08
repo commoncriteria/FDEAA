@@ -3804,8 +3804,8 @@
                     <testlist><test>The evaluator shall first provision user authorization factors for each method, and then verify
                       a valid authorization factor for each authorization method supported allows the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
-                      authorization factor value to a new one for each method. Then he or she will verify that the TOE
-                      denies access to the user’s encrypted data when he or she uses the old or original
+                      authorization factor value to a new one for each method. Then the evaluator shall verify that the TOE
+                      denies access to the user’s encrypted data when the evaluator uses the old or original
                       authorization factor value to gain access for each method.</test>
                     
                   </testlist>
