@@ -4217,10 +4217,10 @@
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</test>
-                      <test>The evaluator performs the version verification activity to determine the current
-                        version of the TOE. After the update tests described in the following tests, the evaluator
-                        performs this activity again to verify that the version correctly corresponds to that of
-                        the update.</test>
+                      <test>The evaluator obtains a legitimate update using procedures described in the
+                        operational guidance and verifies that an update successfully installs on the TOE. The
+                        evaluator shall perform a subset of other evaluation activity tests to demonstrate that
+                        the update functions as expected.</test>
                     </testlist> </Tests>
               </aactivity>
           </f-element>
