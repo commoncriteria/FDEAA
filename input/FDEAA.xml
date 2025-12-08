@@ -4105,7 +4105,7 @@
                 <h:p>
                   The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
                 </h:p><h:p>
-                  Note that this information may also be placed in the entropy documentation specified by <xref to="entropyappendix"/>. 
+                  Note that this information may also be placed in the entropy documentation specified by <xref to="apndx-entropy"/>.
                 </h:p>
               </TSS>
               <Guidance>
