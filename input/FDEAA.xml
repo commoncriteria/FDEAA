@@ -4214,13 +4214,11 @@
                     well as for digital signature alone): </h:p>
                     <testlist>
                       <test>The evaluator performs the version verification activity to determine the current
-                        version of the TOE. After the update tests described in the following tests, the evaluator
-                        performs this activity again to verify that the version correctly corresponds to that of
-                        the update.</test>
+                        version of the TOE.</test>
                       <test>The evaluator obtains a legitimate update using procedures described in the
                         operational guidance and verifies that an update successfully installs on the TOE. The
-                        evaluator shall perform a subset of other evaluation activity tests to demonstrate that
-                        the update functions as expected.</test>
+                        evaluator performs the version verification activity again to verify that the version
+                        correctly corresponds to that of the update.</test>
                     </testlist> </Tests>
               </aactivity>
           </f-element>
