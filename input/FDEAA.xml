@@ -3779,7 +3779,7 @@
 					
                   <h:p>The evaluator shall examine the operational
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
-                  <h:p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <h:p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
                     the AGD documentation.</h:p>
                   <h:p>If item e&#41; "specify the power saving state properties" is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
                     by the TSF, how these states are applied, how to configure when these states are applied
