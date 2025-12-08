@@ -2179,8 +2179,8 @@
 			</selectables>.</title>
             
             <note role="application">
-              The selection should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example, 
-              SHA-256 should be chosen for 2048-bit RSA or ECC with P-256, SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
+              The selections in FCS_COP.1/Hash should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example,
+              SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
               be chosen for ECC with P-521. The selection of the standard is made based on the algorithms selected.<h:br/><h:br/>
               This SFR is mandatory for its use in verification of digital signatures for TOE updates. <h:p/>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </note>
