@@ -1065,6 +1065,8 @@
                               found, there is a minuscule chance that it is not within the context of a key (e.g., some
                               random bits that happen to match). If this is the case the test should be repeated with a
                               different key in Step #1. If a fragment is found the test fails.</h:p>
+                          </test>
+                        </testlist>
                               <h:p>The following tests apply only for the selection of “logically addresses the storage location…”, since the TOE in this instance has more
                                 visibility into what is happening within the underlying platform (e.g., a logical view of
                                 the media). For the selection of “instructs the underlying platform…”, the TOE has no visibility into the inner workings and
@@ -1072,7 +1074,7 @@
                                 beyond test 1.</h:p>
                               <h:p>For the selection of “logically addresses the storage location…”, the following tests are used to determine the TOE is able to request
                                 the platform to overwrite the key with a TOE supplied pattern.</h:p>
-                          </test>
+                        <testlist>
                           <test>
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media (e.g., MBR file system):<h:ol type="1">
                               <h:li>Record the value of the key in the TOE subject to erasure.</h:li>
