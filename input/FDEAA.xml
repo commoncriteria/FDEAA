@@ -812,52 +812,56 @@
 			  
 			  <title>The TSF  shall generate <h:b>asymmetric</h:b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
 			  <selectables linebreak="yes">
-				<selectable id="fcs_ckm.1.1_AK_3">CNSA 2.0 Compliant Algorithms: 
+				<selectable id="fcs_ckm.1.1_AK_1">CNSA 2.0 Compliant Algorithms:
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_4"><h:b>Leighton-Micali Signature Algorithm</h:b> using the parameter sets 
+						<selectable id="fcs_ckm.1.1_AK_2"><h:b>Leighton-Micali Signature Algorithm</h:b> using the parameter sets
 							<selectables>
-								<selectable id="fcs_ckm.1.1_AK_5" >LMS_SHAKE_M24_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_6" >LMS_SHAKE_M24_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_7" >LMS_SHAKE_M24_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_8" >LMS_SHAKE_M24_H25</selectable>
-								<selectable id="fcs_ckm.1.1_AK_9" >LMS_SHAKE_M32_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_10" >LMS_SHAKE_M32_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_11" >LMS_SHAKE_M32_H15</selectable>
+								<selectable id="fcs_ckm.1.1_AK_3" >LMS_SHAKE_M24_H5</selectable>
+								<selectable id="fcs_ckm.1.1_AK_4" >LMS_SHAKE_M24_H10</selectable>
+								<selectable id="fcs_ckm.1.1_AK_5" >LMS_SHAKE_M24_H15</selectable>
+								<selectable id="fcs_ckm.1.1_AK_6" >LMS_SHAKE_M24_H20</selectable>
+								<selectable id="fcs_ckm.1.1_AK_7" >LMS_SHAKE_M24_H25</selectable>
+								<selectable id="fcs_ckm.1.1_AK_8" >LMS_SHAKE_M32_H5</selectable>
+								<selectable id="fcs_ckm.1.1_AK_9" >LMS_SHAKE_M32_H10</selectable>
+								<selectable id="fcs_ckm.1.1_AK_10" >LMS_SHAKE_M32_H15</selectable>
+								<selectable id="fcs_ckm.1.1_AK_11" >LMS_SHAKE_M32_H20</selectable>
 								<selectable id="fcs_ckm.1.1_AK_12" >LMS_SHAKE_M32_H25</selectable>
 								<selectable id="fcs_ckm.1.1_AK_13" >LMS_SHA256_M24_H5</selectable>
 								<selectable id="fcs_ckm.1.1_AK_14" >LMS_SHA256_M24_H10</selectable>
 								<selectable id="fcs_ckm.1.1_AK_15" >LMS_SHA256_M24_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_16" >LMS_SHA256_M24_H25</selectable>
-								<selectable id="fcs_ckm.1.1_AK_17" >LMS_SHA256_M32_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_18" >LMS_SHA256_M32_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_19" >LMS_SHA256_M32_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_20" >LMS_SHA256_M32_H25</selectable>
+								<selectable id="fcs_ckm.1.1_AK_16" >LMS_SHA256_M24_H20</selectable>
+								<selectable id="fcs_ckm.1.1_AK_17" >LMS_SHA256_M24_H25</selectable>
+								<selectable id="fcs_ckm.1.1_AK_18" >LMS_SHA256_M32_H5</selectable>
+								<selectable id="fcs_ckm.1.1_AK_19" >LMS_SHA256_M32_H10</selectable>
+								<selectable id="fcs_ckm.1.1_AK_20" >LMS_SHA256_M32_H15</selectable>
+								<selectable id="fcs_ckm.1.1_AK_21" >LMS_SHA256_M32_H20</selectable>
+								<selectable id="fcs_ckm.1.1_AK_22" >LMS_SHA256_M32_H25</selectable>
 							</selectables>
 						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_21"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> using the parameter sets 
+						<selectable id="fcs_ckm.1.1_AK_23"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> using the parameter sets
 							<selectables>
-								<selectable id="fcs_ckm.1.1_AK_22" >XMSS-SHA2_10_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_23" >XMSS-SHA2_16_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_24" >XMSS-SHA2_20_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_25" >XMSS-SHA2_10_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_26" >XMSS-SHA2_16_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_27" >XMSS-SHA2_20_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_28" >XMSS-SHAKE_10_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_29" >XMSS-SHAKE_16_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_30" >XMSS-SHAKE_20_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE_10_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE_16_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_20_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_24" >XMSS-SHA2_10_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_25" >XMSS-SHA2_16_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_26" >XMSS-SHA2_20_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_27" >XMSS-SHA2_10_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_28" >XMSS-SHA2_16_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_29" >XMSS-SHA2_20_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_30" >XMSS-SHAKE_10_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE_16_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE_20_192</selectable>
+								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_10_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_34" >XMSS-SHAKE_16_256</selectable>
+								<selectable id="fcs_ckm.1.1_AK_35" >XMSS-SHAKE_20_256</selectable>
 							</selectables>
 						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism</h:b> using the parameter set ML-KEM-1024</selectable>
-						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Algorithm</h:b> using the parameter set ML-DSA-87</selectable>
+						<selectable id="fcs_ckm.1.1_AK_36" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism</h:b> using the parameter set ML-KEM-1024</selectable>
+						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>Module-Lattice-Based Digital Signature Algorithm</h:b> using the parameter set ML-DSA-87</selectable>
 					</selectables> 
 				</selectable>
-				<selectable id="fcs_ckm.1.1_AK_36">CNSA 1.0 Compliant Algorithms: 
+				<selectable id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
-						<selectable id="fcs_ckm.1.1_AK_38"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_39" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_40" >no other curves</selectable></selectables> </h:i>]</selectable>
+						<selectable id="fcs_ckm.1.1_AK_39" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
+						<selectable id="fcs_ckm.1.1_AK_40"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_41" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_42" >no other curves</selectable></selectables> </h:i>]</selectable>
 					</selectables> 
 				</selectable> 
 				</selectables>
