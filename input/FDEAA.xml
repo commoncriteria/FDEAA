@@ -3056,7 +3056,7 @@
                       <TSS>The evaluator shall verify the TSS contains a high-level description of the BEV sizes– that it supports BEV outputs of no fewer than 256.</TSS>
                       <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
                       <CustomEA name="KMD">
-                        <h:p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_COP.1/KeyWrap and FCS_CKM.5.1.</h:p>
+                        <h:p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.</h:p>
                         <h:p>The evaluator shall examine the KMD to ensure that it describes how the key chain
                           process functions, such that it does not expose any material that might compromise any
                           key in the chain. (e.g. using a key directly as a compare value against a TPM) This
