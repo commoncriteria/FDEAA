@@ -1565,7 +1565,7 @@
 					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
-						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/SKC">
+						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/KeyEnc">
 							<textcol>Identifier</textcol>
 							<reqtext></reqtext>
 							<selectcol>Cryptographic algorithm</selectcol>
@@ -1574,7 +1574,7 @@
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
 							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
-								completion of the selection operations of FCS_COP.1/SKC.</reqtext>
+								completion of the selection operations of FCS_COP.1/KeyEnc.</reqtext>
 						</tabularize>
 
 						<!-- AES-CBC -->
