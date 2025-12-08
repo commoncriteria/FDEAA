@@ -1190,7 +1190,7 @@
                 <aactivity> 
                     <TSS>
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS, and not as a hash algorithm.
+						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
 					</TSS>
                     <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
 					<KMD>There are no KMD evaluation activities for this SFR.</KMD>
