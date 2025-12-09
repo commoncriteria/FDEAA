@@ -4583,22 +4583,7 @@
           This is not meant to diminish the critical role that a developer’s practices play in
           contributing to the overall trustworthiness of a product; rather, it’s a reflection on
           the information to be made available for evaluation.
-          <!--	      </TSS>
-				<Guidance> -->
-          <h:p>
-            The evaluator shall ensure that the developer has identified (in guidance documentation for application
-            developers concerning the targeted platform) one or more development environments
-            appropriate for use in developing applications for the developer’s platform. For each
-            of these development environments, the developer shall provide information on how to
-            configure the environment to ensure that buffer overflow protection mechanisms in the
-            environment(s) are invoked (e.g., compiler flags). The evaluator shall ensure that
-            this documentation also includes an indication of whether such protections are on by
-            default, or have to be specifically enabled. The evaluator shall ensure that the 
-            TSF is uniquely identified (with respect to other products from the 
-            TSF vendor), and that documentation provided by the developer in 
-            association with the requirements in the ST is associated with the 
-            TSF using this unique identification. </h:p> 
-          <!-- </Guidance>--> 
+          <!-- </TSS> -->
         </aactivity>
       </a-element>
     </a-component>
@@ -5109,10 +5094,6 @@
             expert skills and an electron microscope, for instance, then a test would not be suitable and 
             an appropriate justification would be formulated.
           </h:p>
-          <h:div>
-            The evaluator shall also run a virus scanner with the most current virus definitions against the 
-            application files and verify that no files are flagged as malicious.
-          </h:div>
         </aactivity>
       </a-element>     
     </a-component>
