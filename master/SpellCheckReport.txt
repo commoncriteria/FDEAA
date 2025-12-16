@@ -1,1 +1,3 @@
-output/FDEAA.html: evaluat
+output/FDEAA-release-linkable.html: SHAKE256
+output/FDEAA-release.html: SHAKE256
+output/FDEAA.html: SHAKE256
