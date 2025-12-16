@@ -1,1 +1,4 @@
+output/FDEAA-release-linkable.html: UID
+output/FDEAA-release.html: UID
+output/FDEAA.html: UID
 output/FDEAA.html: evaluat
