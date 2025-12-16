@@ -1113,7 +1113,6 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                  <p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is <a href="#FCS_CKM.6">FCS_CKM.6</a>, to align with the numbering in the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</p>
                   <p>The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has access will be reflected in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> section of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.</p>
                   <p>Several selections allow assignment of a ‘value that does not contain any CSP’. This means that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses some other specified data not drawn from an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> meeting <a href="#FCS_RBG.1">FCS_RBG.1</a> requirements, and not being any of the particular values listed as other selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain current or residual data that itself requires confidentiality protection.</p>
                   
@@ -1128,7 +1127,7 @@ The following sections list Common Criteria and technology terms used in this do
                         <p>The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> includes a key lifecycle, that includes a description
                           where key material reside, how the key material is used, how it is determined that keys
                           and key material are no longer needed, and how the material is destroyed once it is not
-                          needed and that the documentation in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> follows FCS_CKM.4(a) for the
+                          needed and that the documentation in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> follows <a href="#FCS_CKM.6">FCS_CKM.6</a> for the
                           destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
                   <div class="element-activity-header"><a href="#FCS_CKM.6.2">FCS_CKM.6.2</a></div>
@@ -1206,6 +1205,8 @@ The following sections list Common Criteria and technology terms used in this do
                               found, there is a minuscule chance that it is not within the context of a key (e.g., some
                               random bits that happen to match). If this is the case the test should be repeated with a
                               different key in Step #1. If a fragment is found the test fails.</p>
+                          </li>
+                        </ul></span>
                               <p>The following tests apply only for the selection of “logically addresses the storage location…”, since the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in this instance has more
                                 visibility into what is happening within the underlying platform (e.g., a logical view of
                                 the media). For the selection of “instructs the underlying platform…”, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has no visibility into the inner workings and
@@ -1213,7 +1214,7 @@ The following sections list Common Criteria and technology terms used in this do
                                 beyond test 1.</p>
                               <p>For the selection of “logically addresses the storage location…”, the following tests are used to determine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is able to request
                                 the platform to overwrite the key with a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supplied pattern.</p>
-                          </li>
+                        <span class="testlist-"><ul>
                           <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:2</a>:
       
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall use a tool that provides a logical view of the media (e.g., <abbr class="dyn-abbr"><a href="#abbr_MBR">MBR</a></abbr> file system):<ol type="1">
@@ -1318,7 +1319,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                 <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
 						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that if <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256 is selected, that it is being 
-						used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr> or MAC step in a key derivation function or as part of <abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>, and not as a hash algorithm.
+						used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr> or MAC step in a key derivation function or as part of <abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>, and not as a hash algorithm.
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 						The following tests may require the developer to provide access to a test platform that
 						provides the evaluator with tools that are typically not found on factory products.<p></p>
@@ -1463,8 +1464,8 @@ For 100 iterations
 			[<b>selection</b>: <span class="selectable-content" id="_s_171"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]</span>, <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 5 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_174"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 6 [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-              The selection should be consistent with the overall strength of the algorithm used for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> and quantum resistant recommendations. For example, 
-              <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256 should be chosen for 2048-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 should be chosen for 3072-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, 4096-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-384, and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 should
+              The selections in <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> should be consistent with the overall strength of the algorithm used for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> and quantum resistant recommendations. For example,
+              <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 should be chosen for 3072-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, 4096-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-384, and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 should
               be chosen for <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-521. The selection of the standard is made based on the algorithms selected.<br/><br/>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is mandatory for its use in verification of digital signatures for <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> updates. <p></p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </span></div></div></div>
@@ -1592,7 +1593,7 @@ For 100 iterations
                                              
                       
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> contains a high-level description of the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> sizes– that it supports <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> outputs of no fewer than 256.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
-                        <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> describes a high level description of the key hierarchy for all authorizations methods selected in <a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a> that are used to protect the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a> and <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>.</p>
+                        <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> describes a high level description of the key hierarchy for all authorizations methods selected in <a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a> that are used to protect the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet <a href="#FCS_CKM.5">FCS_CKM.5</a>, <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>, and/or <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.</p>
                         <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure that it describes how the key chain
                           process functions, such that it does not expose any material that might compromise any
                           key in the chain. (e.g. using a key directly as a compare value against a <abbr class="dyn-abbr"><a href="#abbr_TPM">TPM</a></abbr>) This
@@ -1736,7 +1737,7 @@ For 100 iterations
 					
                   <p>The evaluator shall examine the operational
                     guidance to ensure that it describes how to initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates.</p>
-                  <p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
                     the AGD documentation.</p>
                   <p>If item e) "specify the power saving state properties" is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: Power Saving: The guidance shall describe the power saving states that are supported
                     by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, how these states are applied, how to configure when these states are applied
@@ -1745,7 +1746,7 @@ For 100 iterations
 					<p>If item e) "configure authorization method" is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall examine the operational
                     guidance to ensure that it describes how selected authorization methods are
                     changed.</p>
-                </div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                </div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   
                   <p>
                   The evaluator shall verify that the
@@ -1760,8 +1761,8 @@ For 100 iterations
       The evaluator shall first provision user authorization factors for each method, and then verify
                       a valid authorization factor for each authorization method supported allows the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
-                      authorization factor value to a new one for each method. Then he or she will verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                      denies access to the user’s encrypted data when he or she uses the old or original
+                      authorization factor value to a new one for each method. Then the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
+                      denies access to the user’s encrypted data when the evaluator uses the old or original
                       authorization factor value to gain access for each method.</li>
                     
                   </ul></span>
@@ -1855,9 +1856,8 @@ For 100 iterations
                       the key chain shall be reviewed to ensure the selected method is followed for the storage
                       of wrapped or encrypted keys in non-volatile memory and plaintext keys in non-volatile
                       memory meet one of the criteria for storage.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the Evaluator shall verify that <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> protects key material in a way consistent with <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> selection and description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr>. This can be achieved by inspecting non-volatile location where <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> stores key material, by inspecting <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> memory when loading those materials from non-volatile storage using debug mode of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution. 
-				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test.
-</div></div></div></div></div>
+                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> protects key material in a way consistent with the selections and description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr>. This can be achieved by inspecting non-volatile locations where the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> stores key material or by inspecting the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> memory when loading those materials from non-volatile storage. It would be sufficient to demonstrate that the stored value is different from the plaintext value of the key as discovered in the test EA for <a href="#FCS_CKM.6">FCS_CKM.6</a>.
+                </div></div></div></div></div>
         
         <div class="comp" id="FPT_PWR_EXT.1"><h4>FPT_PWR_EXT.1 Power Saving States</h4>
           
@@ -3151,9 +3151,9 @@ For 100 iterations
     [<b>selection</b>: 
     <span class="selectable-content">List of standards</span>]
 							<p></p><p></p>The following table provides the allowed choices for
-								completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
+								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -4833,7 +4833,7 @@ If ( keylen = 256 )
                 <p>
                   The	evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it details the self-tests that are run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> makes an argument that the tests are sufficient to demonstrate that the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is operating correctly.
                 </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <a href="#entropyappendix" class="dynref" data-format=""></a>. 
+                  Note that this information may also be placed in the entropy documentation specified by <a href="#apndx-entropy" class="dynref">Appendix E -  Entropy Documentation and Assessment</a>.
                 </p>
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p>

@@ -1072,7 +1072,6 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                  <p>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is <a href="#FCS_CKM.6">FCS_CKM.6</a>, to align with the numbering in the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</p>
                   <p>The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has access will be reflected in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> section of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.</p>
                   <p>Several selections allow assignment of a ‘value that does not contain any CSP’. This means that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses some other specified data not drawn from an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> meeting <a href="#FCS_RBG.1">FCS_RBG.1</a> requirements, and not being any of the particular values listed as other selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain current or residual data that itself requires confidentiality protection.</p>
                   
@@ -1162,8 +1161,8 @@ The following sections list Common Criteria and technology terms used in this do
 			[<b>selection</b>: <span class="selectable-content" id="_s_171"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]</span>, <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 5 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_174"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 6 [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-              The selection should be consistent with the overall strength of the algorithm used for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> and quantum resistant recommendations. For example, 
-              <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256 should be chosen for 2048-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 should be chosen for 3072-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, 4096-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-384, and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 should
+              The selections in <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> should be consistent with the overall strength of the algorithm used for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> and quantum resistant recommendations. For example,
+              <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 should be chosen for 3072-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, 4096-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-384, and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 should
               be chosen for <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-521. The selection of the standard is made based on the algorithms selected.<br/><br/>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is mandatory for its use in verification of digital signatures for <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> updates. <p></p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </span></div></div></div>
@@ -2264,9 +2263,9 @@ The following sections list Common Criteria and technology terms used in this do
     [<b>selection</b>: 
     <span class="selectable-content">List of standards</span>]
 							<p></p><p></p>The following table provides the allowed choices for
-								completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
+								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
 						<tr>
 							<th>Identifier</th>
 							

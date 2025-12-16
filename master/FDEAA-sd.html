@@ -475,7 +475,7 @@ The following sections list Common Criteria and technology terms used in this do
                         <p>The evaluator shall verify the KMD includes a key lifecycle, that includes a description
                           where key material reside, how the key material is used, how it is determined that keys
                           and key material are no longer needed, and how the material is destroyed once it is not
-                          needed and that the documentation in the KMD follows FCS_CKM.4(a) for the
+                          needed and that the documentation in the KMD follows FCS_CKM.6 for the
                           destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
                   <div class="element-activity-header">FCS_CKM.6.2</div>
@@ -553,6 +553,8 @@ The following sections list Common Criteria and technology terms used in this do
                               found, there is a minuscule chance that it is not within the context of a key (e.g., some
                               random bits that happen to match). If this is the case the test should be repeated with a
                               different key in Step #1. If a fragment is found the test fails.</p>
+                          </li>
+                        </ul></span>
                               <p>The following tests apply only for the selection of “logically addresses the storage location…”, since the TOE in this instance has more
                                 visibility into what is happening within the underlying platform (e.g., a logical view of
                                 the media). For the selection of “instructs the underlying platform…”, the TOE has no visibility into the inner workings and
@@ -560,7 +562,7 @@ The following sections list Common Criteria and technology terms used in this do
                                 beyond test 1.</p>
                               <p>For the selection of “logically addresses the storage location…”, the following tests are used to determine the TOE is able to request
                                 the platform to overwrite the key with a TOE supplied pattern.</p>
-                          </li>
+                        <span class="testlist-"><ul>
                           <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:2</a>:
       
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media (e.g., MBR file system):<ol type="1">
@@ -620,7 +622,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS, and not as a hash algorithm.
+						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 						The following tests may require the developer to provide access to a test platform that
 						provides the evaluator with tools that are typically not found on factory products.<p></p>
@@ -795,7 +797,7 @@ For 100 iterations
                                              
                       
                   <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall verify the TSS contains a high-level description of the BEV sizes– that it supports BEV outputs of no fewer than 256.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">
-                        <p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_COP.1/KeyWrap and FCS_CKM.5.1.</p>
+                        <p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.</p>
                         <p>The evaluator shall examine the KMD to ensure that it describes how the key chain
                           process functions, such that it does not expose any material that might compromise any
                           key in the chain. (e.g. using a key directly as a compare value against a TPM) This
@@ -858,7 +860,7 @@ For 100 iterations
 					
                   <p>The evaluator shall examine the operational
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</p>
-                  <p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
                     the AGD documentation.</p>
                   <p>If item e) "specify the power saving state properties" is selected in FMT_SMF.1.1: Power Saving: The guidance shall describe the power saving states that are supported
                     by the TSF, how these states are applied, how to configure when these states are applied
@@ -867,7 +869,7 @@ For 100 iterations
 					<p>If item e) "configure authorization method" is selected in FMT_SMF.1.1: The evaluator shall examine the operational
                     guidance to ensure that it describes how selected authorization methods are
                     changed.</p>
-                </div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                </div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   
                   <p>
                   The evaluator shall verify that the
@@ -882,8 +884,8 @@ For 100 iterations
       The evaluator shall first provision user authorization factors for each method, and then verify
                       a valid authorization factor for each authorization method supported allows the user access to the encrypted data. Then
                       the evaluator shall exercise the management functions to change a user’s
-                      authorization factor value to a new one for each method. Then he or she will verify that the TOE
-                      denies access to the user’s encrypted data when he or she uses the old or original
+                      authorization factor value to a new one for each method. Then the evaluator shall verify that the TOE
+                      denies access to the user’s encrypted data when the evaluator uses the old or original
                       authorization factor value to gain access for each method.</li>
                     
                   </ul></span>
@@ -930,9 +932,8 @@ For 100 iterations
                       the key chain shall be reviewed to ensure the selected method is followed for the storage
                       of wrapped or encrypted keys in non-volatile memory and plaintext keys in non-volatile
                       memory meet one of the criteria for storage.</p></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the Evaluator shall verify that TOE protects key material in a way consistent with SFR selection and description in the TSS and KMD. This can be achieved by inspecting non-volatile location where TOE stores key material, by inspecting TOE memory when loading those materials from non-volatile storage using debug mode of TOE execution. 
-				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test.
-</div></div></span></div><div class="comp" id="FPT-PWR-EXT-1"><h4>FPT_PWR_EXT.1 Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.1</div>
+                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the evaluator shall verify that the TOE protects key material in a way consistent with the selections and description in the TSS and KMD. This can be achieved by inspecting non-volatile locations where the TOE stores key material or by inspecting the TOE memory when loading those materials from non-volatile storage. It would be sufficient to demonstrate that the stored value is different from the plaintext value of the key as discovered in the test EA for FCS_CKM.6.
+                </div></div></span></div><div class="comp" id="FPT-PWR-EXT-1"><h4>FPT_PWR_EXT.1 Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.1</div>
             
               
               
@@ -2145,7 +2146,7 @@ If ( keylen = 256 )
                 <p>
                   The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
                 </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <span href="#entropyappendix" class="dynref" data-format=""></span>. 
+                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix E -  Entropy Documentation and Assessment</span>.
                 </p>
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p>
