@@ -1137,7 +1137,135 @@ The following sections list Common Criteria and technology terms used in this do
             
             
            
-        	
+        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
+			<div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc"> 
+					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [digital signature verification] in accordance with a specified 
+					cryptographic algorithm  
+					
+						
+						
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+						and cryptographic key sizes
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+						that meet the following:
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+						<p></p><p></p>The following table provides the allowable choices for
+										completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.
+					
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-sigver-sels" data-counter-type="ct-Table" id="tab-fcs-cop-sigver-sels">Table <span class="counter">3</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
+					<tr>
+						<th>Identifier</th>
+						
+						<th>Cryptographic algorithm</th>
+						
+						<th>Cryptographic key sizes</th>
+						
+						<th>List of standards</th>
+						
+					</tr>
+
+					
+					<tr>
+						<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PKCS</td>
+						<td>RSASSA-PKCS1-v1_5</td>
+						<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_161">3072</span>, <span class="selectable-content" id="_s_162">4096</span>, <span class="selectable-content" id="_s_163">6144</span>, <span class="selectable-content" id="_s_164">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_165"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_166"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+						<td>
+								RFC 8017 (Section 8.2) [PKCS #1 v2.2]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]
+						</td>
+					</tr>
+
+
+					<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PSS</td>
+							<td>RSASSA-PSS</td>
+							<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_168">3072</span>, <span class="selectable-content" id="_s_169">4096</span>, <span class="selectable-content" id="_s_170">6144</span>, <span class="selectable-content" id="_s_171">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+							<td>
+								RFC 8017 (Section 8.1) [PKCS#1 v2.2]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]
+							</td>
+						</tr>
+
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td> 
+							<td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="_s_175">P-384</span>, <span class="selectable-content" id="_s_176">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_179"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>][<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p>
+									<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]
+							</td>
+						</tr>
+
+		
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
+							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_182">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_184">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_185">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_187">SHAKE256</span>]</span></li></ul>]<p></p>
+								Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="_s_188">1</span>, <span class="selectable-content" id="_s_189">2</span>, <span class="selectable-content" id="_s_190">4</span>, <span class="selectable-content" id="_s_191">8</span>]<p></p>
+								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_192">5</span>, <span class="selectable-content" id="_s_193">10</span>, <span class="selectable-content" id="_s_194">15</span>, <span class="selectable-content" id="_s_195">20</span>, <span class="selectable-content" id="_s_196">25</span>]
+							</td>
+							<td>RFC 8554 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>]<p></p>
+								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+							</td>
+						</tr>
+
+						
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
+							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_198">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_200">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_201">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_202"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_203">SHAKE256</span>]</span></li></ul>]<p></p>
+								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_204">10</span>, <span class="selectable-content" id="_s_205">16</span>, <span class="selectable-content" id="_s_206">20</span>]
+							</td>
+							<td>RFC 8391 [<abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]<p></p>
+								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+							</td>
+						</tr>
+
+						
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr> Signature Verification</td>
+							<td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td>
+						</tr>
+
+					
+				
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+					This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if digital signature verification is a service provided by 
+					the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to tenant software, or if digital signature verification is used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself to 
+					support or implement <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-specified security functionality.<p></p> 
+					Specifically, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author chooses "<i>implement an authenticated platform
+					firmware update mechanism as described in FPT_TUD_EXT.2</i>" or "<i>implement a delayed-authentication platform
+					firmware update mechanism as described in FPT_TUD_EXT.3</i>" in <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>; or if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author 
+					selects "<i>verification of a digital signature by trusted code/data</i>" in FPT_ROT_EXT.2.<p></p>	
+					If this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> must also be claimed.<p></p>
+					The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. 
+					For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the 
+					parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature
+					algorithms, the key size specified must match the selection for the curve used in the algorithm.<p></p>
+					For elliptic curve-based schemes, the key size refers to the binary logarithm (log2) of the order of the
+					base point. As the preferred approach for digital signatures, elliptic curves will be required after all the
+					necessary standards and other supporting information are fully established.<p></p>
+					The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may contain a public key which is integrity protected (e.g., in hardware), in which 
+					case the FDP_ITC.1 and FDP_ITC.2 dependencies do not apply.  In this case, no dependencies 
+					may be chosen.  For signature verifications, private keys are not necessary, so there are no
+					dependencies required for generating or destroying cryptographic keys.<p></p>
+					If <abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr> is claimed, then FCS_COP.1/XOF must also be claimed.
+				</span></div></div></div>
+			
+		</div>	
              
         
         
@@ -1382,7 +1510,7 @@ The following sections list Common Criteria and technology terms used in this do
       
 
 	<h3 id="obj-req-map" class="indexable" data-level="3">5.1.4 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">3</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="5"><a href="#T.AUTHORIZATION_GUESSING">T.AUTHORIZATION_​GUESSING</a></td><td><a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a></td><td>Mitigates this threat by requiring a set of authorization methods that will be difficult to guess.</td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">4</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="5"><a href="#T.AUTHORIZATION_GUESSING">T.AUTHORIZATION_​GUESSING</a></td><td><a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a></td><td>Mitigates this threat by requiring a set of authorization methods that will be difficult to guess.</td></tr>
 <tr><td><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></td><td>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</td></tr>
 <tr><td><a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</td></tr>
 <tr><td><a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> (selection-based)</td><td>Mitigates this threat by requiring multi-factor authentication options, further increasing the difficulty of guessing a authentication factor.</td></tr>
@@ -1454,7 +1582,7 @@ The following sections list Common Criteria and technology terms used in this do
   <p>
     
     <table>
-      <head><b><span class="ctr" data-myid="toe-sec" data-counter-type="ct-Table" id="toe-sec">Table <span class="counter">4</span>: TOE Security Assurance Requirements</span></b></head>
+      <head><b><span class="ctr" data-myid="toe-sec" data-counter-type="ct-Table" id="toe-sec">Table <span class="counter">5</span>: TOE Security Assurance Requirements</span></b></head>
       <tr>
      <td><b>Functional Class</b></td>
      <td><b>Functional Components</b></td>
@@ -2105,7 +2233,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 										completion of the selection operations of <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a>.
 						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-cmac-sels" data-counter-type="ct-Table" id="tab-fcs-cop-cmac-sels">Table <span class="counter">5</span></span>: Allowed choices for <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></caption>
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-cmac-sels" data-counter-type="ct-Table" id="tab-fcs-cop-cmac-sels">Table <span class="counter">6</span></span>: Allowed choices for <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -2164,7 +2292,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 										completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.
 						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyedhash-sels">Table <span class="counter">6</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyedhash-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
 						<tr>
 							<th>Keyed Hash Algorithm</th>
 							
@@ -2236,7 +2364,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -2300,7 +2428,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 										completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
 						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyencap-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyencap-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyencap-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyencap-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -2372,7 +2500,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 								completion of the selection operations of <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -2434,140 +2562,7 @@ The following sections list Common Criteria and technology terms used in this do
                   transported should be at least the security strength of the key it is protecting.
                 </span></div></div></div>
           
-            </div><div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4><div class="statustag"><p><i><b>This component may also be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> as if optional.</b></i></p></div>
-			  
-			  
-			 
-			  			
-			    		
-			<div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc"> 
-					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [digital signature verification] in accordance with a specified 
-					cryptographic algorithm  
-					
-						
-						
-						
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic algorithm</span>]
-						and cryptographic key sizes
-						
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-						that meet the following:
-						
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-						<p></p><p></p>The following table provides the allowable choices for
-										completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.
-					
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-sigver-sels" data-counter-type="ct-Table" id="tab-fcs-cop-sigver-sels">Table <span class="counter">10</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
-					<tr>
-						<th>Identifier</th>
-						
-						<th>Cryptographic algorithm</th>
-						
-						<th>Cryptographic key sizes</th>
-						
-						<th>List of standards</th>
-						
-					</tr>
-
-					
-					<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PKCS</td>
-						<td>RSASSA-PKCS1-v1_5</td>
-						<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_161">3072</span>, <span class="selectable-content" id="_s_162">4096</span>, <span class="selectable-content" id="_s_163">6144</span>, <span class="selectable-content" id="_s_164">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_165"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_166"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-						<td>
-								RFC 8017 (Section 8.2) [PKCS #1 v2.2]<p></p>
-								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]
-						</td>
-					</tr>
-
-
-					<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PSS</td>
-							<td>RSASSA-PSS</td>
-							<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_168">3072</span>, <span class="selectable-content" id="_s_169">4096</span>, <span class="selectable-content" id="_s_170">6144</span>, <span class="selectable-content" id="_s_171">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>
-								RFC 8017 (Section 8.1) [PKCS#1 v2.2]<p></p>
-								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]
-							</td>
-						</tr>
-
-						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td> 
-							<td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="_s_175">P-384</span>, <span class="selectable-content" id="_s_176">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_179"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>][<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p>
-									<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]
-							</td>
-						</tr>
-
-		
-						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
-							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_182">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_184">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_185">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_187">SHAKE256</span>]</span></li></ul>]<p></p>
-								Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="_s_188">1</span>, <span class="selectable-content" id="_s_189">2</span>, <span class="selectable-content" id="_s_190">4</span>, <span class="selectable-content" id="_s_191">8</span>]<p></p>
-								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_192">5</span>, <span class="selectable-content" id="_s_193">10</span>, <span class="selectable-content" id="_s_194">15</span>, <span class="selectable-content" id="_s_195">20</span>, <span class="selectable-content" id="_s_196">25</span>]
-							</td>
-							<td>RFC 8554 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>]<p></p>
-								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
-							</td>
-						</tr>
-
-						
-						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
-							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_198">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_200">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_201">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_202"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_203">SHAKE256</span>]</span></li></ul>]<p></p>
-								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_204">10</span>, <span class="selectable-content" id="_s_205">16</span>, <span class="selectable-content" id="_s_206">20</span>]
-							</td>
-							<td>RFC 8391 [<abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]<p></p>
-								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
-							</td>
-						</tr>
-
-						
-						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr> Signature Verification</td>
-							<td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td>
-						</tr>
-
-					
-				
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-					This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if digital signature verification is a service provided by 
-					the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to tenant software, or if digital signature verification is used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself to 
-					support or implement <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-specified security functionality.<p></p> 
-					Specifically, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author chooses "<i>implement an authenticated platform
-					firmware update mechanism as described in FPT_TUD_EXT.2</i>" or "<i>implement a delayed-authentication platform
-					firmware update mechanism as described in FPT_TUD_EXT.3</i>" in <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>; or if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author 
-					selects "<i>verification of a digital signature by trusted code/data</i>" in FPT_ROT_EXT.2.<p></p>	
-					If this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> must also be claimed.<p></p>
-					The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. 
-					For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the 
-					parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature
-					algorithms, the key size specified must match the selection for the curve used in the algorithm.<p></p>
-					For elliptic curve-based schemes, the key size refers to the binary logarithm (log2) of the order of the
-					base point. As the preferred approach for digital signatures, elliptic curves will be required after all the
-					necessary standards and other supporting information are fully established.<p></p>
-					The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may contain a public key which is integrity protected (e.g., in hardware), in which 
-					case the FDP_ITC.1 and FDP_ITC.2 dependencies do not apply.  In this case, no dependencies 
-					may be chosen.  For signature verifications, private keys are not necessary, so there are no
-					dependencies required for generating or destroying cryptographic keys.<p></p>
-					If <abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr> is claimed, then FCS_COP.1/XOF must also be claimed.
-				</span></div></div></div>
-			
-		</div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+            </div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>.
            </i></b></div>
                
