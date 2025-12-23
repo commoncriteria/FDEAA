@@ -5133,7 +5133,7 @@ If ( keylen = 256 )
 	<h:tr>
 	<h:td>FIA_UID.1 – Timing of identification</h:td>
 	<h:td>
-	  FMT_SMR.1 has a dependency on FIA_UID.1. It is satisfied as functions outside of restrictions of FMT_SMR.1 are not security relevant in this cPP.
+	  FMT_SMR.1 has a dependency on FIA_UID.1. Identification is implicitly satisfied by the authorized user having access to the TOE.
 	</h:td>
 	</h:tr>
 	
