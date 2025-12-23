@@ -1,4 +1,0 @@
-output/FDEAA-release-linkable.html: RSASSA
-output/FDEAA-release.html: RSASSA
-output/FDEAA-sd.html: RSASSA
-output/FDEAA.html: RSASSA
