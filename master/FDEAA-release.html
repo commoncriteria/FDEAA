@@ -1137,37 +1137,8 @@ The following sections list Common Criteria and technology terms used in this do
             
             
            
-        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation (Signature Verification)</h4>
-          
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [<i>cryptographic signature services (verification)</i>] 
-			in accordance with a specified cryptographic algorithm  
-			[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_1">CNSA 2.0 Compliant Algorithms: 
-				[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_2"><b>Leighton-Micali Signature Algorithm</b> for verification using cryptographic key sizes of 
-					[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_3">192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_4">256</span>] bits
-				</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_5"><b>eXtended Merkle Signature Scheme Algorithm</b> for verification using cryptographic key sizes of 
-					[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_6">192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_7">256</span>] bits
-				</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_8"><b>Module-Lattice-Based Digital Signature Algorithm</b> using the parameter 
-				set <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87
-				</span></li></ul>] 
-			</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_9">CNSA 1.0 Compliant Algorithms: 
-				[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_10"><b><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes</b> using cryptographic key sizes of 
-					[<b>selection</b>: <span class="selectable-content" id="_s_170">3072-bits</span>, <span class="selectable-content" id="_s_171">4096-bits</span>]
-				</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_11"><b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> schemes</b> using [“<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” 
-					[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_12">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_13">P-521</span>] 
-					]
-				</span></li></ul>] 
-			</span></li></ul>]
-			that meet the following:
-			[<b>selection</b>: <span class="selectable-content" id="_s_175"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]</span>, <span class="selectable-content" id="_s_176"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 5 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Section 6 [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              The selections in <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> should be consistent with the overall strength of the algorithm used for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> and quantum resistant recommendations. For example,
-              <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 should be chosen for 3072-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, 4096-bit <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>, or <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-384, and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 should
-              be chosen for <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> with P-521. The selection of the standard is made based on the algorithms selected.<br/><br/>
-              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is mandatory for its use in verification of digital signatures for <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> updates. <p></p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
-            </span></div></div></div>
-          
-        </div>
+        	
+             
         
         
             
@@ -1184,10 +1155,10 @@ The following sections list Common Criteria and technology terms used in this do
               
               <div class="element"><div class="reqid" id="FCS_KYC_EXT.1.1"><a href="#FCS_KYC_EXT.1.1" class="abbr">FCS_KYC_EXT.1.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a key chain of: 
-                    [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_262">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_263">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
+                    [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_291">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_292">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
                         [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a></span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a></span></li></ul>]</span></li></ul>]
                   while maintaining an effective strength of [<i>256 bits</i>] for symmetric keys and an effective strength of 
-                      [<b>selection</b>: <span class="selectable-content" id="_s_269">not applicable</span>, <span class="selectable-content" id="_s_270">128 bits</span>, <span class="selectable-content" id="_s_271">192 bits</span>, <span class="selectable-content" id="_s_272">256 bits</span>] for asymmetric keys.
+                      [<b>selection</b>: <span class="selectable-content" id="_s_298">not applicable</span>, <span class="selectable-content" id="_s_299">128 bits</span>, <span class="selectable-content" id="_s_300">192 bits</span>, <span class="selectable-content" id="_s_301">256 bits</span>] for asymmetric keys.
                 </div></div>
               
               <div class="element"><div class="reqid" id="FCS_KYC_EXT.1.2"><a href="#FCS_KYC_EXT.1.2" class="abbr">FCS_KYC_EXT.1.2</a></div><div class="reqdesc">
@@ -1246,7 +1217,7 @@ The following sections list Common Criteria and technology terms used in this do
               
               
              <div class="element"><div class="reqid" id="FCS_SNI_EXT.1.1"><a href="#FCS_SNI_EXT.1.1" class="abbr">FCS_SNI_EXT.1.1</a></div><div class="reqdesc">
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_350">use salts that are generated by a 
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_379">use salts that are generated by a 
                       [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]
                     </span></li></ul>].
                 </div></div>
@@ -1289,7 +1260,7 @@ The following sections list Common Criteria and technology terms used in this do
               <li>forwarding requests to cryptographically erase the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr></li>
               <li>allowing authorized users to change an authorization factor or set of authorization factors used within the supported authorization method</li>
               <li>initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates</li>
-              <li>[<b>selection</b>: <span class="selectable-content" id="_s_404">no other functions</span>, <span class="selectable-content" id="_s_405">specify the power saving state properties</span>, <span class="selectable-content" id="_s_406">define the allowable power saving states</span>, <span class="selectable-content" id="_s_407">generate authorization factors using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr></span>, <span class="selectable-content" id="_s_408">configure authorization method</span>, <span class="selectable-content" id="_s_409">configure cryptographic functionality</span>, <span class="selectable-content" id="_s_410">disable key recovery functionality</span>, <span class="selectable-content" id="_s_411">securely update the public key needed for trusted update</span>, <span class="selectable-content" id="_s_412">configure the number of failed validation attempts required to trigger corrective behavior</span>, <span class="selectable-content" id="_s_413">configure the corrective behavior to issue in the event of an excessive number of failed validation attempts</span>, <span class="selectable-content" id="_s_414">[<b>assignment</b>: 
+              <li>[<b>selection</b>: <span class="selectable-content" id="_s_433">no other functions</span>, <span class="selectable-content" id="_s_434">specify the power saving state properties</span>, <span class="selectable-content" id="_s_435">define the allowable power saving states</span>, <span class="selectable-content" id="_s_436">generate authorization factors using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr></span>, <span class="selectable-content" id="_s_437">configure authorization method</span>, <span class="selectable-content" id="_s_438">configure cryptographic functionality</span>, <span class="selectable-content" id="_s_439">disable key recovery functionality</span>, <span class="selectable-content" id="_s_440">securely update the public key needed for trusted update</span>, <span class="selectable-content" id="_s_441">configure the number of failed validation attempts required to trigger corrective behavior</span>, <span class="selectable-content" id="_s_442">configure the corrective behavior to issue in the event of an excessive number of failed validation attempts</span>, <span class="selectable-content" id="_s_443">[<b>assignment</b>: 
      <span class="assignable-content">other management functions provided by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]</span>]]</li>
             </ol></i> 
             
@@ -1358,7 +1329,7 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           <div class="element"><div class="reqid" id="FPT_PWR_EXT.1.1"><a href="#FPT_PWR_EXT.1.1" class="abbr">FPT_PWR_EXT.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall define the following compliant power saving states: [<b>selection</b>: <span class="selectable-content" id="_s_437">S3</span>, <span class="selectable-content" id="_s_438">S4</span>, <span class="selectable-content" id="_s_439">G2(S5)</span>, <span class="selectable-content" id="_s_440">G3</span>, <span class="selectable-content" id="_s_441">[<b>assignment</b>: 
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall define the following compliant power saving states: [<b>selection</b>: <span class="selectable-content" id="_s_466">S3</span>, <span class="selectable-content" id="_s_467">S4</span>, <span class="selectable-content" id="_s_468">G2(S5)</span>, <span class="selectable-content" id="_s_469">G3</span>, <span class="selectable-content" id="_s_470">[<b>assignment</b>: 
      <span class="assignable-content">other power saving states</span>]</span>].
             <div class="appnote"><span class="note-header">Application
       Note:
@@ -1374,8 +1345,8 @@ The following sections list Common Criteria and technology terms used in this do
           
           <div class="element"><div class="reqid" id="FPT_PWR_EXT.2.1"><a href="#FPT_PWR_EXT.2.1" class="abbr">FPT_PWR_EXT.2.1</a></div><div class="reqdesc">
               For each compliant power saving state defined in <a href="#FPT_PWR_EXT.1.1">FPT_PWR_EXT.1.1</a>, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enter
-              the compliant power saving state when the following conditions occur: user-initiated request, [<b>selection</b>: <span class="selectable-content" id="_s_442">shutdown</span>, <span class="selectable-content" id="_s_443">user inactivity</span>, <span class="selectable-content" id="_s_444">request initiated by remote management system</span>, <span class="selectable-content" id="_s_445">[<b>assignment</b>: 
-     <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_446">no other conditions</span>].
+              the compliant power saving state when the following conditions occur: user-initiated request, [<b>selection</b>: <span class="selectable-content" id="_s_471">shutdown</span>, <span class="selectable-content" id="_s_472">user inactivity</span>, <span class="selectable-content" id="_s_473">request initiated by remote management system</span>, <span class="selectable-content" id="_s_474">[<b>assignment</b>: 
+     <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_475">no other conditions</span>].
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">If volatile memory is not erased as part of an unexpected power shutdown sequence then guidance documentation must define mitigation activities (e.g. how long users should wait after an unexpected power-down before volatile memory can be considered erased).</span></div></div></div>
@@ -1394,11 +1365,11 @@ The following sections list Common Criteria and technology terms used in this do
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.1"><a href="#FPT_TUD_EXT.1.1" class="abbr">FPT_TUD_EXT.1.1</a></div><div class="reqdesc">
              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide [<i>authorized users</i>] the ability to
               query the current version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> 
-                [<b>selection</b>: <span class="selectable-content" id="_s_455">software</span>, <span class="selectable-content" id="_s_456">firmware</span>].
+                [<b>selection</b>: <span class="selectable-content" id="_s_484">software</span>, <span class="selectable-content" id="_s_485">firmware</span>].
             </div></div>
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.2"><a href="#FPT_TUD_EXT.1.2" class="abbr">FPT_TUD_EXT.1.2</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide [<i>authorized users</i>] the ability to initiate updates to <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> 
-                [<b>selection</b>: <span class="selectable-content" id="_s_459">software</span>, <span class="selectable-content" id="_s_460">firmware</span>].
+                [<b>selection</b>: <span class="selectable-content" id="_s_488">software</span>, <span class="selectable-content" id="_s_489">firmware</span>].
             </div></div>
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.3"><a href="#FPT_TUD_EXT.1.3" class="abbr">FPT_TUD_EXT.1.3</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall verify updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> software using a [<i>digital signature <b>as specified in <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></b></i>] by the manufacturer prior to installing those updates.
@@ -2463,7 +2434,140 @@ The following sections list Common Criteria and technology terms used in this do
                   transported should be at least the security strength of the key it is protecting.
                 </span></div></div></div>
           
-            </div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+            </div><div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4><div class="statustag"><p><i><b>This component may also be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> as if optional.</b></i></p></div>
+			  
+			  
+			 
+			  			
+			    		
+			<div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc"> 
+					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [digital signature verification] in accordance with a specified 
+					cryptographic algorithm  
+					
+						
+						
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+						and cryptographic key sizes
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+						that meet the following:
+						
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+						<p></p><p></p>The following table provides the allowable choices for
+										completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.
+					
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-sigver-sels" data-counter-type="ct-Table" id="tab-fcs-cop-sigver-sels">Table <span class="counter">10</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
+					<tr>
+						<th>Identifier</th>
+						
+						<th>Cryptographic algorithm</th>
+						
+						<th>Cryptographic key sizes</th>
+						
+						<th>List of standards</th>
+						
+					</tr>
+
+					
+					<tr>
+						<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PKCS</td>
+						<td>RSASSA-PKCS1-v1_5</td>
+						<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_161">3072</span>, <span class="selectable-content" id="_s_162">4096</span>, <span class="selectable-content" id="_s_163">6144</span>, <span class="selectable-content" id="_s_164">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_165"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_166"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+						<td>
+								RFC 8017 (Section 8.2) [PKCS #1 v2.2]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]
+						</td>
+					</tr>
+
+
+					<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PSS</td>
+							<td>RSASSA-PSS</td>
+							<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_168">3072</span>, <span class="selectable-content" id="_s_169">4096</span>, <span class="selectable-content" id="_s_170">6144</span>, <span class="selectable-content" id="_s_171">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+							<td>
+								RFC 8017 (Section 8.1) [PKCS#1 v2.2]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]
+							</td>
+						</tr>
+
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td> 
+							<td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="_s_175">P-384</span>, <span class="selectable-content" id="_s_176">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_179"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>][<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p>
+									<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]
+							</td>
+						</tr>
+
+		
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
+							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_182">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_184">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_185">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_187">SHAKE256</span>]</span></li></ul>]<p></p>
+								Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="_s_188">1</span>, <span class="selectable-content" id="_s_189">2</span>, <span class="selectable-content" id="_s_190">4</span>, <span class="selectable-content" id="_s_191">8</span>]<p></p>
+								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_192">5</span>, <span class="selectable-content" id="_s_193">10</span>, <span class="selectable-content" id="_s_194">15</span>, <span class="selectable-content" id="_s_195">20</span>, <span class="selectable-content" id="_s_196">25</span>]
+							</td>
+							<td>RFC 8554 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>]<p></p>
+								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+							</td>
+						</tr>
+
+						
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
+							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_198">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_200">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_201">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_202"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_203">SHAKE256</span>]</span></li></ul>]<p></p>
+								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_204">10</span>, <span class="selectable-content" id="_s_205">16</span>, <span class="selectable-content" id="_s_206">20</span>]
+							</td>
+							<td>RFC 8391 [<abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]<p></p>
+								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+							</td>
+						</tr>
+
+						
+						
+						<tr>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr> Signature Verification</td>
+							<td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</td>
+							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td>
+						</tr>
+
+					
+				
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+					This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if digital signature verification is a service provided by 
+					the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to tenant software, or if digital signature verification is used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself to 
+					support or implement <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-specified security functionality.<p></p> 
+					Specifically, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author chooses "<i>implement an authenticated platform
+					firmware update mechanism as described in FPT_TUD_EXT.2</i>" or "<i>implement a delayed-authentication platform
+					firmware update mechanism as described in FPT_TUD_EXT.3</i>" in <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>; or if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author 
+					selects "<i>verification of a digital signature by trusted code/data</i>" in FPT_ROT_EXT.2.<p></p>	
+					If this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a> must also be claimed.<p></p>
+					The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. 
+					For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the 
+					parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature
+					algorithms, the key size specified must match the selection for the curve used in the algorithm.<p></p>
+					For elliptic curve-based schemes, the key size refers to the binary logarithm (log2) of the order of the
+					base point. As the preferred approach for digital signatures, elliptic curves will be required after all the
+					necessary standards and other supporting information are fully established.<p></p>
+					The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may contain a public key which is integrity protected (e.g., in hardware), in which 
+					case the FDP_ITC.1 and FDP_ITC.2 dependencies do not apply.  In this case, no dependencies 
+					may be chosen.  For signature verifications, private keys are not necessary, so there are no
+					dependencies required for generating or destroying cryptographic keys.<p></p>
+					If <abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr> is claimed, then FCS_COP.1/XOF must also be claimed.
+				</span></div></div></div>
+			
+		</div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>.
            </i></b></div>
                
@@ -2488,7 +2592,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 								completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -2506,7 +2610,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td>
 							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td>
 							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_181"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_182"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_209"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_210"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_211"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_212"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
 							</td>
 						</tr>
 
@@ -2517,7 +2621,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative
 								integers starting at an arbitrary non-negative integer</td>
 							<td>512 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_185"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_187"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_188"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_214"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_215"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_216"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_217"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
 							</td>
 						</tr>
 
@@ -2525,13 +2629,13 @@ The following sections list Common Criteria and technology terms used in this do
 						
 						<tr>
 						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_190">deterministic</span>, <span class="selectable-content" id="_s_191"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_219">deterministic</span>, <span class="selectable-content" id="_s_220"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
 							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
-							[<b>selection</b>: <span class="selectable-content" id="_s_192">96</span>, <span class="selectable-content" id="_s_193">104</span>, <span class="selectable-content" id="_s_194">112</span>, <span class="selectable-content" id="_s_195">120</span>, <span class="selectable-content" id="_s_196">128</span>] bits.
+							[<b>selection</b>: <span class="selectable-content" id="_s_221">96</span>, <span class="selectable-content" id="_s_222">104</span>, <span class="selectable-content" id="_s_223">112</span>, <span class="selectable-content" id="_s_224">120</span>, <span class="selectable-content" id="_s_225">128</span>] bits.
 						</td>
 						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_197"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_198"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-							[<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_200"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
+						<td>[<b>selection</b>: <span class="selectable-content" id="_s_226"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_227"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+							[<b>selection</b>: <span class="selectable-content" id="_s_228"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_229"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
 						</td></tr>
 
 					</table><div class="appnote"><span class="note-header">Application
@@ -2579,7 +2683,7 @@ The following sections list Common Criteria and technology terms used in this do
 							<p></p><p></p>The following table provides the allowed choices for
 										completion of the selection operations of <a href="#FCS_CKM.5">FCS_CKM.5</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-ckm-keydrv-sels" data-counter-type="ct-Table" id="fcs-ckm-keydrv-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_CKM.5">FCS_CKM.5</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-ckm-keydrv-sels" data-counter-type="ct-Table" id="fcs-ckm-keydrv-sels">Table <span class="counter">12</span></span>: Allowed choices for <a href="#FCS_CKM.5">FCS_CKM.5</a></caption>
 						<tr>
 							<th>Key type</th>
 							
@@ -2598,30 +2702,30 @@ The following sections list Common Criteria and technology terms used in this do
 						<tr>
 							<td>KDF-CTR</td>  
 							<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-dirgen">Direct Generation from a Random
-									Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_203">Concatenated keys</span>]</td>
+									Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_232">Concatenated keys</span>]</td>
 							<td>KPF2 - KDF in Counter Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_208">256</span>, <span class="selectable-content" id="_s_209">384</span>, <span class="selectable-content" id="_s_210">512</span>] bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_211"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.2) [KPF2]</span>, <span class="selectable-content" id="_s_212"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.1) [KDF in Counter Mode]</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_237">256</span>, <span class="selectable-content" id="_s_238">384</span>, <span class="selectable-content" id="_s_239">512</span>] bits</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_240"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.2) [KPF2]</span>, <span class="selectable-content" id="_s_241"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.1) [KDF in Counter Mode]</span>]</td>
 						</tr>
 
 
 						
 						<tr>
 							<td>KDF-FB</td>  
-							<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_215">Concatenated keys</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_244">Concatenated keys</span>]</td>
 							<td>KPF3 - KDF in Feedback Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_220">256</span>, <span class="selectable-content" id="_s_221">384</span>, <span class="selectable-content" id="_s_222">512</span>] bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_223"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.3) [KPF3]</span>, <span class="selectable-content" id="_s_224"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.2) [KDF in Feedback Mode]</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_249">256</span>, <span class="selectable-content" id="_s_250">384</span>, <span class="selectable-content" id="_s_251">512</span>] bits</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_252"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.3) [KPF3]</span>, <span class="selectable-content" id="_s_253"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.2) [KDF in Feedback Mode]</span>]</td>
 						</tr>
 
 
 						
 						<tr>
 							<td>KDF-DPI</td> 
-								<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_227">Concatenated keys</span>]</td>
+								<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_256">Concatenated keys</span>]</td>
 							<td>KDF in Double Pipeline Iteration Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_232">256</span>, <span class="selectable-content" id="_s_233">384</span>, <span class="selectable-content" id="_s_234">512</span>]bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_235"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.4) [KPF4]</span>, <span class="selectable-content" id="_s_236"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.3) [KDF in Double-Pipeline Iteration Mode]</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_261">256</span>, <span class="selectable-content" id="_s_262">384</span>, <span class="selectable-content" id="_s_263">512</span>]bits</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_264"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.4) [KPF4]</span>, <span class="selectable-content" id="_s_265"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.3) [KDF in Double-Pipeline Iteration Mode]</span>]</td>
 						</tr>
 
 						
@@ -2630,8 +2734,8 @@ The following sections list Common Criteria and technology terms used in this do
 						<tr>
 							<td>KDF-HASH</td>  
 							<td>Shared secret</td>
-							<td>Hash function [<b>selection</b>: <span class="selectable-content" id="_s_238"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_239"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_240">256</span>, <span class="selectable-content" id="_s_241">384</span>, <span class="selectable-content" id="_s_242">512</span>] bits</td>
+							<td>Hash function [<b>selection</b>: <span class="selectable-content" id="_s_267"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_268"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_269">256</span>, <span class="selectable-content" id="_s_270">384</span>, <span class="selectable-content" id="_s_271">512</span>] bits</td>
 							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Option 1) [One-Step Key Derivation]</td>
 						</tr>
 
@@ -2640,8 +2744,8 @@ The following sections list Common Criteria and technology terms used in this do
 						<tr>
 							<td>KDF-MAC-1S</td>  
 							<td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information</td>
-							<td>Keyed hash [<b>selection</b>: <span class="selectable-content" id="_s_244"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_245"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_246"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_247">256</span>, <span class="selectable-content" id="_s_248">384</span>, <span class="selectable-content" id="_s_249">512</span>] bits</td>
+							<td>Keyed hash [<b>selection</b>: <span class="selectable-content" id="_s_273"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_274"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_275"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_276">256</span>, <span class="selectable-content" id="_s_277">384</span>, <span class="selectable-content" id="_s_278">512</span>] bits</td>
 							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Options 2, 3) [One-Step Key Derivation]</td>
 						</tr>
 
@@ -2650,10 +2754,10 @@ The following sections list Common Criteria and technology terms used in this do
 						<tr>
 							<td>KDF-MAC-2S</td>  
 							<td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information, and
-								[<b>selection</b>: <span class="selectable-content" id="_s_251">auxiliary shared secret</span>, <span class="selectable-content" id="_s_252">no other parameters</span>]</td>
-							<td>MAC Step [<b>selection</b>: <span class="selectable-content" id="_s_253"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_254"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_255"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]
-								as randomness extraction and; KDF Step [<b>selection</b>: <span class="selectable-content" id="_s_256">KDF-CTR</span>, <span class="selectable-content" id="_s_257">KDF-FB</span>, <span class="selectable-content" id="_s_258">KDF-DPI</span>].</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_259">256</span>, <span class="selectable-content" id="_s_260">384</span>, <span class="selectable-content" id="_s_261">512</span>] bits</td>
+								[<b>selection</b>: <span class="selectable-content" id="_s_280">auxiliary shared secret</span>, <span class="selectable-content" id="_s_281">no other parameters</span>]</td>
+							<td>MAC Step [<b>selection</b>: <span class="selectable-content" id="_s_282"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_283"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_284"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]
+								as randomness extraction and; KDF Step [<b>selection</b>: <span class="selectable-content" id="_s_285">KDF-CTR</span>, <span class="selectable-content" id="_s_286">KDF-FB</span>, <span class="selectable-content" id="_s_287">KDF-DPI</span>].</td>
+							<td>[<b>selection</b>: <span class="selectable-content" id="_s_288">256</span>, <span class="selectable-content" id="_s_289">384</span>, <span class="selectable-content" id="_s_290">512</span>] bits</td>
 							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 5) [Two-Step Key Derivation]</td>
 						</tr>
 
@@ -2686,14 +2790,14 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="element"><div class="reqid" id="FCS_PCC_EXT.1.1"><a href="#FCS_PCC_EXT.1.1" class="abbr">FCS_PCC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of accepting a password of at least
                   [<b>assignment</b>: 
      <span class="assignable-content">64 or more</span>] characters in the set of {upper case characters, lower case characters, numbers, and [<b>assignment</b>: 
-     <span class="assignable-content">other supported special characters</span>]} and shall perform Password-based Key Derivation Functions in accordance with a specified cryptographic algorithm <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-[<b>selection</b>: <span class="selectable-content" id="_s_305"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_306"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_307"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>], with
+     <span class="assignable-content">other supported special characters</span>]} and shall perform Password-based Key Derivation Functions in accordance with a specified cryptographic algorithm <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-[<b>selection</b>: <span class="selectable-content" id="_s_334"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_335"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_336"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>], with
                   [<b>selection</b>: <span class="selectable-content" id="fcs-pcc-ext-1-2-sel-1">[<b>assignment</b>: 
      <span class="assignable-content">10000 or more</span>] iterations</span>, <span class="selectable-content" id="fcs-pcc-ext-1-2-sel-2">[<b>assignment</b>: 
      <span class="assignable-content">1 or more</span>] iterations and
                       [<b>assignment</b>: 
      <span class="assignable-content">10000 or more</span>] subsequent rounds
                       of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> operations with a device key and PBKDF2 output per <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></span>] and output cryptographic key sizes 
-                  [<b>selection</b>: <span class="selectable-content" id="_s_310">128 bits</span>, <span class="selectable-content" id="_s_311">256 bits</span>] that meet the following: [<i><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-132</i>].
+                  [<b>selection</b>: <span class="selectable-content" id="_s_339">128 bits</span>, <span class="selectable-content" id="_s_340">256 bits</span>] that meet the following: [<i><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-132</i>].
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -2726,7 +2830,7 @@ The following sections list Common Criteria and technology terms used in this do
               
               <div class="element"><div class="reqid" id="FCS_RBG.1.1"><a href="#FCS_RBG.1.1" class="abbr">FCS_RBG.1.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform deterministic random bit generation services using
-                  [<b>selection</b>: <span class="selectable-content" id="_s_319"><i>Hash_DRBG (<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512, SHA3-256, SHA3-384, SHA3-512)</i></span>, <span class="selectable-content" id="_s_320"><i>HMAC_DRBG (<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512, SHA3-256, SHA3-384, SHA3-512)</i></span>, <span class="selectable-content" id="_s_321"><i>CTR_DRBG (<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128, <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-192, <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256)</i></span>] in accordance with [<b>selection</b>: <span class="selectable-content" id="_s_322"><i><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18031:2011</i></span>, <span class="selectable-content" id="fcs-rbg-1-1-nist"><i><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A</i></span>] after initialization with a seed.
+                  [<b>selection</b>: <span class="selectable-content" id="_s_348"><i>Hash_DRBG (<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512, SHA3-256, SHA3-384, SHA3-512)</i></span>, <span class="selectable-content" id="_s_349"><i>HMAC_DRBG (<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512, SHA3-256, SHA3-384, SHA3-512)</i></span>, <span class="selectable-content" id="_s_350"><i>CTR_DRBG (<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-128, <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-192, <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256)</i></span>] in accordance with [<b>selection</b>: <span class="selectable-content" id="_s_351"><i><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18031:2011</i></span>, <span class="selectable-content" id="fcs-rbg-1-1-nist"><i><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A</i></span>] after initialization with a seed.
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -2760,10 +2864,10 @@ The following sections list Common Criteria and technology terms used in this do
                 </span></div></div></div>
               
               <div class="element"><div class="reqid" id="FCS_RBG.1.3"><a href="#FCS_RBG.1.3" class="abbr">FCS_RBG.1.3</a></div><div class="reqdesc">
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall update the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> state by [<b>selection</b>: <span class="selectable-content" id="_s_327">reseeding</span>, <span class="selectable-content" id="_s_328">uninstantiating and reinstantiating</span>] using a [<b>selection</b>: <span class="selectable-content" id="_s_329"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise source [<b>assignment</b>: 
-     <span class="assignable-content">name of noise source</span>]</span>, <span class="selectable-content" id="_s_330"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface for seeding</span>]
-                  in the following situations: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_331">never</span></li><li style=""><span class="selectable-content" id="_s_332">on demand</span></li><li style=""><span class="selectable-content" id="_s_333">on the condition: [<b>assignment</b>: 
-     <span class="assignable-content">condition</span>]</span></li><li style=""><span class="selectable-content" id="_s_334">after [<b>assignment</b>: 
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall update the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> state by [<b>selection</b>: <span class="selectable-content" id="_s_356">reseeding</span>, <span class="selectable-content" id="_s_357">uninstantiating and reinstantiating</span>] using a [<b>selection</b>: <span class="selectable-content" id="_s_358"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise source [<b>assignment</b>: 
+     <span class="assignable-content">name of noise source</span>]</span>, <span class="selectable-content" id="_s_359"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface for seeding</span>]
+                  in the following situations: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_360">never</span></li><li style=""><span class="selectable-content" id="_s_361">on demand</span></li><li style=""><span class="selectable-content" id="_s_362">on the condition: [<b>assignment</b>: 
+     <span class="assignable-content">condition</span>]</span></li><li style=""><span class="selectable-content" id="_s_363">after [<b>assignment</b>: 
      <span class="assignable-content">time</span>]</span></li></ul>]
                   in accordance with [<b>assignment</b>: 
      <span class="assignable-content">list of standards</span>].
@@ -2796,7 +2900,7 @@ The following sections list Common Criteria and technology terms used in this do
            </i></b></div>
               
           <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> using a [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="_s_335"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based noise source</span>, <span class="selectable-content" id="_s_336"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based noise source</span>] [<b>assignment</b>: 
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> using a [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="_s_364"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based noise source</span>, <span class="selectable-content" id="_s_365"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based noise source</span>] [<b>assignment</b>: 
      <span class="assignable-content">name of noise source</span>] with a minimum of [<b>assignment</b>: 
      <span class="assignable-content">number of bits</span>] bits of min-entropy.
                 <div class="appnote"><span class="note-header">Application
@@ -2808,8 +2912,8 @@ The following sections list Common Criteria and technology terms used in this do
            </i></b></div>
               
           <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> using [<b>selection</b>: <span class="selectable-content" id="_s_337">[<b>assignment</b>: 
-     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based noise sources</span>, <span class="selectable-content" id="_s_338">[<b>assignment</b>: 
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> using [<b>selection</b>: <span class="selectable-content" id="_s_366">[<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based noise sources</span>, <span class="selectable-content" id="_s_367">[<b>assignment</b>: 
      <span class="assignable-content"> number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based noise sources</span>].
                 <div class="appnote"><span class="note-header">Application
       Note:
@@ -2824,7 +2928,7 @@ The following sections list Common Criteria and technology terms used in this do
               
           <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>assignment</b>: 
-     <span class="assignable-content"> combining operation</span>] [<b>selection</b>: <span class="selectable-content" id="_s_339">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise sources</span>, <span class="selectable-content" id="_s_340"> input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interfaces for seeding)</span>] to create the entropy input into the derivation function as defined in [<b>assignment</b>: 
+     <span class="assignable-content"> combining operation</span>] [<b>selection</b>: <span class="selectable-content" id="_s_368">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> noise sources</span>, <span class="selectable-content" id="_s_369"> input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interfaces for seeding)</span>] to create the entropy input into the derivation function as defined in [<b>assignment</b>: 
      <span class="assignable-content"> list of standards</span>], resulting in a minimum of [<b>assignment</b>: 
      <span class="assignable-content"> number of bits</span>] bits of min-entropy.
 
@@ -2844,7 +2948,7 @@ The following sections list Common Criteria and technology terms used in this do
               
               
               <div class="element"><div class="reqid" id="FCS_SMC_EXT.1.1"><a href="#FCS_SMC_EXT.1.1" class="abbr">FCS_SMC_EXT.1.1</a></div><div class="reqdesc">
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall combine submasks using the following method [<b>selection</b>: <span class="selectable-content" id="_s_341">exclusive OR (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>)</span>, <span class="selectable-content" id="_s_342"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_343"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_344"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>] to generate an [<i>intermediary key or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></i>].
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall combine submasks using the following method [<b>selection</b>: <span class="selectable-content" id="_s_370">exclusive OR (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>)</span>, <span class="selectable-content" id="_s_371"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_372"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_373"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>] to generate an [<i>intermediary key or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></i>].
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -2866,8 +2970,8 @@ The following sections list Common Criteria and technology terms used in this do
               
               <div class="element"><div class="reqid" id="FCS_VAL_EXT.1.1"><a href="#FCS_VAL_EXT.1.1" class="abbr">FCS_VAL_EXT.1.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform validation of the [<b>selection</b>: <span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-1a">submask</span>, <span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-1b">intermediate key</span>, <span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-1c"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
-                  using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>;</span></li><li style=""><span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-2b">hash the [<b>selection</b>: <span class="selectable-content" id="_s_368">submask</span>, <span class="selectable-content" id="_s_369">intermediate key</span>, <span class="selectable-content" id="_s_370"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
-                    as specified in [<b>selection</b>: <span class="selectable-content" id="fcs-val-ext-1-1-hash"><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></span>, <span class="selectable-content" id="fcs-val-ext-1-1-keyhash"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></span>] and compare it to a stored hashed [<b>selection</b>: <span class="selectable-content" id="_s_373">submask</span>, <span class="selectable-content" id="_s_374"> intermediate key</span>, <span class="selectable-content" id="_s_375"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>];</span></li><li style=""><span class="selectable-content" id="fcs-val-ext-1-1-decr">decrypt a known value using the [<b>selection</b>: <span class="selectable-content" id="_s_377">submask</span>, <span class="selectable-content" id="_s_378">intermediate key</span>, <span class="selectable-content" id="_s_379"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] specified in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> and compare it against a stored known value</span></li></ul>].
+                  using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>;</span></li><li style=""><span class="selectable-content" id="sel-fcs-val-ext-1-1-sel-2b">hash the [<b>selection</b>: <span class="selectable-content" id="_s_397">submask</span>, <span class="selectable-content" id="_s_398">intermediate key</span>, <span class="selectable-content" id="_s_399"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
+                    as specified in [<b>selection</b>: <span class="selectable-content" id="fcs-val-ext-1-1-hash"><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></span>, <span class="selectable-content" id="fcs-val-ext-1-1-keyhash"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></span>] and compare it to a stored hashed [<b>selection</b>: <span class="selectable-content" id="_s_402">submask</span>, <span class="selectable-content" id="_s_403"> intermediate key</span>, <span class="selectable-content" id="_s_404"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>];</span></li><li style=""><span class="selectable-content" id="fcs-val-ext-1-1-decr">decrypt a known value using the [<b>selection</b>: <span class="selectable-content" id="_s_406">submask</span>, <span class="selectable-content" id="_s_407">intermediate key</span>, <span class="selectable-content" id="_s_408"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] specified in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> and compare it against a stored known value</span></li></ul>].
                 </div></div>
               <div class="element"><div class="reqid" id="FCS_VAL_EXT.1.2"><a href="#FCS_VAL_EXT.1.2" class="abbr">FCS_VAL_EXT.1.2</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require validation of the [<i><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></i>] prior to [<i>forwarding the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr></i>].
@@ -2878,13 +2982,13 @@ The following sections list Common Criteria and technology terms used in this do
                     defined in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.
                 </span></div></div></div>
               <div class="element"><div class="reqid" id="FCS_VAL_EXT.1.3"><a href="#FCS_VAL_EXT.1.3" class="abbr">FCS_VAL_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall 
-                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_398">perform a key sanitization of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> upon a 
-                      [<b>selection</b>: <span class="selectable-content" id="_s_399">configurable number</span>, <span class="selectable-content" id="_s_400">[<b>assignment</b>: 
+                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_427">perform a key sanitization of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> upon a 
+                      [<b>selection</b>: <span class="selectable-content" id="_s_428">configurable number</span>, <span class="selectable-content" id="_s_429">[<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number</span>]</span>]
                       of consecutive failed validation attempts
-                    </span></li><li style=""><span class="selectable-content" id="_s_401">institute a delay such that only [<b>assignment</b>: 
-     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] can be made within a 24 hour period</span></li><li style=""><span class="selectable-content" id="_s_402">block validation after [<b>assignment</b>: 
-     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li><li style=""><span class="selectable-content" id="_s_403">require power cycle or reset the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> after [<b>assignment</b>: 
+                    </span></li><li style=""><span class="selectable-content" id="_s_430">institute a delay such that only [<b>assignment</b>: 
+     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] can be made within a 24 hour period</span></li><li style=""><span class="selectable-content" id="_s_431">block validation after [<b>assignment</b>: 
+     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li><li style=""><span class="selectable-content" id="_s_432">require power cycle or reset the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> after [<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li></ul>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -2920,22 +3024,22 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           <div class="element"><div class="reqid" id="FPT_TST.1.1"><a href="#FPT_TST.1.1" class="abbr">FPT_TST.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests [<b>selection</b>: <span class="selectable-content" id="_s_447">during initial start-up</span>, <span class="selectable-content" id="_s_448">at the conditions [<i>before the function is first invoked</i>]</span>]
-              to demonstrate the correct operation of [<b>selection</b>: <span class="selectable-content" id="_s_449">[<b>assignment</b>: 
-     <span class="assignable-content">parts of  <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]</span>, <span class="selectable-content" id="_s_450">the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]:
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests [<b>selection</b>: <span class="selectable-content" id="_s_476">during initial start-up</span>, <span class="selectable-content" id="_s_477">at the conditions [<i>before the function is first invoked</i>]</span>]
+              to demonstrate the correct operation of [<b>selection</b>: <span class="selectable-content" id="_s_478">[<b>assignment</b>: 
+     <span class="assignable-content">parts of  <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]</span>, <span class="selectable-content" id="_s_479">the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]:
 			  [<b>assignment</b>: 
      <span class="assignable-content">list of self-tests run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].              
             </div></div>
           
           <div class="element"><div class="reqid" id="FPT_TST.1.2"><a href="#FPT_TST.1.2" class="abbr">FPT_TST.1.2</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of
-              [<b>selection</b>: <span class="selectable-content" id="_s_451">[<b>assignment</b>: 
-     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>]</span>, <span class="selectable-content" id="_s_452"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>].
+              [<b>selection</b>: <span class="selectable-content" id="_s_480">[<b>assignment</b>: 
+     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>]</span>, <span class="selectable-content" id="_s_481"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>].
             </div></div>
           
           <div class="element"><div class="reqid" id="FPT_TST.1.3"><a href="#FPT_TST.1.3" class="abbr">FPT_TST.1.3</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of [<b>selection</b>: <span class="selectable-content" id="_s_453">[<b>assignment</b>: 
-     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> </span>]</span>, <span class="selectable-content" id="_s_454"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of [<b>selection</b>: <span class="selectable-content" id="_s_482">[<b>assignment</b>: 
+     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> </span>]</span>, <span class="selectable-content" id="_s_483"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is a required dependency of <a href="#FCS_RBG.1">FCS_RBG.1</a> and the cryptographic requirements that are selectable in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>. It is intended to require that any <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> undergo health testing to ensure that the random bit generation functionality has not been degraded. If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports multiple DRBGs, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be iterated to describe the self-test behavior for each.
@@ -2950,7 +3054,7 @@ The following sections list Common Criteria and technology terms used in this do
 
 	All extended components specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> are listed in this table:
 
-<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">12</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="Cryptographic Support (FCS)"><td>Cryptographic Support (FCS)</td><td>FCS_AFA_EXT Authorization Factor Acquisition<br/>FCS_KYC_EXT Key Chaining<br/>FCS_PCC_EXT Cryptographic Password Construction and Conditioning<br/>FCS_SMC_EXT Submask Combining<br/>FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)<br/>FCS_VAL_EXT Validation of Cryptographic Elements<br/></td></tr><tr data-sortkey="Protection of the TSF (FPT)"><td>Protection of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> (FPT)</td><td>FPT_KYP_EXT Key and Key Material Protection<br/>FPT_PWR_EXT Power Management<br/>FPT_TUD_EXT Trusted Update<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="Cryptographic Support (FCS)"><h3 id="ext-comp-FCS" class="indexable" data-level="3">C.2.1 Cryptographic Support (FCS)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
+<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">13</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="Cryptographic Support (FCS)"><td>Cryptographic Support (FCS)</td><td>FCS_AFA_EXT Authorization Factor Acquisition<br/>FCS_KYC_EXT Key Chaining<br/>FCS_PCC_EXT Cryptographic Password Construction and Conditioning<br/>FCS_SMC_EXT Submask Combining<br/>FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)<br/>FCS_VAL_EXT Validation of Cryptographic Elements<br/></td></tr><tr data-sortkey="Protection of the TSF (FPT)"><td>Protection of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> (FPT)</td><td>FPT_KYP_EXT Key and Key Material Protection<br/>FPT_PWR_EXT Power Management<br/>FPT_TUD_EXT Trusted Update<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="Cryptographic Support (FCS)"><h3 id="ext-comp-FCS" class="indexable" data-level="3">C.2.1 Cryptographic Support (FCS)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
 	 FCS class originally defined by <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2:
 	<h3 id="ext-comp-FCS_AFA_EXT" class="indexable" data-level="4">C.2.1.1 FCS_AFA_EXT Authorization Factor Acquisition</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family address the ability for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to accept a variety of authorization factors. 
             </div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FCS_AFA_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">2</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>,
@@ -2979,38 +3083,38 @@ The following sections list Common Criteria and technology terms used in this do
             Note that this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> does not include FCS_KYC_EXT.2; it is only included here to provide a complete definition of the FCS_KYC_EXT family.</p><h4>Management: FCS_KYC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_KYC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_KYC_EXT.1 Key Chaining (Initiator)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>
                 FCS_CKM.1 Cryptographic Key Generation
                 </td></tr></table><h4 id="ext-comp-FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a key chain of: 
-                    [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_273">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_274">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
-                        [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_275">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_276">key transport as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_277">key wrapping as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_278">key derivation as specified in <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a></span></li><li style=""><span class="selectable-content" id="_s_279">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a></span></li></ul>]</span></li></ul>]
+                    [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_302">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_303">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
+                        [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_304">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_305">key transport as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_306">key wrapping as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_307">key derivation as specified in <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a></span></li><li style=""><span class="selectable-content" id="_s_308">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a></span></li></ul>]</span></li></ul>]
                      while maintaining an effective strength of [<i>256 bits</i>] for symmetric keys and an effective strength of 
-                      [<b>selection</b>: <span class="selectable-content" id="_s_280">not applicable</span>, <span class="selectable-content" id="_s_281">128 bits</span>, <span class="selectable-content" id="_s_282">192 bits</span>, <span class="selectable-content" id="_s_283">256 bits</span>] for asymmetric keys.<h4 id="ext-comp-FCS_KYC_EXT.1.2">FCS_KYC_EXT.1.2</h4>
+                      [<b>selection</b>: <span class="selectable-content" id="_s_309">not applicable</span>, <span class="selectable-content" id="_s_310">128 bits</span>, <span class="selectable-content" id="_s_311">192 bits</span>, <span class="selectable-content" id="_s_312">256 bits</span>] for asymmetric keys.<h4 id="ext-comp-FCS_KYC_EXT.1.2">FCS_KYC_EXT.1.2</h4>
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide at least a [<i>256 bit</i>] <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to [<b>assignment</b>: 
      <span class="assignable-content">one or more external entities</span>]
                     [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs-kyc-ext-1-2-sel-2a">after the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> has successfully performed the validation process as specified in <a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>.</span></li><li style=""><span class="selectable-content" id="fcs-kyc-ext-1-2-sel-2b">without validation taking place.</span></li></ul>] 
                 </div><h4>Management: FCS_KYC_EXT.2</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_KYC_EXT.2</h4><p>There are no audit events foreseen.</p><h4>FCS_KYC_EXT.2 Key Chaining (Recipient) </h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies</td></tr></table><h4 id="ext-comp-FCS_KYC_EXT.2.1">FCS_KYC_EXT.2.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall accept a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> of at least 256 bits.<h4 id="ext-comp-FCS_KYC_EXT.2.2">FCS_KYC_EXT.2.2</h4>
-                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a chain of intermediary keys originating from the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_295">key derivation as specified in <a href="#FCS_CKM.5">FCS_CKM.5</a></span></li><li style=""><span class="selectable-content" id="_s_296">key wrapping as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_297">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_298">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a></span></li></ul>] while maintaining an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_299">128 bits</span>, <span class="selectable-content" id="_s_300">256 bits</span>]
-                while maintaining an effective strength of [256 bits] for symmetric keys and an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_301">not applicable</span>, <span class="selectable-content" id="_s_302">128 bits</span>, <span class="selectable-content" id="_s_303">192 bits</span>, <span class="selectable-content" id="_s_304">256 bits</span>] for asymmetric keys.
+                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a chain of intermediary keys originating from the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_324">key derivation as specified in <a href="#FCS_CKM.5">FCS_CKM.5</a></span></li><li style=""><span class="selectable-content" id="_s_325">key wrapping as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_326">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_327">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a></span></li></ul>] while maintaining an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_328">128 bits</span>, <span class="selectable-content" id="_s_329">256 bits</span>]
+                while maintaining an effective strength of [256 bits] for symmetric keys and an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_330">not applicable</span>, <span class="selectable-content" id="_s_331">128 bits</span>, <span class="selectable-content" id="_s_332">192 bits</span>, <span class="selectable-content" id="_s_333">256 bits</span>] for asymmetric keys.
               </div></div><h3 id="ext-comp-FCS_PCC_EXT" class="indexable" data-level="4">C.2.1.3 FCS_PCC_EXT Cryptographic Password Construction and Conditioning</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family ensures that passwords used to produce the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are robust (in terms of their composition) and are conditioned to provide an appropriate-length bit string.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FCS_PCC_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a>,
              Cryptographic Password Construction and Conditioning,
               requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to accept passwords of a certain composition and condition them appropriately. </p><h4>Management: FCS_PCC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_PCC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_PCC_EXT.1 Cryptographic Password Construction and Conditioning</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FCS_COP.1 Cryptographic Operation</td></tr></table><h4 id="ext-comp-FCS_PCC_EXT.1.1">FCS_PCC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be capable of accepting a password of at least [<b>assignment</b>: 
      <span class="assignable-content">64 or more</span>] characters in the set of {upper case characters, lower case characters, numbers, and [<b>assignment</b>: 
-     <span class="assignable-content"> other supported special characters</span>]} and shall perform Password-based Key Derivation Functions in accordance with a specified cryptographic algorithm <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-[<b>selection</b>: <span class="selectable-content" id="_s_312"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_313"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_314"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>], with
-                    [<b>selection</b>: <span class="selectable-content" id="_s_315">[<b>assignment</b>: 
-     <span class="assignable-content">10000 or more</span>] iterations</span>, <span class="selectable-content" id="_s_316">[<b>assignment</b>: 
+     <span class="assignable-content"> other supported special characters</span>]} and shall perform Password-based Key Derivation Functions in accordance with a specified cryptographic algorithm <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-[<b>selection</b>: <span class="selectable-content" id="_s_341"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_342"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_343"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>], with
+                    [<b>selection</b>: <span class="selectable-content" id="_s_344">[<b>assignment</b>: 
+     <span class="assignable-content">10000 or more</span>] iterations</span>, <span class="selectable-content" id="_s_345">[<b>assignment</b>: 
      <span class="assignable-content">1 or more</span>] iterations and [<b>assignment</b>: 
      <span class="assignable-content">10000 or more</span>] subsequent rounds of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> operations with a device key and PBKDF2 output per FCS_COP.1</span>] and output cryptographic key sizes 
-                    [<b>selection</b>: <span class="selectable-content" id="_s_317">128 bits</span>, <span class="selectable-content" id="_s_318">256 bits</span>] that meet the following: [<b>assignment</b>: 
+                    [<b>selection</b>: <span class="selectable-content" id="_s_346">128 bits</span>, <span class="selectable-content" id="_s_347">256 bits</span>] that meet the following: [<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_PBKDF">PBKDF</a></abbr> recommendation or
                       specification</span>].</div></div><h3 id="ext-comp-FCS_SMC_EXT" class="indexable" data-level="4">C.2.1.4 FCS_SMC_EXT Submask Combining</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family specifies the means by which submasks are combined, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports more than one submask being used to derive or protect the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FCS_SMC_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>,
              Submask Combining ,
-             requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to combine the submasks in a predictable fashion.</p><h4>Management: FCS_SMC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_SMC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_SMC_EXT.1 Submask Combining </h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FCS_COP.1 Cryptographic Operation</td></tr></table><h4 id="ext-comp-FCS_SMC_EXT.1.1">FCS_SMC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall combine submasks using the following method [<b>selection</b>: <span class="selectable-content" id="_s_345">exclusive OR (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>)</span>, <span class="selectable-content" id="_s_346"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_347"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_348"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>] to generate an [<b>assignment</b>: 
+             requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to combine the submasks in a predictable fashion.</p><h4>Management: FCS_SMC_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_SMC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_SMC_EXT.1 Submask Combining </h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FCS_COP.1 Cryptographic Operation</td></tr></table><h4 id="ext-comp-FCS_SMC_EXT.1.1">FCS_SMC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall combine submasks using the following method [<b>selection</b>: <span class="selectable-content" id="_s_374">exclusive OR (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>)</span>, <span class="selectable-content" id="_s_375"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_376"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_377"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>] to generate an [<b>assignment</b>: 
      <span class="assignable-content">types of keys</span>].</div></div><h3 id="ext-comp-FCS_SNI_EXT" class="indexable" data-level="4">C.2.1.5 FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family ensures that salts, nonces, and IVs are well formed.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FCS_SNI_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a>,
              Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation),
              requires the generation of salts, nonces, and IVs to be used by the cryptographic components of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to be performed in the specified manner. </p><h4>Management: FCS_SNI_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_SNI_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FCS_RBG.1">FCS_RBG.1</a> Cryptographic Operation (Random Bit Generation)</td></tr></table><h4 id="ext-comp-FCS_SNI_EXT.1.1">FCS_SNI_EXT.1.1</h4>
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_350">use salts that are generated by a 
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_379">use salts that are generated by a 
                       [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]
                     </span></li></ul>].
                 <h4 id="ext-comp-FCS_SNI_EXT.1.2">FCS_SNI_EXT.1.2</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use 
-                  [<b>selection</b>: <span class="selectable-content" id="_s_355">no nonces</span>, <span class="selectable-content" id="_s_356">unique nonces with a minimum size of [<b>assignment</b>: 
+                  [<b>selection</b>: <span class="selectable-content" id="_s_384">no nonces</span>, <span class="selectable-content" id="_s_385">unique nonces with a minimum size of [<b>assignment</b>: 
      <span class="assignable-content">number of bits</span>] bits</span>].<h4 id="ext-comp-FCS_SNI_EXT.1.3">FCS_SNI_EXT.1.3</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall 
                   [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2a"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>: IVs shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2b"><abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>: Nonce shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2c"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>: No <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2d"><abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>: <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> shall be non-repeating. The number of invocations of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> shall not exceed 2^32 for a given secret key</span></li></ul>]
                   </span></li></ul>].
@@ -3020,20 +3124,20 @@ The following sections list Common Criteria and technology terms used in this do
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to validate submasks and BEVs by one or more of the specified methods.</p><h4>Management: FCS_VAL_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_VAL_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_VAL_EXT.1 Validation </h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>
                 <p>FCS_COP.1 Cryptographic Operation</p>                
               </td></tr></table><h4 id="ext-comp-FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</h4>
-                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform validation of the [<b>selection</b>: <span class="selectable-content" id="_s_380">submask</span>, <span class="selectable-content" id="_s_381">intermediate key</span>, <span class="selectable-content" id="_s_382"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
-                    using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_383">key wrap as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>;</span></li><li style=""><span class="selectable-content" id="_s_384">hash the [<b>selection</b>: <span class="selectable-content" id="_s_385">submask</span>, <span class="selectable-content" id="_s_386">intermediate key</span>, <span class="selectable-content" id="_s_387"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
+                    The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform validation of the [<b>selection</b>: <span class="selectable-content" id="_s_409">submask</span>, <span class="selectable-content" id="_s_410">intermediate key</span>, <span class="selectable-content" id="_s_411"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
+                    using the following methods: [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_412">key wrap as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>;</span></li><li style=""><span class="selectable-content" id="_s_413">hash the [<b>selection</b>: <span class="selectable-content" id="_s_414">submask</span>, <span class="selectable-content" id="_s_415">intermediate key</span>, <span class="selectable-content" id="_s_416"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>]
                         as specified in [<b>assignment</b>: 
-     <span class="assignable-content">cryptographic operation requirement</span>] and compare it to a stored hashed [<b>selection</b>: <span class="selectable-content" id="_s_388">submask</span>, <span class="selectable-content" id="_s_389"> intermediate key</span>, <span class="selectable-content" id="_s_390"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>];</span></li><li style=""><span class="selectable-content" id="_s_391">decrypt a known value using the [<b>selection</b>: <span class="selectable-content" id="_s_392">submask</span>, <span class="selectable-content" id="_s_393">intermediate key</span>, <span class="selectable-content" id="_s_394"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] specified in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> and compare it against a stored known value </span></li></ul>].
-                  <h4 id="ext-comp-FCS_VAL_EXT.1.2">FCS_VAL_EXT.1.2</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require validation of the [<b>selection</b>: <span class="selectable-content" id="_s_395">submask</span>, <span class="selectable-content" id="_s_396">intermediate key</span>, <span class="selectable-content" id="_s_397"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] prior to [<b>assignment</b>: 
+     <span class="assignable-content">cryptographic operation requirement</span>] and compare it to a stored hashed [<b>selection</b>: <span class="selectable-content" id="_s_417">submask</span>, <span class="selectable-content" id="_s_418"> intermediate key</span>, <span class="selectable-content" id="_s_419"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>];</span></li><li style=""><span class="selectable-content" id="_s_420">decrypt a known value using the [<b>selection</b>: <span class="selectable-content" id="_s_421">submask</span>, <span class="selectable-content" id="_s_422">intermediate key</span>, <span class="selectable-content" id="_s_423"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] specified in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> and compare it against a stored known value </span></li></ul>].
+                  <h4 id="ext-comp-FCS_VAL_EXT.1.2">FCS_VAL_EXT.1.2</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require validation of the [<b>selection</b>: <span class="selectable-content" id="_s_424">submask</span>, <span class="selectable-content" id="_s_425">intermediate key</span>, <span class="selectable-content" id="_s_426"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span>] prior to [<b>assignment</b>: 
      <span class="assignable-content">activity requiring validation</span>].
                   <h4 id="ext-comp-FCS_VAL_EXT.1.3">FCS_VAL_EXT.1.3</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall 
-                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_398">perform a key sanitization of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> upon a 
-                      [<b>selection</b>: <span class="selectable-content" id="_s_399">configurable number</span>, <span class="selectable-content" id="_s_400">[<b>assignment</b>: 
+                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_427">perform a key sanitization of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> upon a 
+                      [<b>selection</b>: <span class="selectable-content" id="_s_428">configurable number</span>, <span class="selectable-content" id="_s_429">[<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number</span>]</span>]
                       of consecutive failed validation attempts
-                    </span></li><li style=""><span class="selectable-content" id="_s_401">institute a delay such that only [<b>assignment</b>: 
-     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] can be made within a 24 hour period</span></li><li style=""><span class="selectable-content" id="_s_402">block validation after [<b>assignment</b>: 
-     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li><li style=""><span class="selectable-content" id="_s_403">require power cycle or reset the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> after [<b>assignment</b>: 
+                    </span></li><li style=""><span class="selectable-content" id="_s_430">institute a delay such that only [<b>assignment</b>: 
+     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] can be made within a 24 hour period</span></li><li style=""><span class="selectable-content" id="_s_431">block validation after [<b>assignment</b>: 
+     <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li><li style=""><span class="selectable-content" id="_s_432">require power cycle or reset the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> after [<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li></ul>].</div></div></span><span data-sortkey="Protection of the TSF (FPT)"><h3 id="ext-comp-FPT" class="indexable" data-level="3">C.2.2 Protection of the TSF (FPT)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
 	 FPT class originally defined by <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2:
 	<h3 id="ext-comp-FPT_KYP_EXT" class="indexable" data-level="4">C.2.2.1 FPT_KYP_EXT Key and Key Material Protection</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family requires that key and key material be protected if and when written to non-volatile storage.
@@ -3044,7 +3148,7 @@ The following sections list Common Criteria and technology terms used in this do
             <p><a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a> Key Chaining (Initiator)</p>
             <p>FCS_KYC_EXT.2 Key Chaining (Recipient)</p>
             <p><a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> Submask Combining</p>            
-          </td></tr></table><h4 id="ext-comp-FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_426">not store keys in non-volatile memory</span></li><li style=""><span class="selectable-content" id="_s_427">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1, or encrypted, as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_428">only store plaintext keys that meet any one of the following criteria [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_429">the plaintext key is not part of the key chain as specified in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></span></li><li style=""><span class="selectable-content" id="_s_430">the plaintext key will no longer provide access to the encrypted data after initial provisioning</span></li><li style=""><span class="selectable-content" id="_s_431">the plaintext key is a key split that is combined as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>, and the other half of the key split is [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_432">wrapped as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_433">encrypted as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_434">derived and not stored in non-volatile memory</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_435">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="_s_436">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]
+          </td></tr></table><h4 id="ext-comp-FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_455">not store keys in non-volatile memory</span></li><li style=""><span class="selectable-content" id="_s_456">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1, or encrypted, as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_457">only store plaintext keys that meet any one of the following criteria [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_458">the plaintext key is not part of the key chain as specified in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></span></li><li style=""><span class="selectable-content" id="_s_459">the plaintext key will no longer provide access to the encrypted data after initial provisioning</span></li><li style=""><span class="selectable-content" id="_s_460">the plaintext key is a key split that is combined as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>, and the other half of the key split is [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_461">wrapped as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_462">encrypted as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_463">derived and not stored in non-volatile memory</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_464">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="_s_465">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]
                 </span></li></ul>].
               </div></div><h3 id="ext-comp-FPT_PWR_EXT" class="indexable" data-level="4">C.2.2.2 FPT_PWR_EXT Power Management</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family defines secure behavior of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports multiple power saving states. The use of compliant power saving states (i.e. power saving states that purge security relevant data upon entry) is essential for ensuring that state transitions cannot be used as attack vectors to bypass <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> self-protection mechanisms.
             </div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FPT_PWR_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">2</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a>,
@@ -3055,14 +3159,14 @@ The following sections list Common Criteria and technology terms used in this do
             <li>Enable or disable the use of individual power saving states</li>
             <li>Specify one or more power saving state configurations</li>
           </ul></p><h4>Audit: FPT_PWR_EXT.1</h4><p>There are no auditable events foreseen.</p><h4>FPT_PWR_EXT.1 Power Saving States</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies</td></tr></table><h4 id="ext-comp-FPT_PWR_EXT.1.1">FPT_PWR_EXT.1.1</h4>
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall define the following compliant power saving states: [<b>selection</b>: <span class="selectable-content" id="_s_437">S3</span>, <span class="selectable-content" id="_s_438">S4</span>, <span class="selectable-content" id="_s_439">G2(S5)</span>, <span class="selectable-content" id="_s_440">G3</span>, <span class="selectable-content" id="_s_441">[<b>assignment</b>: 
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall define the following compliant power saving states: [<b>selection</b>: <span class="selectable-content" id="_s_466">S3</span>, <span class="selectable-content" id="_s_467">S4</span>, <span class="selectable-content" id="_s_468">G2(S5)</span>, <span class="selectable-content" id="_s_469">G3</span>, <span class="selectable-content" id="_s_470">[<b>assignment</b>: 
      <span class="assignable-content">other power saving states</span>]</span>].
             </div><h4>Management: FPT_PWR_EXT.2</h4><p>There are no management functions foreseen.</p><h4>Audit: FPT_PWR_EXT.2</h4><p>The following actions should be auditable if FAU_GEN Security audit data generation is included in the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:<ul>
             <li>Transition of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> into different power saving states</li>
           </ul></p><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a> Power Saving States</td></tr></table><h4 id="ext-comp-FPT_PWR_EXT.2.1">FPT_PWR_EXT.2.1</h4>
               For each compliant power saving state defined in <a href="#FPT_PWR_EXT.1.1">FPT_PWR_EXT.1.1</a>, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall enter
-              the compliant power saving state when the following conditions occur: user-initiated request, [<b>selection</b>: <span class="selectable-content" id="_s_442">shutdown</span>, <span class="selectable-content" id="_s_443">user inactivity</span>, <span class="selectable-content" id="_s_444">request initiated by remote management system</span>, <span class="selectable-content" id="_s_445">[<b>assignment</b>: 
-     <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_446">no other conditions</span>].
+              the compliant power saving state when the following conditions occur: user-initiated request, [<b>selection</b>: <span class="selectable-content" id="_s_471">shutdown</span>, <span class="selectable-content" id="_s_472">user inactivity</span>, <span class="selectable-content" id="_s_473">request initiated by remote management system</span>, <span class="selectable-content" id="_s_474">[<b>assignment</b>: 
+     <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_475">no other conditions</span>].
             </div></div><h3 id="ext-comp-FPT_TUD_EXT" class="indexable" data-level="4">C.2.2.3 FPT_TUD_EXT Trusted Update</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family address the requirements for updating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware and/or software.
             </div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FPT_TUD_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>,
              Trusted Update,
@@ -3074,10 +3178,10 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></p><h4>FPT_TUD_EXT.1 Trusted Update</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FCS_COP.1 Cryptographic Operation</td></tr></table><h4 id="ext-comp-FPT_TUD_EXT.1.1">FPT_TUD_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide [<b>assignment</b>: 
      <span class="assignable-content">list of subjects</span>] the ability to
                 query the current version of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> 
-                  [<b>selection</b>: <span class="selectable-content" id="_s_457">software</span>, <span class="selectable-content" id="_s_458">firmware</span>].
+                  [<b>selection</b>: <span class="selectable-content" id="_s_486">software</span>, <span class="selectable-content" id="_s_487">firmware</span>].
                 <h4 id="ext-comp-FPT_TUD_EXT.1.2">FPT_TUD_EXT.1.2</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide [<b>assignment</b>: 
      <span class="assignable-content">list of subjects</span>] the ability to initiate updates to <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> 
-                [<b>selection</b>: <span class="selectable-content" id="_s_461">software</span>, <span class="selectable-content" id="_s_462">firmware</span>].<h4 id="ext-comp-FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall verify updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> software using a [<b>selection</b>: <span class="selectable-content" id="_s_463">digital signature</span>, <span class="selectable-content" id="_s_464">published hash</span>] by the manufacturer prior to installing those updates.</div></div></span></span><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix D -  Implicitly Satisfied Requirements</h1><p>This appendix lists requirements that should be considered satisfied by products
+                [<b>selection</b>: <span class="selectable-content" id="_s_490">software</span>, <span class="selectable-content" id="_s_491">firmware</span>].<h4 id="ext-comp-FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall verify updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> software using a [<b>selection</b>: <span class="selectable-content" id="_s_492">digital signature</span>, <span class="selectable-content" id="_s_493">published hash</span>] by the manufacturer prior to installing those updates.</div></div></span></span><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix D -  Implicitly Satisfied Requirements</h1><p>This appendix lists requirements that should be considered satisfied by products
 			successfully evaluated against this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. These requirements are not featured
 			explicitly as <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> and should not be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. They are not included as 
 			standalone <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> because it would increase the time, cost, and complexity of evaluation.
@@ -3085,7 +3189,7 @@ The following sections list Common Criteria and technology terms used in this do
 			security controls. Evaluation against the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> provides evidence that these controls are present 
 			and have been evaluated.</p>
 	
-	<b><span class="ctr" data-myid="imp-sat-reqs-table" data-counter-type="ct-Table" id="imp-sat-reqs-table">Table  <span class="counter">13</span>: Implicitly Satisfied Requirements</span></b>
+	<b><span class="ctr" data-myid="imp-sat-reqs-table" data-counter-type="ct-Table" id="imp-sat-reqs-table">Table  <span class="counter">14</span>: Implicitly Satisfied Requirements</span></b>
     <table>	
 		<tr class="header"><td>Requirement</td><td>Rationale for Satisfaction</td></tr>
 	<tr>
@@ -3149,7 +3253,7 @@ The following sections list Common Criteria and technology terms used in this do
     </ul>
   </p>
 
-<h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">14</span></span>: Acronyms
+<h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">15</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AA"><abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr></span></td><td><span id="long_abbr_AA">Authorization Acquisition</span></td></tr>
 <tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_AF"><abbr class="dyn-abbr"><a href="#abbr_AF">AF</a></abbr></span></td><td><span id="long_abbr_AF">Authorization factor</span></td></tr>
@@ -3223,7 +3327,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_XMSS"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></span></td><td><span id="long_abbr_XMSS">eXtended Merkle Signature Scheme</span></td></tr>
 <tr><td><span class="term" id="abbr_XOR"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span></td><td><span id="long_abbr_XOR">Exclusive or</span></td></tr>
 <tr><td><span class="term" id="abbr_XTS"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr></span></td><td><span id="long_abbr_XTS">XEX (<abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr> Encrypt <abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr>) Tweakable Block Cipher with Ciphertext Stealing</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix H -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">15</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix H -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">16</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
 				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 
