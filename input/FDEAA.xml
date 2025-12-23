@@ -4078,8 +4078,9 @@ If ( keylen = 256 )
               </selectables>
               to demonstrate the correct operation of <selectables>
                 <selectable><assignable>parts of  TSF</assignable></selectable>
-                <selectable>TSF data</selectable>
-              </selectables>.              
+                <selectable>the TSF</selectable>
+              </selectables>:
+			  <assignable>list of self-tests run by the TSF</assignable>.              
             </title>
           </f-element>
           
