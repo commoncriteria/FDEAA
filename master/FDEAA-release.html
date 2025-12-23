@@ -630,10 +630,10 @@ function showTarget(id){
 
           }
     </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/></div><h1 class="title" style="page-break-before:auto;">collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><br/><br/><br/><br/><br/>
-      Version: 3.0<br/>2025-11-13<br/><b>Full Disk Encryption international Technical Community</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr>
+      Version: 3.0<br/>2025-12-23<br/><b>Full Disk Encryption international Technical Community</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>Round 1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr>
 <tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr>
-<tr><td>2.0</td><td>2024-03-28</td><td>Updated for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, or whatever</td></tr>
-<tr><td>3.0</td><td>2025-11-13</td><td>Updated for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, reviewing and applying modifications to the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></td></tr>
+<tr><td>2.0</td><td>2024-03-28</td><td>Second release.</td></tr>
+<tr><td>3.0</td><td>2025-12-23</td><td>Updated for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, reviewing and applying modifications to the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></td></tr>
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#sec-intro" style="text-indent:0px">1<span>Introduction</span></a><a href="#sec-ppoverview" style="text-indent:10px">1.1<span>PP Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#sec-TOEimplementation" style="text-indent:10px">1.3<span>Implementation</span></a><a href="#sec-TOEoverview" style="text-indent:10px">1.4<span>TOE Overview</span></a><a href="#sec-TOEauthorization-acquisition-introduction" style="text-indent:20px">1.4.1<span>Authorization Acquisition Introduction</span></a><a href="#sec-TOEauthorization-acquisition_security_capabilities" style="text-indent:20px">1.4.2<span>Authorization Acquisition Security Capabilities</span></a><a href="#sec-TOEInterface-Boundary" style="text-indent:20px">1.4.3<span>Interface/Boundary</span></a><a href="#sec-TOEdescription" style="text-indent:10px">1.5<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:20px">1.5.1<span>TOE Boundary</span></a><a href="#sec-usecases" style="text-indent:10px">1.6<span>Use Cases</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#sec-spd" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#sec-assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#sec-OSPs" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fcs" style="text-indent:20px">5.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">5.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.3<span>Protection of the TSF (FPT)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.4<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#ase" style="text-indent:20px">5.2.1<span>ASE: Security Target</span></a><a href="#adv" style="text-indent:20px">5.2.2<span>ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.3<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:20px">5.2.4<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
     </span></a><a href="#alc-optional" style="text-indent:20px">A.1.1<span>Class ALC: Life-cycle Support</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
     </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
@@ -873,9 +873,8 @@ The following sections list Common Criteria and technology terms used in this do
 			</dd><dt>PP Claim</dt><p></p><dd>
 					This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not claim conformance to 
 					any Protection Profile.
-				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
-					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-					<ul></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is not conformant to any 
+				</dd><p></p><dd>There are no <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed in a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> 
+					with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is not conformant to any 
 						Functional or Assurance Packages.</dd></dl>
   <h1 class="indexable" data-level="1" id="sec-spd">3 Security Problem Definition</h1>
 
@@ -920,13 +919,11 @@ The following sections list Common Criteria and technology terms used in this do
 	
 	
 	
-    <h2 class="indexable" data-level="2" id="sec-OSPs">3.3 Organizational Security Policies</h2>
+    <h2 class="indexable" data-level="2" id="sec-OSPs">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies.</p>
      
 		
 		
       
-      This document does not define any additional OSPs.
-    
        
 	
 	
@@ -1062,12 +1059,10 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="element"><div class="reqid" id="FCS_CKM.6.2"><a href="#FCS_CKM.6.2" class="abbr">FCS_CKM.6.2</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by
                   <a href="#FCS_CKM.6.1">FCS_CKM.6.1</a> in accordance with a specified cryptographic key destruction method [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_59">For volatile memory, the destruction shall be executed by a [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_60">single overwrite consisting of [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="rbg-overwrite-single">a pseudo-random pattern using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>,</span></li><li style=""><span class="selectable-content" id="_s_62">zeroes,</span></li><li style=""><span class="selectable-content" id="_s_63">ones,</span></li><li style=""><span class="selectable-content" id="_s_64">a new value of a key,</span></li><li style=""><span class="selectable-content" id="_s_65">[<b>assignment</b>: 
-     <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]
-                      </span></li><li style=""><span class="selectable-content" id="_s_66">removal of power to the memory,</span></li><li style=""><span class="selectable-content" id="_s_67">destruction of reference to the key directly followed by a request for garbage collection</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_68">
+     <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_66">removal of power to the memory,</span></li><li style=""><span class="selectable-content" id="_s_67">destruction of reference to the key directly followed by a request for garbage collection</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_68">
                       For non-volatile storage that consists of the invocation of an interface provided by the underlying platform that [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_69">logically addresses the storage location of the key and performs a [<b>selection</b>: <span class="selectable-content" id="_s_70">single</span>, <span class="selectable-content" id="_s_71">[<b>assignment</b>: 
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author defined multi-pass</span>]</span>] overwrite consisting of [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="rbg-overwrite-multi">a pseudo-random pattern using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>,</span></li><li style=""><span class="selectable-content" id="_s_73">zeroes,</span></li><li style=""><span class="selectable-content" id="_s_74">ones,</span></li><li style=""><span class="selectable-content" id="_s_75">a new value of a key,</span></li><li style=""><span class="selectable-content" id="_s_76">[<b>assignment</b>: 
-     <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_77">instructs the underlying platform to destroy the abstraction that represents the key</span></li></ul>]
-                    </span></li></ul>]
+     <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_77">instructs the underlying platform to destroy the abstraction that represents the key</span></li></ul>]</span></li></ul>]
                   that meets the following: [<i>no standard</i>].
                 <div class="appnote"><span class="note-header">Application
       Note:
@@ -1171,72 +1166,42 @@ The following sections list Common Criteria and technology terms used in this do
 					</tr>
 
 					
-					<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PKCS</td>
-						<td>RSASSA-PKCS1-v1_5</td>
-						<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_161">3072</span>, <span class="selectable-content" id="_s_162">4096</span>, <span class="selectable-content" id="_s_163">6144</span>, <span class="selectable-content" id="_s_164">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_165"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_166"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-						<td>
+					<tr><td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PKCS</td><td>RSASSA-PKCS1-v1_5</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_161">3072</span>, <span class="selectable-content" id="_s_162">4096</span>, <span class="selectable-content" id="_s_163">6144</span>, <span class="selectable-content" id="_s_164">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_165"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_166"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>
 								RFC 8017 (Section 8.2) [PKCS #1 v2.2]<p></p>
 								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]
-						</td>
-					</tr>
+						</td></tr>
 
 
-					<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PSS</td>
-							<td>RSASSA-PSS</td>
-							<td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_168">3072</span>, <span class="selectable-content" id="_s_169">4096</span>, <span class="selectable-content" id="_s_170">6144</span>, <span class="selectable-content" id="_s_171">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>
+					<tr><td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-PSS</td><td>RSASSA-PSS</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="_s_168">3072</span>, <span class="selectable-content" id="_s_169">4096</span>, <span class="selectable-content" id="_s_170">6144</span>, <span class="selectable-content" id="_s_171">8192</span>] bits and hash[<b>selection</b>: <span class="selectable-content" id="_s_172"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_173"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>
 								RFC 8017 (Section 8.1) [PKCS#1 v2.2]<p></p>
 								<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]
-							</td>
-						</tr>
+							</td></tr>
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td> 
-							<td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="_s_175">P-384</span>, <span class="selectable-content" id="_s_176">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_179"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>][<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="_s_175">P-384</span>, <span class="selectable-content" id="_s_176">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="_s_177"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_178"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_179"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="_s_180"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>][<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p>
 									<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]
-							</td>
-						</tr>
+							</td></tr>
 
 		
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td>
-							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_182">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_184">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_185">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_187">SHAKE256</span>]</span></li></ul>]<p></p>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr></td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_182">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_183"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_184">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_185">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_186"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_187">SHAKE256</span>]</span></li></ul>]<p></p>
 								Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="_s_188">1</span>, <span class="selectable-content" id="_s_189">2</span>, <span class="selectable-content" id="_s_190">4</span>, <span class="selectable-content" id="_s_191">8</span>]<p></p>
 								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_192">5</span>, <span class="selectable-content" id="_s_193">10</span>, <span class="selectable-content" id="_s_194">15</span>, <span class="selectable-content" id="_s_195">20</span>, <span class="selectable-content" id="_s_196">25</span>]
-							</td>
-							<td>RFC 8554 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>]<p></p>
+							</td><td>RFC 8554 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>]<p></p>
 								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
-							</td>
-						</tr>
+							</td></tr>
 
 						
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td>
-							<td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_198">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_200">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_201">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_202"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_203">SHAKE256</span>]</span></li></ul>]<p></p>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr></td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_198">192 bits with [<b>selection</b>: <span class="selectable-content" id="_s_199"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="_s_200">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="_s_201">256 bits with [<b>selection</b>: <span class="selectable-content" id="_s_202"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="_s_203">SHAKE256</span>]</span></li></ul>]<p></p>
 								Tree height = [<b>selection</b>: <span class="selectable-content" id="_s_204">10</span>, <span class="selectable-content" id="_s_205">16</span>, <span class="selectable-content" id="_s_206">20</span>]
-							</td>
-							<td>RFC 8391 [<abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]<p></p>
+							</td><td>RFC 8391 [<abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]<p></p>
 								 <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
-							</td>
-						</tr>
+							</td></tr>
 
 						
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr> Signature Verification</td>
-							<td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr> Signature Verification</td><td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td></tr>
 
 					
 				
@@ -1346,15 +1311,13 @@ The following sections list Common Criteria and technology terms used in this do
               
              <div class="element"><div class="reqid" id="FCS_SNI_EXT.1.1"><a href="#FCS_SNI_EXT.1.1" class="abbr">FCS_SNI_EXT.1.1</a></div><div class="reqdesc">
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_379">use salts that are generated by a 
-                      [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]
-                    </span></li></ul>].
+                      [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]</span></li></ul>].
                 </div></div>
               <div class="element"><div class="reqid" id="FCS_SNI_EXT.1.2"><a href="#FCS_SNI_EXT.1.2" class="abbr">FCS_SNI_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use 
                   [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-2-sel-1">no nonces</span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-2-sel-2">unique nonces with a minimum size of [<i>64</i>] bits</span>].</div></div>
               
               <div class="element"><div class="reqid" id="FCS_SNI_EXT.1.3"><a href="#FCS_SNI_EXT.1.3" class="abbr">FCS_SNI_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall 
-                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2a"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>: IVs shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2b"><abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>: Nonce shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2c"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>: No <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2d"><abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>: <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> shall be non-repeating. The number of invocations of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> shall not exceed 2^32 for a given secret key</span></li></ul>]
-                  </span></li></ul>].
+                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2a"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>: IVs shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2b"><abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>: Nonce shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2c"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>: No <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2d"><abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>: <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> shall be non-repeating. The number of invocations of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> shall not exceed 2^32 for a given secret key</span></li></ul>]</span></li></ul>].
 				<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -1432,9 +1395,7 @@ The following sections list Common Criteria and technology terms used in this do
           <div class="element"><div class="reqid" id="FPT_KYP_EXT.1.1"><a href="#FPT_KYP_EXT.1.1" class="abbr">FPT_KYP_EXT.1.1</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-1">not store keys in non-volatile memory</span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, or encrypted, as specified in <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a> or <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3">only store plaintext keys that meet any one of the following criteria 
 					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3a">the plaintext key is not part of the key chain as specified in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>, and the other half of the key split is 
-						  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel3ci-">wrapped as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a> or <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</span></li></ul>]
-					  </span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3e">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]
-                 </span></li></ul>].
+						  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel3ci-">wrapped as specified in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a> or <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="sel-fpt-kyp-ext-1-1-sel-3e">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]</span></li></ul>].
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -2178,13 +2139,9 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>  shall generate <b>asymmetric</b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
 			  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_1">CNSA 2.0 Compliant Algorithms:
 					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_2"><b>Leighton-Micali Signature Algorithm</b> using the parameter sets
-							[<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_3">LMS_SHAKE_M24_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_4">LMS_SHAKE_M24_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_5">LMS_SHAKE_M24_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_6">LMS_SHAKE_M24_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_7">LMS_SHAKE_M24_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_8">LMS_SHAKE_M32_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_9">LMS_SHAKE_M32_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_10">LMS_SHAKE_M32_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_11">LMS_SHAKE_M32_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_12">LMS_SHAKE_M32_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_13">LMS_SHA256_M24_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_14">LMS_SHA256_M24_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_15">LMS_SHA256_M24_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_16">LMS_SHA256_M24_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_17">LMS_SHA256_M24_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_18">LMS_SHA256_M32_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_19">LMS_SHA256_M32_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_20">LMS_SHA256_M32_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_21">LMS_SHA256_M32_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_22">LMS_SHA256_M32_H25</span>]
-						</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_23"><b>eXtended Merkle Signature Scheme Algorithm</b> using the parameter sets
-							[<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_24"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_10_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_25"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_16_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_26"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_20_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_27"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_10_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_28"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_16_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_29"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_20_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_30"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_10_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_31"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_16_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_32"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_20_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_33"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_10_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_34"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_16_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_35"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_20_256</span>]
-						</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_36"><b>Module-Lattice-Based Key-Encapsulation Mechanism</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_37"><b>Module-Lattice-Based Digital Signature Algorithm</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</span></li></ul>] 
-				</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
-					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_39"><b>[<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes]</b> using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_49">3072</span>, <span class="selectable-content" id="_s_50">4096</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_40"><b>[<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes]</b> using [<i>“<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” P-384 and [<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_41">P-521</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_42">no other curves</span>] </i>]</span></li></ul>] 
-				</span></li></ul>]
+							[<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_3">LMS_SHAKE_M24_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_4">LMS_SHAKE_M24_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_5">LMS_SHAKE_M24_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_6">LMS_SHAKE_M24_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_7">LMS_SHAKE_M24_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_8">LMS_SHAKE_M32_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_9">LMS_SHAKE_M32_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_10">LMS_SHAKE_M32_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_11">LMS_SHAKE_M32_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_12">LMS_SHAKE_M32_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_13">LMS_SHA256_M24_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_14">LMS_SHA256_M24_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_15">LMS_SHA256_M24_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_16">LMS_SHA256_M24_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_17">LMS_SHA256_M24_H25</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_18">LMS_SHA256_M32_H5</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_19">LMS_SHA256_M32_H10</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_20">LMS_SHA256_M32_H15</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_21">LMS_SHA256_M32_H20</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_22">LMS_SHA256_M32_H25</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_23"><b>eXtended Merkle Signature Scheme Algorithm</b> using the parameter sets
+							[<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_24"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_10_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_25"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_16_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_26"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_20_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_27"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_10_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_28"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_16_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_29"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHA2_20_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_30"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_10_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_31"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_16_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_32"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_20_192</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_33"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_10_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_34"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_16_256</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_35"><abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>-SHAKE256_20_256</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_36"><b>Module-Lattice-Based Key-Encapsulation Mechanism</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_37"><b>Module-Lattice-Based Digital Signature Algorithm</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
+					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_39"><b>[<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes]</b> using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_49">3072</span>, <span class="selectable-content" id="_s_50">4096</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_40"><b>[<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes]</b> using [<i>“<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” P-384 and [<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_41">P-521</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_42">no other curves</span>] </i>]</span></li></ul>]</span></li></ul>]
 				that meet the following:
 				[<b>selection</b>: <span class="selectable-content" id="_s_54"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [<abbr class="dyn-abbr"><a href="#abbr_LMS">LMS</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_XMSS">XMSS</a></abbr>]</span>, <span class="selectable-content" id="_s_55"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203 [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>]</span>, <span class="selectable-content" id="_s_56"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_57"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.1 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_58"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.2 [<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
       Note:
@@ -2246,11 +2203,7 @@ The following sections list Common Criteria and technology terms used in this do
 						</tr>
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td>
-						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_89"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_90"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_89"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_90"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
 							[<b>selection</b>: <span class="selectable-content" id="_s_91">: <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-1:2011 Subclause 7.6</span>, <span class="selectable-content" id="_s_92"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38B</span>] [CMAC]
 						</td></tr>
 
@@ -2303,30 +2256,18 @@ The following sections list Common Criteria and technology terms used in this do
 						</tr>
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td>
-							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_94"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_95"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_94"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_95"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
 
 
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_97">384 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_98">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
-							</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_99"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_100"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_97">384 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_98">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
+							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_99"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_100"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
 
 
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_102">512 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_103">384 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_104">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
-							</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_105"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_106"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_102">512 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_103">384 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_104">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
+							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_105"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_106"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
 
 					</table><div class="appnote"><span class="note-header">Application
       Note:
@@ -2378,24 +2319,15 @@ The following sections list Common Criteria and technology terms used in this do
 
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td>
-							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_108"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_109"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_110"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_111"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_108"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_109"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_110"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_111"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
+							</td></tr>
 
 
 						
-						<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_113">deterministic</span>, <span class="selectable-content" id="_s_114"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_113">deterministic</span>, <span class="selectable-content" id="_s_114"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
 							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
 							[<b>selection</b>: <span class="selectable-content" id="_s_115">96</span>, <span class="selectable-content" id="_s_116">104</span>, <span class="selectable-content" id="_s_117">112</span>, <span class="selectable-content" id="_s_118">120</span>, <span class="selectable-content" id="_s_119">128</span>] bits.
-						</td>
-						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_120"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_121"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_120"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_121"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
 							[<b>selection</b>: <span class="selectable-content" id="_s_122"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_123"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
 						</td></tr>
 
@@ -2441,28 +2373,13 @@ The following sections list Common Criteria and technology terms used in this do
 						</tr>
 
 
-						<tr>
-							<td>KAS1</td>
-							<td>RSASVE</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_125">3072</span>, <span class="selectable-content" id="_s_126">4096</span>, <span class="selectable-content" id="_s_127">6144</span>, <span class="selectable-content" id="_s_128">8192</span>] bits</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Section 7.2.1)</td>
-						</tr>
+						<tr><td>KAS1</td><td>RSASVE</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_125">3072</span>, <span class="selectable-content" id="_s_126">4096</span>, <span class="selectable-content" id="_s_127">6144</span>, <span class="selectable-content" id="_s_128">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Section 7.2.1)</td></tr>
 
 
-						<tr>
-							<td>KTS-OAEP</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_130">3072</span>, <span class="selectable-content" id="_s_131">4096</span>, <span class="selectable-content" id="_s_132">6144</span>, <span class="selectable-content" id="_s_133">8192</span>] bits</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Sections 6.3 and 9)</td>
-						</tr>
+						<tr><td>KTS-OAEP</td><td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_130">3072</span>, <span class="selectable-content" id="_s_131">4096</span>, <span class="selectable-content" id="_s_132">6144</span>, <span class="selectable-content" id="_s_133">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Sections 6.3 and 9)</td></tr>
 
 
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
-							<td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 203</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 203</td></tr>
 
 
 					</table><div class="appnote"><span class="note-header">Application
@@ -2514,42 +2431,24 @@ The following sections list Common Criteria and technology terms used in this do
 
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td>
-							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_136"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_137"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-								[<b>selection</b>: <span class="selectable-content" id="_s_138"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6)</span>, <span class="selectable-content" id="_s_139"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)</span>] [KW mode]</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_136"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_137"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+								[<b>selection</b>: <span class="selectable-content" id="_s_138"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6)</span>, <span class="selectable-content" id="_s_139"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)</span>] [KW mode]</td></tr>
 
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td>
-							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_141"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_142"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-								<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode]</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_141"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_142"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode]</td></tr>
 
 
-						<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with unpredictable, non-repeating nonce, minimum size of 64 bits</td>
-						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_144"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_145"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with unpredictable, non-repeating nonce, minimum size of 64 bits</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_144"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_145"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
 							[<b>selection</b>: <span class="selectable-content" id="_s_146"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 7)</span>, <span class="selectable-content" id="_s_147"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38C</span>] [<abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>]
 						</td></tr>
 
 
-						<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_149">deterministic</span>, <span class="selectable-content" id="_s_150"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_149">deterministic</span>, <span class="selectable-content" id="_s_150"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
 							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
 							[<b>selection</b>: <span class="selectable-content" id="_s_151">96</span>, <span class="selectable-content" id="_s_152">104</span>, <span class="selectable-content" id="_s_153">112</span>, <span class="selectable-content" id="_s_154">120</span>, <span class="selectable-content" id="_s_155">128</span>] bits.
-						</td>
-						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_156"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_157"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_156"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_157"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
 							[<b>selection</b>: <span class="selectable-content" id="_s_158"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_159"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
 						</td></tr>
 
@@ -2601,35 +2500,21 @@ The following sections list Common Criteria and technology terms used in this do
 
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td>
-							<td>256 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_209"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_210"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_211"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_212"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_209"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_210"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_211"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_212"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
+							</td></tr>
 
 
 						
-						<tr>
-							<td><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative
-								integers starting at an arbitrary non-negative integer</td>
-							<td>512 bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_214"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_215"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_216"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_217"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
-							</td>
-						</tr>
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative
+								integers starting at an arbitrary non-negative integer</td><td>512 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_214"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_215"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_216"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_217"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
+							</td></tr>
 
 
 						
-						<tr>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td>
-						<td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_219">deterministic</span>, <span class="selectable-content" id="_s_220"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_219">deterministic</span>, <span class="selectable-content" id="_s_220"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
 							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
 							[<b>selection</b>: <span class="selectable-content" id="_s_221">96</span>, <span class="selectable-content" id="_s_222">104</span>, <span class="selectable-content" id="_s_223">112</span>, <span class="selectable-content" id="_s_224">120</span>, <span class="selectable-content" id="_s_225">128</span>] bits.
-						</td>
-						<td>256 bits</td>
-						<td>[<b>selection</b>: <span class="selectable-content" id="_s_226"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_227"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_226"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_227"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
 							[<b>selection</b>: <span class="selectable-content" id="_s_228"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_229"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
 						</td></tr>
 
@@ -2694,67 +2579,31 @@ The following sections list Common Criteria and technology terms used in this do
 
 
 						
-						<tr>
-							<td>KDF-CTR</td>  
-							<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-dirgen">Direct Generation from a Random
-									Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_232">Concatenated keys</span>]</td>
-							<td>KPF2 - KDF in Counter Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_237">256</span>, <span class="selectable-content" id="_s_238">384</span>, <span class="selectable-content" id="_s_239">512</span>] bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_240"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.2) [KPF2]</span>, <span class="selectable-content" id="_s_241"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.1) [KDF in Counter Mode]</span>]</td>
-						</tr>
+						<tr><td>KDF-CTR</td><td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-dirgen">Direct Generation from a Random
+									Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_232">Concatenated keys</span>]</td><td>KPF2 - KDF in Counter Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-ctr-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td><td>[<b>selection</b>: <span class="selectable-content" id="_s_237">256</span>, <span class="selectable-content" id="_s_238">384</span>, <span class="selectable-content" id="_s_239">512</span>] bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_240"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.2) [KPF2]</span>, <span class="selectable-content" id="_s_241"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.1) [KDF in Counter Mode]</span>]</td></tr>
 
 
 						
-						<tr>
-							<td>KDF-FB</td>  
-							<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_244">Concatenated keys</span>]</td>
-							<td>KPF3 - KDF in Feedback Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_249">256</span>, <span class="selectable-content" id="_s_250">384</span>, <span class="selectable-content" id="_s_251">512</span>] bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_252"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.3) [KPF3]</span>, <span class="selectable-content" id="_s_253"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.2) [KDF in Feedback Mode]</span>]</td>
-						</tr>
+						<tr><td>KDF-FB</td><td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_244">Concatenated keys</span>]</td><td>KPF3 - KDF in Feedback Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-fb-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td><td>[<b>selection</b>: <span class="selectable-content" id="_s_249">256</span>, <span class="selectable-content" id="_s_250">384</span>, <span class="selectable-content" id="_s_251">512</span>] bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_252"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.3) [KPF3]</span>, <span class="selectable-content" id="_s_253"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.2) [KDF in Feedback Mode]</span>]</td></tr>
 
 
 						
-						<tr>
-							<td>KDF-DPI</td> 
-								<td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_256">Concatenated keys</span>]</td>
-							<td>KDF in Double Pipeline Iteration Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_261">256</span>, <span class="selectable-content" id="_s_262">384</span>, <span class="selectable-content" id="_s_263">512</span>]bits</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_264"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.4) [KPF4]</span>, <span class="selectable-content" id="_s_265"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.3) [KDF in Double-Pipeline Iteration Mode]</span>]</td>
-						</tr>
+						<tr><td>KDF-DPI</td><td>[<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-dirgen">Direct Generation from a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="_s_256">Concatenated keys</span>]</td><td>KDF in Double Pipeline Iteration Mode using [<b>selection</b>: <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-cmac"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256-CMAC</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac256"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac384"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="sel-fcs-ckm-5-kdf-dpi-hmac512"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>] as the <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr></td><td>[<b>selection</b>: <span class="selectable-content" id="_s_261">256</span>, <span class="selectable-content" id="_s_262">384</span>, <span class="selectable-content" id="_s_263">512</span>]bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_264"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 11770-6:2016 (Subclause 7.3.4) [KPF4]</span>, <span class="selectable-content" id="_s_265"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-108 Revision 1 Update 1 (Section 4.3) [KDF in Double-Pipeline Iteration Mode]</span>]</td></tr>
 
 						
 
 						
-						<tr>
-							<td>KDF-HASH</td>  
-							<td>Shared secret</td>
-							<td>Hash function [<b>selection</b>: <span class="selectable-content" id="_s_267"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_268"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_269">256</span>, <span class="selectable-content" id="_s_270">384</span>, <span class="selectable-content" id="_s_271">512</span>] bits</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Option 1) [One-Step Key Derivation]</td>
-						</tr>
+						<tr><td>KDF-HASH</td><td>Shared secret</td><td>Hash function [<b>selection</b>: <span class="selectable-content" id="_s_267"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="_s_268"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_269">256</span>, <span class="selectable-content" id="_s_270">384</span>, <span class="selectable-content" id="_s_271">512</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Option 1) [One-Step Key Derivation]</td></tr>
 
 
 						
-						<tr>
-							<td>KDF-MAC-1S</td>  
-							<td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information</td>
-							<td>Keyed hash [<b>selection</b>: <span class="selectable-content" id="_s_273"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_274"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_275"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_276">256</span>, <span class="selectable-content" id="_s_277">384</span>, <span class="selectable-content" id="_s_278">512</span>] bits</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Options 2, 3) [One-Step Key Derivation]</td>
-						</tr>
+						<tr><td>KDF-MAC-1S</td><td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information</td><td>Keyed hash [<b>selection</b>: <span class="selectable-content" id="_s_273"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_274"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_275"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_276">256</span>, <span class="selectable-content" id="_s_277">384</span>, <span class="selectable-content" id="_s_278">512</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 4.1, Options 2, 3) [One-Step Key Derivation]</td></tr>
 
 
 						
-						<tr>
-							<td>KDF-MAC-2S</td>  
-							<td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information, and
-								[<b>selection</b>: <span class="selectable-content" id="_s_280">auxiliary shared secret</span>, <span class="selectable-content" id="_s_281">no other parameters</span>]</td>
-							<td>MAC Step [<b>selection</b>: <span class="selectable-content" id="_s_282"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_283"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_284"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]
-								as randomness extraction and; KDF Step [<b>selection</b>: <span class="selectable-content" id="_s_285">KDF-CTR</span>, <span class="selectable-content" id="_s_286">KDF-FB</span>, <span class="selectable-content" id="_s_287">KDF-DPI</span>].</td>
-							<td>[<b>selection</b>: <span class="selectable-content" id="_s_288">256</span>, <span class="selectable-content" id="_s_289">384</span>, <span class="selectable-content" id="_s_290">512</span>] bits</td>
-							<td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 5) [Two-Step Key Derivation]</td>
-						</tr>
+						<tr><td>KDF-MAC-2S</td><td>Shared secret, salt, <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>, output length, fixed information, and
+								[<b>selection</b>: <span class="selectable-content" id="_s_280">auxiliary shared secret</span>, <span class="selectable-content" id="_s_281">no other parameters</span>]</td><td>MAC Step [<b>selection</b>: <span class="selectable-content" id="_s_282"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</span>, <span class="selectable-content" id="_s_283"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</span>, <span class="selectable-content" id="_s_284"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</span>]
+								as randomness extraction and; KDF Step [<b>selection</b>: <span class="selectable-content" id="_s_285">KDF-CTR</span>, <span class="selectable-content" id="_s_286">KDF-FB</span>, <span class="selectable-content" id="_s_287">KDF-DPI</span>].</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_288">256</span>, <span class="selectable-content" id="_s_289">384</span>, <span class="selectable-content" id="_s_290">512</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56C Revision 2 (Section 5) [Two-Step Key Derivation]</td></tr>
 
 
 					</table><div class="appnote"><span class="note-header">Application
@@ -3106,13 +2955,11 @@ The following sections list Common Criteria and technology terms used in this do
              Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation),
              requires the generation of salts, nonces, and IVs to be used by the cryptographic components of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to be performed in the specified manner. </p><h4>Management: FCS_SNI_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_SNI_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FCS_RBG.1">FCS_RBG.1</a> Cryptographic Operation (Random Bit Generation)</td></tr></table><h4 id="ext-comp-FCS_SNI_EXT.1.1">FCS_SNI_EXT.1.1</h4>
                   The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-1">use no salts</span></li><li style=""><span class="selectable-content" id="_s_379">use salts that are generated by a 
-                      [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]
-                    </span></li></ul>].
+                      [<b>selection</b>: <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-2"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></span>, <span class="selectable-content" id="sel-fcs-sni-ext-1-1-sel-3"> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> provided by the host platform</span>]</span></li></ul>].
                 <h4 id="ext-comp-FCS_SNI_EXT.1.2">FCS_SNI_EXT.1.2</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use 
                   [<b>selection</b>: <span class="selectable-content" id="_s_384">no nonces</span>, <span class="selectable-content" id="_s_385">unique nonces with a minimum size of [<b>assignment</b>: 
      <span class="assignable-content">number of bits</span>] bits</span>].<h4 id="ext-comp-FCS_SNI_EXT.1.3">FCS_SNI_EXT.1.3</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall 
-                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2a"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>: IVs shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2b"><abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>: Nonce shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2c"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>: No <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2d"><abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>: <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> shall be non-repeating. The number of invocations of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> shall not exceed 2^32 for a given secret key</span></li></ul>]
-                  </span></li></ul>].
+                  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-1">use no IVs</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2">create IVs in the following manner [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2a"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>: IVs shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2b"><abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>: Nonce shall be non-repeating and unpredictable</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2c"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>: No <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>. Tweak values shall be non-negative integers, assigned consecutively, and starting at an arbitrary non-negative integer;</span></li><li style=""><span class="selectable-content" id="sel-fcs-sni-ext-1-3-sel-2d"><abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>: <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> shall be non-repeating. The number of invocations of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> shall not exceed 2^32 for a given secret key</span></li></ul>]</span></li></ul>].
 				</div></div><h3 id="ext-comp-FCS_VAL_EXT" class="indexable" data-level="4">C.2.1.6 FCS_VAL_EXT Validation of Cryptographic Elements</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family specifies the means by which submasks and/or BEVs are determined to be valid prior to their use.
             </div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FCS_VAL_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>,
              Validation ,
@@ -3143,8 +2990,7 @@ The following sections list Common Criteria and technology terms used in this do
             <p><a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a> Key Chaining (Initiator)</p>
             <p>FCS_KYC_EXT.2 Key Chaining (Recipient)</p>
             <p><a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> Submask Combining</p>            
-          </td></tr></table><h4 id="ext-comp-FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_455">not store keys in non-volatile memory</span></li><li style=""><span class="selectable-content" id="_s_456">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1, or encrypted, as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_457">only store plaintext keys that meet any one of the following criteria [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_458">the plaintext key is not part of the key chain as specified in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></span></li><li style=""><span class="selectable-content" id="_s_459">the plaintext key will no longer provide access to the encrypted data after initial provisioning</span></li><li style=""><span class="selectable-content" id="_s_460">the plaintext key is a key split that is combined as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>, and the other half of the key split is [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_461">wrapped as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_462">encrypted as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_463">derived and not stored in non-volatile memory</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_464">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="_s_465">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]
-                </span></li></ul>].
+          </td></tr></table><h4 id="ext-comp-FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_455">not store keys in non-volatile memory</span></li><li style=""><span class="selectable-content" id="_s_456">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1, or encrypted, as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_457">only store plaintext keys that meet any one of the following criteria [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_458">the plaintext key is not part of the key chain as specified in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a></span></li><li style=""><span class="selectable-content" id="_s_459">the plaintext key will no longer provide access to the encrypted data after initial provisioning</span></li><li style=""><span class="selectable-content" id="_s_460">the plaintext key is a key split that is combined as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>, and the other half of the key split is [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_461">wrapped as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_462">encrypted as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_463">derived and not stored in non-volatile memory</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_464">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</span></li><li style=""><span class="selectable-content" id="_s_465">the plaintext key is only used to provide additional cryptographic protection to other keys, such that disclosure of the plaintext key would not compromise the security of the keys being protected</span></li></ul>]</span></li></ul>].
               </div></div><h3 id="ext-comp-FPT_PWR_EXT" class="indexable" data-level="4">C.2.2.2 FPT_PWR_EXT Power Management</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family defines secure behavior of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports multiple power saving states. The use of compliant power saving states (i.e. power saving states that purge security relevant data upon entry) is essential for ensuring that state transitions cannot be used as attack vectors to bypass <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> self-protection mechanisms.
             </div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FPT_PWR_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">2</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a>,
              Power Saving States,
