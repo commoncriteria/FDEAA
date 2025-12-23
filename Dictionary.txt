@@ -222,7 +222,15 @@ fail'
 pass'
 test
 UID
-
+FDP
+MGF1
+PSS
+SHAKE256
+Winternitz
+XOF
+log2
+v1
+v2
 
 
 
