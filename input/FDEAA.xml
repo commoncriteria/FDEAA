@@ -2253,9 +2253,7 @@ For 100 iterations
         </f-component>
         
         <f-component cc-id="fcs_cop.1" iteration="SKC" name="Cryptographic Operation - Symmetric Key Cryptography" id="fcs-cop-1-skc" status="sel-based">
-              <depends on-sel="fcs-val-ext-1-1-decr"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-              <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>          
+              <depends on-sel="fcs-val-ext-1-1-decr"/> 
 
               <f-element id="fcs_cop-1-1-skc">
 				<title>
@@ -3590,7 +3588,7 @@ If ( keylen = 256 )
                       <selectable id="fcs-val-ext-1-1-hash">FCS_COP.1/Hash</selectable>
                       <selectable id="fcs-val-ext-1-1-keyhash">FCS_COP.1/KeyedHash</selectable>
                     </selectables> and compare it to a stored hashed <selectables><selectable>submask</selectable><selectable> intermediate key</selectable><selectable>BEV</selectable></selectables>;</selectable>
-                    <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value </selectable>
+                    <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1/SKC and compare it against a stored known value</selectable>
                   </selectables>.
                 </title>
                 
@@ -3656,7 +3654,7 @@ If ( keylen = 256 )
                   </h:p>
                   <h:p>The TOE validates the submasks (e.g., authorization factors) prior to presenting the BEV to the EE. When a password is used as an authorization factor, it is conditioned before any attempts to validate. In cases where validation of the authorization factors fails, the product will not forward a BEV to EE. </h:p>
                   <h:p>When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.</h:p>
-                  <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
+                  <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, FCS_COP.1/KeyWrap, and FCS_COP.1/SKC.</h:p>
                   <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
                 </note>
 				
@@ -3969,7 +3967,7 @@ If ( keylen = 256 )
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
               If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
-              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
+              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG and FCS_RBG.1 must be claimed to
               support generation, encryption, and decryption of symmetric keys used in support of these operations. If the TSF implements submask combining to maintain protected
               cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.  These selection must align with FCS_KYC_EXT.1.
             </note>
