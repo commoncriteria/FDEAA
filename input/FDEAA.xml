@@ -2139,12 +2139,7 @@ For 100 iterations
             </f-component>
             
            
-        <f-component id="sfr-fcs-cop-1-sigver" cc-id="fcs_cop.1" iteration="SigVer" name="Cryptographic Operation - Signature Verification" status="sel-based">
-			<depends on-sel="sel-rot2-digsig"/>  <!-- FPT_ROT_EXT.2 -->
-			<depends on-sel="sel-tud1-auth-update"/>  <!-- FPT_TUD_EXT.1 (covers TUD2, which requires SigVer) -->
-			<depends on-sel="sel-tud1-unauth-update"/> <!-- FPT_TUD_EXT.1 -->
-			<depends on-sel="sel-fdp-itc-ext-1e2-sig"/>  <!-- from FDP_ITC_EXT.1 -->			
-			<depends><optional/></depends>    		<!-- May be also included optionally -->
+        <f-component id="sfr-fcs-cop-1-sigver" cc-id="fcs_cop.1" iteration="SigVer" name="Cryptographic Operation - Signature Verification">
 			<f-element id="fcs-cop-1e1-sigver">
 				<title> 
 					The TSF shall perform [digital signature verification] in accordance with a specified 
