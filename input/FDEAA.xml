@@ -54,7 +54,7 @@
 <!-- Revision History (all documents) -->
   <RevisionHistory>
     <entry>
-      <version>Round 1</version>
+      <version>0.1</version>
       <date>2015-04-23</date>
       <subject>First draft of version 1.0 for comment</subject>
     </entry>
@@ -140,10 +140,7 @@
 
 
       <term abbr='CBC' full="Cipher Block Chaining"></term>
-      <term abbr='CC' full="Common Criteria"></term>
       <term abbr='CCM' full="Counter with CBC-Message Authentication Code"></term>
-      <term abbr='CEM' full="Common Evaluation Methodology"></term>
-      <term abbr='CPP' full="Collaborative Protection Profile"></term>
       <term abbr='DEK' full="Data Encryption Key">A key used to encrypt data-at-rest.</term>
       <term abbr='DRBG' full="Deterministic Random Bit Generator"></term>
       <term abbr='DSS' full="Digital Signature Standard"></term>
@@ -214,18 +211,13 @@
       <term abbr='RBG' full="Random Bit Generator"></term>
       <term abbr='RNG' full="Random Number Generator"></term>
       <term abbr='RSA' full="Rivest Shamir Adleman Algorithm"></term>
-      <term abbr='SAR' full="Security Assurance Requirements"></term>
       <term abbr='SED' full="Self-Encrypting Drive"></term>
       <term abbr='SHA' full="Secure Hash Algorithm"></term>
-      <term abbr='SFR' full="Security Functional Requirements"></term>
-      <term abbr='ST' full="Security Target"></term>
       <term abbr='SPD' full="Security Problem Definition"></term>
       <term abbr='SPI' full="Serial Peripheral Interface"></term>
       <term full="Submask">A submask is a bit string that can be generated and stored in a number
         of ways.</term>
       <term abbr='TPM' full="Trusted Platform Module"></term>
-      <term abbr='TSF' full="TOE Security Functionality"></term>
-      <term abbr='TSS' full="TOE Summary Specification"></term>
       <term abbr='USB' full="Universal Serial Bus"></term>
       <term abbr='XMSS' full="eXtended Merkle Signature Scheme"></term>
       <term abbr='XOR' full="Exclusive or"></term>
@@ -364,8 +356,7 @@
 		<cc-pp-conf/>              		  
 		
 		<!-- Can be in a configuration with these PPs and Modules -->
-		<cc-pp-config-with>             
-		</cc-pp-config-with>
+		<cc-pp-config-with/>
 
 		<!-- Package claims -->
 		<cc-pkg-claim/>
@@ -397,7 +388,7 @@
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_PCC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring user-provided-factors are conditioned to increase the cost of repeatedly guessing a user provided value.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring multi-factor authentication options, further increasing the difficulty of guessing a authentication factor.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks against authorization methods such as passwords and pins.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring several options for enforcing validation, such as key sanitization of the DEK or when a configurable number of failed validation attempts is reached within a 24 hour period. This mitigates brute force attacks.</rationale>
 		  </threat>
 		  
 		  <threat id="t-keying_material_compromise" name="T.KEYING_MATERIAL_COMPROMISE">
@@ -413,10 +404,10 @@
 		    <addressed-by>FCS_CKM.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>
-		    <addressed-by>FCS_KYC_EXT.1</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to produce a BEV.</rationale>
+		    <addressed-by>FCS_KYC_EXT.1</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to protect the BEV.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
 		    <addressed-by>FMT_MOF.1</addressed-by><rationale>Mitigates this threat by restricting the ability to modified compliant power states to authorized users.</rationale>
-		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating</rationale>
+		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE.</rationale>
 		    <addressed-by>FMT_SMR.1</addressed-by><rationale>Mitigates this threat by assigning users with the proper account permissions and privileges.</rationale>
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
 		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key materials.</rationale>
@@ -436,7 +427,7 @@
 		    <addressed-by>FCS_RBG.4 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by obscuring the submasks via a XOR or hashing operation.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1 (selection-based</addressed-by><rationale>Mitigates this threat by defining methods for validation of a submask, intermediate key, or BEV and number of validation attempts.</rationale>
 		    <addressed-by>FPT_FLS.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that a malfunctioning DRBG function cannot be used to generate potentially insecure keys.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</rationale>
 		  </threat>
@@ -460,7 +451,7 @@
 				</description>
 				<addressed-by>FCS_AFA_EXT.2</addressed-by><rationale>Mitigates this threat by requiring authentication to be re-entered upon return from a compliant power state. </rationale>
 			  <addressed-by>FMT_MOF.1</addressed-by><rationale>Mitigates this threat by restricting the authorized user's ability to modify compliant power states.</rationale>
-			  <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
+			  <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE.</rationale>        
 			  <addressed-by>FMT_SMR.1</addressed-by><rationale>Mitigates this threat by assigning users with the proper account permissions and privileges. This can be used with FMT_MOF.1 to restrict users to be able to modify certain power states covered in FMT_MOF.1.</rationale>
 			  <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by defining what power states are compliant for the TOE.</rationale>
 			  <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by defining conditions in which the TOE will enter a compliant power state. These requirements ensure the device is secure if lost in a compliant power state.</rationale>        
@@ -3968,7 +3959,7 @@ If ( keylen = 256 )
                     </selectable>
                     <selectable>institute a delay such that only <assignable>ST author specified number of attempts</assignable> can be made within a 24 hour period</selectable>
                     <selectable>block validation after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
-                    <selectable>require power cycle or reset the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
+                    <selectable>require power cycle or reset of the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
                   </selectables>.</title>
                 <note role="application">
                   <h:p>
@@ -4507,7 +4498,7 @@ If ( keylen = 256 )
             </title>
             
             <ext-comp-def-title>
-              <title>The TSF shall verify updates to the TOE software using a <selectables>
+              <title>The TSF shall verify updates to the TOE using a <selectables>
                 <selectable>digital signature</selectable>
                 <selectable>published hash</selectable>
               </selectables> by the manufacturer prior to installing those updates.</title>
@@ -5267,7 +5258,7 @@ If ( keylen = 256 )
       patches have been released for the version of the component being evaluated, the subject of those patches may form the basis 
       for a flaw hypothesis).<h:br/><h:br/>
       <h:b><h:i>Type 2 Hypotheses-iTC-Sourced</h:i></h:b><h:br/><h:br/>
-      There are no type 2 hypotheses for AA.
+      There are no type 2 hypotheses.
       <h:br/><h:br/>
       <h:b><h:i>Type 3 Hypotheses-Evaluation-Team-Generated</h:i></h:b><h:br/><h:br/>
           The iTC has leveraged the expertise of the developers and the evaluation labs to diligently develop the appropriate search
@@ -5357,7 +5348,7 @@ If ( keylen = 256 )
                 required to perform the identified vulnerabilities (cf. AVA_VAN.1-11);</h:li>
               <h:li>how each flaw hypothesis was resolved (this includes whether the original flaw hypothesis was confirmed or 
                 disproved, and any analysis relating to whether a residual vulnerability is exploitable by an attacker with Basic
-                Attack Potential) (cf. AVA_VAN1-10); and</h:li>
+                Attack Potential) (cf. AVA_VAN.1-10); and</h:li>
               <h:li>in the case that actual testing was performed in the investigation (either as part of flaw hypothesis generation
                 using tools specified by the iTC in the Type 4 Hypotheses section, or in proving or disproving a particular flaw) the steps followed in
                 setting up the TOE (and any required test equipment); executing the test; post-test procedures; and the actual results
