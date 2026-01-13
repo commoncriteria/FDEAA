@@ -1,0 +1,4 @@
+output/FDEAA-release-linkable.html: CEM
+output/FDEAA-release.html: CEM
+output/FDEAA-sd.html: CEM
+output/FDEAA.html: CEM
