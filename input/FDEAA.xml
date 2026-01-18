@@ -1443,15 +1443,14 @@ For 100 iterations
 					minimum key size be equal to the digest size. The FIPS standard specifies no minimum or maximum 
 					key sizes, so if FIPS PUB 198-1 is selected, larger or smaller key sizes may be used. This is 
 					indicated by the parenthesized annotations in the Cryptographic Key Sizes column.<h:p/>
-					In accordance with CNSA 1.0 and 2.0, HMAC-SHA-256 may be used only as a PRF or MAC step in a 
-					key derivation function.
+					In accordance with CNSA 1.0 and 2.0, HMAC-SHA-256 may be used only as a PRF, including as part of a key derivation function or RBG.
 				</note>
 				<aactivity>
 					<TSS>
 						The evaluator shall examine the TSS to ensure that the size of the key is sufficient for the desired
 						security strength of the output.<h:p/>
 						The evaluator shall examine the TSS to verify that if HMAC-SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function.
+						used only as a PRF in a key derivation function or RBG.
 					</TSS>
 					<Guidance>There is no AGD for this activity.</Guidance>
 					<KMD>There is no KMD for this activity.</KMD>
