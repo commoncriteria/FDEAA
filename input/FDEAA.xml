@@ -2269,14 +2269,6 @@ For 100 iterations
 					</selectables>
 				</title>
 				<note role="application">
-					This SFR must be included in the ST if digital signature verification is a service provided by 
-					the TOE to tenant software, or if digital signature verification is used by the TOE itself to 
-					support or implement PP-specified security functionality.<h:p/> 
-					Specifically, this SFR must be included if the ST Author chooses "<h:i>implement an authenticated platform
-					firmware update mechanism as described in FPT_TUD_EXT.2</h:i>" or "<h:i>implement a delayed-authentication platform
-					firmware update mechanism as described in FPT_TUD_EXT.3</h:i>" in FPT_TUD_EXT.1; or if the ST Author 
-					selects "<h:i>verification of a digital signature by trusted code/data</h:i>" in FPT_ROT_EXT.2.<h:p/>	
-					If this SFR is included in the ST, then FCS_COP.1/Hash must also be claimed.<h:p/>
 					The ST Author should choose the algorithm implemented to perform verification of digital signatures. 
 					For the algorithm chosen, the ST Author should make the appropriate assignments/selections to specify the 
 					parameters that are implemented for that algorithm. In particular, if ECDSA is selected as one of the signature
@@ -2284,11 +2276,6 @@ For 100 iterations
 					For elliptic curve-based schemes, the key size refers to the binary logarithm (log2) of the order of the
 					base point. As the preferred approach for digital signatures, elliptic curves will be required after all the
 					necessary standards and other supporting information are fully established.<h:p/>
-					The TOE may contain a public key which is integrity protected (e.g., in hardware), in which 
-					case the FDP_ITC.1 and FDP_ITC.2 dependencies do not apply.  In this case, no dependencies 
-					may be chosen.  For signature verifications, private keys are not necessary, so there are no
-					dependencies required for generating or destroying cryptographic keys.<h:p/>
-					If LMS or XMSS is claimed, then FCS_COP.1/XOF must also be claimed.
 				</note>
 				<aactivity>
 					<TSS>
