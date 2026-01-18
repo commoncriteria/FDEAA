@@ -1176,8 +1176,7 @@
 					<h:ul>
 					<h:li>SHA3 hashes may be used for internal hardware functionality such as
 						boot integrity checks and DRBGs, and</h:li>
-					<h:li>SHA-256 is permitted only for use as a PRF or MAC as part of a key derivation function,
-						or as part of LMS or XMSS.</h:li>
+					<h:li>SHA-256 is permitted only for use as a PRF, including as part of a key derivation function or RBG, or as part of LMS or XMSS.</h:li>
 					</h:ul><h:p/>
 					The hash selection should be consistent with the overall strength of the 
 					algorithm used for signature generation. For example, the TOE should choose SHA-384 for 3072-bit RSA, 
@@ -1186,7 +1185,7 @@
                 <aactivity> 
                     <TSS>
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
+						used only as a PRF, including as part of a key derivation function or RBG, or as part of LMS or XMSS, and not as a hash algorithm.
 					</TSS>
                     <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
 					<KMD>There are no KMD evaluation activities for this SFR.</KMD>
