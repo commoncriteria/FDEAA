@@ -1515,7 +1515,7 @@ For 100 iterations
           <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
           <f-element id="fcs_cop-1-1-keyenc">
 				<title>
-					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
+					The TSF shall perform [symmetric-key key encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
 						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/KeyEnc">
@@ -2513,7 +2513,7 @@ For 100 iterations
 
               <f-element id="fcs_cop-1-1-skc">
 				<title>
-					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
+					The TSF shall perform [symmetric-key data encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
 						<tabularize id="fcs-cop-skc-sels" title="Allowed choices for FCS_COP.1/SKC">
