@@ -1173,9 +1173,9 @@
 					</selectables>.   
                 </title>
                 <note role="application">
-					In accordance with CNSA 1.0 and 2.0:<h:ul>
-					<h:li>SHA3 hashes may be used only for internal hardware functionality such as
-						boot integrity checks, and</h:li>
+					<h:ul>
+					<h:li>SHA3 hashes may be used for internal hardware functionality such as
+						boot integrity checks and DRBGs, and</h:li>
 					<h:li>SHA-256 is permitted only for use as a PRF or MAC as part of a key derivation function,
 						or as part of LMS or XMSS.</h:li>
 					</h:ul><h:p/>
