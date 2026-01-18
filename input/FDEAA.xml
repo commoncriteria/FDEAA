@@ -1624,7 +1624,7 @@ For 100 iterations
 							<selectable>6144</selectable>
 							<selectable>8192</selectable>
 						</selectables> bits</col>
-						<col>NIST SP 800-56B Revision 2 (Section 7.2.1)</col>
+						<col>NIST SP 800-56B Revision 2</col>
 						</selectable>
 
 						<selectable id="sel-fcs-cop-keyencap-kts">
@@ -1636,7 +1636,7 @@ For 100 iterations
 							<selectable>6144</selectable>
 							<selectable>8192</selectable>
 						</selectables> bits</col>
-						<col>NIST SP 800-56B Revision 2 (Sections 6.3 and 9)</col>
+						<col>NIST SP 800-56B Revision 2</col>
 						</selectable>
 
 						<selectable id="sel-fcs-cop-keyencap-mlkem">
