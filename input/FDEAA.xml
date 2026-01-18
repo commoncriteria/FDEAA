@@ -2588,8 +2588,7 @@ For 100 iterations
                   When the XTS mode is selected, a cryptographic key of 512-bit is allowed as specified in IEEE 1619. XTS-AES key is divided into two AES keys
                   of equal size - AES-256 is used when a 512-bit key and XTS mode are selected.<h:br/><h:br/>
 
-                  This SFR is required when the TSF performs any key wrapping, key encryption, or key derivation operation as part of maintaining a key chain
-                  (FCS_KYC_EXT.1), or when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
+                  This SFR is required when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
                   (FCS_VAL_EXT.1).
 
                 </note>
