@@ -3390,11 +3390,7 @@ If ( keylen = 256 )
                     <selectable id="fcs-pcc-ext-1-2-sel-2"><assignable>1 or more</assignable> iterations and
                       <assignable>10000 or more</assignable> subsequent rounds
                       of AES operations with a device key and PBKDF2 output per FCS_COP.1/KeyEnc</selectable>
-                  </selectables> and output cryptographic key sizes 
-                  <selectables>
-                    <selectable>128 bits</selectable>
-                    <selectable>256 bits</selectable>
-                  </selectables> that meet the following: [<h:i>NIST SP 800-132</h:i>].
+                  </selectables> and output cryptographic key sizes [256 bits] that meet the following: [<h:i>NIST SP 800-132</h:i>].
                 </title>
                 
                 <ext-comp-def-title>
