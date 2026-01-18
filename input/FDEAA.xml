@@ -811,7 +811,7 @@
 				</selectable>
 				<selectable id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_39" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
+						<selectable id="fcs_ckm.1.1_AK_39" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables><selectable>6144</selectable><selectable>8192</selectable></selectable>
 						<selectable id="fcs_ckm.1.1_AK_40"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_41" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_42" >no other curves</selectable></selectables> </h:i>]</selectable>
 					</selectables> 
 				</selectable> 
