@@ -2817,13 +2817,19 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li></ul>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                  <p>
-                    The purpose of performing secure validation is to not expose any material that might compromise the submasks. For the selections in <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must clarify in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> which specific entities are referred to in this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> if multiple entities of a type exist.
+                  <p>"Validation" can occur at any point in the key chain. 
+                  The purpose of performing secure validation is to not expose any material that might compromise the submask(s). 
                   </p>
-                  <p>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> validates the submasks (e.g., authorization factors) prior to presenting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>. When a password is used as an authorization factor, it is conditioned before any attempts to validate. In cases where validation of the authorization factors fails, the product will not forward a <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> to <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>. </p>
-                  <p>When the key wrap in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a> is used, the validation is performed inherently.</p>
-                  <p>The delay must be enforced by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a>, <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>, <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, and <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.</p>
-                  <p>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</p>
+                  <p>
+                  The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> validates the selected item(s) prior to forwarding the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> or other protected functions. 
+                  When the key wrap in <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a> is used, the validation is performed inherently.
+				  </p>
+                  <p>
+                  The delay must be enforced by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, but this requirement is not intended to address attacks that bypass the product 
+                  (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, such as a third party 
+                  password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in 
+                  <a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a>, <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>, and <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
+                  </p>
                 </span></div></div></div>
              
             </div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.2 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_FLS.1"><h4>FPT_FLS.1 Failure with Preservation of Secure State</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
