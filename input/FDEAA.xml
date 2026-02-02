@@ -805,60 +805,19 @@
 			  <selectables linebreak="yes">
 				<selectable id="fcs_ckm.1.1_AK_1">CNSA 2.0 Compliant Algorithms:
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_2"><h:b>Leighton-Micali Signature Algorithm</h:b> using the parameter sets
-							<selectables>
-								<selectable id="fcs_ckm.1.1_AK_3" >LMS_SHAKE_M24_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_4" >LMS_SHAKE_M24_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_5" >LMS_SHAKE_M24_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_6" >LMS_SHAKE_M24_H20</selectable>
-								<selectable id="fcs_ckm.1.1_AK_7" >LMS_SHAKE_M24_H25</selectable>
-								<selectable id="fcs_ckm.1.1_AK_8" >LMS_SHAKE_M32_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_9" >LMS_SHAKE_M32_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_10" >LMS_SHAKE_M32_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_11" >LMS_SHAKE_M32_H20</selectable>
-								<selectable id="fcs_ckm.1.1_AK_12" >LMS_SHAKE_M32_H25</selectable>
-								<selectable id="fcs_ckm.1.1_AK_13" >LMS_SHA256_M24_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_14" >LMS_SHA256_M24_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_15" >LMS_SHA256_M24_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_16" >LMS_SHA256_M24_H20</selectable>
-								<selectable id="fcs_ckm.1.1_AK_17" >LMS_SHA256_M24_H25</selectable>
-								<selectable id="fcs_ckm.1.1_AK_18" >LMS_SHA256_M32_H5</selectable>
-								<selectable id="fcs_ckm.1.1_AK_19" >LMS_SHA256_M32_H10</selectable>
-								<selectable id="fcs_ckm.1.1_AK_20" >LMS_SHA256_M32_H15</selectable>
-								<selectable id="fcs_ckm.1.1_AK_21" >LMS_SHA256_M32_H20</selectable>
-								<selectable id="fcs_ckm.1.1_AK_22" >LMS_SHA256_M32_H25</selectable>
-							</selectables>
-						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_23"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> using the parameter sets
-							<selectables>
-								<selectable id="fcs_ckm.1.1_AK_24" >XMSS-SHA2_10_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_25" >XMSS-SHA2_16_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_26" >XMSS-SHA2_20_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_27" >XMSS-SHA2_10_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_28" >XMSS-SHA2_16_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_29" >XMSS-SHA2_20_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_30" >XMSS-SHAKE256_10_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE256_16_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE256_20_192</selectable>
-								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE256_10_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_34" >XMSS-SHAKE256_16_256</selectable>
-								<selectable id="fcs_ckm.1.1_AK_35" >XMSS-SHAKE256_20_256</selectable>
-							</selectables>
-						</selectable>
 						<selectable id="fcs_ckm.1.1_AK_36" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism</h:b> using the parameter set ML-KEM-1024</selectable>
 						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>Module-Lattice-Based Digital Signature Algorithm</h:b> using the parameter set ML-DSA-87</selectable>
 					</selectables> 
 				</selectable>
 				<selectable id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_39" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
+						<selectable id="fcs_ckm.1.1_AK_39" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables><selectable>6144</selectable><selectable>8192</selectable></selectable>
 						<selectable id="fcs_ckm.1.1_AK_40"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_41" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_42" >no other curves</selectable></selectables> </h:i>]</selectable>
 					</selectables> 
 				</selectable> 
 				</selectables>
 				that meet the following:
 				<selectables>
-				<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
 				<selectable>FIPS PUB 203 [ML-KEM]</selectable>
 				<selectable>FIPS PUB 204 [ML-DSA]</selectable>
 				<selectable>FIPS PUB 186-5 Appendix A.1 [RSA]</selectable>
@@ -880,7 +839,7 @@
                       uses specified by the AGD documentation and defined in this cPP.</Guidance>
                     <CustomEA name="KMD">If the TOE uses an asymmetric key as part of the key chain, the KMD should detail
                       how the asymmetric key is used as part of the key chain.</CustomEA>
-                    <Tests> <h:p>If the ST selects "<h:b>implement functionality</h:b>," then the following test activities shall be carried out.</h:p> <h:p>Evaluation Activity Note: The following tests may require the developer to provide access to a developer environment that provides the evaluator with tools that are not typically available to end-users of the application</h:p> <h:p><h:b>Key Generation for FIPS PUB 186-5 RSA Schemes</h:b></h:p> <h:p>The evaluator shall verify the implementation of RSA Key Generation by the TOE using the Key Generation test. This test verifies the ability of the TSF to correctly produce values for the key components including the public verification exponent e, the private prime factors p and q, the public modulus n and the calculation of the private signature exponent d. Key Pair generation specifies 5 ways (or methods) to generate the primes p and q. These include:<h:ul><h:li>Random Primes:<h:ul><h:li>Provable primes</h:li><h:li>Probable primes</h:li></h:ul></h:li><h:li>Primes with Conditions:<h:ul><h:li>Primes p1, p2, q1, q2, p, and q shall all be provable primes</h:li><h:li>Primes p1, p2, q1, and q2 shall be provable primes, and p and q shall be probable primes</h:li><h:li>Primes p1, p2, q1, q2, p, and q shall all be probable primes</h:li></h:ul></h:li></h:ul> To test the key generation method for the Random Provable primes method and for all the Primes with Conditions methods, the evaluator must seed the TSF key generation routine with sufficient data to deterministically generate the RSA key pair. This includes the random seed(s), the public exponent of the RSA key, and the desired key length. For each key length supported, the evaluator shall have the TSF generate 25 key pairs. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated from a known good implementation.</h:p> <h:p>If possible, the Random Probable primes method should also be verified against a known good implementation as described above. Otherwise, the evaluator shall have the TSF generate 10 keys pairs for each supported key length nlen and verify:<h:ul><h:li>n = p⋅q,</h:li><h:li>p and q are probably prime according to Miller-Rabin tests,</h:li><h:li>GCD(p-1, e) = 1,</h:li><h:li>GCD(q-1, e) = 1,</h:li><h:li>2 <h:sup>16</h:sup>≤ e ≤ 2 <h:sup>256</h:sup> and e is an odd integer,</h:li><h:li>|p-q| > 2 <h:sup>nlen/2 - 100</h:sup>,</h:li><h:li>p ≥ 2 <h:sup>nlen/2 -1/2</h:sup>,</h:li><h:li>q ≥ 2 <h:sup>nlen/2 -1/2</h:sup>,</h:li><h:li>2 <h:sup>(nlen/2)</h:sup>&lt; d &lt; LCM(p-1, q-1),</h:li><h:li>e⋅d = 1 mod LCM(p-1, q-1).</h:li></h:ul></h:p> <h:p><h:b>Key Generation for Elliptic Curve Cryptography (ECC)</h:b></h:p> <h:p><h:b>FIPS 186-5 ECC Key Generation Test</h:b>- For each supported NIST curve, i.e., P-384 and P-521, the evaluator shall require the implementation under test (IUT) to generate 10 private/public key pairs. The private key shall be generated using an approved random bit generator (RBG). To determine correctness, the evaluator shall submit the generated key pairs to the public key verification (PKV) function of a known good implementation.</h:p> <h:p><h:b>FIPS 186-5 Public Key Verification (PKV) Test</h:b>- For each supported NIST curve, i.e., P-384 and P-521, the evaluator shall generate 10 private/public key pairs using the key generation function of a known good implementation and modify five of the public key values so that they are incorrect, leaving five values unchanged (i.e., correct). The evaluator shall obtain in response a set of 10 PASS/FAIL values.</h:p> <h:p><h:b>Key Generation for LMS/XMSS</h:b></h:p> <h:p>For each supported LMS/LMSOTS pair, the evaluator will provide 1, 2, 3, 4, 5 seeds for H = 25, 20, 15, 10, 5 respectively where H = the height of the LMS tree. For each seed, the TOE will generate the corresponding public key which is to be verified by the evaluator using a known good implementation.</h:p> <h:p><h:b>Key Generation for ML-DSA</h:b></h:p> <h:p>The evaluator shall 10x input to the internal KeyGen function a 32-byte random seed. Verify the returned public-private key pair is correct using a known good implementation. Here internal KeyGen refers to the TOE’s implementation of the function ML-DSA.KeyGen_internal(-) as described in FIPS.204.</h:p> <h:p><h:b>Key Generation for ML-KEM</h:b></h:p> <h:p>The evaluator shall 10x input to the internal KeyGen function a pair of 32-byte random string. Verify the returned encapsulation and decapsulation key pair is correct using a known good implementation. Here internal KeyGen refers to the TOE’s implementation of the function ML-KEM.KeyGen_internal(-,-) as described in FIPS.203.</h:p></Tests>
+                    <Tests> <h:p>If the ST selects "<h:b>implement functionality</h:b>," then the following test activities shall be carried out.</h:p> <h:p>Evaluation Activity Note: The following tests may require the developer to provide access to a developer environment that provides the evaluator with tools that are not typically available to end-users of the application</h:p> <h:p><h:b>Key Generation for FIPS PUB 186-5 RSA Schemes</h:b></h:p> <h:p>The evaluator shall verify the implementation of RSA Key Generation by the TOE using the Key Generation test. This test verifies the ability of the TSF to correctly produce values for the key components including the public verification exponent e, the private prime factors p and q, the public modulus n and the calculation of the private signature exponent d. Key Pair generation specifies 5 ways (or methods) to generate the primes p and q. These include:<h:ul><h:li>Random Primes:<h:ul><h:li>Provable primes</h:li><h:li>Probable primes</h:li></h:ul></h:li><h:li>Primes with Conditions:<h:ul><h:li>Primes p1, p2, q1, q2, p, and q shall all be provable primes</h:li><h:li>Primes p1, p2, q1, and q2 shall be provable primes, and p and q shall be probable primes</h:li><h:li>Primes p1, p2, q1, q2, p, and q shall all be probable primes</h:li></h:ul></h:li></h:ul> To test the key generation method for the Random Provable primes method and for all the Primes with Conditions methods, the evaluator must seed the TSF key generation routine with sufficient data to deterministically generate the RSA key pair. This includes the random seed(s), the public exponent of the RSA key, and the desired key length. For each key length supported, the evaluator shall have the TSF generate 25 key pairs. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated from a known good implementation.</h:p> <h:p>If possible, the Random Probable primes method should also be verified against a known good implementation as described above. Otherwise, the evaluator shall have the TSF generate 10 keys pairs for each supported key length nlen and verify:<h:ul><h:li>n = p⋅q,</h:li><h:li>p and q are probably prime according to Miller-Rabin tests,</h:li><h:li>GCD(p-1, e) = 1,</h:li><h:li>GCD(q-1, e) = 1,</h:li><h:li>2 <h:sup>16</h:sup>≤ e ≤ 2 <h:sup>256</h:sup> and e is an odd integer,</h:li><h:li>|p-q| > 2 <h:sup>nlen/2 - 100</h:sup>,</h:li><h:li>p ≥ 2 <h:sup>nlen/2 -1/2</h:sup>,</h:li><h:li>q ≥ 2 <h:sup>nlen/2 -1/2</h:sup>,</h:li><h:li>2 <h:sup>(nlen/2)</h:sup>&lt; d &lt; LCM(p-1, q-1),</h:li><h:li>e⋅d = 1 mod LCM(p-1, q-1).</h:li></h:ul></h:p> <h:p><h:b>Key Generation for Elliptic Curve Cryptography (ECC)</h:b></h:p> <h:p><h:b>FIPS 186-5 ECC Key Generation Test</h:b>- For each supported NIST curve, i.e., P-384 and P-521, the evaluator shall require the implementation under test (IUT) to generate 10 private/public key pairs. The private key shall be generated using an approved random bit generator (RBG). To determine correctness, the evaluator shall submit the generated key pairs to the public key verification (PKV) function of a known good implementation.</h:p> <h:p><h:b>FIPS 186-5 Public Key Verification (PKV) Test</h:b>- For each supported NIST curve, i.e., P-384 and P-521, the evaluator shall generate 10 private/public key pairs using the key generation function of a known good implementation and modify five of the public key values so that they are incorrect, leaving five values unchanged (i.e., correct). The evaluator shall obtain in response a set of 10 PASS/FAIL values.</h:p> <h:p><h:b>Key Generation for ML-DSA</h:b></h:p> <h:p>The evaluator shall 10x input to the internal KeyGen function a 32-byte random seed. Verify the returned public-private key pair is correct using a known good implementation. Here internal KeyGen refers to the TOE’s implementation of the function ML-DSA.KeyGen_internal(-) as described in FIPS.204.</h:p> <h:p><h:b>Key Generation for ML-KEM</h:b></h:p> <h:p>The evaluator shall 10x input to the internal KeyGen function a pair of 32-byte random string. Verify the returned encapsulation and decapsulation key pair is correct using a known good implementation. Here internal KeyGen refers to the TOE’s implementation of the function ML-KEM.KeyGen_internal(-,-) as described in FIPS.203.</h:p></Tests>
            
                 </aactivity>
               </f-element>
@@ -1173,11 +1132,10 @@
 					</selectables>.   
                 </title>
                 <note role="application">
-					In accordance with CNSA 1.0 and 2.0:<h:ul>
-					<h:li>SHA3 hashes may be used only for internal hardware functionality such as
-						boot integrity checks, and</h:li>
-					<h:li>SHA-256 is permitted only for use as a PRF or MAC as part of a key derivation function,
-						or as part of LMS or XMSS.</h:li>
+					<h:ul>
+					<h:li>SHA3 hashes may be used for internal hardware functionality such as
+						boot integrity checks and DRBGs, and</h:li>
+					<h:li>SHA-256 is permitted only for use as a PRF, including as part of a key derivation function or RBG, or as part of LMS or XMSS.</h:li>
 					</h:ul><h:p/>
 					The hash selection should be consistent with the overall strength of the 
 					algorithm used for signature generation. For example, the TOE should choose SHA-384 for 3072-bit RSA, 
@@ -1186,7 +1144,7 @@
                 <aactivity> 
                     <TSS>
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
+						used only as a PRF, including as part of a key derivation function or RBG, or as part of LMS or XMSS, and not as a hash algorithm.
 					</TSS>
                     <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
 					<KMD>There are no KMD evaluation activities for this SFR.</KMD>
@@ -1485,15 +1443,14 @@ For 100 iterations
 					minimum key size be equal to the digest size. The FIPS standard specifies no minimum or maximum 
 					key sizes, so if FIPS PUB 198-1 is selected, larger or smaller key sizes may be used. This is 
 					indicated by the parenthesized annotations in the Cryptographic Key Sizes column.<h:p/>
-					In accordance with CNSA 1.0 and 2.0, HMAC-SHA-256 may be used only as a PRF or MAC step in a 
-					key derivation function.
+					In accordance with CNSA 1.0 and 2.0, HMAC-SHA-256 may be used only as a PRF, including as part of a key derivation function or RBG.
 				</note>
 				<aactivity>
 					<TSS>
 						The evaluator shall examine the TSS to ensure that the size of the key is sufficient for the desired
 						security strength of the output.<h:p/>
 						The evaluator shall examine the TSS to verify that if HMAC-SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function.
+						used only as a PRF in a key derivation function or RBG.
 					</TSS>
 					<Guidance>There is no AGD for this activity.</Guidance>
 					<KMD>There is no KMD for this activity.</KMD>
@@ -1558,7 +1515,7 @@ For 100 iterations
           <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
           <f-element id="fcs_cop-1-1-keyenc">
 				<title>
-					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
+					The TSF shall perform [symmetric-key key encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
 						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/KeyEnc">
@@ -1667,7 +1624,7 @@ For 100 iterations
 							<selectable>6144</selectable>
 							<selectable>8192</selectable>
 						</selectables> bits</col>
-						<col>NIST SP 800-56B Revision 2 (Section 7.2.1)</col>
+						<col>NIST SP 800-56B Revision 2</col>
 						</selectable>
 
 						<selectable id="sel-fcs-cop-keyencap-kts">
@@ -1679,7 +1636,7 @@ For 100 iterations
 							<selectable>6144</selectable>
 							<selectable>8192</selectable>
 						</selectables> bits</col>
-						<col>NIST SP 800-56B Revision 2 (Sections 6.3 and 9)</col>
+						<col>NIST SP 800-56B Revision 2</col>
 						</selectable>
 
 						<selectable id="sel-fcs-cop-keyencap-mlkem">
@@ -2270,26 +2227,12 @@ For 100 iterations
 					</selectables>
 				</title>
 				<note role="application">
-					This SFR must be included in the ST if digital signature verification is a service provided by 
-					the TOE to tenant software, or if digital signature verification is used by the TOE itself to 
-					support or implement PP-specified security functionality.<h:p/> 
-					Specifically, this SFR must be included if the ST Author chooses "<h:i>implement an authenticated platform
-					firmware update mechanism as described in FPT_TUD_EXT.2</h:i>" or "<h:i>implement a delayed-authentication platform
-					firmware update mechanism as described in FPT_TUD_EXT.3</h:i>" in FPT_TUD_EXT.1; or if the ST Author 
-					selects "<h:i>verification of a digital signature by trusted code/data</h:i>" in FPT_ROT_EXT.2.<h:p/>	
-					If this SFR is included in the ST, then FCS_COP.1/Hash must also be claimed.<h:p/>
 					The ST Author should choose the algorithm implemented to perform verification of digital signatures. 
 					For the algorithm chosen, the ST Author should make the appropriate assignments/selections to specify the 
 					parameters that are implemented for that algorithm. In particular, if ECDSA is selected as one of the signature
 					algorithms, the key size specified must match the selection for the curve used in the algorithm.<h:p/>
 					For elliptic curve-based schemes, the key size refers to the binary logarithm (log2) of the order of the
-					base point. As the preferred approach for digital signatures, elliptic curves will be required after all the
-					necessary standards and other supporting information are fully established.<h:p/>
-					The TOE may contain a public key which is integrity protected (e.g., in hardware), in which 
-					case the FDP_ITC.1 and FDP_ITC.2 dependencies do not apply.  In this case, no dependencies 
-					may be chosen.  For signature verifications, private keys are not necessary, so there are no
-					dependencies required for generating or destroying cryptographic keys.<h:p/>
-					If LMS or XMSS is claimed, then FCS_COP.1/XOF must also be claimed.
+					base point.<h:p/>
 				</note>
 				<aactivity>
 					<TSS>
@@ -2570,7 +2513,7 @@ For 100 iterations
 
               <f-element id="fcs_cop-1-1-skc">
 				<title>
-					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
+					The TSF shall perform [symmetric-key data encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
 						<tabularize id="fcs-cop-skc-sels" title="Allowed choices for FCS_COP.1/SKC">
@@ -2645,8 +2588,7 @@ For 100 iterations
                   When the XTS mode is selected, a cryptographic key of 512-bit is allowed as specified in IEEE 1619. XTS-AES key is divided into two AES keys
                   of equal size - AES-256 is used when a 512-bit key and XTS mode are selected.<h:br/><h:br/>
 
-                  This SFR is required when the TSF performs any key wrapping, key encryption, or key derivation operation as part of maintaining a key chain
-                  (FCS_KYC_EXT.1), or when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
+                  This SFR is required when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
                   (FCS_VAL_EXT.1).
 
                 </note>
@@ -3448,10 +3390,10 @@ If ( keylen = 256 )
                     <selectable id="fcs-pcc-ext-1-2-sel-2"><assignable>1 or more</assignable> iterations and
                       <assignable>10000 or more</assignable> subsequent rounds
                       of AES operations with a device key and PBKDF2 output per FCS_COP.1/KeyEnc</selectable>
-                  </selectables> and output cryptographic key sizes 
+                  </selectables> and output cryptographic key sizes
                   <selectables>
-                    <selectable>128 bits</selectable>
                     <selectable>256 bits</selectable>
+                    <selectable>512 bits</selectable>
                   </selectables> that meet the following: [<h:i>NIST SP 800-132</h:i>].
                 </title>
                 
@@ -3462,8 +3404,8 @@ If ( keylen = 256 )
                       <selectable><assignable>1 or more</assignable> iterations and <assignable>10000 or more</assignable> subsequent rounds of AES operations with a device key and PBKDF2 output per FCS_COP.1</selectable>
                     </selectables> and output cryptographic key sizes 
                     <selectables>
-                      <selectable>128 bits</selectable>
                       <selectable>256 bits</selectable>
+                      <selectable>512 bits</selectable>
                     </selectables> that meet the following: <assignable>PBKDF recommendation or
                       specification</assignable>.</title>
                 </ext-comp-def-title>
