@@ -136,9 +136,6 @@
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</term>
       <term abbr='BIOS' full="Basic Input Output System"></term>
-      
-
-
       <term abbr='CBC' full="Cipher Block Chaining"></term>
       <term abbr='CCM' full="Counter with CBC-Message Authentication Code"></term>
       <term abbr='DEK' full="Data Encryption Key">A key used to encrypt data-at-rest.</term>
@@ -3903,13 +3900,18 @@ If ( keylen = 256 )
                     <selectable>require power cycle or reset of the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
                   </selectables>.</title>
                 <note role="application">
-                  <h:p>
-                    The purpose of performing secure validation is to not expose any material that might compromise the submasks. For the selections in FCS_VAL_EXT.1.1, the ST author must clarify in the KMD which specific entities are referred to in this SFR if multiple entities of a type exist.
+                  <h:p>"Validation" can occur at any point in the key chain. 
+                  The purpose of performing secure validation is to not expose any material that might compromise the submask(s). 
                   </h:p>
-                  <h:p>The TOE validates the submasks (e.g., authorization factors) prior to presenting the BEV to the EE. When a password is used as an authorization factor, it is conditioned before any attempts to validate. In cases where validation of the authorization factors fails, the product will not forward a BEV to EE. </h:p>
-                  <h:p>When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.</h:p>
-                  <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, FCS_COP.1/KeyWrap, and FCS_COP.1/SKC.</h:p>
-                  <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
+                  <h:p>
+                  The TOE validates the selected item(s) prior to forwarding the BEV or other protected functions. 
+                  When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.
+                  <h:p>
+                  The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product 
+                  (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party 
+                  password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in 
+                  FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.
+                  </h:p>
                 </note>
 				
 				<aactivity>
