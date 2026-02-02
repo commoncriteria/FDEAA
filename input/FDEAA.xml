@@ -727,7 +727,7 @@
               <h:p>The TOE may accept any number of authorization methods.  The TOE may support any number of specific authorization factors for those methods and these are categorized as “submasks”. The ST author selects the authorization methods they support.</h:p>
               <h:p>
                 Use of multi-factor authorization is preferable; if more than one authorization factor is used, the submasks produced must be combined using FCS_SMC_EXT.1 specified in Appendix A.</h:p>
-				<h:p>External security tokens are expected to be physically seperate and handled in a way that aligns with solution needs, this is expected to be enforced by local security policy.</h:p>
+				<h:p>External security tokens are expected to be physically separate and handled in a way that aligns with solution needs, this is expected to be enforced by local security policy.</h:p>
               
             </note>
             <aactivity >
