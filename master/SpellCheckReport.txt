@@ -1,3 +1,0 @@
-output/FDEAA-release-linkable.html: seperate
-output/FDEAA-release.html: seperate
-output/FDEAA.html: seperate
