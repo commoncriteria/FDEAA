@@ -3906,6 +3906,7 @@ If ( keylen = 256 )
                   <h:p>
                   The TOE validates the selected item(s) prior to forwarding the BEV or other protected functions. 
                   When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.
+				  </h:p>
                   <h:p>
                   The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product 
                   (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party 
