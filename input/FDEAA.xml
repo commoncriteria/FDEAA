@@ -215,8 +215,7 @@
       <term abbr='SHA' full="Secure Hash Algorithm"></term>
       <term abbr='SPD' full="Security Problem Definition"></term>
       <term abbr='SPI' full="Serial Peripheral Interface"></term>
-      <term full="Submask">A submask is a bit string that can be generated and stored in a number
-        of ways.</term>
+      <term full="Submask">A submask is a bit string that can be generated and stored in a number of ways. The individual SFRs provide context where these values may be used and what functions they perform, such as the BEV, intermediate key, or derived authentication value.</term>
       <term abbr='TPM' full="Trusted Platform Module"></term>
       <term abbr='USB' full="Universal Serial Bus"></term>
       <term abbr='XMSS' full="eXtended Merkle Signature Scheme"></term>
