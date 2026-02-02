@@ -1,7 +1,7 @@
 * Warning: This document still has at least one comment.
 * Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[3]""/on-sel[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/note[1]"In accord"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/note[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[3]""
@@ -158,12 +158,8 @@
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[4]""/col[4]"RFC 8554 "/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[5]""/col[3]"Private k"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[5]""/col[4]"RFC 8391 "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"This SFR "/h:p[6]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"The ST Au"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/note[1]"The ST Au"/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[1]""/h:tr[2]""/h:td[4]"RFC 8017 "/h:p[1]""
