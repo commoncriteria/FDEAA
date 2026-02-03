@@ -1,2 +1,0 @@
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:50:38: error: character content of element "PPPubDate" invalid; must be an ISO date
-/home/runner/work/FDEAA/FDEAA/input/FDEAA.xml:74:30: error: character content of element "date" invalid; must be an ISO date
