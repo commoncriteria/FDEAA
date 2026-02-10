@@ -3245,7 +3245,7 @@ For 100 iterations
 
 						
 						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative 
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative 
 								integers starting at an arbitrary non-negative integer</td><td>512 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_93"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_94"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_95"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std<a id="period_924" href="#period_924">. </a>1619-2018</span>, <span class="selectable-content" id="_s_96"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
 							</td></tr>
 
@@ -3268,7 +3268,7 @@ For 100 iterations
 						reused to encrypt different plaintext pairs under the same key<a id="period_927" href="#period_927">. </a>The evaluator shall also confirm
 						that for each invocation of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks<a id="period_928" href="#period_928">. </a></p>
 						
-						<p>If <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
+						<p>If <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
 						full-length keys by methods that ensure that the two key halves are different and independent<a id="period_929" href="#period_929">. </a> The evaluator 
 						shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the block of data containing the key and that is full block of data in alignment with selected the <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> standard<a id="period_930" href="#period_930">. </a></p>
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
@@ -3764,7 +3764,7 @@ For 100 iterations
 
 
 						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative
 								integers starting at an arbitrary non-negative integer</td><td>512 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_187"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_188"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_189"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std<a id="period_1024" href="#period_1024">. </a>1619-2018</span>, <span class="selectable-content" id="_s_190"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
 							</td></tr>
 
@@ -3783,7 +3783,7 @@ For 100 iterations
                   suitable for use in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_1026" href="#period_1026">. </a>If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author incorporates the validation requirement (<a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>) and chooses to select the option to decrypt a known
                   value and perform a comparison, this is the requirement used to specify the algorithm, modes, and key sizes the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author can choose from<a id="period_1027" href="#period_1027">. </a><br><br>
 
-                  When the <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode is selected, a cryptographic key of 512-bit is allowed as specified in <abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> 1619<a id="period_1028" href="#period_1028">. </a><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES key is divided into two <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> keys
+                  When the <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode is selected, a cryptographic key of 512-bit is allowed as specified in <abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> 1619<a id="period_1028" href="#period_1028">. </a><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS key is divided into two <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> keys
                   of equal size - <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-256 is used when a 512-bit key and <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode are selected<a id="period_1029" href="#period_1029">. </a><br><br>
 
                   This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs validation of a submask, intermediate key, or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using a symmetric encryption operation
@@ -3798,7 +3798,7 @@ For 100 iterations
                 <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
 						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes the construction of any IVs,
 						tweak values, and counters in conformance with the relevant specifications<a id="period_1031" href="#period_1031">. </a><p></p>
-						If <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
+						If <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
 						full-length keys by methods that ensure that the two key halves are different and independent<a id="period_1032" href="#period_1032">. </a>						If a <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
 						specification to confirm that it describes how the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is generated and that the same <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is never
 						reused to encrypt different plaintext pairs under the same key<a id="period_1033" href="#period_1033">. </a>The evaluator shall also confirm
@@ -3892,7 +3892,7 @@ If ( keylen = 256 )
 
 
 						
-						<br><b><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</b><p></p>
+						<br><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</b><p></p>
 						<table border="1">
 							<tr class="header" bgcolor="#cccccc">
 								<td valign="top">Identifier</td>
@@ -3901,7 +3901,7 @@ If ( keylen = 256 )
 								<td valign="top">List of Standards</td>
 							</tr>
 							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>-AES</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</td>
 								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive
 									non-negative integers starting at an arbitrary non-negative integer</td>
 								<td valign="top">512 bits</td>

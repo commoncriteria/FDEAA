@@ -1361,7 +1361,7 @@ For 100 iterations
 						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
 						that for each invocation of GCM, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.</p>
 						
-						<p>If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
+						<p>If AES-XTS is claimed then the evaluator shall examine the TSS to verify that the TOE creates
 						full-length keys by methods that ensure that the two key halves are different and independent.  The evaluator 
 						shall confirm the TSS describes the block of data containing the key and that is full block of data in alignment with selected the AES standard.</p>
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
@@ -1713,7 +1713,7 @@ For 100 iterations
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
 						The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
 						tweak values, and counters in conformance with the relevant specifications.<p></p>
-						If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
+						If AES-XTS is claimed then the evaluator shall examine the TSS to verify that the TOE creates
 						full-length keys by methods that ensure that the two key halves are different and independent.
 						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
 						specification to confirm that it describes how the IV is generated and that the same IV is never
@@ -1810,7 +1810,7 @@ If ( keylen = 256 )
 
 
 						
-						<br/><b>XTS-AES</b><p></p>
+						<br/><b>AES-XTS</b><p></p>
 						<table border="1">
 							<tr class="header" bgcolor="#cccccc">
 								<td valign="top">Identifier</td>
@@ -1819,7 +1819,7 @@ If ( keylen = 256 )
 								<td valign="top">List of Standards</td>
 							</tr>
 							<tr>
-								<td valign="top">XTS-AES</td>
+								<td valign="top">AES-XTS</td>
 								<td valign="top">AES in XTS mode with unique tweak values that are consecutive
 									non-negative integers starting at an arbitrary non-negative integer</td>
 								<td valign="top">512 bits</td>
