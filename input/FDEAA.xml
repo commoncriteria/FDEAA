@@ -1564,9 +1564,9 @@ For 100 iterations
 							<selectable>NIST SP 800-38D</selectable></selectables> [GCM]
 						</col></selectable>
 						
-						<!-- XTS-AES -->
+						<!-- AES-XTS -->
 						<selectable id="sel-fcs-cop-skc-aes-xts">
-							<col>XTS-AES</col>
+							<col>AES-XTS</col>
 							<col>AES in XTS mode with unique tweak values that are consecutive non-negative 
 								integers starting at an arbitrary non-negative integer</col>
 							<col>512 bits</col>
@@ -1592,7 +1592,7 @@ For 100 iterations
 						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
 						that for each invocation of GCM, the length of the plaintext is at most (2<h:sup>32</h:sup>)-2 blocks.</h:p>
 						
-						<h:p>If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
+						<h:p>If AES-XTS is claimed then the evaluator shall examine the TSS to verify that the TOE creates
 						full-length keys by methods that ensure that the two key halves are different and independent.  The evaluator 
 						shall confirm the TSS describes the block of data containing the key and that is full block of data in alignment with selected the AES standard.</h:p>
 					</TSS>
@@ -2556,9 +2556,9 @@ For 100 iterations
 							</col>
 						</selectable>
 
-						<!-- XTS-AES -->
+						<!-- AES-XTS -->
 						<selectable id="sel-fcs-cop-skc-aes-xts">
-							<col>XTS-AES</col>
+							<col>AES-XTS</col>
 							<col>AES in XTS mode with unique tweak values that are consecutive non-negative
 								integers starting at an arbitrary non-negative integer</col>
 							<col>512 bits</col>
@@ -2600,7 +2600,7 @@ For 100 iterations
                   suitable for use in the TOE. If the ST author incorporates the validation requirement (FCS_VAL_EXT.1) and chooses to select the option to decrypt a known
                   value and perform a comparison, this is the requirement used to specify the algorithm, modes, and key sizes the ST author can choose from.<h:br/><h:br/>
 
-                  When the XTS mode is selected, a cryptographic key of 512-bit is allowed as specified in IEEE 1619. XTS-AES key is divided into two AES keys
+                  When the XTS mode is selected, a cryptographic key of 512-bit is allowed as specified in IEEE 1619. AES-XTS key is divided into two AES keys
                   of equal size - AES-256 is used when a 512-bit key and XTS mode are selected.<h:br/><h:br/>
 
                   This SFR is required when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
@@ -2611,7 +2611,7 @@ For 100 iterations
 					<TSS>
 						The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
 						tweak values, and counters in conformance with the relevant specifications.<h:p/>
-						If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
+						If AES-XTS is claimed then the evaluator shall examine the TSS to verify that the TOE creates
 						full-length keys by methods that ensure that the two key halves are different and independent.
 						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
 						specification to confirm that it describes how the IV is generated and that the same IV is never
@@ -2710,8 +2710,8 @@ If ( keylen = 256 )
 						exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.<h:p/>
 
 
-						<!-- XTS-AES -->
-						<h:br/><h:b>XTS-AES</h:b><h:p/>
+						<!-- AES-XTS -->
+						<h:br/><h:b>AES-XTS</h:b><h:p/>
 						<h:table border="1">
 							<h:tr class="header" bgcolor="#cccccc">
 								<h:td valign="top">Identifier</h:td>
@@ -2720,7 +2720,7 @@ If ( keylen = 256 )
 								<h:td valign="top">List of Standards</h:td>
 							</h:tr>
 							<h:tr>
-								<h:td valign="top">XTS-AES</h:td>
+								<h:td valign="top">AES-XTS</h:td>
 								<h:td valign="top">AES in XTS mode with unique tweak values that are consecutive
 									non-negative integers starting at an arbitrary non-negative integer</h:td>
 								<h:td valign="top">512 bits</h:td>
