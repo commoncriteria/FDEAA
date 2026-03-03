@@ -40,6 +40,7 @@
     short="Wid">                                       # A short name for the PP (e.g. App or MDF)
 -->
 
+		<comment>Adjust date once finalized</comment>
   <!-- PPReference (all documents) -->
   <PPReference>
     <ReferenceTable>
@@ -47,7 +48,6 @@
       <PPVersion>3.0</PPVersion>
       <PPAuthor>Full Disk Encryption international Technical Community</PPAuthor>
 	    <!-- Year - Month - Day --> 
-		<comment>Adjust date once finalized</comment>
       <PPPubDate>2026-03-03</PPPubDate>
       <Keywords>Full Drive Encryption – Authorization Acquisition</Keywords>               <!-- This field is unused and optional -->
     </ReferenceTable>
