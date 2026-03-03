@@ -3479,14 +3479,21 @@ If ( keylen = 256 )
         
             <f-component cc-id="fcs_rbg.1" name="Cryptographic Operation (Random Bit Generation)"
               id="fcs-rbg-1" status="sel-based">
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
-              <depends on-sel="sel-fcs-kdf-ext-1-1-sel-1a"/>
 			  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-fb-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-dpi-dirgen"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-cbc"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-gcm"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-xts"/
+              <depends on-sel="sel-fcs-cop-kw-aes-kw"/>
+              <depends on-sel="sel-fcs-cop-kw-aes-kwp"/>
+              <depends on-sel="sel-fcs-cop-kw-aes-ccm"/>
+              <depends on-sel="sel-fcs-cop-kw-aes-gcm"/>
+              <depends on-sel="sel-fcs-cop-keyencap-kas1"/>
+              <depends on-sel="sel-fcs-cop-keyencap-kts"/>
+              <depends on-sel="sel-fcs-cop-keyencap-mlkem"/>
+              <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
+              <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
               <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
               <depends on-sel="rbg-overwrite-single"/>
               <depends on-sel="rbg-overwrite-multi"/>
