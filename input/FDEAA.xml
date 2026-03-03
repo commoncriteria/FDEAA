@@ -791,7 +791,9 @@
             </f-component>
             
             <f-component cc-id="fcs_ckm.1" iteration="AKG" name="Cryptographic Key Generation (Asymmetric Keys)" id="fcs-ckm-1-akg" status="sel-based">
-				<depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
+				<depends on-sel="sel-fcs-cop-keyencap-kas1"/>
+			  <depends on-sel="sel-fcs-cop-keyencap-kts"/>
+			  <depends on-sel="sel-fcs-cop-keyencap-mlkem"/>
 				<depends on-sel="sel-fcs-afa-ext-1-1-sel-2a"/>
               <f-element id="fcs_ckm-1-1-akg">
 			  
