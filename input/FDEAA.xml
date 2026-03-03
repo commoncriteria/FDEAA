@@ -4199,7 +4199,7 @@ If ( keylen = 256 )
             <title>
               The TSF shall <selectables linebreak="yes">
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-1">not store keys in non-volatile memory</selectable>
-                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1/KeyWrap, or encrypted, as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
+                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when <selectables><selectable id="sel-fpt-kyp-ext-1-1-sel-2-1">wrapped, as specified in FCS_COP.1/KeyWrap</selectable><selectable id="sel-fpt-kyp-ext-1-1-sel-2-2">encrypted, as specified in FCS_COP.1/KeyEnc</selectable><sekectable id="sel-fpt-kyp-ext-1-1-sel-2-3">encrypted as specified in FCS_COP.1/KeyEncap</selectable></selectables></selectable>
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-3">only store plaintext keys that meet any one of the following criteria 
 					<selectables>
 	                  <selectable id="sel-fpt-kyp-ext-1-1-sel-3a">the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.1</selectable>
@@ -4207,7 +4207,8 @@ If ( keylen = 256 )
 	                  <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is 
 						  <selectables linebreak="yes">
 		                    <selectable id="sel-fpt-kyp-ext-1-1-sel3ci-">wrapped as specified in FCS_COP.1/KeyWrap</selectable>
-		                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
+		                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in <selectables><selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-1">FCS_COP.1/KeyEnc</selectable>
+								<selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-2">FCS_COP.1/KeyEncap</selectable></selectables></selectable>
 		                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   		</selectables>
 					  </selectable>
