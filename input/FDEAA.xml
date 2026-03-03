@@ -843,9 +843,13 @@
             </f-component>
         
             <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              
+              <depends on-sel="sel-fcs-cop-keyenc-aes-cbc"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-gcm"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-xts"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-kw"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-kwp"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-ccm"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-gcm"/>
               <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
                 sizes <h:i>256 bit</h:i> that meet the following: [<h:i>no standard</h:i>].
