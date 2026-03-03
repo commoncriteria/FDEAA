@@ -1864,6 +1864,8 @@ For 100 iterations
             <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation - Key Wrapping" id="fcs-cop-1-keywrap" status="sel-based">
               <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
+              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2-1"/>
+              <depends on-sel="sel-fpt-kyp-ext-1-1-sel3ci"/>
               <f-element id="fcs_cop-1-1-keywrap">
                 
 				<title>
