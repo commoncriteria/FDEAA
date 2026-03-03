@@ -4180,7 +4180,7 @@ If ( keylen = 256 )
             <title>
               The TSF shall preserve a secure state when the following types of failures occur: [<h:i>DRBG self-test failure</h:i>].              
             </title>
-            <note role="application">The intent of this requirement is to ensure that cryptographic services requiring random bit generation cannot be performed if a failure of a self-test defined in FPT_TST.1 occurs.</note>
+            <note role="application">This requirement must be included if FCS_RBG.1 is included in the ST. The intent of this requirement is to ensure that cryptographic services requiring random bit generation cannot be performed if a failure of a self-test defined in FPT_TST.1 occurs.</note>
             <aactivity>              
               <TSS>
                 The evaluator shall verify that the TSF describes how the TOE enters an error state in the event of a DRBG self-test failure.
