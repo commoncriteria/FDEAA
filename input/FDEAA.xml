@@ -4352,14 +4352,7 @@ If ( keylen = 256 )
           
         </f-component>
         
-        <f-component cc-id="fpt_tst.1" name="TSF Self-Testing" status="sel-based">
-          <depends on-sel="internal-seed"/>
-          <depends on-sel="internal-seeds"/>
-          <depends on-sel="external-seed"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+        <f-component cc-id="fpt_tst.1" name="TSF Self-Testing">
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
