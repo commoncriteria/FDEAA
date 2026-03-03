@@ -1513,6 +1513,8 @@ For 100 iterations
         <f-component cc-id="fcs_cop.1" iteration="KeyEnc" name="Cryptographic Operation - Key Encryption" id="fcs-cop-1-keyenc" status="sel-based">
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
           <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
+          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii-1"/>
+          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2-2"/>
           <f-element id="fcs_cop-1-1-keyenc">
 				<title>
 					The TSF shall perform [symmetric-key key encryption/decryption] in accordance with a
@@ -1613,7 +1615,6 @@ For 100 iterations
 					</Tests>
             </aactivity>
           </f-element>
-          
         </f-component>
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation - Key Encapsulation" id="fcs-cop-1-keyencap" status="sel-based">
