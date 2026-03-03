@@ -47,7 +47,8 @@
       <PPVersion>3.0</PPVersion>
       <PPAuthor>Full Disk Encryption international Technical Community</PPAuthor>
 	    <!-- Year - Month - Day --> 
-      <PPPubDate>2026-02-10</PPPubDate>
+		<comment>Adjust date once finalized</comment>
+      <PPPubDate>2026-03-03</PPPubDate>
       <Keywords>Full Drive Encryption – Authorization Acquisition</Keywords>               <!-- This field is unused and optional -->
     </ReferenceTable>
   </PPReference>
@@ -71,7 +72,7 @@
     </entry>
     <entry>
         <version>3.0</version>
-        <date>2026-02-10</date>
+        <date>2026-03-03</date>
         <subject>Updated for CC:2022, reviewing and applying modifications to the cPP</subject>
       </entry>
   </RevisionHistory>
@@ -5480,11 +5481,10 @@ If ( keylen = 256 )
     <tag>FDE–EE</tag>
     
     <description>
-<comment>Update references before publication.</comment>
         <!-- todo: update hyperlink when PP published -->
         <h:a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
           Protection Profile for Full Drive Encryption – Encryption Engine, Version 3.0,
-          MMMM DD, 2025</h:a><comment>Adjust date once finalized</comment></description> 
+         March, 2025</h:a></description> 
 </entry>
  </bibliography>
 
