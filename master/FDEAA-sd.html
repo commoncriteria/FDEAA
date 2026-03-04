@@ -272,7 +272,7 @@
    
    </style></head><body><div style="text-align: center; margin-left: auto; margin-right: auto;"><h1 class="title" style="page-break-before:auto;">Supporting Document<br/>
         Mandatory Technical Document</h1><br/><br/><br/><br/><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>collaborative Protection Profile for Full Drive Encryption – Authorization Acquisition<br/>
-      Version: 3.0<br/>2026-02-10<br/><b>Full Disk Encryption international Technical Community</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
+      Version: 3.0<br/>2026-03-03<br/><b>Full Disk Encryption international Technical Community</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
       and the associated Common Evaluation Methodology for
       Information Technology Security Evaluation.</p><p>SDs may be “Guidance Documents”, that highlight specific approaches 
       and application of the standard to areas where no mutual recognition of
@@ -282,7 +282,7 @@
       The usage of the latter class is not only mandatory, but certificates
       issued as a result of their application are recognized under the CCRA.</p><p><b>Technical Editor:</b><br/>
       National Information Assurance Partnership (NIAP)
-      </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>0.1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr><tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr><tr><td>2.0</td><td>2024-03-28</td><td>Second release.</td></tr><tr><td>3.0</td><td>2026-02-10</td><td>Updated for CC:2022, reviewing and applying modifications to the cPP</td></tr></table></p><p><b>General Purpose:</b><br/>
+      </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>0.1</td><td>2015-04-23</td><td>First draft of version 1.0 for comment</td></tr><tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr><tr><td>2.0</td><td>2024-03-28</td><td>Second release.</td></tr><tr><td>3.0</td><td>2026-03-03</td><td>Updated for CC:2022, reviewing and applying modifications to the cPP</td></tr></table></p><p><b>General Purpose:</b><br/>
       The purpose of this SD is to define evaluation methods for the functional behavior of
             
       products.
@@ -1155,7 +1155,27 @@ For 100 iterations
                     result in entry to a non-compliant power saving state and, if that is the case, validate
                     that the documentation contains information on mitigation measures.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall trigger each condition in the list of identified conditions and ensure
                     the TOE ends up in a compliant power saving state by running the test identified in
-                    FCS_CKM.6.</div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
+                    FCS_CKM.6.</div></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                <p>
+                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
+                </p><p>
+                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix E -  Entropy Documentation and Assessment</span>.
+                </p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
+                </p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <p>
+                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
+                </p><p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
+                </p>
+              </div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
                 
                   
                   
@@ -1359,7 +1379,7 @@ For 100 iterations
 						that for each invocation of GCM, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.</p>
 						
 						<p>If AES-XTS is claimed then the evaluator shall examine the TSS to verify that the TOE creates
-						full-length keys by methods that ensure that the two key halves are different and independent.  The evaluator 
+						full-length keys by methods that ensure that the two key halves are distinct.  The evaluator 
 						shall confirm the TSS describes the block of data containing the key and that is full block of data in alignment with selected the AES standard.</p>
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
 						If multiple key encryption modes are supported, the evaluator examines the guidance
@@ -2343,26 +2363,6 @@ If ( keylen = 256 )
                 The evaluator shall verify that the guidance documentation describes the error state that results from a DRBG self-test failure and the actions that a user or administrator should take in response to attempt to resolve the error state.
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 			  There is no Test for this activity.
-              </div></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                <p>
-                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
-                </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix E -  Entropy Documentation and Assessment</span>.
-                </p>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
-                </p>
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>
-                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
-                </p><p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
-                </p>
               </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ADV_FSP.1</div>
             
             There are no specific evaluation activities associated with these SARs, except
@@ -2526,10 +2526,9 @@ guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appen
                 3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
               April 2017.</li></ul></td></tr>
 <tr><td><span id="bibfdeiee"></span>[FDE–EE]</td><td>
-<span style="" class="comment " id="Comment-1-">Update references before publication.</span>
         
         <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
           Protection Profile for Full Drive Encryption – Encryption Engine, Version 3.0,
-          MMMM DD, 2025</a><span style="" class="comment " id="Comment-2-">Adjust date once finalized</span></td></tr>
+         March, 2025</a></td></tr>
 
  </table></body></html>
