@@ -1579,7 +1579,7 @@ For 100 iterations
 						</col></selectable>
 						
 						<!-- AES-XTS -->
-						<selectable id="sel-fcs-cop-skc-aes-xts">
+						<selectable id="sel-fcs-cop-key-aes-xts">
 							<col>AES-XTS</col>
 							<col>AES in XTS mode with unique tweak values that are consecutive non-negative 
 								integers starting at an arbitrary non-negative integer</col>
