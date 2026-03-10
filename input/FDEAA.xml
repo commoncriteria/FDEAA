@@ -235,7 +235,7 @@
         independently evaluate solutions tailored to one cPP or the other. When a customer acquires
         an FDE solution, they will either obtain a single vendor product that meets the AA + EE cPPs
         or two products, one of which meets the AA and the other of which meets the EE cPPs.</h:p>
-        <h:p>The table below illustrates a few examples for certification.</h:p>
+        <h:p>Table 1 illustrates a few examples for certification.</h:p>
         
         <h:head><h:b><ctr ctr-type="Table" pre="Table" id="atref-mandatory">: Examples of cPP Implementations</ctr></h:b></h:head>			
         <h:tr class="header"><h:td>Event</h:td><h:td/></h:tr>    	
@@ -1276,7 +1276,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 6 provides the allowed choices for
 										completion of the selection operations of FCS_COP.1/CMAC.</reqtext>
 						</tabularize>
 						
@@ -1399,7 +1399,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 7 provides the allowed choices for
 										completion of the selection operations of FCS_COP.1/KeyedHash.</reqtext>
 						</tabularize>
 						
@@ -1528,7 +1528,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 8 provides the allowed choices for
 								completion of the selection operations of FCS_COP.1/KeyEnc.</reqtext>
 						</tabularize>
 
@@ -1632,7 +1632,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 9 provides the allowed choices for
 										completion of the selection operations of FCS_COP.1/KeyEncap.</reqtext>
 						</tabularize>
 
@@ -1879,7 +1879,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 9 provides the allowed choices for
 								completion of the selection operations of FCS_COP.1/KeyWrap.</reqtext>
 						</tabularize>
 
@@ -2124,7 +2124,7 @@ For 100 iterations
 						<selectcol>Cryptographic key sizes</selectcol>
 						<reqtext>that meet the following:</reqtext>
 						<selectcol>List of standards</selectcol>
-						<reqtext><h:p/><h:p/>The following table provides the allowable choices for
+						<reqtext><h:p/><h:p/>Table 3 provides the allowable choices for
 										completion of the selection operations of FCS_COP.1/SigVer.</reqtext>
 					</tabularize>
 					
@@ -2284,6 +2284,7 @@ For 100 iterations
 							</h:tr>
 							<h:tr>
 								<h:td valign="top">RSA-PKCS </h:td>
+								<h:td valign="top">RSASSA-PKCS1-v1_5</h:td>
 								<h:td valign="top">RSASSA-PKCS1-v1_5</h:td>
 								<h:td valign="top">Modulus of size [<h:b>selection:</h:b> 3072, 4096, 6144, 8192] bits,
 									hash [<h:b>selection:</h:b> SHA-384, SHA-512]</h:td>
@@ -2547,7 +2548,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 11 provides the allowed choices for
 								completion of the selection operations of FCS_COP.1/SKC.</reqtext>
 						</tabularize>
 
@@ -2831,7 +2832,7 @@ If ( keylen = 256 )
 							<selectcol>Key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 12 provides the allowed choices for
 										completion of the selection operations of FCS_CKM.5.</reqtext>
 						</tabularize>
 
