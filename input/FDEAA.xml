@@ -321,16 +321,7 @@
       -->
 
     </section>  <!-- Use Cases -->
-	<section title="Product Features Mapped to Implementation-dependent Requirements" id="sec-features">
-			The features enumerated below, if implemented by the TOE, require that additional SFRs be claimed in the ST.<h:br/>
-			<implements>
-				<feature id="skey-gen-support" title="Symmetric Key Generation Support">
-					<description>A conformant TOE is required to implement proper generation of symmetric keys.  
-					It is often required when leveraging Key Wrapping per FCS_COP.1/KeyWrap or Key Encryption per FCS_COP.1/KeyEnc, but those 
-					uses may not necessarily require generation with key chains utilizing key combination or derivation.<h:br/></description>
-				</feature>
-			</implements>			
-		</section>
+
   </section>   <!-- Introduction  -->
 
 
@@ -2541,8 +2532,8 @@ For 100 iterations
 		</f-component>	
              
         
-        <f-component cc-id="fcs_cop.1" iteration="SKC" name="Cryptographic Operation - Symmetric Key Cryptography" id="fcs-cop-1-skc" status="feat-based">
-              <depends on-sel="skey-gen-support"/>
+        <f-component cc-id="fcs_cop.1" iteration="SKC" name="Cryptographic Operation - Symmetric Key Cryptography" id="fcs-cop-1-skc" status="sel-based">
+              <depends on-sel="fcs-val-ext-1-1-decr"/> 
 
               <f-element id="fcs_cop-1-1-skc">
 				<title>
