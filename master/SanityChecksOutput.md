@@ -1,5 +1,3 @@
-* Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[4]""/depends[3]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel3ci from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
