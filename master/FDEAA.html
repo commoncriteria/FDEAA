@@ -634,10 +634,10 @@ function showTarget(id){
 <tr><td>1.0</td><td>2015-08-14</td><td>Release - first version released</td></tr>
 <tr><td>2.0</td><td>2024-03-28</td><td>Second release.</td></tr>
 <tr><td>3.0</td><td>2026-03-10</td><td>Updated for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, reviewing and applying modifications to the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#sec-intro" style="text-indent:0px">1<span>Introduction</span></a><a href="#sec-ppoverview" style="text-indent:10px">1.1<span>PP Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#sec-TOEimplementation" style="text-indent:10px">1.3<span>Implementation</span></a><a href="#sec-TOEoverview" style="text-indent:10px">1.4<span>TOE Overview</span></a><a href="#sec-TOEauthorization-acquisition-introduction" style="text-indent:20px">1.4.1<span>Authorization Acquisition Introduction</span></a><a href="#sec-TOEauthorization-acquisition_security_capabilities" style="text-indent:20px">1.4.2<span>Authorization Acquisition Security Capabilities</span></a><a href="#sec-TOEInterface-Boundary" style="text-indent:20px">1.4.3<span>Interface/Boundary</span></a><a href="#sec-TOEdescription" style="text-indent:10px">1.5<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:20px">1.5.1<span>TOE Boundary</span></a><a href="#sec-usecases" style="text-indent:10px">1.6<span>Use Cases</span></a><a href="#sec-features" style="text-indent:10px">1.7<span>Product Features Mapped to Implementation-dependent Requirements</span></a><a href="#skey-gen-support" style="text-indent:20px">1.7.1<span>Symmetric Key Generation Support</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#sec-spd" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#sec-assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#sec-OSPs" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fcs" style="text-indent:20px">5.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">5.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.3<span>Protection of the TSF (FPT)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.4<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#ase" style="text-indent:20px">5.2.1<span>ASE: Security Target</span></a><a href="#adv" style="text-indent:20px">5.2.2<span>ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.3<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:20px">5.2.4<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#sec-intro" style="text-indent:0px">1<span>Introduction</span></a><a href="#sec-ppoverview" style="text-indent:10px">1.1<span>PP Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#sec-TOEimplementation" style="text-indent:10px">1.3<span>Implementation</span></a><a href="#sec-TOEoverview" style="text-indent:10px">1.4<span>TOE Overview</span></a><a href="#sec-TOEauthorization-acquisition-introduction" style="text-indent:20px">1.4.1<span>Authorization Acquisition Introduction</span></a><a href="#sec-TOEauthorization-acquisition_security_capabilities" style="text-indent:20px">1.4.2<span>Authorization Acquisition Security Capabilities</span></a><a href="#sec-TOEInterface-Boundary" style="text-indent:20px">1.4.3<span>Interface/Boundary</span></a><a href="#sec-TOEdescription" style="text-indent:10px">1.5<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:20px">1.5.1<span>TOE Boundary</span></a><a href="#sec-usecases" style="text-indent:10px">1.6<span>Use Cases</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#sec-spd" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#sec-assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#sec-OSPs" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fcs" style="text-indent:20px">5.1.1<span>Cryptographic Support (FCS)</span></a><a href="#FMT" style="text-indent:20px">5.1.2<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.3<span>Protection of the TSF (FPT)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.4<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#ase" style="text-indent:20px">5.2.1<span>ASE: Security Target</span></a><a href="#adv" style="text-indent:20px">5.2.2<span>ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.3<span>AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:20px">5.2.4<span>Class ALC: Life-cycle Support</span></a><a href="#class-ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#class-ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
     </span></a><a href="#alc-optional" style="text-indent:20px">A.1.1<span>Class ALC: Life-cycle Support</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
     </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
-    </span></a><a href="#fcs-feat-based" style="text-indent:20px">A.3.1<span>Cryptographic Support (FCS)</span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
+    </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
     </span></a><a href="#fcs-sel-based" style="text-indent:10px">B.1<span>Cryptographic Support (FCS)</span></a><a href="#fpt-sel-based" style="text-indent:10px">B.2<span>Protection of the TSF (FPT)</span></a><a href="#ext-comp-defs" style="text-indent:0px">Appendix C - <span>Extended Component Definitions</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.1<span>Extended Components Table</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.2<span>Extended Component Definitions</span></a><a href="#ext-comp-FCS" style="text-indent:20px">C.2.1<span>Cryptographic Support (FCS)</span></a><a href="#ext-comp-FCS_AFA_EXT" style="text-indent:30px">C.2.1.1<span>FCS_AFA_EXT Authorization Factor Acquisition</span></a><a href="#ext-comp-FCS_KYC_EXT" style="text-indent:30px">C.2.1.2<span>FCS_KYC_EXT Key Chaining</span></a><a href="#ext-comp-FCS_PCC_EXT" style="text-indent:30px">C.2.1.3<span>FCS_PCC_EXT Cryptographic Password Construction and Conditioning</span></a><a href="#ext-comp-FCS_SMC_EXT" style="text-indent:30px">C.2.1.4<span>FCS_SMC_EXT Submask Combining</span></a><a href="#ext-comp-FCS_SNI_EXT" style="text-indent:30px">C.2.1.5<span>FCS_SNI_EXT Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</span></a><a href="#ext-comp-FCS_VAL_EXT" style="text-indent:30px">C.2.1.6<span>FCS_VAL_EXT Validation of Cryptographic Elements</span></a><a href="#ext-comp-FPT" style="text-indent:20px">C.2.2<span>Protection of the TSF (FPT)</span></a><a href="#ext-comp-FPT_KYP_EXT" style="text-indent:30px">C.2.2.1<span>FPT_KYP_EXT Key and Key Material Protection</span></a><a href="#ext-comp-FPT_PWR_EXT" style="text-indent:30px">C.2.2.2<span>FPT_PWR_EXT Power Management</span></a><a href="#ext-comp-FPT_TUD_EXT" style="text-indent:30px">C.2.2.3<span>FPT_TUD_EXT Trusted Update</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix D - <span>Implicitly Satisfied Requirements</span></a><a href="#apndx-entropy" style="text-indent:0px">Appendix E - <span>Entropy Documentation and Assessment</span></a><a href="#sec-ent-design" style="text-indent:10px">E.1<span>Design Description</span></a><a href="#sec-ent-justification" style="text-indent:10px">E.2<span>Entropy Justification</span></a><a href="#sec-ent-oc" style="text-indent:10px">E.3<span>Operating Conditions</span></a><a href="#s-ent-health" style="text-indent:10px">E.4<span>Health Testing</span></a><a href="#apndx-keyMan" style="text-indent:0px">Appendix F - <span>Key Management Description</span></a><a href="#acronyms" style="text-indent:0px">Appendix G - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix H - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="sec-intro">1 Introduction</h1>
 
     
@@ -845,14 +845,7 @@ The following sections list Common Criteria and technology terms used in this do
       
 
       
-	<h2 class="indexable" data-level="2" id="sec-features">1.7 Product Features Mapped to Implementation-dependent Requirements</h2>
-			The features enumerated below, if implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, require that additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.<br/>
-			<h3 class="indexable" data-level="3" id="skey-gen-support">1.7.1 Symmetric Key Generation Support</h3><span class="description">A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is required to implement proper generation of symmetric keys.  
-					It is often required when leveraging Key Wrapping per <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a> or Key Encryption per <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>, but those 
-					uses may not necessarily require generation with key chains utilizing key combination or derivation.<br/></span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></b></li></ul></p>			
-		
+
   <h1 class="indexable" data-level="1" id="sec-cclaims">2 Conformance Claims</h1>
 
 	
@@ -3073,8 +3066,863 @@ For 100 iterations
         </div></div></div><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
             Objective requirements.</p><h2 id="feat-based-reqs" class="indexable" data-level="2">A.3 Implementation-dependent  Requirements
-    </h2><h3 id="fcs-feat-based" class="indexable" data-level="3">A.3.1 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#skey-gen-support">Symmetric Key Generation Support</a></i></b></li></ul></div>
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Implementation-dependent requirements.</p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
+    </h1><span class="description">
+	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
+        the baseline requirements
+        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
+        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+        There are additional requirements based on selections in the body of 
+        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
+        if certain selections are made, then additional requirements below must be included.
+ 	</p>
+		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_AFA_EXT.1.1">FCS_AFA_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyEncap">FCS_COP.1.1/KeyEncap</a></i></b></li></ul></div>
+				
+			  
+			  
+				
+              <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>  shall generate <b>asymmetric</b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
+			  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_1">CNSA 2.0 Compliant Algorithms:
+					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_36"><b>Module-Lattice-Based Key-Encapsulation Mechanism</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_37"><b>Module-Lattice-Based Digital Signature Algorithm</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
+					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_39"><b>[<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes]</b> using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_16">3072</span>, <span class="selectable-content" id="_s_17">4096</span>, <span class="selectable-content" id="_s_18">6144</span>, <span class="selectable-content" id="_s_19">8192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_40"><b>[<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes]</b> using [<i>“<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” P-384 and [<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_41">P-521</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_42">no other curves</span>] </i>]</span></li></ul>]</span></li></ul>]
+				that meet the following:
+				[<b>selection</b>: <span class="selectable-content" id="_s_23"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203 [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>]</span>, <span class="selectable-content" id="_s_24"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_25"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.1 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_26"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.2 [<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                  Asymmetric keys may be used to “wrap” a key or submask. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a> or <a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>.
+<p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</p>				  
+                </span></div></div></div>
               
+            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
+                    
+                    
+                    
+                    
+           
+                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes / parameter sets supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+                      If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> specifies more than one scheme, the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify
+                      that it identifies the usage for each scheme.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
+                      configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key generation schemes and key sizes for all
+                      uses specified by the AGD documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses an asymmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail
+                      how the asymmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p>If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> selects "<b>implement functionality</b>," then the following test activities shall be carried out.</p> <p>Evaluation Activity Note: The following tests may require the developer to provide access to a developer environment that provides the evaluator with tools that are not typically available to end-users of the application</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Schemes</b></p> <p>The evaluator shall verify the implementation of <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Key Generation by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> using the Key Generation test. This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly produce values for the key components including the public verification exponent e, the private prime factors p and q, the public modulus n and the calculation of the private signature exponent d. Key Pair generation specifies 5 ways (or methods) to generate the primes p and q. These include:<ul><li>Random Primes:<ul><li>Provable primes</li><li>Probable primes</li></ul></li><li>Primes with Conditions:<ul><li>Primes p1, p2, q1, q2, p, and q shall all be provable primes</li><li>Primes p1, p2, q1, and q2 shall be provable primes, and p and q shall be probable primes</li><li>Primes p1, p2, q1, q2, p, and q shall all be probable primes</li></ul></li></ul> To test the key generation method for the Random Provable primes method and for all the Primes with Conditions methods, the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation routine with sufficient data to deterministically generate the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key pair. This includes the random seed(s), the public exponent of the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key, and the desired key length. For each key length supported, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs. The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated from a known good implementation.</p> <p>If possible, the Random Probable primes method should also be verified against a known good implementation as described above. Otherwise, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 10 keys pairs for each supported key length nlen and verify:<ul><li>n = p⋅q,</li><li>p and q are probably prime according to Miller-Rabin tests,</li><li>GCD(p-1, e) = 1,</li><li>GCD(q-1, e) = 1,</li><li>2 <sup>16</sup>≤ e ≤ 2 <sup>256</sup> and e is an odd integer,</li><li>|p-q| &gt; 2 <sup>nlen/2 - 100</sup>,</li><li>p ≥ 2 <sup>nlen/2 -1/2</sup>,</li><li>q ≥ 2 <sup>nlen/2 -1/2</sup>,</li><li>2 <sup>(nlen/2)</sup>&lt; d &lt; LCM(p-1, q-1),</li><li>e⋅d = 1 mod LCM(p-1, q-1).</li></ul></p> <p><b>Key Generation for Elliptic Curve Cryptography (<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>)</b></p> <p><b><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-5 <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> Key Generation Test</b>- For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-384 and P-521, the evaluator shall require the implementation under test (IUT) to generate 10 private/public key pairs. The private key shall be generated using an approved random bit generator (<abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>). To determine correctness, the evaluator shall submit the generated key pairs to the public key verification (PKV) function of a known good implementation.</p> <p><b><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-5 Public Key Verification (PKV) Test</b>- For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-384 and P-521, the evaluator shall generate 10 private/public key pairs using the key generation function of a known good implementation and modify five of the public key values so that they are incorrect, leaving five values unchanged (i.e., correct). The evaluator shall obtain in response a set of 10 PASS/FAIL values.</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></b></p> <p>The evaluator shall 10x input to the internal KeyGen function a 32-byte random seed. Verify the returned public-private key pair is correct using a known good implementation. Here internal KeyGen refers to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the function <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>.KeyGen_internal(-) as described in <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>.204.</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></b></p> <p>The evaluator shall 10x input to the internal KeyGen function a pair of 32-byte random string. Verify the returned encapsulation and decapsulation key pair is correct using a known good implementation. Here internal KeyGen refers to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the function <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>.KeyGen_internal(-,-) as described in <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>.203.</p></div></div></div></div></div><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_COP.1.1/KeyEnc">FCS_COP.1.1/KeyEnc</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyWrap">FCS_COP.1.1/KeyWrap</a></i></b></li></ul></div>
+              
+              
+              
+			  
+			  
+			  
+			  
+              <div class="element"><div class="reqid" id="FCS_CKM.1.1/SKG"><a href="#FCS_CKM.1.1/SKG" class="abbr">FCS_CKM.1.1/SKG</a></div><div class="reqdesc">
+                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>symmetric</b> cryptographic keys <b>using a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></b> and specified cryptographic key
+                sizes <i>256 bit</i> that meet the following: [<i>no standard</i>].
+                <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                  Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is referenced for key generation where the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates or re-generates key encryption or key wrapping keys as part of deriving a key (as in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>)                  
+                </span></div></div></div>
+              
+            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a></div>
+                  
+                    
+                    
+                    
+                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall review the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine that a symmetric key is supported by
+                    the product, that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> includes a description of the protection provided by the
+                    product for this key. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes
+                    supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
+                      configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key sizes for all uses specified by the AGD
+                      documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses a symmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail how
+                      the symmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div></div></div></div><div class="comp" id="FCS_COP.1/CMAC"><h4>FCS_COP.1/CMAC Cryptographic Operation - CMAC</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_CKM.5.1">FCS_CKM.5.1</a></i></b></li></ul></div>
+			    
+			   
+			   
+			
+			<div class="element"><div class="reqid" id="FCS_COP.1.1/CMAC"><a href="#FCS_COP.1.1/CMAC" class="abbr">FCS_COP.1.1/CMAC</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [CMAC] in accordance with a specified cryptographic algorithm 
+					
+							
+							
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+							and cryptographic key sizes
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+							that meet the following:
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+							<p></p><p></p>Table 6 provides the allowed choices for
+										completion of the selection operations of <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a>.
+						
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-cmac-sels" data-counter-type="ct-Table" id="tab-fcs-cop-cmac-sels">Table <span class="counter">6</span></span>: Allowed choices for <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></caption>
+						<tr>
+							<th>Identifier</th>
+							
+							<th>Cryptographic algorithm</th>
+							
+							<th>Cryptographic key sizes</th>
+							
+							<th>List of standards</th>
+							
+						</tr>
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_57"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_58"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+							[<b>selection</b>: <span class="selectable-content" id="_s_59">: <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-1:2011 Subclause 7.6</span>, <span class="selectable-content" id="_s_60"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38B</span>] [CMAC]
+						</td></tr>
+
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+					The use of 256-bit keys for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> algorithms is required by CNSA 1.0 and 2.0.
+				</span></div></div></div>
+			
+		<div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></div>
+					
+					
+					
+				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> consists of all zeros in accordance with
+						the relevant standards.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> activities for this requirement.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<p></p>
+						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
+						itself, the test platform shall be identified and the differences between test
+						environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC </td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
+									<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+									[<b>selection:</b>  <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-1:2011 (Subclause 7.6), <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38B] [CMAC]</td>
+							</tr>
+						</table><p></p>	
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate MAC values using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in CMAC mode the evaluator shall
+						perform the CMAC Generation Test and CMAC Verification Test using the following input
+						parameters:<ul>
+						<li>Key Size [256] bits</li>
+						<li>Message size [0-524288] bits in increments of 8</li>
+						<li>MAC sizes [1-128] bits</li></ul><p></p>
+						<br/><b>CMAC Generation Test</b><p></p>
+						The evaluator shall generate eight test cases using random keys and data for each combination of
+						the above parameters as follows:<p></p><ul>
+						<li>For each claimed key size,</li>
+						<li>For four message sizes as follows:<ul>
+							<li>The smallest supported message size,</li>
+							<li>The largest supported message size,</li>
+							<li>Two sizes that are divisible by the block size, and</li>
+							<li>Two sizes that are not divisible by the block size</li></ul></li>
+						<li>For three MAC sizes as follows:<ul>
+							<li>The smallest supported MAC size,</li>
+							<li>The largest supported MAC size, and</li>
+							<li>Some other supported MAC size</li></ul></li></ul><p></p>
+						The evaluator shall compare the output from each test case against results generated by a known-
+						good implementation with the same input parameters.
+						<br/><b>CMAC Verification Test</b><p></p>
+						The evaluator shall generate 20 test cases using random keys and data for each combination of
+						the above parameters as follows:<ul>
+						<li>For each claimed key size,</li>
+						<li>For four message sizes as follows:<ul>
+							<li>The smallest supported message size,</li>
+							<li>The largest supported message size,</li>
+							<li>Two sizes that are divisible by the block size, and</li>
+							<li>Two sizes that are not divisible by the block size</li></ul></li>
+						<li>For three MAC sizes as follows:<ul>
+							<li>The smallest supported MAC size,</li>
+							<li>The largest supported MAC size, and</li>
+							<li>Some other supported MAC size</li></ul></li></ul><p></p>
+						The evaluator shall modify the tag such that 25% of the test cases in each group of 20 test
+						cases should fail.<p></p>
+						The evaluator shall determine that the verification fails for the test cases with modified inputs,
+						and succeeds for those with unmodified inputs.
+					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyedHash"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>, </i></b></li><li><b><i><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a></i></b></li></ul></div>
+          
+          
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyedHash"><a href="#FCS_COP.1.1/KeyedHash" class="abbr">FCS_COP.1.1/KeyedHash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [keyed hash message authentication] in accordance
+					with a specified cryptographic algorithm 
+					
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Keyed Hash Algorithm</span>]
+							and cryptographic key sizes
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+							that meet the following:
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+							<p></p><p></p>Table 7 provides the allowed choices for
+										completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.
+						
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyedhash-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
+						<tr>
+							<th>Keyed Hash Algorithm</th>
+							
+							<th>Cryptographic key sizes</th>
+							
+							<th>List of standards</th>
+							
+						</tr>
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_62"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_63"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
+
+
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_65">384 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_66">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
+							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_67"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_68"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
+
+
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_70">512 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_71">384 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_72">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
+							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_73"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_74"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+							</td></tr>
+
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+					The <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> minimum key sizes in the table are specified in <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021, which requires that the
+					minimum key size be equal to the digest size. The <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> standard specifies no minimum or maximum 
+					key sizes, so if <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1 is selected, larger or smaller key sizes may be used. This is 
+					indicated by the parenthesized annotations in the Cryptographic Key Sizes column.<p></p>
+					In accordance with CNSA 1.0 and 2.0, <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256 may be used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr>, including as part of a key derivation function or <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
+				</span></div></div></div>
+          
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></div>
+					
+					
+					
+					
+				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that the size of the key is sufficient for the desired
+						security strength of the output.<p></p>
+						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that if <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256 is selected, that it is being 
+						used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr> in a key derivation function or <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There is no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
+						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr></b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Keyed Hash Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td>
+								<td valign="top">[<b>selection:</b> (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 256] bits</td>
+								<td valign="top">
+									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td>
+								<td valign="top">[<b>selection:</b> (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 512, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, 256] bits</td>
+								<td valign="top">
+									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
+							</tr>
+						</table><p></p>	
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate keyed hashes using <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> the evaluator shall perform the
+						Algorithm Functional Test for each combination of claimed <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> algorithm the following
+						parameters:<ul>
+						<li>Hash function [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+						<li>Key length [8-65536] bits by 8s</li>
+						<li>MAC length [32-[digest size of hash function (256, 384, 512)]] bits</li></ul><p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						For each supported Hash function the evaluator shall generate 150 test cases using random input
+						messages of 128 bits, random supported key lengths, random keys, and random supported MAC
+						lengths such that across the 150 test cases:<ul>
+						<li>The key length includes the minimum, the maximum, a key length equal to the block
+							size, and key lengths that are both larger and smaller than the block size.</li>
+						<li>The MAC size includes the minimum, the maximum, and two other random values.</li></ul><p></p>
+						The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.	
+					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyEnc"><h4>FCS_COP.1/KeyEnc Cryptographic Operation - Key Encryption</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_PCC_EXT.1.1">FCS_PCC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
+          
+          
+          
+          
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyEnc"><a href="#FCS_COP.1.1/KeyEnc" class="abbr">FCS_COP.1.1/KeyEnc</a></div><div class="reqdesc">
+					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [symmetric-key key encryption/decryption] in accordance with a
+					specified cryptographic algorithm
+					
+							
+							
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+							and cryptographic key sizes
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+							that meet the following:
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+							<p></p><p></p>Table 8 provides the allowed choices for
+								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
+						
+				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
+						<tr>
+							<th>Identifier</th>
+							
+							<th>Cryptographic algorithm</th>
+							
+							<th>Cryptographic key sizes</th>
+							
+							<th>List of standards</th>
+							
+						</tr>
+
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_76"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_77"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_78"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_79"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
+							</td></tr>
+
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_81">deterministic</span>, <span class="selectable-content" id="_s_82"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
+							[<b>selection</b>: <span class="selectable-content" id="_s_83">96</span>, <span class="selectable-content" id="_s_84">104</span>, <span class="selectable-content" id="_s_85">112</span>, <span class="selectable-content" id="_s_86">120</span>, <span class="selectable-content" id="_s_87">128</span>] bits.
+						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_88"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_89"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+							[<b>selection</b>: <span class="selectable-content" id="_s_90"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_91"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
+						</td></tr>
+
+						
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative 
+								integers starting at an arbitrary non-negative integer</td><td>512 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_93"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_94"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_95"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_96"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
+							</td></tr>
+
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key encryption as part of maintaining and deriving a key chain (<a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>
+              uses key encryption as part of password conditioning (<a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a>).
+            </span></div></div></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></div>
+					
+					
+					
+					
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+						<p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes the construction of any IVs,
+						tweak values, and counters in conformance with the relevant specifications.<p></p>
+						If a <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
+						specification to confirm that it describes how the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is generated and that the same <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is never
+						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
+						that for each invocation of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.</p>
+						
+						<p>If <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
+						full-length keys by methods that ensure that the two key halves are distinct.  The evaluator 
+						shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the block of data containing the key and that is full block of data in alignment with selected the <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> standard.</p>
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+						If multiple key encryption modes are supported, the evaluator examines the guidance
+						documentation to determine that the method of choosing a specific mode/key size by
+						the end user is described.
+					</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
+						The evaluator shall examine the vendor's <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to verify that it includes a description
+						of how key encryption will be used as part of the key chain.
+					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> test should be followed in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> Cryptographic Operation - Symmetric Key Cryptography
+					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyEncap"><h4>FCS_COP.1/KeyEncap Cryptographic Operation - Key Encapsulation</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
+          
+		  
+		  
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyEncap"><a href="#FCS_COP.1.1/KeyEncap" class="abbr">FCS_COP.1.1/KeyEncap</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
+					
+							
+							
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+							and cryptographic key sizes
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+							that meet the following:
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+							<p></p><p></p>Table 9 provides the allowed choices for
+										completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
+						
+				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyencap-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyencap-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
+						<tr>
+							<th>Identifier</th>
+							
+							<th>Cryptographic algorithm</th>
+							
+							<th>Cryptographic key sizes</th>
+							
+							<th>List of standards</th>
+							
+						</tr>
+
+
+						<tr><td>KAS1</td><td>RSASVE</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_98">3072</span>, <span class="selectable-content" id="_s_99">4096</span>, <span class="selectable-content" id="_s_100">6144</span>, <span class="selectable-content" id="_s_101">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2</td></tr>
+
+
+						<tr><td>KTS-OAEP</td><td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_103">3072</span>, <span class="selectable-content" id="_s_104">4096</span>, <span class="selectable-content" id="_s_105">6144</span>, <span class="selectable-content" id="_s_106">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2</td></tr>
+
+
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 203</td></tr>
+
+
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              This requirement is used in the body of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author chooses to use key transport in the key chaining approach that is specified in 
+              <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.<br/><br/>
+              <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-57 Part 1 Revision 5 Section 5.6.2 specifies that the size of key used to protect the
+              key being transported should be at least the security strength of the key it is protecting.<p></p>
+              If this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is claimed, then <a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> must also be claimed.<p></p>
+              KAS1 and KTS-OAEP with the selectable parameters are CNSA 1.0 compliant. <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024 is CNSA 2.0 compliant.
+            </span></div></div></div>
+          
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></div>
+					
+					
+					
+					
+				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> documents that the selection of the key size is
+						sufficient for the security strength of the key encapsulated.<p></p>
+						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that any one-time values such as nonces or masks
+						are constructed and used in accordance with the relevant standards.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<p></p>
+						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
+						itself, the test platform shall be identified and the differences between test
+						environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
+
+						
+						<br/><b>KAS1 [RSASVE single-party]</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KAS1</td>
+								<td valign="top">RSASVE</td>
+								<td valign="top">[<b>selection:</b> 3072, 4096, 6144, 8192] bits</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Section 7.2.1)</td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the of KAS1 RSASVE Single-Party Key Encapsulation, the
+						evaluator shall perform the Algorithm Functional Test and Validation Test using the following
+						input parameters:<ul>
+						<li><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Private key format [Basic with fixed public exponent, Prime Factor with fixed
+							public exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
+							random public exponent, Prime Factor with random public exponent, Chinese
+							Remainder Theorem with random public exponent]</li>
+						<li>Modulo value [3072, 4096, 6144, 8192]</li>
+						<li>Role [initiator, responder]</li>
+						<li>Key confirmation supported [yes, no]</li></ul><p></p>
+						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
+						parameter type with the largest number of supported values. For example, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports all
+						six key formats, then the evaluator shall generate six test groups. Each of the above supported
+						parameter values must be included in at least one test group.<p></p>
+						Regardless of how many parameter values are supported, there must be at least two test groups.<p></p>
+						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
+						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
+						group is designated randomly as either AFT or VAT.<p></p>
+						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
+						other as a responder, if supported.<p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
+						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
+						compared with those generated by a known-good implementation using the same inputs.<p></p>
+						<br/><b>Validation Test</b><p></p>
+						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
+						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<ul>
+						<li>Two test cases must have a shared secret with a leading nibble of 0s,</li>
+						<li>Two test cases have modified derived key material,</li>
+						<li>Two test cases have modified tags, if key confirmation is supported,</li>
+						<li>Two test cases have modified MACs, if key confirmation is supported, and</li>
+						<li>The remaining test cases are not modified.</li></ul><p></p>
+						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
+						correspond as expected for both the modified and unmodified values.<p></p>
+
+						
+						<br/><b>KTS-OAEP [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP]</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top">KTS-OAEP</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td>
+								<td valign="top">[<b>selection:</b> 3072, 4096, 6144, 8192] bits</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Sections 6.3 &amp; 9)</td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the of KTS-OAEP, the evaluator shall perform the
+						Algorithm Functional Test and Validation Test using the following input parameters:<ul>
+						<li>Roles [initiator, receiver]</li>
+						<li>Private Key format [Basic with fixed public exponent, Prime Factor with fixed public
+							exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
+							random public exponent, Prime Factor with random public exponent, Chinese
+							Remainder Theorem with random public exponent]</li>
+						<li>Supported modulus values [3072, 4096, 6144, 8192]</li>
+						<li>Key confirmation supported [yes, no]</li></ul><p></p>
+						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
+						parameter type with the largest number of supported values. For example, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports all
+						six key formats, then the evaluator shall generate six test groups. Each of the above supported
+						parameter values must be included in at least one test group.<p></p>
+						Regardless of how many parameter values are supported, there must be at least two test groups.<p></p>
+						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
+						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
+						group is designated randomly as either AFT or VAT.<p></p>
+						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
+						other as a responder, if supported.<p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
+						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
+						compared with those generated by a known-good implementation using the same inputs.<p></p>
+						<br/><b>Validation Test</b><p></p>
+						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
+						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<ul>
+						<li>Two test cases must have a shared secret with a leading nibble of 0s,</li>
+						<li>Two test cases have modified derived key material,</li>
+						<li>Two test cases have modified tags, if key confirmation is supported,</li>
+						<li>Two test cases have modified MACs, if key confirmation is supported, and</li>
+						<li>The remaining test cases are not modified.</li></ul><p></p>
+						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
+						correspond as expected for both the modified and unmodified values.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr> Key Encapsulation</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
+								<td valign="top">Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203</td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr> key encapsulation/decapsulation, the evaluator
+						shall perform the Encapsulation Test and the Decapsulation Test using the following input
+						parameters:<ul>
+						<li>Encapsulation Parameters:<ul>
+							<li>Parameter set [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024]</li>
+							<li>Previously generated encapsulation key (<i>ek</i>)</li>
+							<li>Random value (<i>m</i>) [32 bytes]</li></ul></li>
+						<li>Decapsulation Parameters:<ul>
+							<li>Parameter set [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024]</li>
+							<li>Previously generated decapsulation key (<i>dk</i>)</li>
+							<li>Previously generated ciphertext (<i>c</i>) [32 bytes]</li></ul></li>
+						</ul><p></p>
+						<br/><b>Encapsulation Test</b><p></p>
+						For each supported parameter set the evaluator shall generate 25 test cases consisting of an
+						encapsulation key ek and random value m. For each test case the valuator shall require the
+						implementation under test to generate the corresponding shared secret k and ciphertext c. To
+						determine correctness, the evaluator shall compare the resulting values with those generated
+						using a known-good implementation using the same inputs.<p></p>
+						<br/><b>Encapsulation Key Check (if supported)</b><p></p>
+						The evaluator shall generate 10 encapsulation keys such that:<ul>
+						<li>Five of the encapsulation keys are valid, and</li>
+						<li>Five of the encapsulation keys are modified such that a value in the noisy linear
+						system is encoded into the key as a value greater than Q.</li></ul><p></p>
+						The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Encapsulation Key Check functionality to determine the
+						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
+						should be determined invalid. <p></p>
+						<br/><b>Decapsulation Key Check (if supported)</b><p></p>
+						The evaluator shall generate 10 decapsulation keys such that:<ul>
+						<li>Five of the decapsulation keys are valid, and</li>
+						<li>Five of the decapsulation keys are modified such that the concatenated
+						values ek||H(ek) will no longer match by modifying H(ek) to be a different value.</li></ul><p></p>
+						The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Decapsulation Key Check functionality to determine the
+						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
+						should be determined invalid.<p></p>
+						<br/><b>Decapsulation Test</b><p></p>
+						For each supported parameter set the evaluator shall use a single previously generated
+						decapsulation key <i>dk</i> and generate 10 test cases consisting of valid and invalid ciphertexts c. For
+						each test case the evaluator shall require the implementation under test to generate the
+						corresponding shared secret <i>k</i> whether or not the ciphertext is valid. To determine correctness,
+						the evaluator shall compare the resulting values with those generated using a known-good
+						implementation using the same inputs.<p></p>
+					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyWrap"><h4>FCS_COP.1/KeyWrap Cryptographic Operation - Key Wrapping</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
+              
+              
+              
+              
+              <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyWrap"><a href="#FCS_COP.1.1/KeyWrap" class="abbr">FCS_COP.1.1/KeyWrap</a></div><div class="reqdesc">
+					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [key wrapping] in accordance with a specified cryptographic algorithm
+					
+							
+							
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+							and cryptographic key sizes
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+							that meet the following:
+							
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+							<p></p><p></p>Table 9 provides the allowed choices for
+								completion of the selection operations of <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>.
+						
+				<table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
+						<tr>
+							<th>Identifier</th>
+							
+							<th>Cryptographic algorithm</th>
+							
+							<th>Cryptographic key sizes</th>
+							
+							<th>List of standards</th>
+							
+						</tr>
+
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_109"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_110"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+								[<b>selection</b>: <span class="selectable-content" id="_s_111"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6)</span>, <span class="selectable-content" id="_s_112"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)</span>] [KW mode]</td></tr>
+
+
+						
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_114"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_115"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+								<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode]</td></tr>
+
+
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with unpredictable, non-repeating nonce, minimum size of 64 bits</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_117"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_118"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+							[<b>selection</b>: <span class="selectable-content" id="_s_119"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 7)</span>, <span class="selectable-content" id="_s_120"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38C</span>] [<abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>]
+						</td></tr>
+
+
+						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_122">deterministic</span>, <span class="selectable-content" id="_s_123"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
+							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
+							[<b>selection</b>: <span class="selectable-content" id="_s_124">96</span>, <span class="selectable-content" id="_s_125">104</span>, <span class="selectable-content" id="_s_126">112</span>, <span class="selectable-content" id="_s_127">120</span>, <span class="selectable-content" id="_s_128">128</span>] bits.
+						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_129"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_130"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+							[<b>selection</b>: <span class="selectable-content" id="_s_131"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_132"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
+						</td></tr>
+
+					</table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                  This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key wrapping as part of maintaining and deriving a key chain (<a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
+                  when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs validation of a submask, intermediate key, or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using a key wrap operation (<a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>).<br/><br/>
+                  <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> 800-57p1rev5 sec. 5.6.2 specifies that the size of key used to protect the key being
+                  transported should be at least the security strength of the key it is protecting.
+                </span></div></div></div>
+          
+            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></div>
+					
+					
+					
+					
+				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+						The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> documents that the selection of the key size is
+						sufficient for the security strength of the key wrapped.<p></p>
+						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes the construction of any IVs,
+						nonces, and MACs in conformance with the relevant specifications.<p></p>
+						If a <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
+						specification to confirm that it describes how the nonce is generated and that the same nonce is
+						never reused to encrypt different plaintext pairs under the same key.<p></p>
+						If a <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
+						specification to confirm that it describes how the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is generated and that the same <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is never
+						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
+						that for each invocation of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.
+					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> activities for this requirement.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
+						The evaluator shall review the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure that all keys are wrapped using the
+						approved method and a description of when the key wrapping occurs.
+					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+						For tests of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM, see testing for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.<p></p>
+						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
+						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
+														<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+													[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6),
+														<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)] [KW mode] </td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to wrap keys using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in Key Wrap mode the evaluator shall perform
+						the Algorithm Functional Tests using the following input parameters:<ul>
+						<li>Key size [256] bits</li>
+						<li>Keyword cipher type [cipher, inverse]</li>
+						<li>Payload sizes [128-4096] bits by 64s</li></ul><p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						The evaluator shall generate 100 encryption test cases using random data for each combination
+						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
+						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
+						divisible by 128.<p></p>
+						The results shall be compared with those generated by a known-good implementation using the
+						same inputs.<p></p>
+						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
+						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
+						determine correctness, the evaluator shall confirm that the results correspond as expected for
+						both the modified and unmodified values.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
+														<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+													<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode] </td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to wrap keys using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in Key Wrap with Padding mode with padding
+						the evaluator shall perform the Algorithm Functional Tests using the following input parameters:<ul>
+						<li>Key size [256] bits</li>
+						<li>Keyword cipher type [cipher, inverse]</li>
+						<li>Payload sizes [8-4096] bits by 8s</li></ul><p></p>
+						<br/><b>Algorithm Functional Test</b><p></p>
+						The evaluator shall generate 100 encryption test cases using random data for each combination
+						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
+						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
+						divisible by 128.<p></p>
+						The results shall be compared with those generated by a known-good implementation using the
+						same inputs.<p></p>
+						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
+						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
+						determine correctness, the evaluator shall confirm that the results correspond as expected for
+						both the modified and unmodified values.<p></p>
+
+						
+						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</b><p></p>
+						<table border="1">
+							<tr class="header" bgcolor="#cccccc">
+								<td valign="top">Identifier</td>
+								<td valign="top">Cryptographic Algorithm</td>
+								<td valign="top">Cryptographic Key Sizes</td>
+								<td valign="top">List of Standards</td>
+							</tr>
+							<tr>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM </td>
+								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with non-repeating nonce, minimum size
+									of 64 bits</td>
+								<td valign="top">256 bits</td>
+								<td valign="top">
+									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
+									<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
+									[<b>selection:</b>  <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 7), <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38C] [<abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>]</td>
+							</tr>
+						</table><p></p>
+						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM authenticated encryption functionality the
+						evaluator shall perform the Algorithm Functional Tests described below using the following
+						input parameters:<ul>
+						<li>Key Size [256] bits</li>
+						<li>Associated data size [0-65536] bits in increments of 8</li>
+						<li>Payload size [0-256] bits in increments of 8</li>
+						<li><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size [64-104] bits in increments of 8</li>
+						<li>Tag size [32-128] bits in increments of 16</li></ul><p></p>
+						<br/><b>Algorithm Functional Tests</b><p></p>
+						Unless otherwise specified, the following tests should use random data, a tag size of 128 bits,
+						<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size of 104 bits, payload size of 256 bits, and associated data size of 256 bits. If any of
+						these values are not supported, any supported value may be used. The evaluator shall compare
+						the output from each test case against results generated by a known-good implementation with
+						the same input parameters.<p></p>
+						<br/><b><i>Variable Associated Data Test</i></b><p></p>
+						For each claimed key size, and for each supported associated data size from 0 through 256 bits in
+						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.
+						In addition, for each key size, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 cases with associated
+						data lengths of 65536 bits, if supported.<p></p>
+						<br/><b><i>Variable Payload Test</i></b><p></p>
+						For each claimed key size, and for each supported payload size from 0 through 256 bits in
+						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
+						<br/><b><i>Variable Nonce Test</i></b><p></p>
+						For each claimed key size, and for each supported <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size from 64 through 104 bits in
+						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
+						<br/><b><i>Variable Tag Test</i></b><p></p>
+						For each claimed key size, and for each supported tag size from 32 through 128 bits in
+						increments of 16 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
+						<br/><b><i>Decryption Verification Test</i></b><p></p>
+						For each claimed key size, for each supported associated data size from 0 through 256 bits in
+						increments of 8 bits, for each supported payload size from 0 through 256 bits in increments of 8
+						bits, for each supported <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size from 64 through 104 bits in increments of 8 bits, and for
+						each supported tag size from 32 through 128 bits in increments of 16 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be
+						tested by decrypting 10 test cases using all random data.<p></p>
+					</div></div></div></div></div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a></i></b></li></ul></div>
+               
 
               <div class="element"><div class="reqid" id="FCS_COP.1.1/SKC"><a href="#FCS_COP.1.1/SKC" class="abbr">FCS_COP.1.1/SKC</a></div><div class="reqdesc">
 					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [symmetric-key data encryption/decryption] in accordance with a
@@ -3096,7 +3944,7 @@ For 100 iterations
 							<p></p><p></p>Table 11 provides the allowed choices for
 								completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">6</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -3336,860 +4184,6 @@ If ( keylen = 256 )
 						test cases for the supported combinations of the parameters as described above. For each
 						parameter combination the evaluator shall introduce an error into either the Ciphertext or the Tag
 						such that approximately half of the cases are correct and half the cases contain errors.
-					</div></div></div></div></div><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
-    </h1><span class="description">
-	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
-        the baseline requirements
-        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
-        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-        There are additional requirements based on selections in the body of 
-        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-        if certain selections are made, then additional requirements below must be included.
- 	</p>
-		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_AFA_EXT.1.1">FCS_AFA_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyEncap">FCS_COP.1.1/KeyEncap</a></i></b></li></ul></div>
-				
-			  
-			  
-				
-              <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>  shall generate <b>asymmetric</b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
-			  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_1">CNSA 2.0 Compliant Algorithms:
-					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_36"><b>Module-Lattice-Based Key-Encapsulation Mechanism</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_37"><b>Module-Lattice-Based Digital Signature Algorithm</b> using the parameter set <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>-87</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_38">CNSA 1.0 Compliant Algorithms:
-					[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_39"><b>[<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes]</b> using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_16">3072</span>, <span class="selectable-content" id="_s_17">4096</span>, <span class="selectable-content" id="_s_18">6144</span>, <span class="selectable-content" id="_s_19">8192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_ckm.1.1_AK_40"><b>[<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes]</b> using [<i>“<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves” P-384 and [<b>selection</b>: <span class="selectable-content" id="fcs_ckm.1.1_AK_41">P-521</span>, <span class="selectable-content" id="fcs_ckm.1.1_AK_42">no other curves</span>] </i>]</span></li></ul>]</span></li></ul>]
-				that meet the following:
-				[<b>selection</b>: <span class="selectable-content" id="_s_23"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203 [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>]</span>, <span class="selectable-content" id="_s_24"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [<abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>]</span>, <span class="selectable-content" id="_s_25"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.1 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_26"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.2 [<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-                  Asymmetric keys may be used to “wrap” a key or submask. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a> or <a href="#FCS_AFA_EXT.1">FCS_AFA_EXT.1</a>.
-<p>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</p>				  
-                </span></div></div></div>
-              
-            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
-                    
-                    
-                    
-                    
-           
-                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes / parameter sets supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-                      If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> specifies more than one scheme, the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify
-                      that it identifies the usage for each scheme.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
-                      configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key generation schemes and key sizes for all
-                      uses specified by the AGD documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses an asymmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail
-                      how the asymmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p>If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> selects "<b>implement functionality</b>," then the following test activities shall be carried out.</p> <p>Evaluation Activity Note: The following tests may require the developer to provide access to a developer environment that provides the evaluator with tools that are not typically available to end-users of the application</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Schemes</b></p> <p>The evaluator shall verify the implementation of <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Key Generation by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> using the Key Generation test. This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly produce values for the key components including the public verification exponent e, the private prime factors p and q, the public modulus n and the calculation of the private signature exponent d. Key Pair generation specifies 5 ways (or methods) to generate the primes p and q. These include:<ul><li>Random Primes:<ul><li>Provable primes</li><li>Probable primes</li></ul></li><li>Primes with Conditions:<ul><li>Primes p1, p2, q1, q2, p, and q shall all be provable primes</li><li>Primes p1, p2, q1, and q2 shall be provable primes, and p and q shall be probable primes</li><li>Primes p1, p2, q1, q2, p, and q shall all be probable primes</li></ul></li></ul> To test the key generation method for the Random Provable primes method and for all the Primes with Conditions methods, the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation routine with sufficient data to deterministically generate the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key pair. This includes the random seed(s), the public exponent of the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key, and the desired key length. For each key length supported, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs. The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated from a known good implementation.</p> <p>If possible, the Random Probable primes method should also be verified against a known good implementation as described above. Otherwise, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 10 keys pairs for each supported key length nlen and verify:<ul><li>n = p⋅q,</li><li>p and q are probably prime according to Miller-Rabin tests,</li><li>GCD(p-1, e) = 1,</li><li>GCD(q-1, e) = 1,</li><li>2 <sup>16</sup>≤ e ≤ 2 <sup>256</sup> and e is an odd integer,</li><li>|p-q| &gt; 2 <sup>nlen/2 - 100</sup>,</li><li>p ≥ 2 <sup>nlen/2 -1/2</sup>,</li><li>q ≥ 2 <sup>nlen/2 -1/2</sup>,</li><li>2 <sup>(nlen/2)</sup>&lt; d &lt; LCM(p-1, q-1),</li><li>e⋅d = 1 mod LCM(p-1, q-1).</li></ul></p> <p><b>Key Generation for Elliptic Curve Cryptography (<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>)</b></p> <p><b><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-5 <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> Key Generation Test</b>- For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-384 and P-521, the evaluator shall require the implementation under test (IUT) to generate 10 private/public key pairs. The private key shall be generated using an approved random bit generator (<abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>). To determine correctness, the evaluator shall submit the generated key pairs to the public key verification (PKV) function of a known good implementation.</p> <p><b><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-5 Public Key Verification (PKV) Test</b>- For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-384 and P-521, the evaluator shall generate 10 private/public key pairs using the key generation function of a known good implementation and modify five of the public key values so that they are incorrect, leaving five values unchanged (i.e., correct). The evaluator shall obtain in response a set of 10 PASS/FAIL values.</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr></b></p> <p>The evaluator shall 10x input to the internal KeyGen function a 32-byte random seed. Verify the returned public-private key pair is correct using a known good implementation. Here internal KeyGen refers to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the function <abbr class="dyn-abbr"><a href="#abbr_ML-DSA">ML-DSA</a></abbr>.KeyGen_internal(-) as described in <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>.204.</p> <p><b>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></b></p> <p>The evaluator shall 10x input to the internal KeyGen function a pair of 32-byte random string. Verify the returned encapsulation and decapsulation key pair is correct using a known good implementation. Here internal KeyGen refers to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the function <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>.KeyGen_internal(-,-) as described in <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>.203.</p></div></div></div></div></div><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_COP.1.1/KeyEnc">FCS_COP.1.1/KeyEnc</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyWrap">FCS_COP.1.1/KeyWrap</a></i></b></li></ul></div>
-              
-              
-              
-			  
-			  
-			  
-			  
-              <div class="element"><div class="reqid" id="FCS_CKM.1.1/SKG"><a href="#FCS_CKM.1.1/SKG" class="abbr">FCS_CKM.1.1/SKG</a></div><div class="reqdesc">
-                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>symmetric</b> cryptographic keys <b>using a Random Bit Generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a></b> and specified cryptographic key
-                sizes <i>256 bit</i> that meet the following: [<i>no standard</i>].
-                <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-                  Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is referenced for key generation where the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generates or re-generates key encryption or key wrapping keys as part of deriving a key (as in <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>)                  
-                </span></div></div></div>
-              
-            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a></div>
-                  
-                    
-                    
-                    
-                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall review the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine that a symmetric key is supported by
-                    the product, that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> includes a description of the protection provided by the
-                    product for this key. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes
-                    supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
-                      configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key sizes for all uses specified by the AGD
-                      documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>.</div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses a symmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail how
-                      the symmetric key is used as part of the key chain.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div></div></div></div><div class="comp" id="FCS_COP.1/CMAC"><h4>FCS_COP.1/CMAC Cryptographic Operation - CMAC</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_CKM.5.1">FCS_CKM.5.1</a></i></b></li></ul></div>
-			    
-			   
-			   
-			
-			<div class="element"><div class="reqid" id="FCS_COP.1.1/CMAC"><a href="#FCS_COP.1.1/CMAC" class="abbr">FCS_COP.1.1/CMAC</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [CMAC] in accordance with a specified cryptographic algorithm 
-					
-							
-							
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic algorithm</span>]
-							and cryptographic key sizes
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-							that meet the following:
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-							<p></p><p></p>Table 6 provides the allowed choices for
-										completion of the selection operations of <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a>.
-						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-cmac-sels" data-counter-type="ct-Table" id="tab-fcs-cop-cmac-sels">Table <span class="counter">7</span></span>: Allowed choices for <a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></caption>
-						<tr>
-							<th>Identifier</th>
-							
-							<th>Cryptographic algorithm</th>
-							
-							<th>Cryptographic key sizes</th>
-							
-							<th>List of standards</th>
-							
-						</tr>
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_57"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_58"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-							[<b>selection</b>: <span class="selectable-content" id="_s_59">: <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-1:2011 Subclause 7.6</span>, <span class="selectable-content" id="_s_60"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38B</span>] [CMAC]
-						</td></tr>
-
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-					The use of 256-bit keys for <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> algorithms is required by CNSA 1.0 and 2.0.
-				</span></div></div></div>
-			
-		<div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/CMAC">FCS_COP.1/CMAC</a></div>
-					
-					
-					
-				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> consists of all zeros in accordance with
-						the relevant standards.
-					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> activities for this requirement.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-						The following tests may require the developer to provide access to a test platform that
-						provides the evaluator with tools that are typically not found on factory products.<p></p>
-						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The
-						evaluator shall perform the following test or witness respective tests executed by
-						the developer. The tests must be executed on a platform that is as close as practically
-						possible to the operational platform (but which may be instrumented in terms of,
-						for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-						itself, the test platform shall be identified and the differences between test
-						environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC </td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> using CMAC mode</td>
-								<td valign="top">256 bits</td>
-								<td valign="top">
-									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
-									<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-									[<b>selection:</b>  <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-1:2011 (Subclause 7.6), <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38B] [CMAC]</td>
-							</tr>
-						</table><p></p>	
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate MAC values using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in CMAC mode the evaluator shall
-						perform the CMAC Generation Test and CMAC Verification Test using the following input
-						parameters:<ul>
-						<li>Key Size [256] bits</li>
-						<li>Message size [0-524288] bits in increments of 8</li>
-						<li>MAC sizes [1-128] bits</li></ul><p></p>
-						<br/><b>CMAC Generation Test</b><p></p>
-						The evaluator shall generate eight test cases using random keys and data for each combination of
-						the above parameters as follows:<p></p><ul>
-						<li>For each claimed key size,</li>
-						<li>For four message sizes as follows:<ul>
-							<li>The smallest supported message size,</li>
-							<li>The largest supported message size,</li>
-							<li>Two sizes that are divisible by the block size, and</li>
-							<li>Two sizes that are not divisible by the block size</li></ul></li>
-						<li>For three MAC sizes as follows:<ul>
-							<li>The smallest supported MAC size,</li>
-							<li>The largest supported MAC size, and</li>
-							<li>Some other supported MAC size</li></ul></li></ul><p></p>
-						The evaluator shall compare the output from each test case against results generated by a known-
-						good implementation with the same input parameters.
-						<br/><b>CMAC Verification Test</b><p></p>
-						The evaluator shall generate 20 test cases using random keys and data for each combination of
-						the above parameters as follows:<ul>
-						<li>For each claimed key size,</li>
-						<li>For four message sizes as follows:<ul>
-							<li>The smallest supported message size,</li>
-							<li>The largest supported message size,</li>
-							<li>Two sizes that are divisible by the block size, and</li>
-							<li>Two sizes that are not divisible by the block size</li></ul></li>
-						<li>For three MAC sizes as follows:<ul>
-							<li>The smallest supported MAC size,</li>
-							<li>The largest supported MAC size, and</li>
-							<li>Some other supported MAC size</li></ul></li></ul><p></p>
-						The evaluator shall modify the tag such that 25% of the test cases in each group of 20 test
-						cases should fail.<p></p>
-						The evaluator shall determine that the verification fails for the test cases with modified inputs,
-						and succeeds for those with unmodified inputs.
-					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyedHash"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>, </i></b></li><li><b><i><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a></i></b></li></ul></div>
-          
-          
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyedHash"><a href="#FCS_COP.1.1/KeyedHash" class="abbr">FCS_COP.1.1/KeyedHash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [keyed hash message authentication] in accordance
-					with a specified cryptographic algorithm 
-					
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Keyed Hash Algorithm</span>]
-							and cryptographic key sizes
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-							that meet the following:
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-							<p></p><p></p>Table 7 provides the allowed choices for
-										completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.
-						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyedhash-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
-						<tr>
-							<th>Keyed Hash Algorithm</th>
-							
-							<th>Cryptographic key sizes</th>
-							
-							<th>List of standards</th>
-							
-						</tr>
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_62"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_63"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td></tr>
-
-
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_65">384 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_66">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
-							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_67"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_68"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td></tr>
-
-
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_70">512 (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_71">384 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="_s_72">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits
-							</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_73"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”)</span>, <span class="selectable-content" id="_s_74"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
-							</td></tr>
-
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-					The <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> minimum key sizes in the table are specified in <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021, which requires that the
-					minimum key size be equal to the digest size. The <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> standard specifies no minimum or maximum 
-					key sizes, so if <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1 is selected, larger or smaller key sizes may be used. This is 
-					indicated by the parenthesized annotations in the Cryptographic Key Sizes column.<p></p>
-					In accordance with CNSA 1.0 and 2.0, <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256 may be used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr>, including as part of a key derivation function or <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
-				</span></div></div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></div>
-					
-					
-					
-					
-				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that the size of the key is sufficient for the desired
-						security strength of the output.<p></p>
-						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that if <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256 is selected, that it is being 
-						used only as a <abbr class="dyn-abbr"><a href="#abbr_PRF">PRF</a></abbr> in a key derivation function or <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
-					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There is no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
-						shall perform the following test or witness respective tests executed by the developer. The tests
-						must be executed on a platform that is as close as practically possible to the operational platform
-						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
-						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
-						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr></b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Keyed Hash Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td>
-								<td valign="top">256 bits</td>
-								<td valign="top">
-									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td>
-								<td valign="top">[<b>selection:</b> (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 256] bits</td>
-								<td valign="top">
-									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td>
-								<td valign="top">[<b>selection:</b> (ISO, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 512, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, 256] bits</td>
-								<td valign="top">
-									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 9797-2:2021 (Section 7 “MAC Algorithm 2”), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1] </td>
-							</tr>
-						</table><p></p>	
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate keyed hashes using <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> the evaluator shall perform the
-						Algorithm Functional Test for each combination of claimed <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> algorithm the following
-						parameters:<ul>
-						<li>Hash function [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
-						<li>Key length [8-65536] bits by 8s</li>
-						<li>MAC length [32-[digest size of hash function (256, 384, 512)]] bits</li></ul><p></p>
-						<br/><b>Algorithm Functional Test</b><p></p>
-						For each supported Hash function the evaluator shall generate 150 test cases using random input
-						messages of 128 bits, random supported key lengths, random keys, and random supported MAC
-						lengths such that across the 150 test cases:<ul>
-						<li>The key length includes the minimum, the maximum, a key length equal to the block
-							size, and key lengths that are both larger and smaller than the block size.</li>
-						<li>The MAC size includes the minimum, the maximum, and two other random values.</li></ul><p></p>
-						The evaluator shall compare the output against results generated by a known-good
-						implementation with the same input.	
-					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyEnc"><h4>FCS_COP.1/KeyEnc Cryptographic Operation - Key Encryption</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_PCC_EXT.1.1">FCS_PCC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
-          
-          
-          
-          
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyEnc"><a href="#FCS_COP.1.1/KeyEnc" class="abbr">FCS_COP.1.1/KeyEnc</a></div><div class="reqdesc">
-					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [symmetric-key key encryption/decryption] in accordance with a
-					specified cryptographic algorithm
-					
-							
-							
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic algorithm</span>]
-							and cryptographic key sizes
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-							that meet the following:
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-							<p></p><p></p>Table 8 provides the allowed choices for
-								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
-						
-				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
-						<tr>
-							<th>Identifier</th>
-							
-							<th>Cryptographic algorithm</th>
-							
-							<th>Cryptographic key sizes</th>
-							
-							<th>List of standards</th>
-							
-						</tr>
-
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CBC</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr> mode with non-repeating and unpredictable IVs</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_76"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_77"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_78"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 10116:2017 (Clause 7)</span>, <span class="selectable-content" id="_s_79"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38A</span>] [<abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr>]
-							</td></tr>
-
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_81">deterministic</span>, <span class="selectable-content" id="_s_82"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
-							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
-							[<b>selection</b>: <span class="selectable-content" id="_s_83">96</span>, <span class="selectable-content" id="_s_84">104</span>, <span class="selectable-content" id="_s_85">112</span>, <span class="selectable-content" id="_s_86">120</span>, <span class="selectable-content" id="_s_87">128</span>] bits.
-						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_88"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_89"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-							[<b>selection</b>: <span class="selectable-content" id="_s_90"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_91"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
-						</td></tr>
-
-						
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr> mode with unique tweak values that are consecutive non-negative 
-								integers starting at an arbitrary non-negative integer</td><td>512 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_93"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_94"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>[<b>selection</b>: <span class="selectable-content" id="_s_95"><abbr class="dyn-abbr"><a href="#abbr_IEEE">IEEE</a></abbr> Std. 1619-2018</span>, <span class="selectable-content" id="_s_96"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38E</span>] [<abbr class="dyn-abbr"><a href="#abbr_XTS">XTS</a></abbr>]
-							</td></tr>
-
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key encryption as part of maintaining and deriving a key chain (<a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>
-              uses key encryption as part of password conditioning (<a href="#FCS_PCC_EXT.1">FCS_PCC_EXT.1</a>).
-            </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></div>
-					
-					
-					
-					
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-						<p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes the construction of any IVs,
-						tweak values, and counters in conformance with the relevant specifications.<p></p>
-						If a <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
-						specification to confirm that it describes how the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is generated and that the same <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is never
-						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
-						that for each invocation of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.</p>
-						
-						<p>If <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-XTS is claimed then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> creates
-						full-length keys by methods that ensure that the two key halves are distinct.  The evaluator 
-						shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the block of data containing the key and that is full block of data in alignment with selected the <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> standard.</p>
-					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-						If multiple key encryption modes are supported, the evaluator examines the guidance
-						documentation to determine that the method of choosing a specific mode/key size by
-						the end user is described.
-					</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
-						The evaluator shall examine the vendor's <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to verify that it includes a description
-						of how key encryption will be used as part of the key chain.
-					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-						The <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> test should be followed in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> Cryptographic Operation - Symmetric Key Cryptography
-					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyEncap"><h4>FCS_COP.1/KeyEncap Cryptographic Operation - Key Encapsulation</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
-          
-		  
-		  
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyEncap"><a href="#FCS_COP.1.1/KeyEncap" class="abbr">FCS_COP.1.1/KeyEncap</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
-					
-							
-							
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic algorithm</span>]
-							and cryptographic key sizes
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-							that meet the following:
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-							<p></p><p></p>Table 9 provides the allowed choices for
-										completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
-						
-				<table><caption><span class="ctr" data-myid="tab-fcs-cop-keyencap-sels" data-counter-type="ct-Table" id="tab-fcs-cop-keyencap-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
-						<tr>
-							<th>Identifier</th>
-							
-							<th>Cryptographic algorithm</th>
-							
-							<th>Cryptographic key sizes</th>
-							
-							<th>List of standards</th>
-							
-						</tr>
-
-
-						<tr><td>KAS1</td><td>RSASVE</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_98">3072</span>, <span class="selectable-content" id="_s_99">4096</span>, <span class="selectable-content" id="_s_100">6144</span>, <span class="selectable-content" id="_s_101">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2</td></tr>
-
-
-						<tr><td>KTS-OAEP</td><td><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_103">3072</span>, <span class="selectable-content" id="_s_104">4096</span>, <span class="selectable-content" id="_s_105">6144</span>, <span class="selectable-content" id="_s_106">8192</span>] bits</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2</td></tr>
-
-
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td><td>Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 203</td></tr>
-
-
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              This requirement is used in the body of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author chooses to use key transport in the key chaining approach that is specified in 
-              <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.<br/><br/>
-              <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-57 Part 1 Revision 5 Section 5.6.2 specifies that the size of key used to protect the
-              key being transported should be at least the security strength of the key it is protecting.<p></p>
-              If this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is claimed, then <a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> must also be claimed.<p></p>
-              KAS1 and KTS-OAEP with the selectable parameters are CNSA 1.0 compliant. <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024 is CNSA 2.0 compliant.
-            </span></div></div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></div>
-					
-					
-					
-					
-				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> documents that the selection of the key size is
-						sufficient for the security strength of the key encapsulated.<p></p>
-						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that any one-time values such as nonces or masks
-						are constructed and used in accordance with the relevant standards.
-					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-						The following tests may require the developer to provide access to a test platform that
-						provides the evaluator with tools that are typically not found on factory products.<p></p>
-						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The
-						evaluator shall perform the following test or witness respective tests executed by
-						the developer. The tests must be executed on a platform that is as close as practically
-						possible to the operational platform (but which may be instrumented in terms of,
-						for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-						itself, the test platform shall be identified and the differences between test
-						environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
-
-						
-						<br/><b>KAS1 [RSASVE single-party]</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top">KAS1</td>
-								<td valign="top">RSASVE</td>
-								<td valign="top">[<b>selection:</b> 3072, 4096, 6144, 8192] bits</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Section 7.2.1)</td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the of KAS1 RSASVE Single-Party Key Encapsulation, the
-						evaluator shall perform the Algorithm Functional Test and Validation Test using the following
-						input parameters:<ul>
-						<li><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Private key format [Basic with fixed public exponent, Prime Factor with fixed
-							public exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
-							random public exponent, Prime Factor with random public exponent, Chinese
-							Remainder Theorem with random public exponent]</li>
-						<li>Modulo value [3072, 4096, 6144, 8192]</li>
-						<li>Role [initiator, responder]</li>
-						<li>Key confirmation supported [yes, no]</li></ul><p></p>
-						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
-						parameter type with the largest number of supported values. For example, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports all
-						six key formats, then the evaluator shall generate six test groups. Each of the above supported
-						parameter values must be included in at least one test group.<p></p>
-						Regardless of how many parameter values are supported, there must be at least two test groups.<p></p>
-						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
-						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
-						group is designated randomly as either AFT or VAT.<p></p>
-						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
-						other as a responder, if supported.<p></p>
-						<br/><b>Algorithm Functional Test</b><p></p>
-						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
-						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
-						compared with those generated by a known-good implementation using the same inputs.<p></p>
-						<br/><b>Validation Test</b><p></p>
-						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
-						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<ul>
-						<li>Two test cases must have a shared secret with a leading nibble of 0s,</li>
-						<li>Two test cases have modified derived key material,</li>
-						<li>Two test cases have modified tags, if key confirmation is supported,</li>
-						<li>Two test cases have modified MACs, if key confirmation is supported, and</li>
-						<li>The remaining test cases are not modified.</li></ul><p></p>
-						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
-						correspond as expected for both the modified and unmodified values.<p></p>
-
-						
-						<br/><b>KTS-OAEP [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP]</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top">KTS-OAEP</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>-OAEP</td>
-								<td valign="top">[<b>selection:</b> 3072, 4096, 6144, 8192] bits</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56B Revision 2 (Sections 6.3 &amp; 9)</td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of the of KTS-OAEP, the evaluator shall perform the
-						Algorithm Functional Test and Validation Test using the following input parameters:<ul>
-						<li>Roles [initiator, receiver]</li>
-						<li>Private Key format [Basic with fixed public exponent, Prime Factor with fixed public
-							exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
-							random public exponent, Prime Factor with random public exponent, Chinese
-							Remainder Theorem with random public exponent]</li>
-						<li>Supported modulus values [3072, 4096, 6144, 8192]</li>
-						<li>Key confirmation supported [yes, no]</li></ul><p></p>
-						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
-						parameter type with the largest number of supported values. For example, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports all
-						six key formats, then the evaluator shall generate six test groups. Each of the above supported
-						parameter values must be included in at least one test group.<p></p>
-						Regardless of how many parameter values are supported, there must be at least two test groups.<p></p>
-						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
-						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
-						group is designated randomly as either AFT or VAT.<p></p>
-						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
-						other as a responder, if supported.<p></p>
-						<br/><b>Algorithm Functional Test</b><p></p>
-						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
-						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
-						compared with those generated by a known-good implementation using the same inputs.<p></p>
-						<br/><b>Validation Test</b><p></p>
-						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
-						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<ul>
-						<li>Two test cases must have a shared secret with a leading nibble of 0s,</li>
-						<li>Two test cases have modified derived key material,</li>
-						<li>Two test cases have modified tags, if key confirmation is supported,</li>
-						<li>Two test cases have modified MACs, if key confirmation is supported, and</li>
-						<li>The remaining test cases are not modified.</li></ul><p></p>
-						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
-						correspond as expected for both the modified and unmodified values.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr> Key Encapsulation</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr></td>
-								<td valign="top">Parameter set = <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203</td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of <abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr> key encapsulation/decapsulation, the evaluator
-						shall perform the Encapsulation Test and the Decapsulation Test using the following input
-						parameters:<ul>
-						<li>Encapsulation Parameters:<ul>
-							<li>Parameter set [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024]</li>
-							<li>Previously generated encapsulation key (<i>ek</i>)</li>
-							<li>Random value (<i>m</i>) [32 bytes]</li></ul></li>
-						<li>Decapsulation Parameters:<ul>
-							<li>Parameter set [<abbr class="dyn-abbr"><a href="#abbr_ML-KEM">ML-KEM</a></abbr>-1024]</li>
-							<li>Previously generated decapsulation key (<i>dk</i>)</li>
-							<li>Previously generated ciphertext (<i>c</i>) [32 bytes]</li></ul></li>
-						</ul><p></p>
-						<br/><b>Encapsulation Test</b><p></p>
-						For each supported parameter set the evaluator shall generate 25 test cases consisting of an
-						encapsulation key ek and random value m. For each test case the valuator shall require the
-						implementation under test to generate the corresponding shared secret k and ciphertext c. To
-						determine correctness, the evaluator shall compare the resulting values with those generated
-						using a known-good implementation using the same inputs.<p></p>
-						<br/><b>Encapsulation Key Check (if supported)</b><p></p>
-						The evaluator shall generate 10 encapsulation keys such that:<ul>
-						<li>Five of the encapsulation keys are valid, and</li>
-						<li>Five of the encapsulation keys are modified such that a value in the noisy linear
-						system is encoded into the key as a value greater than Q.</li></ul><p></p>
-						The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Encapsulation Key Check functionality to determine the
-						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
-						should be determined invalid. <p></p>
-						<br/><b>Decapsulation Key Check (if supported)</b><p></p>
-						The evaluator shall generate 10 decapsulation keys such that:<ul>
-						<li>Five of the decapsulation keys are valid, and</li>
-						<li>Five of the decapsulation keys are modified such that the concatenated
-						values ek||H(ek) will no longer match by modifying H(ek) to be a different value.</li></ul><p></p>
-						The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Decapsulation Key Check functionality to determine the
-						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
-						should be determined invalid.<p></p>
-						<br/><b>Decapsulation Test</b><p></p>
-						For each supported parameter set the evaluator shall use a single previously generated
-						decapsulation key <i>dk</i> and generate 10 test cases consisting of valid and invalid ciphertexts c. For
-						each test case the evaluator shall require the implementation under test to generate the
-						corresponding shared secret <i>k</i> whether or not the ciphertext is valid. To determine correctness,
-						the evaluator shall compare the resulting values with those generated using a known-good
-						implementation using the same inputs.<p></p>
-					</div></div></div></div></div><div class="comp" id="FCS_COP.1/KeyWrap"><h4>FCS_COP.1/KeyWrap Cryptographic Operation - Key Wrapping</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, </i></b></li><li><b><i><a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a></i></b></li></ul></div>
-              
-              
-              
-              
-              <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyWrap"><a href="#FCS_COP.1.1/KeyWrap" class="abbr">FCS_COP.1.1/KeyWrap</a></div><div class="reqdesc">
-					The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [key wrapping] in accordance with a specified cryptographic algorithm
-					
-							
-							
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic algorithm</span>]
-							and cryptographic key sizes
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic key sizes</span>]
-							that meet the following:
-							
-    [<b>selection</b>: 
-    <span class="selectable-content">List of standards</span>]
-							<p></p><p></p>Table 9 provides the allowed choices for
-								completion of the selection operations of <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>.
-						
-				<table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
-						<tr>
-							<th>Identifier</th>
-							
-							<th>Cryptographic algorithm</th>
-							
-							<th>Cryptographic key sizes</th>
-							
-							<th>List of standards</th>
-							
-						</tr>
-
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_109"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_110"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-								[<b>selection</b>: <span class="selectable-content" id="_s_111"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6)</span>, <span class="selectable-content" id="_s_112"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)</span>] [KW mode]</td></tr>
-
-
-						
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_114"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_115"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-								<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode]</td></tr>
-
-
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with unpredictable, non-repeating nonce, minimum size of 64 bits</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_117"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_118"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-							[<b>selection</b>: <span class="selectable-content" id="_s_119"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 7)</span>, <span class="selectable-content" id="_s_120"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38C</span>] [<abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>]
-						</td></tr>
-
-
-						<tr><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM</td><td><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode with non-repeating IVs using [<b>selection</b>: <span class="selectable-content" id="_s_122">deterministic</span>, <span class="selectable-content" id="_s_123"><abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>-based</span>],
-							<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> construction; the tag must be of length
-							[<b>selection</b>: <span class="selectable-content" id="_s_124">96</span>, <span class="selectable-content" id="_s_125">104</span>, <span class="selectable-content" id="_s_126">112</span>, <span class="selectable-content" id="_s_127">120</span>, <span class="selectable-content" id="_s_128">128</span>] bits.
-						</td><td>256 bits</td><td>[<b>selection</b>: <span class="selectable-content" id="_s_129"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2)</span>, <span class="selectable-content" id="_s_130"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197</span>] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-							[<b>selection</b>: <span class="selectable-content" id="_s_131"><abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 10)</span>, <span class="selectable-content" id="_s_132"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38D</span>] [<abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>]
-						</td></tr>
-
-					</table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-                  This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is required when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs key wrapping as part of maintaining and deriving a key chain (<a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>) or
-                  when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> performs validation of a submask, intermediate key, or <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using a key wrap operation (<a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a>).<br/><br/>
-                  <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> 800-57p1rev5 sec. 5.6.2 specifies that the size of key used to protect the key being
-                  transported should be at least the security strength of the key it is protecting.
-                </span></div></div></div>
-          
-            <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></div>
-					
-					
-					
-					
-				<div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-						The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> documents that the selection of the key size is
-						sufficient for the security strength of the key wrapped.<p></p>
-						The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes the construction of any IVs,
-						nonces, and MACs in conformance with the relevant specifications.<p></p>
-						If a <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
-						specification to confirm that it describes how the nonce is generated and that the same nonce is
-						never reused to encrypt different plaintext pairs under the same key.<p></p>
-						If a <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr> mode algorithm is selected, then the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> summary
-						specification to confirm that it describes how the <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is generated and that the same <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr> is never
-						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
-						that for each invocation of <abbr class="dyn-abbr"><a href="#abbr_GCM">GCM</a></abbr>, the length of the plaintext is at most (2<sup>32</sup>)-2 blocks.
-					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> activities for this requirement.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
-						The evaluator shall review the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure that all keys are wrapped using the
-						approved method and a description of when the key wrapping occurs.
-					</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-						For tests of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-GCM, see testing for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.<p></p>
-						The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
-						shall perform the following test or witness respective tests executed by the developer. The tests
-						must be executed on a platform that is as close as practically possible to the operational platform
-						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
-						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
-						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KW</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KW mode</td>
-								<td valign="top">256 bits</td>
-								<td valign="top">[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
-														<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-													[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (clause 6),
-														<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.2)] [KW mode] </td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to wrap keys using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in Key Wrap mode the evaluator shall perform
-						the Algorithm Functional Tests using the following input parameters:<ul>
-						<li>Key size [256] bits</li>
-						<li>Keyword cipher type [cipher, inverse]</li>
-						<li>Payload sizes [128-4096] bits by 64s</li></ul><p></p>
-						<br/><b>Algorithm Functional Test</b><p></p>
-						The evaluator shall generate 100 encryption test cases using random data for each combination
-						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
-						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
-						divisible by 128.<p></p>
-						The results shall be compared with those generated by a known-good implementation using the
-						same inputs.<p></p>
-						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
-						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
-						determine correctness, the evaluator shall confirm that the results correspond as expected for
-						both the modified and unmodified values.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-KWP</td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in KWP mode</td>
-								<td valign="top">256 bits</td>
-								<td valign="top">[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
-														<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-													<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38F (Section 6.3) [KWP mode] </td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to wrap keys using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in Key Wrap with Padding mode with padding
-						the evaluator shall perform the Algorithm Functional Tests using the following input parameters:<ul>
-						<li>Key size [256] bits</li>
-						<li>Keyword cipher type [cipher, inverse]</li>
-						<li>Payload sizes [8-4096] bits by 8s</li></ul><p></p>
-						<br/><b>Algorithm Functional Test</b><p></p>
-						The evaluator shall generate 100 encryption test cases using random data for each combination
-						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
-						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
-						divisible by 128.<p></p>
-						The results shall be compared with those generated by a known-good implementation using the
-						same inputs.<p></p>
-						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
-						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
-						determine correctness, the evaluator shall confirm that the results correspond as expected for
-						both the modified and unmodified values.<p></p>
-
-						
-						<br/><b><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM</b><p></p>
-						<table border="1">
-							<tr class="header" bgcolor="#cccccc">
-								<td valign="top">Identifier</td>
-								<td valign="top">Cryptographic Algorithm</td>
-								<td valign="top">Cryptographic Key Sizes</td>
-								<td valign="top">List of Standards</td>
-							</tr>
-							<tr>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM </td>
-								<td valign="top"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in <abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr> mode with non-repeating nonce, minimum size
-									of 64 bits</td>
-								<td valign="top">256 bits</td>
-								<td valign="top">
-									[<b>selection:</b> <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 18033-3:2010 (Subclause 5.2),
-									<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 197] [<abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>]<p></p>
-									[<b>selection:</b>  <abbr class="dyn-abbr"><a href="#abbr_ISO/IEC">ISO/IEC</a></abbr> 19772:2020 (Clause 7), <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-38C] [<abbr class="dyn-abbr"><a href="#abbr_CCM">CCM</a></abbr>]</td>
-							</tr>
-						</table><p></p>
-						To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s implementation of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CCM authenticated encryption functionality the
-						evaluator shall perform the Algorithm Functional Tests described below using the following
-						input parameters:<ul>
-						<li>Key Size [256] bits</li>
-						<li>Associated data size [0-65536] bits in increments of 8</li>
-						<li>Payload size [0-256] bits in increments of 8</li>
-						<li><abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size [64-104] bits in increments of 8</li>
-						<li>Tag size [32-128] bits in increments of 16</li></ul><p></p>
-						<br/><b>Algorithm Functional Tests</b><p></p>
-						Unless otherwise specified, the following tests should use random data, a tag size of 128 bits,
-						<abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size of 104 bits, payload size of 256 bits, and associated data size of 256 bits. If any of
-						these values are not supported, any supported value may be used. The evaluator shall compare
-						the output from each test case against results generated by a known-good implementation with
-						the same input parameters.<p></p>
-						<br/><b><i>Variable Associated Data Test</i></b><p></p>
-						For each claimed key size, and for each supported associated data size from 0 through 256 bits in
-						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.
-						In addition, for each key size, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 cases with associated
-						data lengths of 65536 bits, if supported.<p></p>
-						<br/><b><i>Variable Payload Test</i></b><p></p>
-						For each claimed key size, and for each supported payload size from 0 through 256 bits in
-						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
-						<br/><b><i>Variable Nonce Test</i></b><p></p>
-						For each claimed key size, and for each supported <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size from 64 through 104 bits in
-						increments of 8 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
-						<br/><b><i>Variable Tag Test</i></b><p></p>
-						For each claimed key size, and for each supported tag size from 32 through 128 bits in
-						increments of 16 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be tested by encrypting 10 test cases using all random data.<p></p>
-						<br/><b><i>Decryption Verification Test</i></b><p></p>
-						For each claimed key size, for each supported associated data size from 0 through 256 bits in
-						increments of 8 bits, for each supported payload size from 0 through 256 bits in increments of 8
-						bits, for each supported <abbr class="dyn-abbr"><a href="#abbr_IV">IV</a></abbr>/Nonce size from 64 through 104 bits in increments of 8 bits, and for
-						each supported tag size from 32 through 128 bits in increments of 16 bits, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be
-						tested by decrypting 10 test cases using all random data.<p></p>
 					</div></div></div></div></div><div class="comp" id="FCS_CKM.5"><h4>FCS_CKM.5 Cryptographic Key Derivation</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</a></i></b></li></ul></div>
 		
 			<div class="element"><div class="reqid" id="FCS_CKM.5.1"><a href="#FCS_CKM.5.1" class="abbr">FCS_CKM.5.1</a></div><div class="reqdesc">
