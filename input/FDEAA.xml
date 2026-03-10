@@ -325,7 +325,7 @@
 			The features enumerated below, if implemented by the TOE, require that additional SFRs be claimed in the ST.<h:br/>
 			<implements>
 				<feature id="skey-gen-support" title="Symmetric Key Generation Support">
-					<description>A conformant TOE is required to implement proper generation of symmetric keys.  It is often required when leveraging Key Wrapping per FCS_COP.1/KeyWrap or Key Encryption per FCS_COP.1/KeyEnc, but those 
+					<description>A conformant TOE is required to implement proper generation of symmetric keys.  It is often required when leveraging key wrapping per FCS_COP.1/KeyWrap or key encryption per FCS_COP.1/KeyEnc, but those 
 					uses may not necessarily require generation with key chains utilizing key combination or derivation.<h:br/></description>
 				</feature>
 			</implements>			
