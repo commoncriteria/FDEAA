@@ -1881,7 +1881,7 @@ For 100 iterations
 							<selectcol>Cryptographic key sizes</selectcol>
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
-							<reqtext><h:p/><h:p/>Table 9 provides the allowed choices for
+							<reqtext><h:p/><h:p/>Table 10 provides the allowed choices for
 								completion of the selection operations of FCS_COP.1/KeyWrap.</reqtext>
 						</tabularize>
 
