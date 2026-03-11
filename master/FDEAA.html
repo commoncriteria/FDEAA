@@ -1839,9 +1839,7 @@ For 100 iterations
                   The method the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses to chain keys and manage/protect them is described in the Key Management Description; see Appendix E for more information.<br/><br/>
                 
                   The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s use of key encryption, key encapsulation, key wrapping, key derivation, or submask combining determines whether the selection-based requirements 
-                  <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>, <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>, <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>, and <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> are claimed. Additionally, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s use of key encryption or key
-                  wrapping for key chaining requires <a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> and <a href="#FCS_RBG.1">FCS_RBG.1</a> and <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> to be claimed. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s use 
-				  of key encapsulation for key chaining requires <a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> and <a href="#FCS_RBG.1">FCS_RBG.1</a> to be claimed.
+                  <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>, <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>, <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, <a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>, and <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> are claimed.
                   
                 </span></div></div></div>
           
@@ -2094,8 +2092,7 @@ For 100 iterations
               of wrapping or encryption on keys that have already been protected.<br/><br/>
             
               If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>, <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>,
-              or <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a> must be claimed. Additionally, if key wrapping or key encryption is used, then <a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> and <a href="#FCS_RBG.1">FCS_RBG.1</a> must be claimed to
-              support generation, encryption, and decryption of symmetric keys used in support of these operations. If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> implements submask combining to maintain protected
+              or <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a> must be claimed. If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> implements submask combining to maintain protected
               cryptographic key storage, then <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a> must be claimed.  These selection must align with <a href="#FCS_KYC_EXT.1">FCS_KYC_EXT.1</a>.
             </span></div></div></div>
          
