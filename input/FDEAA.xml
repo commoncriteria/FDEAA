@@ -3331,9 +3331,7 @@ If ( keylen = 256 )
                   The method the TOE uses to chain keys and manage/protect them is described in the Key Management Description; see Appendix E for more information.<h:br/><h:br/>
                 
                   The TOE’s use of key encryption, key encapsulation, key wrapping, key derivation, or submask combining determines whether the selection-based requirements 
-                  FCS_COP.1/KeyEnc, FCS_COP.1/KeyEncap, FCS_COP.1/KeyWrap, FCS_CKM.5.1, and FCS_SMC_EXT.1 are claimed. Additionally, the TOE’s use of key encryption or key
-                  wrapping for key chaining requires FCS_CKM.1/SKG and FCS_RBG.1 and FCS_COP.1/SKC to be claimed. The TOE’s use 
-				  of key encapsulation for key chaining requires FCS_CKM.1/AKG and FCS_RBG.1 to be claimed.
+                  FCS_COP.1/KeyEnc, FCS_COP.1/KeyEncap, FCS_COP.1/KeyWrap, FCS_CKM.5.1, and FCS_SMC_EXT.1 are claimed.
                   
                 </note>
                   <aactivity >
@@ -4262,8 +4260,7 @@ If ( keylen = 256 )
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
               If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
-              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG and FCS_RBG.1 must be claimed to
-              support generation, encryption, and decryption of symmetric keys used in support of these operations. If the TSF implements submask combining to maintain protected
+              or FCS_COP.1/KeyEncap must be claimed. If the TSF implements submask combining to maintain protected
               cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.  These selection must align with FCS_KYC_EXT.1.
             </note>
              
