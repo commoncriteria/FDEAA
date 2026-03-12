@@ -28,6 +28,10 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/master/pd
 
 * link:QQQQ[Protection Profile for QQQQ]
 
+=== NIAP Version
+
+* link:QQQQ[Protection Profile for QQQQ]
+
 === Contributing
 
 If you are interested in contributing directly to future versions the
