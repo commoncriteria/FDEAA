@@ -38,15 +38,15 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/release-3
 
 === Draft Version (latest build of master branch)
 * https://commoncriteria.github.io/FDEAA/master/FDEAA-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
-* https://commoncriteria.github.io/pp-template/master/FDEAA-release-linkable.pdf[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (pdf)
 
 === 3.0 Release Version
 
-* link:QQQQ[Protection Profile for QQQQ]
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html.pdf[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (pdf)
 
-=== NIAP Version
+=== 3.0 NIAP Link
 
-* link:QQQQ[Protection Profile for QQQQ]
+* Added upon 3.0 endorsement.
 
 === Contributing
 
