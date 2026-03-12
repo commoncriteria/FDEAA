@@ -1,8 +1,3 @@
-== To create a new project based on this template
-* Follow the directions on this wiki page: https://github.com/commoncriteria/pp-template/wiki/Creating-a-New-Project
-* Edit the README contents below, replacing QQQQ with the name of your requirements document, and replacing all occurrences of "pp-template" with the name of your new repo.
-* And then delete this part, leaving everything below here.
-
 == Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition
 
 [cols="1,1,1,1,1,1,1,1"]
