@@ -1,4 +1,4 @@
-== Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition
+== Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition
 
 [cols="1,1,1,1,1,1,1,1"]
 |===
@@ -37,12 +37,12 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/release-3
 |===
 
 === Draft Version (latest build of master branch)
-* https://commoncriteria.github.io/FDEAA/master/FDEAA-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/FDEAA/master/FDEAA-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
 
 === 3.0 Release Version
 
-* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
-* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html.pdf[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (pdf)
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html.pdf[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (pdf)
 
 === 3.0 NIAP Link
 
