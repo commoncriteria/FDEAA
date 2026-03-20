@@ -48,6 +48,10 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/release-3
 
 * Added upon 3.0 endorsement.
 
+=== Common Criteria Portal
+
+* https://www.commoncriteriaportal.org/pps/collaborativePP.cfm?cpp=1[Common Criteria Portal Documents]
+
 === Contributing
 
 If you are interested in contributing directly to future versions the
