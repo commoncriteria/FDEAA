@@ -671,7 +671,7 @@
   <sec:SFRs title="Security Functional Requirements">
     The individual security functional requirements are specified in the sections below.
     
-    <section title="Cryptographic Support (FCS)" id="fcs">
+    <section title="Class FCS: Cryptographic Support" id="fcs">
 	  
 
         <!-- FCS_CKM_EXT.1 -->
@@ -3990,7 +3990,7 @@ If ( keylen = 256 )
             </f-component>
       </section>
     
-      <section title="Security Management (FMT)" id="FMT">
+      <section title="Class FMT: Security Management" id="FMT">
         <f-component cc-id="fmt_mof.1" name="Management of Functions Behavior" id="fmt-mof-1">
           <f-element id="fmt-mof-1-1">
             <title>
@@ -4157,7 +4157,7 @@ If ( keylen = 256 )
       </f-component>        
       </section>
     
-      <section title="Protection of the TSF (FPT)" id="fpt">
+      <section title="Class FPT: Protection of the TSF" id="fpt">
         <ext-comp-def title="Key and Key Material Protection" fam-id="FPT_KYP_EXT">
           <fam-behavior>This family requires that key and key material be protected if and when written to non-volatile storage.
             </fam-behavior>
