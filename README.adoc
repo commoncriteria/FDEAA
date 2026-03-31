@@ -46,7 +46,7 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/release-3
 
 === 3.0 NIAP Link
 
-* Added upon 3.0 endorsement.
+* https://www.niap-ccevs.org/protectionprofiles/535[NIAP collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition Version 3.0]
 
 === Common Criteria Portal
 
@@ -57,9 +57,9 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEAA/gh-pages/release-3
 
 If you are interested in contributing directly to future versions the
 this Protection Profile, please consider joining the NIAP technical
-community. *
-https://www.niap-ccevs.org/NIAP_Evolution/tech_communities.cfm[How to
-join the NIAP Technical Community (Mailing list and updates)]
+community. 
+
+* https://www.niap-ccevs.org/NIAP_Evolution/tech_communities.cfm[How to join the NIAP Technical Community (Mailing list and updates)]
 
 === Feedback
 
