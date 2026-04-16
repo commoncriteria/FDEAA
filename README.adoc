@@ -64,7 +64,10 @@ community.
 === Feedback
 
 Questions, comments, and fixes can be submitted to the
-https://github.com/commoncriteria/QQQQ/issues[repository issue tracker]
+https://github.com/commoncriteria/FDEAA/issues[repository issue tracker]
+
+=== FDE Interpretation Team (FIT)
+The FIT is a subgroup to resolve questions on the cPP(s).  Issues may be sent to the FIT using the the built in GitHub issue feature, emailing the FDE-FIT-iTC@niap-ccevs.org, or through NIAP.
 
 === Quickstart
 
