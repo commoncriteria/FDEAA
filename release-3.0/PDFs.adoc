@@ -1,4 +1,4 @@
-* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA.html.pdf[FDEAA.html.pdf]
-* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-sd.html.pdf[FDEAA-sd.html.pdf]
 * https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release.html.pdf[FDEAA-release.html.pdf]
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-sd.html.pdf[FDEAA-sd.html.pdf]
+* https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA.html.pdf[FDEAA.html.pdf]
 * https://commoncriteria.github.io/FDEAA/release-3.0/FDEAA-release-linkable.html.pdf[FDEAA-release-linkable.html.pdf]
