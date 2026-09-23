@@ -668,7 +668,7 @@ function showTarget(id){
 	<div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes.</td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
@@ -689,8 +689,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs.</td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
@@ -3057,7 +3057,7 @@ The following sections list Common Criteria and technology terms used in this do
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AA"><abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr></span></td><td><span id="long_abbr_AA">Authorization Acquisition</span></td></tr>
 <tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_AF"><abbr class="dyn-abbr"><a href="#abbr_AF">AF</a></abbr></span></td><td><span id="long_abbr_AF">Authorization factor</span></td></tr>
-<tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
+<tr><td><span class="term" id="abbr_base PP" data-plural="base PPs"><abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr></span></td><td><span id="long_abbr_base PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_BEV"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span></td><td><span id="long_abbr_BEV">Border Encryption Value</span></td></tr>
 <tr><td><span class="term" id="abbr_BIOS"><abbr class="dyn-abbr"><a href="#abbr_BIOS">BIOS</a></abbr></span></td><td><span id="long_abbr_BIOS">Basic Input Output System</span></td></tr>
 <tr><td><span class="term" id="abbr_CBC"><abbr class="dyn-abbr"><a href="#abbr_CBC">CBC</a></abbr></span></td><td><span id="long_abbr_CBC">Cipher Block Chaining</span></td></tr>
@@ -3133,7 +3133,10 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="bibfdeiee">[<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>–<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>]</span></td><td><span class="description">
+          </ul></span></td></tr><tr><td><span id="bibERRv12">[ERR]</span></td><td><span class="description"><a href="https://www.commoncriteriaportal.org/files/ccfiles/CCMB-2025-001-v1_2-Errata_Interpretation_CC_CEM_2022.pdf">
+              Errata and Interpretation for CC:2022 (Release 1) and CEM:2022 (Release 1), Version 1.2</a>, 
+			  CCMB-2025-02-001, 15 October 2025.
+        </span></td></tr><tr><td><span id="bibfdeiee">[<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>–<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>]</span></td><td><span class="description">
         
         <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative
           Protection Profile for Full Drive Encryption – Encryption Engine, Version 3.0,
