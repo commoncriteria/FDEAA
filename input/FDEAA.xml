@@ -4580,7 +4580,7 @@ If ( keylen = 256 )
      </h:tr>
      <h:tr>
       <h:td>Tests (ATE)</h:td>
-      <h:td>Independent Testing – Sample (ATE_IND.1)</h:td>
+      <h:td>Independent Testing – Conformance (ATE_IND.1)</h:td>
      </h:tr>
      <h:tr>
       <h:td>Vulnerability Assessment (AVA)</h:td>
