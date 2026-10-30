@@ -2973,7 +2973,7 @@ If ( keylen = 256 )
 					must also be claimed, depending on the selection made for PRF.<h:p/>
 					If KDF-Hash is claimed, then FCS_COP.1/Hash must also be claimed.<h:p/>
 					If KDF-MAC-1S is claimed, then FCS_COP.1/KeyedHash must also be claimed.<h:p/>
-					If KDF-MAC-2S is claimed, then both FCS_COP.1/KeyedHash and FCS_COP.1/CMAC must also be claimed.<h:p/>
+					If KDF-MAC-2S is claimed, then FCS_COP.1/KeyedHash must also be claimed.<h:p/>
 					In KDF-MAC-2S, CMAC has been removed as a selection for the MAC step because it requires
 					selection of 128 bits for the output key size, which is not supported in CNSA 1.0. If HMAC is
 					selected in the MAC step, then the same HMAC is used as the KDF.<h:p/>
