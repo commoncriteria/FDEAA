@@ -3605,7 +3605,7 @@ If ( keylen = 256 )
                       Clarification to the Entropy Documentation and Assessment Annex</h:a>.
                   </h:p>
                   <TSS>There are no TSS activities for this requirement.</TSS>
-                  <Guidance>There are no TSS activities for this requirement.</Guidance>
+                  <Guidance>There are no AGD activities for this requirement.</Guidance>
                   <Tests>There are no test activities for this requirement.</Tests>
                   
                 </aactivity>
@@ -3660,7 +3660,7 @@ If ( keylen = 256 )
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
                   <TSS>There are no TSS activities for this requirement.</TSS>
-                  <Guidance>There are no TSS activities for this requirement.</Guidance>
+                  <Guidance>There are no AGD activities for this requirement.</Guidance>
                   <Tests>There are no test activities for this requirement.</Tests>
                 </aactivity>
               </f-element>
@@ -3683,7 +3683,7 @@ If ( keylen = 256 )
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
                   <TSS>There are no TSS activities for this requirement.</TSS>
-                  <Guidance>There are no TSS activities for this requirement.</Guidance>
+                  <Guidance>There are no AGD activities for this requirement.</Guidance>
                   <Tests>There are no test activities for this requirement.</Tests>
                 </aactivity>                  
               </f-element>
@@ -3705,7 +3705,7 @@ If ( keylen = 256 )
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.
                   </h:p>
                   <TSS>There are no TSS activities for this requirement.</TSS>
-                  <Guidance>There are no TSS activities for this requirement.</Guidance>
+                  <Guidance>There are no AGD activities for this requirement.</Guidance>
                   <Tests>There are no test activities for this requirement.</Tests>
                 </aactivity>
               </f-element>
@@ -3727,7 +3727,7 @@ If ( keylen = 256 )
                     Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source's relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
                   <TSS>There are no TSS activities for this requirement.</TSS>
-                  <Guidance>There are no TSS activities for this requirement.</Guidance>
+                  <Guidance>There are no AGD activities for this requirement.</Guidance>
                   <Tests>There are no test activities for this requirement.</Tests>
                 </aactivity>
               </f-element>
